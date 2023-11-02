@@ -21,15 +21,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Markdown\Readme.md">
-      <Filter>Markdown</Filter>
-    </None>
     <None Include="Markdown\Agenda.md">
       <Filter>Markdown</Filter>
     </None>
     <None Include="Markdown\Classes_Objects.md">
       <Filter>Markdown</Filter>
     </None>
+    <None Include="Markdown\Readme.md" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">

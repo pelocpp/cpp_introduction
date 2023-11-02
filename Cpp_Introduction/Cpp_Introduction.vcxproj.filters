@@ -27,7 +27,7 @@
     <None Include="Markdown\Classes_Objects.md">
       <Filter>Markdown</Filter>
     </None>
-    <None Include="Markdown\Readme.md" />
+    <None Include="..\Readme.md" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">

@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\Readme.md" />
     <None Include="Markdown\Agenda.md" />
     <None Include="Markdown\Classes_Objects.md" />
-    <None Include="Markdown\Readme.md" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Classes_Objects\Main.cpp" />

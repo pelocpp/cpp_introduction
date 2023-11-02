@@ -1,27 +1,35 @@
 // ===========================================================================
-// Time.h
+// Time.h (with constructors)
 // ===========================================================================
 
 #pragma once
 
 #include <iostream>
-#include <iomanip>
 #include <cstdio>
 
-namespace Classes_Objects
+namespace Classes_Objects_Constructors
 {
     class Time
     {
-    public:
-        // member data / instance variables
+    private:
         int m_seconds;
         int m_minutes;
         int m_hours;
 
-        // public interface / methods
-        void reset();
-        void increment();
+    public:
+        // c'tors
+        Time();
+        Time(int hours, int minutes, int seconds);
+        Time(int hours, int minutes);
+        Time(int seconds);  // conversion c'tor
+        Time(const char*);  // conversion c'tor
+
+        // public interface
         void print();
+
+    private:
+        // helper method(s)
+        void secondsToTime(int seconds);
     };
 }
 

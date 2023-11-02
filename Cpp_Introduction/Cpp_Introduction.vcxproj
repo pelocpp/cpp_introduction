@@ -22,14 +22,25 @@
     <None Include="..\Readme.md" />
     <None Include="Markdown\Agenda.md" />
     <None Include="Markdown\Classes_Objects.md" />
+    <None Include="Markdown\Classes_Objects_Improved.md" />
+    <None Include="Markdown\Constructors.md" />
+    <None Include="Markdown\References.md" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Classes_Objects\Main.cpp" />
     <ClCompile Include="Classes_Objects\Time.cpp" />
+    <ClCompile Include="Classes_Objects_Improved\Main.cpp" />
+    <ClCompile Include="Classes_Objects_Improved\Time.cpp" />
+    <ClCompile Include="Constructors\Main.cpp" />
+    <ClCompile Include="Constructors\Time.cpp" />
     <ClCompile Include="Program.cpp" />
+    <ClCompile Include="References\Main.cpp" />
+    <ClCompile Include="References\References.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Classes_Objects\Time.h" />
+    <ClInclude Include="Classes_Objects_Improved\Time.h" />
+    <ClInclude Include="Constructors\Time.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -117,6 +128,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <ObjectFileName>$(IntDir)\%(RelativeDir)\%(Filename)</ObjectFileName>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

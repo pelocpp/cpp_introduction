@@ -4,18 +4,18 @@
 
 ---
 
-[//]: # (Test ...)
+[//]: # (Test ...  PeLo .. hmm, brauche ich das ....)
 
 
 ## [Erster Blick auf Klassen und Objekte](Classes_Objects.md) 
   * Begriffe *Klasse* und *Objekt*
   * Instanzvariablen, Methoden
   * Punkt-Operator für den Zugriff
+
+
+## [Vertiefungen zu Klassen und Objekten](Classes_Objects_Improved.md) 
   * Zugriffsklassen (`private`, `public`)
   * *setter*-/*getter*-Methoden
-
-
-## Vertiefungen zu Klassen und Objekten
   * `this`-Operator
   * Überladen von Methoden
   * Klassen- vs. Instanzvariable / Klassen- vs. Instanzmethode / `static`

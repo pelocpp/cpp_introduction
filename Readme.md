@@ -1,4 +1,4 @@
-# C++&ndash;Einführung
+# Einführung in die Programmiersprache C++
 
 ## Einleitung
 

@@ -1,4 +1,4 @@
-# Erster Blick auf Klassen und Objekte
+# Referenzen
 
 
 [Zurück](../../Readme.md)
@@ -7,17 +7,41 @@
 
 ## Erläuterungen
 
-Im Umfeld der objektorientierten Programmierung versteht man unter einer *Klasse* 
-die Zusammenfassung von Daten und ihren korrespondierenden Funktionen
-in einem gemeinsamen Sprachkonstrukt.
+Zeiger (Pointer) der Programmiersprache C sind eine Möglichkeit,
+um auf Objekte (Variablen) indirekt zugreifen zu können.
 
-Eine Klasse steht für die Beschreibung (Bauplan) eines solchen Datentyps,
-reale Variablen dieses Datentyps bezeichnet man in der objektorientierten Programmierung
-als *Objekte*.
+Referenzen bieten nahezu die gleichen Möglichkeiten wie Zeiger, aber mit einer wesentlich *einfacheren*
+Syntax.
 
-Das Sprachkonstrukt einer Klasse definiert einen so genannten *abstrakten Datentyp*,
-die Menge der gekapselten Daten (so genannte *Instanzvariablen*) und Funktionen
-(so genannte *Methoden*) leiten sich aus dem Problemkontext ab.
+Es ist wichtig zu verstehen, 
+
+  * was Referenzen sind
+  * wie sich Referenzen von Zeigern unterscheiden
+  * wie man Referenzen erzeugt und verwendet
+  * welche Beschränkungen für Referenzen gelten
+  * wie man Werte und Objekte in und aus Funktionen (Methoden) als Referenz übergibt.
+
+
+### Was ist eine Referenz?
+
+Eine *Referenz* ist ein *Alias*-Name. 
+
+Wenn man eine Referenz erzeugt, initialisiert man sie mit dem Namen eines
+anderen Objekts, dem Ziel.
+
+Von diesem Moment an ist die Referenz wie ein alternativer Name für das Ziel, und alles,
+was man mit der Referenz anstellt, bezieht sich tatsächlich auf das Ziel.
+
+Die Deklaration einer Referenz besteht aus dem Typ des Zielobjekts, gefolgt vom Referenzoperator (&) und dem
+Namen der Referenz.
+Die Regeln für die Benennung von Referenzen sind die gleichen wie für Variablennamen.
+
+Viele Programmierer stellen ihren Referenzen ein vorangestelltes `r`.
+Zum Beispiel erzeugt man für eine
+Integer-Variable einInt eine Referenz mit der folgenden Anweisung:
+
+int &rEineRef = einInt;
+
 
 ## Beispiele
 

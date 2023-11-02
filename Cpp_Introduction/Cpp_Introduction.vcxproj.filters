@@ -19,6 +19,15 @@
     <Filter Include="Source Files\Classes_Objects">
       <UniqueIdentifier>{c0ba38c6-36d7-45d1-8a6f-cfa8cc8b3c3f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Classes_Objects_Improved">
+      <UniqueIdentifier>{85b60403-b271-4f31-9110-cf3a956aecd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Constructors">
+      <UniqueIdentifier>{b3c5a966-18bd-482a-91fd-d6f6310e3f64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\References">
+      <UniqueIdentifier>{dd5b3766-0256-468e-98ba-aad0a0dcc208}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -28,6 +37,15 @@
       <Filter>Markdown</Filter>
     </None>
     <None Include="..\Readme.md" />
+    <None Include="Markdown\Classes_Objects_Improved.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\Constructors.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\References.md">
+      <Filter>Markdown</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -39,10 +57,34 @@
     <ClCompile Include="Classes_Objects\Time.cpp">
       <Filter>Source Files\Classes_Objects</Filter>
     </ClCompile>
+    <ClCompile Include="Classes_Objects_Improved\Main.cpp">
+      <Filter>Source Files\Classes_Objects_Improved</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes_Objects_Improved\Time.cpp">
+      <Filter>Source Files\Classes_Objects_Improved</Filter>
+    </ClCompile>
+    <ClCompile Include="Constructors\Main.cpp">
+      <Filter>Source Files\Constructors</Filter>
+    </ClCompile>
+    <ClCompile Include="Constructors\Time.cpp">
+      <Filter>Source Files\Constructors</Filter>
+    </ClCompile>
+    <ClCompile Include="References\Main.cpp">
+      <Filter>Source Files\References</Filter>
+    </ClCompile>
+    <ClCompile Include="References\References.cpp">
+      <Filter>Source Files\References</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Classes_Objects\Time.h">
       <Filter>Source Files\Classes_Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes_Objects_Improved\Time.h">
+      <Filter>Source Files\Classes_Objects_Improved</Filter>
+    </ClInclude>
+    <ClInclude Include="Constructors\Time.h">
+      <Filter>Source Files\Constructors</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

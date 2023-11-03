@@ -16,28 +16,34 @@
     <Filter Include="Markdown">
       <UniqueIdentifier>{a112073f-6661-4360-95f8-a2890605aced}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Classes_Objects">
-      <UniqueIdentifier>{c0ba38c6-36d7-45d1-8a6f-cfa8cc8b3c3f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Classes_Objects_Improved">
-      <UniqueIdentifier>{85b60403-b271-4f31-9110-cf3a956aecd8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Constructors">
       <UniqueIdentifier>{b3c5a966-18bd-482a-91fd-d6f6310e3f64}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\References">
       <UniqueIdentifier>{dd5b3766-0256-468e-98ba-aad0a0dcc208}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ParameterPassingTechniques">
+      <UniqueIdentifier>{9b012437-9f2b-449b-8b06-034602611898}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ClassesObjects">
+      <UniqueIdentifier>{c0ba38c6-36d7-45d1-8a6f-cfa8cc8b3c3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ClassesObjectsImproved">
+      <UniqueIdentifier>{85b60403-b271-4f31-9110-cf3a956aecd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OperatorOverloading">
+      <UniqueIdentifier>{4791d00b-6d2b-4e99-9e41-a764a25b0761}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
       <Filter>Markdown</Filter>
     </None>
-    <None Include="Markdown\Classes_Objects.md">
+    <None Include="Markdown\ClassesObjects.md">
       <Filter>Markdown</Filter>
     </None>
     <None Include="..\Readme.md" />
-    <None Include="Markdown\Classes_Objects_Improved.md">
+    <None Include="Markdown\ClassesObjectsImproved.md">
       <Filter>Markdown</Filter>
     </None>
     <None Include="Markdown\Constructors.md">
@@ -46,22 +52,16 @@
     <None Include="Markdown\References.md">
       <Filter>Markdown</Filter>
     </None>
+    <None Include="Markdown\ParameterPassingTechniques.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\OperatorOverloading.md">
+      <Filter>Markdown</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes_Objects\Main.cpp">
-      <Filter>Source Files\Classes_Objects</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes_Objects\Time.cpp">
-      <Filter>Source Files\Classes_Objects</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes_Objects_Improved\Main.cpp">
-      <Filter>Source Files\Classes_Objects_Improved</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes_Objects_Improved\Time.cpp">
-      <Filter>Source Files\Classes_Objects_Improved</Filter>
     </ClCompile>
     <ClCompile Include="Constructors\Main.cpp">
       <Filter>Source Files\Constructors</Filter>
@@ -72,19 +72,40 @@
     <ClCompile Include="References\Main.cpp">
       <Filter>Source Files\References</Filter>
     </ClCompile>
-    <ClCompile Include="References\References.cpp">
-      <Filter>Source Files\References</Filter>
+    <ClCompile Include="ParameterPassingTechniques\Main.cpp">
+      <Filter>Source Files\ParameterPassingTechniques</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassesObjects\Main.cpp">
+      <Filter>Source Files\ClassesObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassesObjects\Time.cpp">
+      <Filter>Source Files\ClassesObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassesObjectsImproved\Main.cpp">
+      <Filter>Source Files\ClassesObjectsImproved</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassesObjectsImproved\Time.cpp">
+      <Filter>Source Files\ClassesObjectsImproved</Filter>
+    </ClCompile>
+    <ClCompile Include="OperatorOverloading\Main.cpp">
+      <Filter>Source Files\OperatorOverloading</Filter>
+    </ClCompile>
+    <ClCompile Include="OperatorOverloading\Time.cpp">
+      <Filter>Source Files\OperatorOverloading</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Classes_Objects\Time.h">
-      <Filter>Source Files\Classes_Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes_Objects_Improved\Time.h">
-      <Filter>Source Files\Classes_Objects_Improved</Filter>
-    </ClInclude>
     <ClInclude Include="Constructors\Time.h">
       <Filter>Source Files\Constructors</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassesObjects\Time.h">
+      <Filter>Source Files\ClassesObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassesObjectsImproved\Time.h">
+      <Filter>Source Files\ClassesObjectsImproved</Filter>
+    </ClInclude>
+    <ClInclude Include="OperatorOverloading\Time.h">
+      <Filter>Source Files\OperatorOverloading</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

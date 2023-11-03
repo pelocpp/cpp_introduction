@@ -148,9 +148,9 @@ Weiterentwicklung der Klasse `Time` keine Fehlermeldungen
 
 ## Quellcode des Beispiels:
 
-[Time.h](..\Classes_Objects\Time.h)<br />
-[Time.cpp](..\Classes_Objects\Time.cpp)<br />
-[Main.cpp](..\Classes_Objects\Main.cpp)
+[Time.h](..\ClassesObjectsImproved\Time.h)<br />
+[Time.cpp](..\ClassesObjectsImproved\Time.cpp)<br />
+[Main.cpp](..\ClassesObjectsImproved\Main.cpp)
 
 ---
 

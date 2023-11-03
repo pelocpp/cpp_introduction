@@ -27,21 +27,21 @@ Es ist wichtig zu verstehen,
 Eine *Referenz* ist ein *Alias*-Name. 
 
 Wenn man eine Referenz erzeugt, initialisiert man sie mit dem Namen eines
-anderen Objekts, dem Ziel.
+anderen Objekts, dem Zielobjekt.
 
-Von diesem Moment an ist die Referenz wie ein alternativer Name für das Ziel, und alles,
-was man mit der Referenz anstellt, bezieht sich tatsächlich auf das Ziel.
+Von diesem Moment an ist die Referenz wie ein alternativer Name für das Zielobjekt, und alles,
+was man mit der Referenz anstellt, bezieht sich tatsächlich auf das Zielobjekt.
 
-Die Deklaration einer Referenz besteht aus dem Typ des Zielobjekts, gefolgt vom Referenzoperator (&) und dem
+Die Deklaration einer Referenz besteht aus dem Typ des Zielobjekts, gefolgt vom Referenzoperator (`&`) und dem
 Namen der Referenz.
-Die Regeln für die Benennung von Referenzen sind die gleichen wie für Variablennamen.
 
-Viele Programmierer stellen ihren Referenzen ein vorangestelltes `r`.
-Zum Beispiel erzeugt man für eine
-Integer-Variable einInt eine Referenz mit der folgenden Anweisung:
+Viele Programmierer stellen Referenzvariablen ein `r` voran.
+Zum Beispiel erzeugt man für eine int-Variable einInt eine Referenz mit der folgenden Anweisung:
 
-int &rEineRef = einInt;
-
+```cpp
+int n = 123;
+int &rInt = n;
+```
 
 ## Beispiele
 

@@ -11,6 +11,8 @@ extern void testTime();
 extern void testTimeImproved();
 extern void testTimeConstructors();
 extern void testReferences();
+extern void testParameterPassing();
+extern void testOperatorsOverloading();
 
 int main()
 {
@@ -22,7 +24,9 @@ int main()
         // testTime();
         // testTimeImproved();
         // testTimeConstructors();
-        testReferences();
+        // testReferences();
+        //testParameterPassing();
+        testOperatorsOverloading();
     }
     catch (const std::exception& ex) {
         std::cout << "Exception: " << ex.what() << std::endl;

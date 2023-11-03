@@ -7,13 +7,13 @@
 [//]: # (Test ...  PeLo .. hmm, brauche ich das ....)
 
 
-## [Erster Blick auf Klassen und Objekte](Classes_Objects.md) 
+## [Erster Blick auf Klassen und Objekte](ClassesObjects.md) 
   * Begriffe *Klasse* und *Objekt*
   * Instanzvariablen, Methoden
   * Punkt-Operator für den Zugriff
 
 
-## [Vertiefungen zu Klassen und Objekten](Classes_Objects_Improved.md) 
+## [Vertiefungen zu Klassen und Objekten](ClassesObjectsImproved.md) 
   * Zugriffsklassen (`private`, `public`)
   * *setter*-/*getter*-Methoden
   * `this`-Operator
@@ -21,27 +21,25 @@
   * Klassen- vs. Instanzvariable / Klassen- vs. Instanzmethode / `static`
 
 
-## Konstruktoren
-  * Definition
+## [Initialisierung von Objekten: Konstruktoren](Constructors.md) 
+  * Was sind Konstruktoren
   * Verkettung von Konstruktoren
   * Element-Initialisierungsliste (*member initializer list*)
 
 
-## Das Konzept &ldquo;Referenz&rdquo;
+## [Referenzen](References.md) 
+  * Was ist ein Referenz
   * Vergleich Pointer &ndash; Referenzen
-  * Einführung des Konzepts Referenz / Vergleich Pointer - Referenzen
+  * Referenzen und das Schlüsselwort `const`
 
 
-## Übergabe von Parametern
+## [Technik der Übergabe von Parametern](ParameterPassingTechniques.md) 
+  * Parameterübergabemechanismen: *Call-by-Value*, *Call-by-Address* und *Call-by-Reference*
+  * Vergleich der Aufrufmethoden
 
-  * Parameterübergabemechanismus: call-by-value vs. call-by-reference
-  * Betrachtung einer Methode malZwei(int wert) in den drei Varianten call-by-value, call-by-pointer und call-by-reference.
-  * 
 
-## Überladen von Operatoren
+## [Überladen von Operatoren](OperatorOverloading.md) 
   * Definition
-  * Verkettung von Konstruktoren
-  * Element-Initialisierungsliste (*member initializer list*)
 
 
 ## Ein- und Ausgabe mit *Streams*

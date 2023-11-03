@@ -1,5 +1,5 @@
 // ===========================================================================
-// Time.cpp (improved)
+// Time.cpp // Classes and Objects Improved
 // ===========================================================================
 
 //#include <iostream>
@@ -9,7 +9,7 @@
 
 namespace Classes_Objects_Improved
 {
-    // getter // setter
+    // setter
     void Time::setHours(int hours)
     {
         m_hours = (0 <= hours && hours < 24) ? hours : 0;

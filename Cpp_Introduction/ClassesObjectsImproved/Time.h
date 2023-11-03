@@ -1,5 +1,5 @@
 // ===========================================================================
-// Time.h (improved)
+// Time.h // Classes and Objects Improved
 // ===========================================================================
 
 #pragma once
@@ -19,9 +19,9 @@ namespace Classes_Objects_Improved
 
     public:
         // getter // setter
-        int getSeconds() const { return m_seconds; }
-        int getMinutes() const { return m_minutes; }
-        int getHours() const { return m_hours; }
+        int getSeconds() { return m_seconds; }
+        int getMinutes() { return m_minutes; }
+        int getHours() { return m_hours; }
         void setSeconds(int seconds);
         void setMinutes(int minutes);
         void setHours(int hours);

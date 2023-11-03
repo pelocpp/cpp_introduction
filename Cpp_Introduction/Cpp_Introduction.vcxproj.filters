@@ -37,6 +37,15 @@
     <Filter Include="Source Files\DynamicMemoryManagement">
       <UniqueIdentifier>{0aac6741-0a39-4cb7-99a4-3c6997d2a563}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\RuleOfThree">
+      <UniqueIdentifier>{ff8ccf77-f96f-4b5a-adf5-cd4a08b8535b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ProceduralVsOOProgramming">
+      <UniqueIdentifier>{b5e03d0e-15b3-48ae-b21c-890158505992}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Namespaces">
+      <UniqueIdentifier>{4913df45-dc9a-4cf6-87b7-4d9d6e809f71}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -62,6 +71,15 @@
       <Filter>Markdown</Filter>
     </None>
     <None Include="Markdown\DynamicMemoryManagement.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\RuleOfThree.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\ProceduralVsOOProgramming.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\Namespaces.md">
       <Filter>Markdown</Filter>
     </None>
   </ItemGroup>
@@ -102,6 +120,24 @@
     <ClCompile Include="DynamicMemoryManagement\Main.cpp">
       <Filter>Source Files\DynamicMemoryManagement</Filter>
     </ClCompile>
+    <ClCompile Include="RuleOfThree\BigData.cpp">
+      <Filter>Source Files\RuleOfThree</Filter>
+    </ClCompile>
+    <ClCompile Include="RuleOfThree\Main.cpp">
+      <Filter>Source Files\RuleOfThree</Filter>
+    </ClCompile>
+    <ClCompile Include="ProceduralVsOOProgramming\Example_OO_Programming.cpp">
+      <Filter>Source Files\ProceduralVsOOProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="ProceduralVsOOProgramming\Example_Procedural_Programming.cpp">
+      <Filter>Source Files\ProceduralVsOOProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="ProceduralVsOOProgramming\Main.cpp">
+      <Filter>Source Files\ProceduralVsOOProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="Namespaces\Main.cpp">
+      <Filter>Source Files\Namespaces</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constructors\Time.h">
@@ -115,6 +151,9 @@
     </ClInclude>
     <ClInclude Include="OperatorOverloading\Time.h">
       <Filter>Source Files\OperatorOverloading</Filter>
+    </ClInclude>
+    <ClInclude Include="RuleOfThree\BigData.h">
+      <Filter>Source Files\RuleOfThree</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

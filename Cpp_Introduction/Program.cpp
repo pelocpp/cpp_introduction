@@ -7,14 +7,18 @@
 #include <iostream>
 
 // function prototypes
-extern void testTime();
-extern void testTimeImproved();
-extern void testTimeConstructors();
+extern void testClassesObjects();
+extern void testProceduralVsOOProgramming();
+extern void testClassesObjectsImproved();
+extern void testConstructors();
 extern void testReferences();
 extern void testParameterPassing();
 extern void testOperatorsOverloading();
 extern void testDynamicMemoryManagement();
+extern void testRuleOfThree();
+extern void testNamespaces();
 
+// entry point
 int main()
 {
     std::cout << "[Collection of introductionary C++ Code Examples - Copyright (C) 2019-2023 Peter Loos]" << std::endl;
@@ -22,13 +26,17 @@ int main()
     // main entry points code examples
     try
     {
-        // testTime();
-        // testTimeImproved();
-        // testTimeConstructors();
-        // testReferences();
+        //testClassesObjects();
+        //testProceduralVsOOProgramming();
+        //testClassesObjectsImproved();
+        //testConstructors();
+        //testReferences();
         //testParameterPassing();
         //testOperatorsOverloading();
-        testDynamicMemoryManagement();
+        //testDynamicMemoryManagement();
+        //testRuleOfThree();
+        testNamespaces();
+
     }
     catch (const std::exception& ex) {
         std::cout << "Exception: " << ex.what() << std::endl;

@@ -1,24 +1,14 @@
 // ===========================================================================
-// Main.cpp  // Constructors
+// Main.cpp // Comparison OO versus Procedural Programming
 // ===========================================================================
 
-#include "Time.h"
+extern void testComparisonOO();
+extern void testComparisonProcedural();
 
-void testConstructors()
+void testProceduralVsOOProgramming()
 {
-    using namespace Classes_Objects_Constructors;
-
-    Time t1;
-    t1.print();
-
-    Time t2(12, 30, 0);
-    t2.print();
-
-    Time t3("09:30:00");
-    t3.print();
-
-    Time t4(24 * 60 * 60 - 1);
-    t4.print();
+    testComparisonOO();
+    testComparisonProcedural();
 }
 
 // ===========================================================================

@@ -4,7 +4,7 @@
 
 #include "Time.h"
 
-void testTime()
+void testClassesObjects()
 {
     using namespace Classes_Objects;
 

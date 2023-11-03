@@ -4,13 +4,19 @@
 
 ---
 
-[//]: # (Test ...  PeLo .. hmm, brauche ich das ....)
+[//]: # (Dies ist ein Markdown Kommentar, brauche ich das ....)
 
 
 ## [Erster Blick auf Klassen und Objekte](ClassesObjects.md) 
   * Begriffe *Klasse* und *Objekt*
   * Instanzvariablen, Methoden
   * Punkt-Operator für den Zugriff
+
+
+## [Vergleich zwischen prozeduraler und objektorientierter Programmierung](ProceduralVsOOProgramming.md) 
+  * Was bedeutet &ldquo;prozedurale&rdquo; Programmierung
+  * Was bedeutet &ldquo;objektorientierte&rdquo; Programmierung
+  * Vorteile der objektorientierten Programmierung
 
 
 ## [Vertiefungen zu Klassen und Objekten](ClassesObjectsImproved.md) 
@@ -45,7 +51,8 @@
 ## Ein- und Ausgabe mit *Streams*
 
 
-## Namensräume
+## [Namensräume / Namespaces](Namespaces.md) 
+  * Definition
 
 
 ## Exception-Handling
@@ -55,13 +62,13 @@
 ## Dynamische Speicherverwaltung
 
 
-
-## &ldquo;Rule of Three&rdquo;
-
+## [&ldquo;Rule of Three&rdquo;: Kopierkonstruktor, Wertzuweisungsoperator und Destruktor](RuleOfThree.md) 
+  * Die &ldquo;Rule of Three&rdquo; verstehen
+  * Implizite Definition von Konstruktoren in C++
+  * Explizite Definition von Konstruktoren in C++
 
 
 ## Vererbung
-
 
 
 ## Polymorphismus
@@ -71,27 +78,10 @@
 ## Templates
 
 
-
-
 ## STL (Standard Template Library)
 
 
-
-
-
 ## XXX
-
-
-
-
-## XXX
-
-
-
-
-
-## XXX
-
 
 
 

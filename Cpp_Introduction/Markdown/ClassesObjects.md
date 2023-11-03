@@ -1,6 +1,6 @@
 # Erster Blick auf Klassen und Objekte
 
-[Zurück](../../Readme.md)
+[Zurück](Agenda.md)
 
 ---
 
@@ -171,6 +171,6 @@ TBD: Rectangle
 
 ---
 
-[Zurück](../../../Readme.md)
+[Zurück](Agenda.md)
 
 ---

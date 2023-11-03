@@ -1,7 +1,6 @@
 # Überladen von Operatoren
 
-
-[Zurück](Readme.md)
+[Zurück](Agenda.md)
 
 ---
 
@@ -388,6 +387,6 @@ TBD: Weitere Operatoren
 ---
 
 
-[Zurück](../../../Readme.md)
+[Zurück](Agenda.md)
 
 ---

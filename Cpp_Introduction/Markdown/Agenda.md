@@ -52,7 +52,7 @@
 
 
 
-## Dynamische Daten
+## Dynamische Speicherverwaltung
 
 
 

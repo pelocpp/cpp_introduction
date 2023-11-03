@@ -24,6 +24,7 @@
     <None Include="Markdown\ClassesObjects.md" />
     <None Include="Markdown\ClassesObjectsImproved.md" />
     <None Include="Markdown\Constructors.md" />
+    <None Include="Markdown\DynamicMemoryManagement.md" />
     <None Include="Markdown\OperatorOverloading.md" />
     <None Include="Markdown\ParameterPassingTechniques.md" />
     <None Include="Markdown\References.md" />
@@ -35,6 +36,7 @@
     <ClCompile Include="ClassesObjects\Time.cpp" />
     <ClCompile Include="Constructors\Main.cpp" />
     <ClCompile Include="Constructors\Time.cpp" />
+    <ClCompile Include="DynamicMemoryManagement\Main.cpp" />
     <ClCompile Include="OperatorOverloading\Main.cpp" />
     <ClCompile Include="OperatorOverloading\Time.cpp" />
     <ClCompile Include="ParameterPassingTechniques\Main.cpp" />

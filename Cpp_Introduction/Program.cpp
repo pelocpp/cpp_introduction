@@ -13,6 +13,7 @@ extern void testTimeConstructors();
 extern void testReferences();
 extern void testParameterPassing();
 extern void testOperatorsOverloading();
+extern void testDynamicMemoryManagement();
 
 int main()
 {
@@ -26,7 +27,8 @@ int main()
         // testTimeConstructors();
         // testReferences();
         //testParameterPassing();
-        testOperatorsOverloading();
+        //testOperatorsOverloading();
+        testDynamicMemoryManagement();
     }
     catch (const std::exception& ex) {
         std::cout << "Exception: " << ex.what() << std::endl;

@@ -34,6 +34,9 @@
     <Filter Include="Source Files\OperatorOverloading">
       <UniqueIdentifier>{4791d00b-6d2b-4e99-9e41-a764a25b0761}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\DynamicMemoryManagement">
+      <UniqueIdentifier>{0aac6741-0a39-4cb7-99a4-3c6997d2a563}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -56,6 +59,9 @@
       <Filter>Markdown</Filter>
     </None>
     <None Include="Markdown\OperatorOverloading.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\DynamicMemoryManagement.md">
       <Filter>Markdown</Filter>
     </None>
   </ItemGroup>
@@ -92,6 +98,9 @@
     </ClCompile>
     <ClCompile Include="OperatorOverloading\Time.cpp">
       <Filter>Source Files\OperatorOverloading</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicMemoryManagement\Main.cpp">
+      <Filter>Source Files\DynamicMemoryManagement</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

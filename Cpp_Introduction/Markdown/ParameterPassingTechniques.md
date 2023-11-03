@@ -1,7 +1,7 @@
 # Technik der Übergabe von Parametern
 
 
-[Zurück](../../Readme.md)
+[Zurück](Agenda.md)
 
 ---
 
@@ -155,7 +155,7 @@ Funktion swap
 
 ---
 
-[Zurück](../../../Readme.md)
+[Zurück](Agenda.md)
 
 ---
 

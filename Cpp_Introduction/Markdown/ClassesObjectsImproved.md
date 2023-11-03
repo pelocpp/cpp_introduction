@@ -1,7 +1,7 @@
 # Vertiefungen zu Klassen und Objekten
 
 
-[Zurück](../../Readme.md)
+[Zurück](Agenda.md)
 
 ---
 
@@ -163,6 +163,6 @@ TBD: Rectangle
 ---
 
 
-[Zurück](../../../Readme.md)
+[Zurück](Agenda.md)
 
 ---

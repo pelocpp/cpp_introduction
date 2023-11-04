@@ -54,7 +54,8 @@ Typischerweise ist die Realisierung einer Klasse auf 2 Dateien aufgeteilt:
 
 *Bemerkung*:
 Bei der Deklaration der Klasse `Time` ist noch ein weiteres Schlüsselwörter
-`public` zum Einsatz gekommen. Wir gehen im Abschnitt Zugriffsrechte (PELO: Link)
+`public` zum Einsatz gekommen. Wir gehen im Abschnitt Zugriffsrechte
+([Vertiefungen zu Klassen und Objekten](ClassesObjectsImproved.md))
 hierauf näher ein.
 
 #### Datei *Time.cpp*:
@@ -104,7 +105,10 @@ hierauf näher ein.
 *1. Bemerkung*:
 Dieses Beispiel einer Klasse *Time* weist noch viele Mängel auf,
 um es als wirklich guten C++&ndash;Quellcode bezeichnen zu können.
-Eine Reihe von Verbesserungen nehmen wir im nächsten Abschnitt XXX (Pelo) vor.
+Eine Reihe von Verbesserungen nehmen wir im Abschnitt
+[Vertiefungen zu Klassen und Objekten](ClassesObjectsImproved.md)
+vor.
+
 
 *2. Bemerkung*:
 Betrachen Sie die Beispiele im vorliegenden Quellcode, treffen Sie auf ein 

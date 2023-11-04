@@ -4,6 +4,8 @@
 
 ## Vorab
 
+## [Historisches zu C++](./Cpp_Introduction/Markdown/History.md) 
+
 ## [Agenda](./Cpp_Introduction/Markdown/Agenda.md) 
 
 ## Fahrplan
@@ -12,7 +14,7 @@
 
 ## Literatur
 
-## Technische Hinweise (EInstellungen)
+## Technische Hinweise (Einstellungen)
 
 
 ## TO BE DONE

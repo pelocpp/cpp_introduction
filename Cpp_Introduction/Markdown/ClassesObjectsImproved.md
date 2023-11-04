@@ -7,7 +7,13 @@
 
 ## Erläuterungen
 
-Wir gehen auf ein zentrales Prinzip der objektorientierten Programmierung ein:
+Wir gehen in diesem Abschnitt auf mehrere zentrale Prinzipien der objektorientierten Programmierung ein:
+
+  * Zugriffsschutz und Kapselung
+  * *getter*- und *setter*-Methoden
+  * `this`-Operator
+  * Überladen von Methoden
+  * Klassenvariablen und -methoden
 
 ### Zugriffsschutz und Kapselung
 
@@ -106,43 +112,126 @@ Weitere Details siehe im nachfolgenden Beispiel weiter unten.
 
 ## Beispiele
 
-Wir betrachten als Beispiel eine Uhrzeit: Sie besteht aus Stunden, Minuten und Sekunden.
-Für den Einstieg betrachten wir nur die Methode `increment` (erhöhe die Uhrzeit um eine Sekunden),
-`print` (Ausgabe der Uhrzeit auf der Konsole) und `reset` (Uhrzeit auf den Wert `00:00:00` rücksetzen).
-
-*Hinweis*: Beachten Sie bei der Realisierung:
-Typischerweise ist die Realisierung einer Klasse auf 2 Dateien aufgeteilt:
-
-  * Header-Datei (Dateiendung *.cpp*):<br/>
-  * Implementierungs-Datei (Dateiendung *.h*):<br/>Realisierung der Methoden der Klasse
+Wir bleiben bei unserer Betrachtung von Uhrzeiten. 
+Der nun folgende Quellcode integriert vor Betrachtungen dieses Abschnitts:
 
 Datei *Time.h*:
 
 ```cpp
+01: class Time
+02: {
+03: private:
+04:     int m_seconds;
+05:     int m_minutes;
+06:     int m_hours;
+07: 
+08: public:
+09:     // getter // setter
+10:     int getSeconds() { return m_seconds; }
+11:     int getMinutes() { return m_minutes; }
+12:     int getHours() { return m_hours; }
+13:     void setSeconds(int seconds);
+14:     void setMinutes(int minutes);
+15:     void setHours(int hours);
+16: 
+17:     // public interface
+18:     void reset();
+19:     void increment();
+20:     void decrement();
+21:     void print();
+22: };
 ```
-
-*Bemerkung*:
-Bei der Deklaration der Klasse `Time` ist noch ein weiteres Schlüsselwörter
-`public` zum Einsatz gekommen. Wir gehen im Abschnitt Zugriffsrechte (PELO: Link)
-hierauf näher ein.
 
 Datei *Time.cpp*:
 
 ```cpp
+01: // setter
+02: void Time::setHours(int hours)
+03: {
+04:     m_hours = (0 <= hours && hours < 24) ? hours : 0;
+05: 
+06:     if (0 <= hours && hours < 24) {
+07:         m_hours = hours;
+08:     }
+09:     else {
+10:         // we don't modify the current value of 'm_hours'
+11:         std::cout << "Wrong value for hours: " << hours << std::endl;
+12:     }
+13: }
+14: 
+15: void Time::setMinutes(int minutes)
+16: {
+17:     if (0 <= minutes && minutes < 60) {
+18:         m_minutes = minutes;
+19:     }
+20:     else {
+21:         // we don't modify the current value of 'm_minutes'
+22:         std::cout << "Wrong value for minutes: " << minutes << std::endl;
+23:     }
+24: }
+25: 
+26: void Time::setSeconds(int seconds)
+27: {
+28:     if (0 <= seconds && seconds < 60) {
+29:         m_seconds = seconds;
+30:     }
+31:     else {
+32:         // we don't modify the current value of 'm_seconds'
+33:         std::cout << "Wrong value for seconds: " << seconds << std::endl;
+34:     }
+35: }
+36: 
+37: // public interface
+38: void Time::reset()
+39: {
+40:     m_seconds = 0;
+41:     m_minutes = 0;
+42:     m_hours = 0;
+43: }
+44: 
+45: void Time::increment()
+46: {
+47:     m_seconds++;
+48:     if (m_seconds >= 60)
+49:     {
+50:         m_seconds = 0;
+51:         m_minutes++;
+52:         if (m_minutes >= 60)
+53:         {
+54:             m_minutes = 0;
+55:             m_hours++;
+56:             if (m_hours >= 24)
+57:             {
+58:                 m_hours = 0;
+59:             }
+60:         }
+61:     }
+62: }
+63: 
+64: void Time::decrement()
+65: {
+66:     m_seconds--;
+67:     if (m_seconds < 0)
+68:     {
+69:         m_seconds = 59;
+70:         m_minutes--;
+71:         if (m_minutes < 0)
+72:         {
+73:             m_minutes = 59;
+74:             m_hours--;
+75:             if (m_hours < 0)
+76:             {
+77:                 m_hours = 23;
+78:             }
+79:         }
+80:     }
+81: }
+82: 
+83: void Time::print()
+84: {
+85:     std::printf("%02d:%02d:%02d\n", m_hours, m_minutes, m_seconds);
+86: }
 ```
-
-*1. Bemerkung*:
-Dieses Beispiel einer Klasse *Time* weist noch viele Mängel auf,
-um es als wirklich guten C++&ndash;Quellcode bezeichnen zu können.
-Eine Reihe von Verbesserungen nehmen wir im nächsten Abschnitt XXX (Pelo) vor.
-
-*2. Bemerkung*:
-Betrachen Sie die Beispiele im vorliegenden Quellcode, treffen Sie auf ein 
-weiteres Schlüsselwort: `namespace`. Auch Namensräume stellen im Augenblick einen Vorgriff
-auf das zu einem späteren Zeitpunkt zu betrachtende Sprachkonstrukt von *Namensräumen* dar,
-aber um es hier schon einmal kurz anzusprechen:
-Sie helfen dabei, dass wir im Zuge unserer
-Weiterentwicklung der Klasse `Time` keine Fehlermeldungen  
 
 ---
 

@@ -100,6 +100,9 @@
     <None Include="Markdown\String.md">
       <Filter>Markdown</Filter>
     </None>
+    <None Include="Markdown\History.md">
+      <Filter>Markdown</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">

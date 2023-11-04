@@ -66,7 +66,7 @@ Parameter übergeben.
 
 #### Kapselung ermöglich Schutz der Daten
 
-Im folgenden Beispiel greifen wir auf die Instanzvariable `m_radius` und `m_lenght`
+Im folgenden Beispiel greifen wir auf die Instanzvariable `m_radius` und `m_length`
 der beteiligten Objekte direkt zu. Es könnten bei falschen Eingabe damit
 auch falsche Werte in das Objekt gelangen (zum Beispiel ein negativer Radius für einen Kreis).
 Das muss aber so nicht sein.
@@ -105,6 +105,33 @@ auf Instanzvariable untersagt. Mehr dazu im folgenden Abschnitt (PELO).
 22: }
 ```
 
+#### Datei *Example_Procedural_Programming.cpp* - Testrahmen:
+
+Ein Testrahmen zur prozeduralen Programmierung:
+
+```cpp
+01: void testComparisonProcedural()
+02: {
+03:     using namespace Procedural_Versus_OO_Programming;
+04: 
+05:     double radius;
+06:     double seite;
+07: 
+08:     std::cout << "Enter a Radius: ";
+09:     std::cin >> radius;
+10: 
+11:     std::cout << "Circumference: " << circumferenceCircle(radius) << std::endl;
+12:     std::cout << "Area: " << areaCircle(radius) << std::endl << std::endl;
+13: 
+14:     std::cout << "Enter Length: ";
+15:     std::cin >> seite;
+16: 
+17:     std::cout << "Circumference: " << circumferenceSquare(seite) << std::endl;
+18:     std::cout << "Area: " << areaSquare(seite) << std::endl;
+19: }
+```
+
+
 #### Datei *Example_OO_Programming.cpp*:
 
 ```cpp
@@ -141,6 +168,32 @@ auf Instanzvariable untersagt. Mehr dazu im folgenden Abschnitt (PELO).
 31:         return m_length * m_length;
 32:     }
 33: };
+```
+
+#### Datei *Example_OO_Programming.cpp* - Testrahmen:
+
+Ein Testrahmen zur objektorientierten Programmierung:
+
+```cpp
+01: void testComparisonOO()
+02: {
+03:     using namespace Procedural_Versus_OO_Programming;
+04: 
+05:     Circle circle;
+06:     Square square;
+07: 
+08:     std::cout << "Enter Radius of Circle: ";
+09:     std::cin >> circle.m_radius;
+10:     
+11:     std::cout << "Circumference of Circle: " << circle.circumference() << std::endl;
+12:     std::cout << "Area of Circle: " << circle.area() << std::endl;
+13:     
+14:     std::cout << std::endl << "Enter Side Length of Square: ";
+15:     std::cin >> square.m_length;
+16:     
+17:     std::cout << "Circumference of Square: " << square.circumference() << std::endl;
+18:     std::cout << "Area of Square: " << square.area() << std::endl;
+19: }
 ```
 
 ---

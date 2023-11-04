@@ -52,6 +52,9 @@
     <Filter Include="Source Files\Exceptions">
       <UniqueIdentifier>{60255ba8-ae53-42cf-85e6-bd9cbe74b91c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\String">
+      <UniqueIdentifier>{409d937a-5ac7-4c8f-825f-e075e2a300e6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -92,6 +95,9 @@
       <Filter>Markdown</Filter>
     </None>
     <None Include="Markdown\Exceptions.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\String.md">
       <Filter>Markdown</Filter>
     </None>
   </ItemGroup>
@@ -155,6 +161,9 @@
     </ClCompile>
     <ClCompile Include="Exceptions\Main.cpp">
       <Filter>Source Files\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="String\Main.cpp">
+      <Filter>Source Files\String</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

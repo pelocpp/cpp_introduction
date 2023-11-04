@@ -55,11 +55,13 @@
   * Definition
 
 
-## Exception-Handling
+## [Zeichenketten: Klasse `std::string`](String.md)
 
 
+## [Exceptions / Behandlung von Ausnahmen](Exceptions.md) 
 
-## Dynamische Speicherverwaltung
+
+## [Dynamische Speicherverwaltung](DynamicMemoryManagement.md) 
 
 
 ## [&ldquo;Rule of Three&rdquo;: Kopierkonstruktor, Wertzuweisungsoperator und Destruktor](RuleOfThree.md) 
@@ -74,8 +76,7 @@
 ## Polymorphismus
 
 
-
-## Templates
+## [Templates / Schablonen](Templates.md) 
 
 
 ## STL (Standard Template Library)

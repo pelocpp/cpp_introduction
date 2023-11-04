@@ -32,6 +32,7 @@
     <None Include="Markdown\ProceduralVsOOProgramming.md" />
     <None Include="Markdown\References.md" />
     <None Include="Markdown\RuleOfThree.md" />
+    <None Include="Markdown\String.md" />
     <None Include="Markdown\Templates.md" />
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +55,7 @@
     <ClCompile Include="References\Main.cpp" />
     <ClCompile Include="RuleOfThree\BigData.cpp" />
     <ClCompile Include="RuleOfThree\Main.cpp" />
+    <ClCompile Include="String\Main.cpp" />
     <ClCompile Include="Templates\Main.cpp" />
   </ItemGroup>
   <ItemGroup>

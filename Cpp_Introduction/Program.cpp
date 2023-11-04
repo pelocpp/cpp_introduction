@@ -18,6 +18,7 @@ extern void testDynamicMemoryManagement();
 extern void testRuleOfThree();
 extern void testNamespaces();
 extern void testTemplates();
+extern void testStrings();
 extern void testExceptions();
 
 // entry point
@@ -39,7 +40,8 @@ int main()
         //testRuleOfThree();
         //testNamespaces();
         //testTemplates();
-        testExceptions();
+        testStrings();
+        //testExceptions();
     }
     catch (const std::exception& ex) {
         std::cout << "Exception: " << ex.what() << std::endl;

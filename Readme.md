@@ -13,3 +13,9 @@
 ## Literatur
 
 ## Technische Hinweise (EInstellungen)
+
+
+## TO BE DONE
+
+### Klasse Time: MEthode equals
+

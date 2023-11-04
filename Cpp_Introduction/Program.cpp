@@ -17,6 +17,8 @@ extern void testOperatorsOverloading();
 extern void testDynamicMemoryManagement();
 extern void testRuleOfThree();
 extern void testNamespaces();
+extern void testTemplates();
+extern void testExceptions();
 
 // entry point
 int main()
@@ -35,8 +37,9 @@ int main()
         //testOperatorsOverloading();
         //testDynamicMemoryManagement();
         //testRuleOfThree();
-        testNamespaces();
-
+        //testNamespaces();
+        //testTemplates();
+        testExceptions();
     }
     catch (const std::exception& ex) {
         std::cout << "Exception: " << ex.what() << std::endl;

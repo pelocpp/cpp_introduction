@@ -46,6 +46,12 @@
     <Filter Include="Source Files\Namespaces">
       <UniqueIdentifier>{4913df45-dc9a-4cf6-87b7-4d9d6e809f71}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Templates">
+      <UniqueIdentifier>{a1b31ad0-d153-418d-87f9-27054390f693}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exceptions">
+      <UniqueIdentifier>{60255ba8-ae53-42cf-85e6-bd9cbe74b91c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -80,6 +86,12 @@
       <Filter>Markdown</Filter>
     </None>
     <None Include="Markdown\Namespaces.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\Templates.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\Exceptions.md">
       <Filter>Markdown</Filter>
     </None>
   </ItemGroup>
@@ -137,6 +149,12 @@
     </ClCompile>
     <ClCompile Include="Namespaces\Main.cpp">
       <Filter>Source Files\Namespaces</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\Main.cpp">
+      <Filter>Source Files\Templates</Filter>
+    </ClCompile>
+    <ClCompile Include="Exceptions\Main.cpp">
+      <Filter>Source Files\Exceptions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

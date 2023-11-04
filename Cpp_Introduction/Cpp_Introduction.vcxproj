@@ -25,12 +25,14 @@
     <None Include="Markdown\ClassesObjectsImproved.md" />
     <None Include="Markdown\Constructors.md" />
     <None Include="Markdown\DynamicMemoryManagement.md" />
+    <None Include="Markdown\Exceptions.md" />
     <None Include="Markdown\Namespaces.md" />
     <None Include="Markdown\OperatorOverloading.md" />
     <None Include="Markdown\ParameterPassingTechniques.md" />
     <None Include="Markdown\ProceduralVsOOProgramming.md" />
     <None Include="Markdown\References.md" />
     <None Include="Markdown\RuleOfThree.md" />
+    <None Include="Markdown\Templates.md" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ClassesObjectsImproved\Main.cpp" />
@@ -40,6 +42,7 @@
     <ClCompile Include="Constructors\Main.cpp" />
     <ClCompile Include="Constructors\Time.cpp" />
     <ClCompile Include="DynamicMemoryManagement\Main.cpp" />
+    <ClCompile Include="Exceptions\Main.cpp" />
     <ClCompile Include="Namespaces\Main.cpp" />
     <ClCompile Include="OperatorOverloading\Main.cpp" />
     <ClCompile Include="OperatorOverloading\Time.cpp" />
@@ -51,6 +54,7 @@
     <ClCompile Include="References\Main.cpp" />
     <ClCompile Include="RuleOfThree\BigData.cpp" />
     <ClCompile Include="RuleOfThree\Main.cpp" />
+    <ClCompile Include="Templates\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClassesObjectsImproved\Time.h" />

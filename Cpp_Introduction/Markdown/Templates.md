@@ -7,6 +7,8 @@
 
 ## Erläuterungen
 
+### Was sind Templates?
+
 Häufig macht man als Entwickler die Beobachtung, dass bestimmte Methoden/Operationen
 auf Werte unterschiedlichen Datentyps anwendbar sind.
 

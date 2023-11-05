@@ -12,7 +12,7 @@ und mit `std::cin` von der Tastatur eingelesen, ohne eine genaue
 Vorstellung davon zu haben, was sich dahinter verbirgt.
 
 
-### Streams &ndash; ein Überblick
+### Ein Überblick über Streams
 
 Wie man in C++ Daten auf dem Bildschirm ausgibt oder in eine Datei schreibt oder wie Daten in ein Programm
 eingelesen werden, ist nicht in der Sprachspezifikation festgelegt.
@@ -21,21 +21,21 @@ Dies fällt vielmehr in den Bereich der C++&ndash;Standardbibliothek.
 Sie enthält eine `iostream`-Teilbibliothek, mit der die Ein- und Ausgabe erleichtert wird.
 
 Für die `iostream`-Klassen ist der Datenfluss vom Programm zum Bildschirm ein Strom (engl. *stream*) von Daten,
-bei dem ein Byte dem anderen folgt. Ist das Ziel des Streams eine Datei oder der Bildschirm,
-ist die Quelle in der Regel Teil Ihres Programms. Wird die Richtung des Streams umgekehrt,
-können die Daten von der Tastatur oder einer Datei kommen und »ergießen« sich in Ihren Datenvariablen.
+bei dem ein Byte dem anderen folgt. Ist das Ziel des Stroms eine Datei oder der Bildschirm,
+ist die Quelle in der Regel Teil Ihres Programms. Wird die Richtung des Stroms umgekehrt,
+können die Daten von der Tastatur oder einer Datei kommen und »ergießen« sich in Ihren Programmvariablen.
 
 ### Pufferung
 
-Auf die Festplatte (und im geringeren Maße auch auf den Bildschirm) zu schreiben ist sehr »teuer«.
+Auf die Festplatte (und im geringeren Maße auch auf den Bildschirm) zu schreiben ist sehr »teuer«, soll heißen: Laufzeitaufwendig.
 Im Vergleich zu anderen Operationen dauert das Schreiben von Daten auf die Festplatte
 oder das Lesen von der Festplatte ziemlich lange,
 und die Programmausführung wird für diese Zeitdauer im allgemeinen angehalten.
 
 Um dieses Problem zu umgehen, werden Streams »gepuffert«.
 Die Daten werden in den Stream geschrieben, der jedoch noch nicht sofort auf die Platte
-zurückgeschrieben wird. Statt dessen füllt sich der Streampuffer stetig,
-und wenn er voll ist, schreibt er seinen Inhalt auf einmal auf die Platte.
+zurückgeschrieben wird. Statt dessen füllt sich der Strompuffer stetig,
+und wenn er voll ist, schreibt er seinen Inhalt in einem Rutsch auf die Festplatte.
 
 ### Streams und Puffer
 
@@ -44,7 +44,7 @@ Wie nicht anders zu erwarten, werden in C++ Streams objektorientiert implementie
   * Die Klasse `std::streambuf` verwaltet den Puffer, und ihre Elementfunktionen übernehmen das Füllen, das
     vollständige oder teilweise Leeren sowie anderweitige Manipulationen des Puffers.
   * Die Klasse `std::ios` ist die Basisklasse für die Ein- und Ausgabe-Streamklassen.
-    Die `std::ios`-Klasse verfügt über ein `std::streambuf`-Objekt als Elementvariable.
+    Die `std::ios`-Klasse verfügt über ein `std::streambuf`-Objekt als Instanzvariable.
   * Die `std::istream`- und `std::ostream`-Klassen leiten sich von `std::ios` ab und sind für das Verhalten von Eingabe-
     beziehungsweise Ausgabe-Streams spezialisiert.
   * Die Klasse `iostream` leitet sich von `std::istream` und von `std::ostream` ab und stellt Ein- und Ausgabe-Methoden zur
@@ -55,7 +55,7 @@ Wie nicht anders zu erwarten, werden in C++ Streams objektorientiert implementie
 ### Standard-E/A-Objekte
 
 Wenn ein C++-Programm, das die `std::iostream`-Klassen einbindet, ausgeführt wird,
-werden drei Objekte erzeugt und initialisiert.
+werden drei Objekte automatisch erzeugt und initialisiert.
 
   * `std::cin` ist verantwortlich für die Eingabe von dem Standardeingabegerät, der Tastatur.
   * `std::cout` ist verantwortlich für die Ausgabe auf das Standardausgabegerät, den Bildschirm.
@@ -103,11 +103,11 @@ In unserem Beispiel
 std::cin >> n;
 ```
 
-wird der Typ von eineVariable vom Compiler ermittelt. Da es sich um einen `int`-Wert
-handelt, wird die folgende Funktion aufgerufen:
+wird der Typ von `n` vom Compiler ermittelt. Da es sich um den Datentyp `int` handelt,
+wird die folgende Funktion aufgerufen:
 
 ```cpp
-std::istream & operator>> (int &);
+std::istream& operator>> (int&);
 ```
 
 Beachten Sie, daß der Parameter als **Referenz** übergeben wird.
@@ -122,7 +122,8 @@ andere numerische Daten auf dem Bildschirm auszugeben.
 Es ist dabei möglich, die Daten zu formatieren, spaltenweise auszurichten
 und numerische Zahlen in dezimaler und hexadezimaler Schreibweise auszugeben.
 
-In der `print`-Methode der Klasse `Time` finden wir zwei Umsetzungen vor:
+Eine minimalistische Umsetzung all dieser Möglichkeiten
+finden wir in der `print`-Methode der Klasse `Time` vor:
 
 
 ```cpp
@@ -134,6 +135,10 @@ void Time::print()
     std::cout << std::endl;
 }
 ```
+
+`std::setw` setzt die Feldbreite zur Ausgabe eines Werts, mit `std::setfill` lassen sich Füllzeichen ausgeben,
+wenn das vorgesehene Feld für die Ausgabe eines Werts größer als der dazu erforderliche Bereich ist.
+
 
 ## Beispiele
 

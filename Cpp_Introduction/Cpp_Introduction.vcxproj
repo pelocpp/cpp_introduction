@@ -31,6 +31,7 @@
     <None Include="Markdown\Exceptions.md" />
     <None Include="Markdown\FirstOfAll.md" />
     <None Include="Markdown\History.md" />
+    <None Include="Markdown\HowToInstall.md" />
     <None Include="Markdown\Introduction.md" />
     <None Include="Markdown\Literature.md" />
     <None Include="Markdown\Namespaces.md" />
@@ -77,8 +78,12 @@
     <ClInclude Include="RuleOfThree\BigData.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Markdown\Buch_Dirk_Louis.png" />
+    <Image Include="Markdown\Buch_Dummies.png" />
+    <Image Include="Markdown\Buch_T_Will.png" />
     <Image Include="Markdown\Cpp.png" />
     <Image Include="Markdown\OperatorsPrecedence.png" />
+    <Image Include="Markdown\PropertyPages.png" />
     <Image Include="Markdown\WhatAreYouStudying.png" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

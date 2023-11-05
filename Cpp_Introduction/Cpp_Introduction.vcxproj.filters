@@ -133,6 +133,9 @@
     <None Include="Markdown\Streams.md">
       <Filter>Markdown</Filter>
     </None>
+    <None Include="Markdown\HowToInstall.md">
+      <Filter>Markdown</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -227,6 +230,18 @@
       <Filter>Markdown</Filter>
     </Image>
     <Image Include="Markdown\OperatorsPrecedence.png">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\Buch_Dirk_Louis.png">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\Buch_Dummies.png">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\Buch_T_Will.png">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\PropertyPages.png">
       <Filter>Markdown</Filter>
     </Image>
   </ItemGroup>

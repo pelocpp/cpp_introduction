@@ -57,7 +57,7 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
 
 
 ## [Ein- und Ausgabe mit *Streams*](Streams.md) 
-  * Streams &ndash; ein Überblick
+  * Ein Überblick über Streams
   * Pufferung
   * Streams und Puffer
   * Standard-E/A-Objekte
@@ -102,14 +102,12 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
 ## Polymorphismus
 
 
-## [Templates / Schablonen](Templates.md) 
+## [Templates / Schablonen](Templates.md)
+  * Was sind Templates?
+  * Ein universeller Taschenrechner
 
 
 ## STL (Standard Template Library)
-
-
-## XXX
-
 
 
 

@@ -1,4 +1,5 @@
-# Literatur
+# To de Done Liste
+
 
 [Zurück](../../Readme.md)
 
@@ -17,15 +18,6 @@ Exception Handling: Methode `throw`
 
 
 ---
-
-
-To be Done
-
-https://www.delftstack.com/de/howto/cpp/cpp-rule-of-three/
-
----
-
-
 
 
 [Zurück](../../Readme.md)

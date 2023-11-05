@@ -103,6 +103,21 @@
     <None Include="Markdown\History.md">
       <Filter>Markdown</Filter>
     </None>
+    <None Include="Markdown\Roadmap.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\Introduction.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\FirstOfAll.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\Literature.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\ToBeDone.md">
+      <Filter>Markdown</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -185,5 +200,10 @@
     <ClInclude Include="RuleOfThree\BigData.h">
       <Filter>Source Files\RuleOfThree</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Markdown\Cpp.png">
+      <Filter>Markdown</Filter>
+    </Image>
   </ItemGroup>
 </Project>

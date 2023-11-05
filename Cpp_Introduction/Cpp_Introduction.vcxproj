@@ -26,15 +26,20 @@
     <None Include="Markdown\Constructors.md" />
     <None Include="Markdown\DynamicMemoryManagement.md" />
     <None Include="Markdown\Exceptions.md" />
+    <None Include="Markdown\FirstOfAll.md" />
     <None Include="Markdown\History.md" />
+    <None Include="Markdown\Introduction.md" />
+    <None Include="Markdown\Literature.md" />
     <None Include="Markdown\Namespaces.md" />
     <None Include="Markdown\OperatorOverloading.md" />
     <None Include="Markdown\ParameterPassingTechniques.md" />
     <None Include="Markdown\ProceduralVsOOProgramming.md" />
     <None Include="Markdown\References.md" />
+    <None Include="Markdown\Roadmap.md" />
     <None Include="Markdown\RuleOfThree.md" />
     <None Include="Markdown\String.md" />
     <None Include="Markdown\Templates.md" />
+    <None Include="Markdown\ToBeDone.md" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ClassesObjectsImproved\Main.cpp" />
@@ -65,6 +70,9 @@
     <ClInclude Include="Constructors\Time.h" />
     <ClInclude Include="OperatorOverloading\Time.h" />
     <ClInclude Include="RuleOfThree\BigData.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Markdown\Cpp.png" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

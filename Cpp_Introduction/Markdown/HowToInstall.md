@@ -1,6 +1,13 @@
-# Technische Hinweise (Einstellungen)
+# Technische Hinweise
 
 [Zurück](../../Readme.md)
+
+---
+
+## Compiler / Entwicklungsumgebung
+
+Das Repository wurde mit der &ndash;C++ Visual Studio Entwicklungsumgebung 2022&ndash; erstellt.
+Alle Beispiel müssten aber auch mit dem GCC Compiler übersetzungsfähig sein.
 
 ---
 

@@ -58,6 +58,9 @@
     <Filter Include="Source Files\Streams">
       <UniqueIdentifier>{8f7ec9fa-76c5-4ba1-95c8-0ef2df956c27}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Static">
+      <UniqueIdentifier>{a4973b10-46d2-433a-a665-1d4c21bba1f1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -136,6 +139,9 @@
     <None Include="Markdown\HowToInstall.md">
       <Filter>Markdown</Filter>
     </None>
+    <None Include="Markdown\Static.md">
+      <Filter>Markdown</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -203,6 +209,9 @@
     </ClCompile>
     <ClCompile Include="Streams\Main.cpp">
       <Filter>Source Files\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="Static\Main.cpp">
+      <Filter>Source Files\Static</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

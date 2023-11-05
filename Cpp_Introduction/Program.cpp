@@ -11,6 +11,7 @@ extern void testClassesObjects();
 extern void testProceduralVsOOProgramming();
 extern void testClassesObjectsImproved();
 extern void testConstructors();
+extern void testStatic();
 extern void testReferences();
 extern void testParameterPassing();
 extern void testOperatorsOverloading();

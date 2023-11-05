@@ -14,6 +14,13 @@ Exception Handling: Methode `throw`
 
 ---
 
+Bei static / Klassenelementen kann man das Beispiel mit dem Objekte zählen unterbringen
+
+Allerdigs gibt es den Destruktor noch nicht .................
+
+
+---
+
 [//]: # (Dies ist ein Markdown Kommentar, brauche ich das ....)
 
 

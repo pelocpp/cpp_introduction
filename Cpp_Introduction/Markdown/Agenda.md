@@ -15,7 +15,7 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
 ## [Erster Blick auf Klassen und Objekte](ClassesObjects.md) 
   * Dateiorganisation (Header-Dateien, Implementierungs-Dateien)
   * Begriffe *Klasse* und *Objekt*
-  * Nomenklator: Instanzvariablen, Methoden
+  * Nomenklator
   * Punkt-Operator für den Zugriff
 
 
@@ -28,15 +28,18 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
 ## [Vertiefungen zu Klassen und Objekten](ClassesObjectsImproved.md) 
   * Zugriffsklassen (`private`, `public`)
   * *setter*-/*getter*-Methoden
-  * `this`-Operator
-  * Überladen von Methoden
-  * Klassen- vs. Instanzvariable / Klassen- vs. Instanzmethode / `static`
-
+  * Der `this`-Operator
+  
 
 ## [Initialisierung von Objekten: Konstruktoren](Constructors.md) 
   * Was sind Konstruktoren
-  * Verkettung von Konstruktoren
   * Element-Initialisierungsliste (*member initializer list*)
+  * Überladen von Konstruktoren
+
+
+## [Statische Datenelemente (`static`)](Static.md) 
+  * Statische Datenelemente
+  * Statische Elementfunktionen
 
 
 ## [Referenzen](References.md) 
@@ -75,9 +78,9 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
 
 
 ## [Exceptions / Behandlung von Ausnahmen](Exceptions.md)
-* Was sind Exceptions?
-* Komponenten in der Behandlung von Ausnahmen
-* Schlüsselwörter `try` und `catch`
+  * Was sind Exceptions?
+  * Komponenten in der Behandlung von Ausnahmen
+  * Schlüsselwörter `try` und `catch`
 
 
 ## [Dynamische Speicherverwaltung](DynamicMemoryManagement.md) 

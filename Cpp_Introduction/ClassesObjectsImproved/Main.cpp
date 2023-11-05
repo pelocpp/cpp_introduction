@@ -4,7 +4,34 @@
 
 #include "Time.h"
 
-void testClassesObjectsImproved()
+namespace Classes_Objects_Motivating_This
+{
+    class Time
+    {
+    private:
+        int seconds;
+        int minutes;
+        int hours;
+
+    public:
+        // getter // setter
+        void setHours(int hours);
+    };
+
+    void Time::setHours(int hours)
+    {
+        if (0 <= hours && hours < 24) {
+            hours = hours;          // wrong !!!
+            // vs
+            this->hours = hours;    // correct !!!
+        }
+        else {
+            // some error handling ...
+        }
+    }
+}
+
+void testClassTimeImproved()
 {
     using namespace Classes_Objects_Improved;
 
@@ -25,6 +52,11 @@ void testClassesObjectsImproved()
     Time what;
     what.setHours(9999);
     what.print();            // watch output carefully
+}
+
+void testClassesObjectsImproved()
+{
+    testClassTimeImproved();
 }
 
 // ===========================================================================

@@ -97,17 +97,70 @@ Der Umweg über diese Zugriffsmethoden bewirkt somit einen ausschließlich *kontro
 
 Weitere Details siehe im nachfolgenden Beispiel weiter unten.
 
-### `this`-Operator
+### Der `this`-Operator
 
-(PeLo // TBD)
+Wir betrachten für einen Moment eine geringfügig modifizierte
+Realisierung unserer Klasse `Time`:
 
-### Überladen von Methoden
+```cpp
+01: class Time
+02: {
+03: private:
+04:     int seconds;
+05:     int minutes;
+06:     int hours;
+07: 
+08: public:
+09:     // setter
+10:     void setSeconds(int seconds);
+11: };
+```
 
+Im Prinzip geht es nur um die Betrachtung von Bezeichnern,
+die für Instanzvariablen und Parameter von Methoden verwendet werden.
 
+Möglichweise erkennen Sie schon ein kleines Problem beim Betrachten des Code-Fragments?
+Lassen Sie mich versuchen, den *setter* für den Stundenanteil zu realisieren:
 
-### Klassen- vs. Instanzvariable / Klassen- vs. Instanzmethode / `static`
+```cpp
+01: void Time::setHours(int hours)
+02: {
+03:     if (0 <= hours && hours < 24) {
+04:         hours = hours;
+05:     }
+06:     else {
+07:         // some error handling ...
+08:     }
+09: }
+```
 
-(PeLo // TBD)
+Erkennen Sie in Zeile 3 das Problem? Richtig, der Bezeichner `hours` wird zweimal verwendet:
+
+  * Als Instanzvariable der Klasse `Time`
+  * Als Parameter der *setter*-Methode `setHours`
+
+Interessanteweise ist das letzte Code-Fragment übersetzungsfähig, aber läuft es auch korrekt?
+
+Nein, es wird in dieser Situation die Instanzvariable durch den Parameter verdeckt!
+
+Mögliche Abhilfen:
+
+  * Unterschiedliche Bezeichner für Instanzvariablen und Parameter von Methoden
+  * Gebrauch des `this`-Operators
+
+Mit dem `this`-Operator könnte man die *setter*-Methode korrekt realisieren:
+
+<pre>
+01: void Time::setHours(int hours)
+02: {
+03:     if (0 <= hours && hours < 24) {
+04:         <b>this->hours</b> = hours;
+05:     }
+06:     else {
+07:         // some error handling ...
+08:     }
+09: }
+</pre>
 
 
 ## Beispiele

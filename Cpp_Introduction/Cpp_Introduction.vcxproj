@@ -41,6 +41,7 @@
     <None Include="Markdown\References.md" />
     <None Include="Markdown\Roadmap.md" />
     <None Include="Markdown\RuleOfThree.md" />
+    <None Include="Markdown\Static.md" />
     <None Include="Markdown\Streams.md" />
     <None Include="Markdown\String.md" />
     <None Include="Markdown\Templates.md" />
@@ -66,6 +67,7 @@
     <ClCompile Include="References\Main.cpp" />
     <ClCompile Include="RuleOfThree\BigData.cpp" />
     <ClCompile Include="RuleOfThree\Main.cpp" />
+    <ClCompile Include="Static\Main.cpp" />
     <ClCompile Include="Streams\Main.cpp" />
     <ClCompile Include="String\Main.cpp" />
     <ClCompile Include="Templates\Main.cpp" />

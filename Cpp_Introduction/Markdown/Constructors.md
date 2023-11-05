@@ -42,10 +42,10 @@ Umgangssprachlich kann man auch sagen, dass ein Konstruktor eine Instanz &ldquo;
 Die Anweisung zum Aufruf eines Konstruktors wird durch den Compiler im Zuge der Objekterzeugung *automatisch* abgesetzt.
 Auf diese Weise wird erreicht, dass Objekterzeugung und Konstruktorausführung zu einer Einheit *verschmelzen*.
 
-### Überladen von Methoden
+### Überladen von Konstruktoren
 
 Eine Klasse kann durchaus mehrere Konstruktoren besitzen.
-Wir stoßen auf den Feature des *Überladens von Methoden*,
+Wir stoßen auf das Feature des *Überladens von Methoden*,
 dieses Mal speziell im Umfeld von Konstruktoren.
 
 Wir finden im nachfolgenden Beispiel also gleich fünf Konstruktoren vor.
@@ -145,12 +145,6 @@ Datei *Time.cpp*:
 55:     m_seconds = seconds % 60;
 56: }
 ```
-
-*1. Bemerkung*:
-XXX
-
-*2. Bemerkung*:
-XXXX
 
 ---
 

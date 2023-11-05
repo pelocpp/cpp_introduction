@@ -12,8 +12,6 @@ namespace Classes_Objects_Improved
     // setter
     void Time::setHours(int hours)
     {
-        m_hours = (0 <= hours && hours < 24) ? hours : 0;
-
         if (0 <= hours && hours < 24) {
             m_hours = hours;
         }

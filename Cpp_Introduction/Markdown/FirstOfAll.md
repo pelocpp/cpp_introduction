@@ -19,7 +19,7 @@ muss man leider konstatieren, dass C++ eher zu den schwierigeren Sprachen zählt.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="WhatAreYouStudying.png" width="300">
 </p>
 
-*Abbildung* 1: Modern C++ &ndash; *Relax*!
+*Abbildung* 1: C++ &ndash; *Relax*!
 
 <sup>(Credits: [Don’t Trust a Programmer Who Knows C++](https://analyticsindiamag.com/dont-trust-a-programmer-who-knows-c/))</sup>
 
@@ -47,7 +47,7 @@ Einstiegsaufgabe schmackhaft zu machen:
 
 **Shoot yourself in the foot**.
 
-*Antwort*:
+In Abhängigkeit von der von Ihnen präferierten Programmiersprache wären folgenden Lösungen denkbar:
 
 **C**: &ldquo;*You shoot yourself in the foot.*&rdquo;
 

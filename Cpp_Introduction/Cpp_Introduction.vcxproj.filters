@@ -205,5 +205,8 @@
     <Image Include="Markdown\Cpp.png">
       <Filter>Markdown</Filter>
     </Image>
+    <Image Include="Markdown\WhatAreYouStudying.png">
+      <Filter>Markdown</Filter>
+    </Image>
   </ItemGroup>
 </Project>

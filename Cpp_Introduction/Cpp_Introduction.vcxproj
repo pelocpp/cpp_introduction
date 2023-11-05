@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Markdown\Cpp.png" />
+    <Image Include="Markdown\WhatAreYouStudying.png" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

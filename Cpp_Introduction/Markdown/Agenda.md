@@ -4,12 +4,18 @@
 
 ---
 
-[//]: # (Dies ist ein Markdown Kommentar, brauche ich das ....)
+Es ist nicht einfach, bei dem enormen Umfang von sprachlichen Konstrukten,
+Erweiterungen und Neuerungen von C++ den Überblick zu behalten.
+Das von mir zusammengestellte Inhaltsverzeichnis unternimmt den Versuch,
+die sprachlichen Mittel für einen Einstieg 
+nach gewissen systematischen und methodischen Gesichtspunkten so zu gliedern und zusammenzufassen,
+dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
 
 
 ## [Erster Blick auf Klassen und Objekte](ClassesObjects.md) 
+  * Dateiorganisation (Header-Dateien, Implementierungs-Dateien)
   * Begriffe *Klasse* und *Objekt*
-  * Instanzvariablen, Methoden
+  * Nomenklator: Instanzvariablen, Methoden
   * Punkt-Operator für den Zugriff
 
 

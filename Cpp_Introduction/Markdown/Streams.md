@@ -135,7 +135,6 @@ void Time::print()
 }
 ```
 
-
 ## Beispiele
 
 Wir geben ein kleines Beispiel für das Einlesen eines `int`- und eines `double`-Werts:

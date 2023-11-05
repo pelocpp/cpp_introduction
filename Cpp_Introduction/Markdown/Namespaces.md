@@ -7,6 +7,8 @@
 
 ## Erläuterungen
 
+### Hintergrund für das Konzept der &ldquo;Namensräume&rdquo;
+
 Wenn mehrere Programmierer an einem Projekt arbeiten, dann wird der Quellcode in
 verschiedene Module aufgeteilt. Jedes Programmiererteam kümmert sich um eine
 Teilaufgabe. Am Ende werden die einzelnen Module zusammengefügt.
@@ -21,6 +23,13 @@ Wenn jeder einen eigenen Namensraum nutzt, kann er in diesem Namensraum seine
 Variablen beliebig sinnvoll benennen, ohne Namenskonflikte fürchten zu müssen. Seine
 Variablen und Funktionen müssen dann jedoch über den Namensraum angesprochen
 werden.
+
+
+### Schlüsselwörter `using` und `namespace`
+
+Namensräume werden mit dem Schlüsselwort `namespace` definiert,
+für eine Einbindung eines Namensraums verwendet man das Schlüsselwort `using` &ndash;
+in Kombination mit `namespace`, also in der Schreibweise `using namespace`.
 
 
 ## Beispiele

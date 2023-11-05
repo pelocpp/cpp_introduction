@@ -118,6 +118,15 @@
     <None Include="Markdown\ToBeDone.md">
       <Filter>Markdown</Filter>
     </None>
+    <None Include="Markdown\cpp_deep_copy.svg">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\cpp_flat_copy.svg">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\cpp_standard_flat_copy.svg">
+      <Filter>Markdown</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -206,6 +215,9 @@
       <Filter>Markdown</Filter>
     </Image>
     <Image Include="Markdown\WhatAreYouStudying.png">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\OperatorsPrecedence.png">
       <Filter>Markdown</Filter>
     </Image>
   </ItemGroup>

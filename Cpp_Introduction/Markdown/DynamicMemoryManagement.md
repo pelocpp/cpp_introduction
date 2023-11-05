@@ -6,6 +6,8 @@
 
 ## Erläuterungen
 
+### Speicherbereiche eines C++&ndash;Programms
+
 In einem C++&ndash;Programm sind mehrere Speicherbereiche vorhanden,
 die vor dem Start des Programms vom Betriebssystem dem Programm (genauer: *Prozess*)
 zugewiesen werden:
@@ -20,7 +22,6 @@ Neben diesen Segmenten (Speicherbereiche) kennt eine CPU auch noch *Register*.
 Das bekannteste Register heißt *Akkumulator* (*Accumulator*),
 in ihm werden in der Regel die Ergebnisse der Recheneinheit (*ALU*, *Arithmetic Logic Unit*) gespeichert.
 
-
 Bei Intel-CPUs gibt es eine direkte Zuordnung dieser Speicherbereich
 zur Speichersegmentierung in der Intel x86-Computerbefehlssatzarchitektur:
 
@@ -33,12 +34,47 @@ zur Speichersegmentierung in der Intel x86-Computerbefehlssatzarchitektur:
 
 Lokale Variablen befinden sich zusammen mit den Funktionsparametern auf dem Stack.
 
-Der Code steht natürlich im Codebereich, und globale Variablen im Bereich des globalen Datensegments.
+Der Code steht natürlich im Codebereich, und globale Variablen im globalen Datensegment.
 
 Die Register dienen internen Verwaltungsaufgaben. Dazu gehören beispielsweise Stack-Operationen
-und die Steuerung des Programmablaufs.
+(Register **SP** (*Stack Pointer*) und **BP** (*Base Pointer*))
+oder der *Akkumulator* (**AX** bzw. **EAX**).
 
-Speicher, der *dynamisch* allokiert wird, residiert in der so genannten Halde.
+Speicher, der *dynamisch* allokiert wird, residiert in der so genannten *Halde*.
+
+### Lebensdauer von Variablen in einem C++&ndash;Programm
+
+Man kann die Lebensdauer von Variablen in einem C++&ndash;Programm in drei Gruppen einteilen:
+
+  * Globale Variablen:<br />
+  Derartige Variablen werden außerhalb von Funktionen oder Klassen, also auf der obersten
+  Ebene eines Programms definiert. Dabei sollten sie stets mit einem Vorbelegungswert initialisiert werden.<br />
+  Globale Variablen existieren so lange wie das Programm ausgeführt wird.
+  So gesehen sollte man sie behutsam einsetzen, das die bereits vor dem Start des Programms Speicher in Anspruch
+* nehmen &ndash; und diesen bis dem Ende des Programms auch nicht vorzeitig freigeben können.<br />
+  Man kann auf globale Variablen von überall im gesamten Programm zugreifen.
+
+  * Lokale Variablen:<br />
+  Lokal werden in Funktionen oder Methoden (oder in inneren Blöcken von Funktionen oder Methoden)
+  definiert.<br />
+  Sie werden wie gewohnt durch eine Deklaration erstellt
+  und durch das Schließen des Codeblockes zerstört.
+  Danach hat gibt es keine Möglichkeit mehr auf diese Variable zuzugreifen.<br />
+  Lokale Variablen werden nicht automatisch initialisiert,
+  es ist eine manuelle Initialisierung durch den Programmierer im Quellcode erforderlich.
+
+
+  * Dynamisch Variablen:<br />
+  Unter dynamisch Variablen versteht man Variablen, die nach Bedarf angelegt werden
+  und wieder explizit zu löschen sind, wann man sie nicht mehr benötigt.
+  So gesehen stehen dynamische Variablen für eine optimale Inanspruchnahme des Speichers,
+  da globalen Variablen möglicherweise zu großzugig mit dem Speicher umgehen
+  und lokale Variablen nicht über Funktionsgrenzen hinweg verfügbar sind.<br />
+  Man kann beliebig viele Variablen dynamisch anlegen (solange Hauptspeicher verfügbar ist).<br />
+  Ihr großer Vorteil besteht darin, dass man mit ihrer Hilfe genau so viel Speicher anfordern kann,
+  wie man für einen Programmablauf benötigt.<br />
+  Zum Reservieren dynamischen Speichers gibt es die beiden Operatoren `new` und `delete`.
+
 
 ### Stack und Heap (Stapel und Halde)
 

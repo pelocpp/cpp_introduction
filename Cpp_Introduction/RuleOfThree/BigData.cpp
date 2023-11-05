@@ -44,6 +44,8 @@ namespace Rule_Of_Three {
     // ===================================================================
     // copy semantics: copy constructor and assignment operator 
 
+#if defined (IsCorrect)
+
     BigData::BigData(const BigData& data) {
 
         // allocate buffer
@@ -76,6 +78,8 @@ namespace Rule_Of_Three {
 
         return *this;
     }
+
+#endif
 
     // ===================================================================
     // public interface

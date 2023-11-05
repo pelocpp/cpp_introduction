@@ -37,10 +37,10 @@ int main()
         //testParameterPassing();
         //testOperatorsOverloading();
         //testDynamicMemoryManagement();
-        //testRuleOfThree();
+        testRuleOfThree();
         //testNamespaces();
         //testTemplates();
-        testStrings();
+        //testStrings();
         //testExceptions();
     }
     catch (const std::exception& ex) {

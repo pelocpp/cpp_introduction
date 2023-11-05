@@ -7,6 +7,9 @@
 #include <iostream>
 #include <cstdio>
 
+// needed to demonstrate correct and wrong implementation
+#define IsCorrect
+
 namespace Rule_Of_Three {
 
     class BigData
@@ -27,8 +30,10 @@ namespace Rule_Of_Three {
         bool isEmpty() const;
 
         // copy semantics
-        BigData(const BigData&); // copy c'tor
+#if defined (IsCorrect)
+        BigData(const BigData&);              // copy c'tor
         BigData& operator= (const BigData&);  // copy assignment
+#endif
 
         // public interface
         void print();

@@ -24,6 +24,9 @@
     <None Include="Markdown\ClassesObjects.md" />
     <None Include="Markdown\ClassesObjectsImproved.md" />
     <None Include="Markdown\Constructors.md" />
+    <None Include="Markdown\cpp_deep_copy.svg" />
+    <None Include="Markdown\cpp_flat_copy.svg" />
+    <None Include="Markdown\cpp_standard_flat_copy.svg" />
     <None Include="Markdown\DynamicMemoryManagement.md" />
     <None Include="Markdown\Exceptions.md" />
     <None Include="Markdown\FirstOfAll.md" />
@@ -73,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Markdown\Cpp.png" />
+    <Image Include="Markdown\OperatorsPrecedence.png" />
     <Image Include="Markdown\WhatAreYouStudying.png" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -162,6 +166,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <ObjectFileName>$(IntDir)\%(RelativeDir)\%(Filename)</ObjectFileName>
+      <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

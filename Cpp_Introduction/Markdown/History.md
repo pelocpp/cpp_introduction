@@ -11,7 +11,7 @@ Ihre Sprachdefinition wird maßgeblich beeinflusst von *Bjarne Stroustrup*:
 
 <img src="BjarneStroustrup.png" width="400">
 
-*Abbildung* 1: Der Erfinder von C++: *Bjarne Stroustrup*
+*Abbildung* 1: Der Erfinder von C++: *Bjarne Stroustrup*.
 
 Eine Pilotsprache &ldquo;C mit Klassen&rdquo; diente als Vorlage,
 sie griff auf Strukturen und Konzepte von C zurück und war um objektorientierte Elemente erweitert.
@@ -49,33 +49,33 @@ Nach neun Jahren Arbeit verabschieden diese beiden Standardisierungsgremien den 
 ## Was denken andere Entwickler über C++?
 
 
-&ldquo;*C++ makes it much harder to shoot yourself in the foot, but when you do, it blows off your whole leg.*&rdquo; &ndash; Bjarne Stroustrup.
+&ldquo;*C++ makes it much harder to shoot yourself in the foot, but when you do, it blows off your whole leg.*&rdquo; &ndash; **Bjarne Stroustrup**.
 
-&ldquo;*In C we had to code our own bugs. In C++ we can inherit them.*&rdquo; &ndash; Prof. Gerald Karam.
+&ldquo;*In C we had to code our own bugs. In C++ we can inherit them.*&rdquo; &ndash; **Prof. Gerald Karam**.
 
-&ldquo;*Fifty years of programming language research, and we end up with C++&nbsp;???*&rdquo;  &ndash; Richard A. O'Keefe, Computer scientist, concentrating on languages for logic programming and functional programming (including Prolog and Haskell).
+&ldquo;*Fifty years of programming language research, and we end up with C++&nbsp;???*&rdquo; &ndash; **Richard A. O'Keefe**, Computer scientist, concentrating on languages for logic programming and functional programming (including Prolog and Haskell).
 
-&ldquo;*I invented the term 'Object-Oriented', and I can tell you I did not have C++ in mind.*&rdquo;  &ndash; Alan Kay, creator of Smalltalk.
+&ldquo;*I invented the term 'Object-Oriented', and I can tell you I did not have C++ in mind.*&rdquo; &ndash; **Alan Kay**, creator of Smalltalk.
 
-&ldquo;*C++: Hard to learn and built to stay that way."*&rdquo;
+&ldquo;*C++: Hard to learn and built to stay that way."*&rdquo; &ndash; *Without author*;
 
-&ldquo;*Java is, in many ways, C++--.*&rdquo; &ndash; Michael Feldman, Professor Emeritus at the George Washington University, Department of Computer Science, Washington.
+&ldquo;*Java is, in many ways, C++--.*&rdquo; &ndash; **Michael Feldman**, Professor Emeritus at the George Washington University, Department of Computer Science, Washington.
 
-&ldquo;*Writing in C or C++ is like running a chain saw with all the safety guards removed.*&rdquo; &ndash; Bob Gray.
+&ldquo;*Writing in C or C++ is like running a chain saw with all the safety guards removed.*&rdquo; &ndash; **Bob Gray**.
 
-&ldquo;*Ever spend a little time reading comp.lang.c++&nbsp;? That's really the best place to learn about the number of C++ users looking for a better language.*&rdquo; &ndash; R. William Beckwith.
+&ldquo;*Ever spend a little time reading comp.lang.c++&nbsp;? That's really the best place to learn about the number of C++ users looking for a better language.*&rdquo; &ndash; **R. William Beckwith**.
 
-&ldquo;*The evolution of languages: FORTRAN is a non-typed language. C is a weakly typed language. Ada is a strongly typed language. C++ is a strongly hyped language.*&rdquo; &ndash; Ron Sercely.
+&ldquo;*The evolution of languages: FORTRAN is a non-typed language. C is a weakly typed language. Ada is a strongly typed language. C++ is a strongly hyped language.*&rdquo; &ndash; **Ron Sercely**.
 
-&ldquo;*C(++) is a write-only, high-level assembler language.*&rdquo;  &ndash; Stefan Van Baelen.
+&ldquo;*C(++) is a write-only, high-level assembler language.*&rdquo; &ndash; **Stefan Van Baelen**.
 
-&ldquo;*C++ : Where friends have access to your private members.*&rdquo;  &ndash; Gavin Russell Baker.
+&ldquo;*C++ : Where friends have access to your private members.*&rdquo; &ndash; **Gavin Russell Baker**.
 
-&ldquo;*C++ would make a decent teaching language if we could teach the ++ part without the C part.*&rdquo;  &ndash; Michael B. Feldman.
+&ldquo;*C++ would make a decent teaching language if we could teach the ++ part without the C part.*&rdquo; &ndash; **Michael B. Feldman**.
 
-&ldquo;*The great thing about Object Oriented code is that it can make small, simple problems look like large, complex ones.*&rdquo;  &ndash; *Without author*.
+&ldquo;*The great thing about Object Oriented code is that it can make small, simple problems look like large, complex ones.*&rdquo; &ndash; *Without author*.
 
-&ldquo;*Hybrid ('half-assed') object languages like C++ are worst of all, as they unite the simplicity of Brainfuck with the inherent security of C and the speed of Perl.*&rdquo; &ndash; Tony.
+&ldquo;*Hybrid ('half-assed') object languages like C++ are worst of all, as they unite the simplicity of Brainfuck with the inherent security of C and the speed of Perl.*&rdquo; &ndash; **Tony**.
 
 
 ---

@@ -15,6 +15,8 @@ Einem C++&ndash;Entwickler steht aus der C++ Standardbibliothek
 (*Standard Template Library*, *STL*) die Klasse `std::string` zur Verfügung.
 Sie ist in der Hantierung erheblich einfacher als das Arbeiten mit Variablen des Typs `const char*`.
 
+### Einbinden von Klassen aus der C++&ndash;Standardbibliothek
+
 Zur Benutzung der Klasse `std::string` muss ein entsprechendes STL-Headerfile eingebunden werden:
 
 ```cpp
@@ -25,10 +27,9 @@ Durch diese Anweisung wird die Klasse `string` aus dem Namensraum `std` bekannt 
 so daß für die korrekte Verwendung `std::string` verwendet werden muss.
 
 
-
 ## Beispiele
 
-Das folgende Beispiel versucht, einige der bisher betrachteten objektorientierden Techniken
+Das folgende Beispiel versucht, einige der bisher betrachteten objektorientierten Techniken
 an einer C++ Standardklasse zu demonstrieren bzw. zu beobachten:
 
   * Konstruktoren

@@ -20,6 +20,7 @@ extern void testNamespaces();
 extern void testTemplates();
 extern void testStrings();
 extern void testExceptions();
+extern void testStreams();
 
 // entry point
 int main()
@@ -37,11 +38,12 @@ int main()
         //testParameterPassing();
         //testOperatorsOverloading();
         //testDynamicMemoryManagement();
-        testRuleOfThree();
+        //testRuleOfThree();
         //testNamespaces();
         //testTemplates();
         //testStrings();
         //testExceptions();
+        testStreams();
     }
     catch (const std::exception& ex) {
         std::cout << "Exception: " << ex.what() << std::endl;

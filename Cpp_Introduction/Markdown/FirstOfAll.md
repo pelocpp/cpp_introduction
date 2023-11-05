@@ -40,7 +40,7 @@ Features von C++, die vor allem unter den Begrifflichkeiten
 ## Abgrenzung von anderen Programmiersprachen
 
 Sollten Sie immer noch nicht davon überzeugt sein, sich den Strapazen des Erlernens von C++
-auszusetzen, hier ein letzer Versuch, Ihnen die Entscheidung mit einer kleinen
+auszusetzen, hier noch ein Versuch, Ihnen die Entscheidung mit einer kleinen
 Einstiegsaufgabe schmackhaft zu machen:
 
 *Aufgabe*:

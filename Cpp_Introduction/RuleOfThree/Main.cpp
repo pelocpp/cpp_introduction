@@ -33,12 +33,17 @@ namespace Rule_Of_Three {
     // test methods
     void testRuleOfThree01() {
 
+        BigData data(100);
+    }
+
+    void testRuleOfThree02() {
+
         BigData data1(100);
         BigData data2;
         data2 = data1;
     }
 
-    void testRuleOfThree02() {
+    void testRuleOfThree03() {
 
         BigData data1(100);
         BigData data2(data1);
@@ -49,7 +54,7 @@ namespace Rule_Of_Three {
         return data;
     }
 
-    void testRuleOfThree03() {
+    void testRuleOfThree04() {
 
         BigData data;
         data.print();
@@ -57,7 +62,7 @@ namespace Rule_Of_Three {
         data.print();
     }
 
-    void testRuleOfThree04() {
+    void testRuleOfThree05() {
 
         BigData data;
         data = BigData(100);
@@ -72,6 +77,7 @@ void testRuleOfThree()
     //testRuleOfThree02();
     //testRuleOfThree03();
     //testRuleOfThree04();
+    //testRuleOfThree05();
 }
 
 // ===========================================================================

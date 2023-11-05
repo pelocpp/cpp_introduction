@@ -30,10 +30,10 @@ namespace Rule_Of_Three {
         bool isEmpty() const;
 
         // copy semantics
-#if defined (IsCorrect)
+    #if defined (IsCorrect)
         BigData(const BigData&);              // copy c'tor
         BigData& operator= (const BigData&);  // copy assignment
-#endif
+    #endif
 
         // public interface
         void print();

@@ -7,7 +7,7 @@
 Es ist nicht einfach, bei dem enormen Umfang von sprachlichen Konstrukten,
 Erweiterungen und Neuerungen von C++ den Überblick zu behalten.
 Das von mir zusammengestellte Inhaltsverzeichnis unternimmt den Versuch,
-die sprachlichen Mittel für einen Einstieg 
+die sprachlichen Konstrukte für einen Einstieg 
 nach gewissen systematischen und methodischen Gesichtspunkten so zu gliedern und zusammenzufassen,
 dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
 
@@ -81,10 +81,13 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
   * Operatoren `new` und `delete`
 
 
-## [&ldquo;Rule of Three&rdquo;: Kopierkonstruktor, Wertzuweisungsoperator und Destruktor](RuleOfThree.md) 
-  * Die &ldquo;Rule of Three&rdquo; verstehen
-  * Implizite Definition von Konstruktoren in C++
-  * Explizite Definition von Konstruktoren in C++
+## [&ldquo;Rule of Three&rdquo;: Kopierkonstruktor, Wertzuweisungsoperator und Destruktor](RuleOfThree.md)
+  * Objekte mit dynamischen Daten
+  * Ein Destruktor zum automatisierten Freigeben von allokierten Speicher
+  * Objekte kopieren und zuweisen
+  * *Flat Copy* versus *Deep Copy*
+  * Überladen von Kopierkonstruktor und Wertzuweisungsoperator
+  * Die &ldquo;Rule of Three&rdquo;
 
 
 ## Vererbung

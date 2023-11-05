@@ -55,6 +55,9 @@
     <Filter Include="Source Files\String">
       <UniqueIdentifier>{409d937a-5ac7-4c8f-825f-e075e2a300e6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Streams">
+      <UniqueIdentifier>{8f7ec9fa-76c5-4ba1-95c8-0ef2df956c27}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -127,6 +130,9 @@
     <None Include="Markdown\cpp_standard_flat_copy.svg">
       <Filter>Markdown</Filter>
     </None>
+    <None Include="Markdown\Streams.md">
+      <Filter>Markdown</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -191,6 +197,9 @@
     </ClCompile>
     <ClCompile Include="String\Main.cpp">
       <Filter>Source Files\String</Filter>
+    </ClCompile>
+    <ClCompile Include="Streams\Main.cpp">
+      <Filter>Source Files\Streams</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

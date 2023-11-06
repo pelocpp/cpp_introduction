@@ -139,7 +139,7 @@ Erkennen Sie in Zeile 3 das Problem? Richtig, der Bezeichner `hours` wird zweima
   * Als Instanzvariable der Klasse `Time`
   * Als Parameter der *setter*-Methode `setHours`
 
-Interessanteweise ist das letzte Code-Fragment übersetzungsfähig, aber läuft es auch korrekt?
+Interessanterweise ist das letzte Code-Fragment übersetzungsfähig, aber läuft es auch korrekt?
 
 Nein, es wird in dieser Situation die Instanzvariable durch den Parameter verdeckt!
 

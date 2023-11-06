@@ -30,7 +30,7 @@ Typischerweise ist die Realisierung einer Klasse auf 2 Dateien aufgeteilt:
   * Header-Datei (Dateiendung *.cpp*):<br/>
   * Implementierungs-Datei (Dateiendung *.h*):<br/>Realisierung der Methoden der Klasse
 
-#### Datei *Time.h*:
+#### Datei *[Time.h](../ClassesObjects/Time.h)*:
 
 ```cpp
 01: #include <iostream>
@@ -58,7 +58,7 @@ Bei der Deklaration der Klasse `Time` ist noch ein weiteres Schlüsselwörter
 ([Vertiefungen zu Klassen und Objekten](ClassesObjectsImproved.md))
 hierauf näher ein.
 
-#### Datei *Time.cpp*:
+#### Datei *[Time.cpp](../ClassesObjects/Time.cpp)*:
 
 ```cpp
 01: #include "Time.h"
@@ -120,7 +120,7 @@ Weiterentwicklung der Klasse `Time` keine Fehlermeldungen der Gestalt
 &ldquo;*Error class 'Time': 'class' type redefinition*&rdquo;
 erhalten. Bis auf Weiteres dürfen Sie die `namespace`-Anweisungen getrost ignorieren.
 
-#### Datei *Main.cpp* - Testrahmen:
+#### Datei *[Main.cpp](../ClassesObjects/Main.cpp)* - Testrahmen:
 
 Ein Testrahmen mit 2 Objekten `now` und `later`:
 
@@ -161,9 +161,9 @@ Ein Testrahmen mit 2 Objekten `now` und `later`:
 
 ## Quellcode des Beispiels:
 
-[Time.h](../ClassesObjects/Time.h)<br />
-[Time.cpp](../ClassesObjects/Time.cpp)<br />
-[Main.cpp](../ClassesObjects/Main.cpp)
+*[Time.h](../ClassesObjects/Time.h)*<br />
+*[Time.cpp](../ClassesObjects/Time.cpp)*<br />
+*[Main.cpp](../ClassesObjects/Main.cpp)*
 
 ---
 

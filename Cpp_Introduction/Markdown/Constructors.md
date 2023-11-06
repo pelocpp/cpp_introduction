@@ -10,7 +10,7 @@
 Um die Integrität eines Objekts für seine gesamte Lebensdauer zu gewährleisten,
 sind Instanzvariablen eines Objekts bereits bei seiner *Erzeugung* sinnvoll zu initialisieren.
 
-Darunter versteht man *nicht* die Vorgehensweise wie in diesem Code-Fragment:
+Darunter versteht man *nicht* die Vorgehensweise wie in diesem Code-Fragment gezeigt:
 
 ```cpp
 Time now;
@@ -21,9 +21,7 @@ now.setSeconds(30);
 
 Es kann vom Übersetzer nicht sicher gestellt werden, dass auf diese Weise
 *alle* Instanzvariablen des Objekts erreicht werden.
-
 Man hat ein sprachliches Mittel geschaffen, um die Anweisung
-
 
 ```cpp
 Time now;
@@ -31,12 +29,11 @@ Time now;
 
 so zu erweitern, dass für das Objekt auch Vorbelegungswerte mit übergeben werden können:
 
-
-### Konstruktoren
+### Was sind Konstruktoren?
 
 Unter einem *Konstruktor* versteht man eine spezielle Art von Methode,
 die den gleichen Namen wie die Klasse hat, zu der sie gehört.
-Ein Konstruktor besitzt die Aufgabe, die Instanzvariablen eines Objekts vollständig mit sinnvollen Werten zu initialisieren.
+Ein Konstruktor besitzt die Aufgabe, die Instanzvariablen eines Objekts vollständig mit sinnvollen Werten vorzubelegen.
 Umgangssprachlich kann man auch sagen, dass ein Konstruktor eine Instanz &ldquo;konstruiert&rdquo;.
 
 Die Anweisung zum Aufruf eines Konstruktors wird durch den Compiler im Zuge der Objekterzeugung *automatisch* abgesetzt.
@@ -45,16 +42,12 @@ Auf diese Weise wird erreicht, dass Objekterzeugung und Konstruktorausführung zu
 ### Überladen von Konstruktoren
 
 Eine Klasse kann durchaus mehrere Konstruktoren besitzen.
-Wir stoßen auf das Feature des *Überladens von Methoden*,
-dieses Mal speziell im Umfeld von Konstruktoren.
+Wir stoßen auf das Feature des *Überladens von Methoden*
+häufig im Umfeld von Konstruktoren.
 
-Wir finden im nachfolgenden Beispiel also gleich fünf Konstruktoren vor.
+Im nachfolgenden Beispiel finden wir also gleich fünf Konstruktoren vor:
 
-## Beispiele
-
-Wir ergänzen die Klasse `Time` um mehrere Konstruktoren:
-
-Datei *Time.h*:
+#### Datei [*Time.h*](../Constructors/Time.h):
 
 ```cpp
 01: class Time
@@ -85,27 +78,28 @@ Datei *Time.h*:
 In diesem Abschnitt stehen nur Konstruktoren im Vordergrund. Aus diesem Grund
 wurden die anderen Methoden der Klasse bis auf wenige Ausnahmen weggelassen.
 
-Datei *Time.cpp*:
+
+#### Datei [*Time.cpp*](../Constructors/Time.cpp):
 
 ```cpp
-01: // c'tors
-02: Time::Time() : m_seconds(0), m_minutes(0), m_hours(0) {}  // default c'tor
+01: // default c'tor
+02: Time::Time() : m_seconds(0), m_minutes(0), m_hours(0) {}
 03: 
-04: Time::Time(int hours, int minutes, int seconds)   // user-defined c'tor
-05: {
-06:     m_hours = (0 <= hours && hours < 24) ? hours : 0;
-07:     m_minutes = (0 <= minutes && minutes < 60) ? minutes : 0;
-08:     m_seconds = (0 <= seconds && seconds < 60) ? seconds : 0;
-09: }
-10: 
-11: Time::Time(int hours, int minutes)   // user-defined c'tor
-12: {
-13:     m_hours = (0 <= hours && hours < 24) ? hours : 0;
-14:     m_minutes = (0 <= minutes && minutes < 60) ? minutes : 0;
-15:     m_seconds = 0;
-16: }
-17: 
-18: Time::Time(const char* s)  // user-defined c'tor
+04: // user-defined c'tor
+05: Time::Time(int hours, int minutes, int seconds)
+06: {
+07:     m_hours = (0 <= hours && hours < 24) ? hours : 0;
+08:     m_minutes = (0 <= minutes && minutes < 60) ? minutes : 0;
+09:     m_seconds = (0 <= seconds && seconds < 60) ? seconds : 0;
+10: }
+11: 
+12: // user-defined c'tor
+13: Time::Time(int hours, int minutes)
+14:     : Time(hours, minutes, 0) 
+15: {}
+16: 
+17: // conversion c'tor
+18: Time::Time(const char* s)
 19: {
 20:     // expecting format "hh:mm:ss" - don't expect wrong input (!)
 21:     int hours = 10 * (s[0] - '0') + (s[1] - '0');
@@ -118,56 +112,54 @@ Datei *Time.cpp*:
 28:     m_seconds = (0 <= seconds && seconds < 60) ? seconds : 0;
 29: }
 30: 
-31: Time::Time(int seconds)     // conversion c'tor
-32: {
-33:     if (0 <= seconds && seconds <= 24 * 60 * 60)
-34:     {
-35:         secondsToTime(seconds);
-36:     }
-37:     else
-38:     {
-39:         m_seconds = m_minutes = m_hours = 0;
-40:     }
-41: }
-42: 
-43: // public interface
-44: void Time::print()
-45: {
-46:     std::printf("%02d:%02d:%02d\n", m_hours, m_minutes, m_seconds);
-47: }
-48: 
-49: // private interface
-50: void Time::secondsToTime(int seconds)
-51: {
-52:     m_hours = seconds / 3600;
-53:     seconds = seconds % 3600;
-54:     m_minutes = seconds / 60;
-55:     m_seconds = seconds % 60;
-56: }
+31: // conversion c'tor
+32: Time::Time(int seconds)     
+33: {
+34:     if (0 <= seconds && seconds <= 24 * 60 * 60)
+35:     {
+36:         secondsToTime(seconds);
+37:     }
+38:     else
+39:     {
+40:         m_seconds = m_minutes = m_hours = 0;
+41:     }
+42: }
+43: 
+44: // public interface
+45: void Time::print()
+46: {
+47:     std::printf("%02d:%02d:%02d\n", m_hours, m_minutes, m_seconds);
+48: }
+49: 
+50: // private interface
+51: void Time::secondsToTime(int seconds)
+52: {
+53:     m_hours = seconds / 3600;
+54:     seconds = seconds % 3600;
+55:     m_minutes = seconds / 60;
+56:     m_seconds = seconds % 60;
+57: }
 ```
 
----
 
-#### Datei *Main.cpp* - Testrahmen:
+#### Datei [*Main.cpp*](../Constructors/Main.cpp):
 
 
 ```cpp
-01: void testTimeConstructors()
+01: void testConstructors()
 02: {
-03:     using namespace Classes_Objects_Constructors;
-04: 
-05:     Time t1;
-06:     t1.print();
-07: 
-08:     Time t2(12, 30, 0);
-09:     t2.print();
-10: 
-11:     Time t3("09:30:00");
-12:     t3.print();
-13: 
-14:     Time t4(24 * 60 * 60 - 1);
-15:     t4.print();
-16: }
+03:     Time t1;
+04:     t1.print();
+05: 
+06:     Time t2(12, 30, 0);
+07:     t2.print();
+08: 
+09:     Time t3("09:30:00");
+10:     t3.print();
+11: 
+12:     Time t4(24 * 60 * 60 - 1);
+13:     t4.print();
+14: }
 ```
 
 *Ausgabe*:
@@ -179,6 +171,37 @@ Datei *Time.cpp*:
 09:30:00
 23:59:59
 ```
+
+
+### Element-Initialisierungsliste (*Member Initializer List*)
+
+Ein Konstruktor kann optional über eine so genannte *Element-Initialisierungsliste* verfügen,
+die die Instanzvariablen initialisiert,
+bevor der Rumpf des Konstruks ausgeführt wird.
+
+Im letzten Code-Fragment kommt diese Syntax bei zwei Konstruktoren 
+zum Einsatz:
+
+```cpp
+01: Time::Time() : m_seconds(0), m_minutes(0), m_hours(0) {}
+02: 
+03: Time::Time(int hours, int minutes)
+04:     : Time(hours, minutes, 0) 
+05: {}
+```
+
+---
+
+### Konvertierungskonstruktoren
+
+
+WEITER !!!!!!!!!!!!!!!!
+
+
+
+
+
+
 
 ---
 

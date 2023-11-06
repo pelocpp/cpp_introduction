@@ -45,7 +45,7 @@ int &rInt = n;
 
 ## Beispiele
 
-#### Datei *[Main.cpp](../References/References.cpp)*:
+#### Datei [*Main.cpp*](../References/References.cpp):
 
 ```cpp
 01: void referencesUnderstanding()

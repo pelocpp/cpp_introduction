@@ -30,26 +30,22 @@ Typischerweise ist die Realisierung einer Klasse auf 2 Dateien aufgeteilt:
   * Header-Datei (Dateiendung *.cpp*):<br/>
   * Implementierungs-Datei (Dateiendung *.h*):<br/>Realisierung der Methoden der Klasse
 
-#### Datei *[Time.h](../ClassesObjects/Time.h)*:
+#### Datei [*Time.h*](../ClassesObjects/Time.h):
 
 ```cpp
-01: #include <iostream>
-02: #include <iomanip>
-03: #include <cstdio>
-04: 
-05: class Time
-06: {
-07: public:
-08:     // member data / instance variables
-09:     int m_seconds;
-10:     int m_minutes;
-11:     int m_hours;
-12: 
-13:     // public interface / methods
-14:     void reset();
-15:     void increment();
-16:     void print();
-17: };
+01: class Time
+02: {
+03: public:
+04:     // member data / instance variables
+05:     int m_seconds;
+06:     int m_minutes;
+07:     int m_hours;
+08: 
+09:     // public interface / methods
+10:     void reset();
+11:     void increment();
+12:     void print();
+13: };
 ```
 
 *Bemerkung*:
@@ -58,48 +54,39 @@ Bei der Deklaration der Klasse `Time` ist noch ein weiteres Schlüsselwörter
 ([Vertiefungen zu Klassen und Objekten](ClassesObjectsImproved.md))
 hierauf näher ein.
 
-#### Datei *[Time.cpp](../ClassesObjects/Time.cpp)*:
+#### Datei [*Time.cpp*](../ClassesObjects/Time.cpp):
 
 ```cpp
-01: #include "Time.h"
-02: 
-03: // implementation
-04: void Time::reset()
-05: {
-06:     m_seconds = 0;
-07:     m_minutes = 0;
-08:     m_hours = 0;
-09: }
-10: 
-11: void Time::increment()
-12: {
-13:     m_seconds++;
-14:     if (m_seconds >= 60)
-15:     {
-16:         m_seconds = 0;
-17:         m_minutes++;
-18:         if (m_minutes >= 60)
-19:         {
-20:             m_minutes = 0;
-21:             m_hours++;
-22:             if (m_hours >= 24)
-23:             {
-24:                 m_hours = 0;
-25:             }
-26:         }
-27:     }
-28: }
-29: 
-30: void Time::print()
-31: {
-32:     //std::cout << std::setw(2) << std::setfill('0') << m_hours << ":";
-33:     //std::cout << std::setw(2) << std::setfill('0') << m_minutes << ":";
-34:     //std::cout << std::setw(2) << std::setfill('0') << m_seconds;
-35:     //std::cout << std::endl;
-36: 
-37:     // or - with the help of C-printf:
-38:     std::printf("%02d:%02d:%02d\n", m_hours, m_minutes, m_seconds);
-39: }
+01: void Time::reset()
+02: {
+03:     m_seconds = 0;
+04:     m_minutes = 0;
+05:     m_hours = 0;
+06: }
+07: 
+08: void Time::increment()
+09: {
+10:     m_seconds++;
+11:     if (m_seconds >= 60)
+12:     {
+13:         m_seconds = 0;
+14:         m_minutes++;
+15:         if (m_minutes >= 60)
+16:         {
+17:             m_minutes = 0;
+18:             m_hours++;
+19:             if (m_hours >= 24)
+20:             {
+21:                 m_hours = 0;
+22:             }
+23:         }
+24:     }
+25: }
+26: 
+27: void Time::print()
+28: {
+29:     std::printf("%02d:%02d:%02d\n", m_hours, m_minutes, m_seconds);
+30: }
 ```
 
 *1. Bemerkung*:
@@ -120,7 +107,7 @@ Weiterentwicklung der Klasse `Time` keine Fehlermeldungen der Gestalt
 &ldquo;*Error class 'Time': 'class' type redefinition*&rdquo;
 erhalten. Bis auf Weiteres dürfen Sie die `namespace`-Anweisungen getrost ignorieren.
 
-#### Datei *[Main.cpp](../ClassesObjects/Main.cpp)* - Testrahmen:
+#### Datei [*Main.cpp*](../ClassesObjects/Main.cpp) - Testrahmen:
 
 Ein Testrahmen mit 2 Objekten `now` und `later`:
 

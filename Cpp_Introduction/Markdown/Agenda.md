@@ -32,10 +32,10 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
   
 
 ## [Initialisierung von Objekten: Konstruktoren](Constructors.md) 
-  * Was sind Konstruktoren
-  * Element-Initialisierungsliste (*member initializer list*)
+  * Was sind Konstruktoren?
   * Überladen von Konstruktoren
-
+  * Element-Initialisierungsliste (*Member Initializer List*)
+  * Konvertierungskonstruktoren
 
 ## [Statische Datenelemente (`static`)](Static.md) 
   * Statische Datenelemente
@@ -99,7 +99,7 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
   * Die &ldquo;Rule of Three&rdquo;
 
 
-## Vererbung
+## [Vererbung](Inheritance.md)
 
 
 ## Polymorphismus

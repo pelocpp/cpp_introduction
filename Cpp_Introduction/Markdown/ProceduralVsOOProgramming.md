@@ -77,8 +77,8 @@ auf Instanzvariable untersagt. Mehr dazu im folgenden Abschnitt (PELO).
 
 ## Beispiele
 
+#### Datei [*Example_Procedural_Programming.cpp*](../ProceduralVsOOProgramming/Example_Procedural_Programming.cpp)*:
 
-#### Datei *Example_Procedural_Programming.cpp*:
 
 ```cpp
 01: const double Pi = 3.14159265358979323846;
@@ -105,95 +105,121 @@ auf Instanzvariable untersagt. Mehr dazu im folgenden Abschnitt (PELO).
 22: }
 ```
 
-#### Datei *Example_Procedural_Programming.cpp* - Testrahmen:
+#### Datei [*Example_Procedural_Programming.cpp* - Testrahmen](../ProceduralVsOOProgramming/Example_Procedural_Programming.cpp)*:
 
 Ein Testrahmen zur prozeduralen Programmierung:
 
 ```cpp
 01: void testComparisonProcedural()
 02: {
-03:     using namespace Procedural_Versus_OO_Programming;
-04: 
-05:     double radius;
-06:     double seite;
-07: 
-08:     std::cout << "Enter a Radius: ";
-09:     std::cin >> radius;
-10: 
-11:     std::cout << "Circumference: " << circumferenceCircle(radius) << std::endl;
-12:     std::cout << "Area: " << areaCircle(radius) << std::endl << std::endl;
-13: 
-14:     std::cout << "Enter Length: ";
-15:     std::cin >> seite;
-16: 
-17:     std::cout << "Circumference: " << circumferenceSquare(seite) << std::endl;
-18:     std::cout << "Area: " << areaSquare(seite) << std::endl;
-19: }
+03:     double radius;
+04:     double seite;
+05: 
+06:     std::cout << "Enter a Radius: ";
+07:     std::cin >> radius;
+08: 
+09:     std::cout << "Circumference: " << circumferenceCircle(radius) << std::endl;
+10:     std::cout << "Area: " << areaCircle(radius) << std::endl << std::endl;
+11: 
+12:     std::cout << "Enter Length: ";
+13:     std::cin >> seite;
+14: 
+15:     std::cout << "Circumference: " << circumferenceSquare(seite) << std::endl;
+16:     std::cout << "Area: " << areaSquare(seite) << std::endl;
+17: }
 ```
 
+#### Datei [*Example_OO_Programming.cpp*](../ProceduralVsOOProgramming/Example_OO_Programming.cpp)*:
 
-#### Datei *Example_OO_Programming.cpp*:
 
 ```cpp
 01: const double Pi = 3.14159265358979323846;
 02: 
 03: class Circle
 04: {
-05: public:
+05: private:
 06:     double m_radius;
 07: 
-08:     double circumference()
-09:     {
-10:         return 2 * m_radius * Pi;
-11:     }
-12: 
-13:     double area()
-14:     {
-15:         return Pi * m_radius * m_radius;
-16:     }
-17: };
-18: 
-19: class Square
-20: {
-21: public:
-22:     double m_length;
-23: 
-24:     double circumference()
-25:     {
-26:         return 4 * m_length;
-27:     }
-28: 
-29:     double area()
-30:     {
-31:         return m_length * m_length;
-32:     }
-33: };
+08: public:
+09:     Circle()
+10:     {
+11:         m_radius = 0;
+12:     }
+13: 
+14:     void setRadius(double radius)
+15:     {
+16:         if (radius > 0) {
+17:             m_radius = radius;
+18:         }
+19:     }
+20: 
+21:     double circumference()
+22:     {
+23:         return 2 * m_radius * Pi;
+24:     }
+25: 
+26:     double area()
+27:     {
+28:         return Pi * m_radius * m_radius;
+29:     }
+30: };
+31: 
+32: class Square
+33: {
+34: private:
+35:     double m_length;
+36: 
+37: public:
+38:     Square()
+39:     {
+40:         m_length = 0;
+41:     }
+42: 
+43:     void setlength(double length)
+44:     {
+45:         if (length > 0) {
+46:             m_length = length;
+47:         }
+48:     }
+49: 
+50:     double circumference()
+51:     {
+52:         return 4 * m_length;
+53:     }
+54: 
+55:     double area()
+56:     {
+57:         return m_length * m_length;
+58:     }
+59: };
 ```
 
-#### Datei *Example_OO_Programming.cpp* - Testrahmen:
+#### Datei [*Example_OO_Programming.cpp* - Testrahmen](../ProceduralVsOOProgramming/Example_OO_Programming.cpp)*:
 
 Ein Testrahmen zur objektorientierten Programmierung:
 
 ```cpp
 01: void testComparisonOO()
 02: {
-03:     using namespace Procedural_Versus_OO_Programming;
-04: 
-05:     Circle circle;
-06:     Square square;
-07: 
-08:     std::cout << "Enter Radius of Circle: ";
-09:     std::cin >> circle.m_radius;
+03:     Circle circle;
+04:     Square square;
+05: 
+06:     std::cout << "Enter Radius of Circle: ";
+07:     double radius;
+08:     std::cin >> radius;
+09:     circle.setRadius(radius);
 10:     
 11:     std::cout << "Circumference of Circle: " << circle.circumference() << std::endl;
 12:     std::cout << "Area of Circle: " << circle.area() << std::endl;
 13:     
 14:     std::cout << std::endl << "Enter Side Length of Square: ";
-15:     std::cin >> square.m_length;
-16:     
-17:     std::cout << "Circumference of Square: " << square.circumference() << std::endl;
-18:     std::cout << "Area of Square: " << square.area() << std::endl;
-19: }
+15:     double length;
+16:     std::cin >> length;
+17:     square.setlength(length);
+18:     
+19:     std::cout << "Circumference of Square: " << square.circumference() << std::endl;
+20:     std::cout << "Area of Square: " << square.area() << std::endl;
+21: }
 ```
 
 ---
@@ -205,7 +231,6 @@ Ein Testrahmen zur objektorientierten Programmierung:
 [*Main.cpp*](../ProceduralVsOOProgramming/Main.cpp)
 
 ---
-
 
 [Zurück](Agenda.md)
 

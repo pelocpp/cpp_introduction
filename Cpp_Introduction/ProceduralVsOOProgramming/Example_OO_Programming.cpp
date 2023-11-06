@@ -1,5 +1,6 @@
 // ===========================================================================
-// Example_OO_Programming.cpp // Comparison OO versus Procedural Programming
+// Example_OO_Programming.cpp /
+// Comparison OO versus Procedural Programming
 // ===========================================================================
 
 #include <iostream>

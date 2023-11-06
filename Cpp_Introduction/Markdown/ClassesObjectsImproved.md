@@ -11,9 +11,7 @@ Wir gehen in diesem Abschnitt auf mehrere zentrale Prinzipien der objektorientie
 
   * Zugriffsschutz und Kapselung
   * *getter*- und *setter*-Methoden
-  * `this`-Operator
-  * Überladen von Methoden
-  * Klassenvariablen und -methoden
+  * Der `this`-Operator
 
 ### Zugriffsschutz und Kapselung
 
@@ -59,10 +57,26 @@ so wird der Zugriff aller nachfolgend deklarierten Daten und Methoden wie folgt 
   
 * Zugriffsklasse `protected`:<br />
   Die Anwendung des Zugriffsspezifizierers `protected` ist nur in einer Vererbungshierarchie sinnvoll,
-  wir kommen auf seine Bedeutung im Abschnitt der Vererbung (PeLo // Link) zu sprechen.
+  wir kommen auf seine Bedeutung im Abschnitt der [Vererbung](Inheritance.md) zu sprechen.
 
-Weitere Details siehe im nachfolgenden Beispiel weiter unten.
+#### Datei [*Time.h*](../ClassesObjectsImproved/Time.h):
 
+```cpp
+01: class Time
+02: {
+03: private:
+04:     int m_seconds;
+05:     int m_minutes;
+06:     int m_hours;
+07: 
+08: public:
+09:     // public interface
+10:     void reset();
+11:     void increment();
+12:     void decrement();
+13:     void print();
+14: };
+```
 
 ### *getter*/*setter*-Methoden
 
@@ -95,7 +109,93 @@ behalten aber andererseits die Integrität des Objekts im Hinterkopf.
 
 Der Umweg über diese Zugriffsmethoden bewirkt somit einen ausschließlich *kontrollierten* Zugriff auf das Objekt:
 
-Weitere Details siehe im nachfolgenden Beispiel weiter unten.
+#### Datei [*Time.h*](../ClassesObjectsImproved/Time.h):
+
+```cpp
+01: class Time
+02: {
+03: private:
+04:     int m_seconds;
+05:     int m_minutes;
+06:     int m_hours;
+07: 
+08: public:
+09:     // getter // setter
+10:     int getSeconds() { return m_seconds; }
+11:     int getMinutes() { return m_minutes; }
+12:     int getHours() { return m_hours; }
+13:     void setSeconds(int seconds);
+14:     void setMinutes(int minutes);
+15:     void setHours(int hours);
+16: 
+17:     // public interface
+18:     ...
+19: };
+```
+
+#### Datei [*Time.cpp*](../ClassesObjectsImproved/Time.cpp):
+
+```cpp
+01: // setter
+02: void Time::setHours(int hours)
+03: {
+04:     if (0 <= hours && hours < 24) {
+05:         m_hours = hours;
+06:     }
+07:     else {
+08:         // we don't modify the current value of 'm_hours'
+09:         std::cout << "Wrong value for hours: " << hours << std::endl;
+10:     }
+11: }
+12: 
+13: void Time::setMinutes(int minutes)
+14: {
+15:     if (0 <= minutes && minutes < 60) {
+16:         m_minutes = minutes;
+17:     }
+18:     else {
+19:         // we don't modify the current value of 'm_minutes'
+20:         std::cout << "Wrong value for minutes: " << minutes << std::endl;
+21:     }
+22: }
+23: 
+24: void Time::setSeconds(int seconds)
+25: {
+26:     if (0 <= seconds && seconds < 60) {
+27:         m_seconds = seconds;
+28:     }
+29:     else {
+30:         // we don't modify the current value of 'm_seconds'
+31:         std::cout << "Wrong value for seconds: " << seconds << std::endl;
+32:     }
+33: }
+```
+
+#### Datei [*Main.cpp*](../ClassesObjectsImproved/Main.cpp) - Testrahmen:
+
+```cpp
+01: void testClassTimeImproved()
+02: {
+03:     Time now;
+04:     now.setHours(10);
+05:     now.setMinutes(20);
+06:     now.setSeconds(30);
+07:     now.print();
+08: 
+09:     // now.m_hours = 9999;   // doesn't compile
+10: 
+11:     now.increment();
+12:     now.print();
+13: 
+14:     now.decrement();
+15:     now.print();
+16: 
+17:     Time what;
+18:     what.setHours(9999);
+19:     what.print();            // watch output carefully
+20: }
+```
+
 
 ### Der `this`-Operator
 
@@ -145,8 +245,8 @@ Nein, es wird in dieser Situation die Instanzvariable durch den Parameter verdec
 
 Mögliche Abhilfen:
 
-  * Unterschiedliche Bezeichner für Instanzvariablen und Parameter von Methoden
-  * Gebrauch des `this`-Operators
+  * Unterschiedliche Bezeichner für Instanzvariablen und Parameter von Methoden.
+  * Gebrauch des `this`-Operators.
 
 Mit dem `this`-Operator könnte man die *setter*-Methode korrekt realisieren:
 
@@ -162,130 +262,6 @@ Mit dem `this`-Operator könnte man die *setter*-Methode korrekt realisieren:
 09: }
 </pre>
 
-
-## Beispiele
-
-Wir bleiben bei unserer Betrachtung von Uhrzeiten. 
-Der nun folgende Quellcode integriert vor Betrachtungen dieses Abschnitts:
-
-Datei *Time.h*:
-
-```cpp
-01: class Time
-02: {
-03: private:
-04:     int m_seconds;
-05:     int m_minutes;
-06:     int m_hours;
-07: 
-08: public:
-09:     // getter // setter
-10:     int getSeconds() { return m_seconds; }
-11:     int getMinutes() { return m_minutes; }
-12:     int getHours() { return m_hours; }
-13:     void setSeconds(int seconds);
-14:     void setMinutes(int minutes);
-15:     void setHours(int hours);
-16: 
-17:     // public interface
-18:     void reset();
-19:     void increment();
-20:     void decrement();
-21:     void print();
-22: };
-```
-
-Datei *Time.cpp*:
-
-```cpp
-01: // setter
-02: void Time::setHours(int hours)
-03: {
-04:     m_hours = (0 <= hours && hours < 24) ? hours : 0;
-05: 
-06:     if (0 <= hours && hours < 24) {
-07:         m_hours = hours;
-08:     }
-09:     else {
-10:         // we don't modify the current value of 'm_hours'
-11:         std::cout << "Wrong value for hours: " << hours << std::endl;
-12:     }
-13: }
-14: 
-15: void Time::setMinutes(int minutes)
-16: {
-17:     if (0 <= minutes && minutes < 60) {
-18:         m_minutes = minutes;
-19:     }
-20:     else {
-21:         // we don't modify the current value of 'm_minutes'
-22:         std::cout << "Wrong value for minutes: " << minutes << std::endl;
-23:     }
-24: }
-25: 
-26: void Time::setSeconds(int seconds)
-27: {
-28:     if (0 <= seconds && seconds < 60) {
-29:         m_seconds = seconds;
-30:     }
-31:     else {
-32:         // we don't modify the current value of 'm_seconds'
-33:         std::cout << "Wrong value for seconds: " << seconds << std::endl;
-34:     }
-35: }
-36: 
-37: // public interface
-38: void Time::reset()
-39: {
-40:     m_seconds = 0;
-41:     m_minutes = 0;
-42:     m_hours = 0;
-43: }
-44: 
-45: void Time::increment()
-46: {
-47:     m_seconds++;
-48:     if (m_seconds >= 60)
-49:     {
-50:         m_seconds = 0;
-51:         m_minutes++;
-52:         if (m_minutes >= 60)
-53:         {
-54:             m_minutes = 0;
-55:             m_hours++;
-56:             if (m_hours >= 24)
-57:             {
-58:                 m_hours = 0;
-59:             }
-60:         }
-61:     }
-62: }
-63: 
-64: void Time::decrement()
-65: {
-66:     m_seconds--;
-67:     if (m_seconds < 0)
-68:     {
-69:         m_seconds = 59;
-70:         m_minutes--;
-71:         if (m_minutes < 0)
-72:         {
-73:             m_minutes = 59;
-74:             m_hours--;
-75:             if (m_hours < 0)
-76:             {
-77:                 m_hours = 23;
-78:             }
-79:         }
-80:     }
-81: }
-82: 
-83: void Time::print()
-84: {
-85:     std::printf("%02d:%02d:%02d\n", m_hours, m_minutes, m_seconds);
-86: }
-```
-
 ---
 
 ## Quellcode des Beispiels:
@@ -296,14 +272,12 @@ Datei *Time.cpp*:
 
 ---
 
-
 ## Übungen
 
 TBD: Rectangle
 
 
 ---
-
 
 [Zurück](Agenda.md)
 

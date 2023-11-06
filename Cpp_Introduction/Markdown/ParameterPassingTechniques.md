@@ -79,7 +79,7 @@ allerdings muss der Parameter der Funktion vom Typ *Referenz* sein.
 
 Studieren Sie sorgfältig die folgenden drei Realisierungen einer Funktion `multiplyByTwo`:
 
-#### Datei *Main.cpp*:
+#### Datei [*Main.cpp*](../ParameterPassingTechniques/Main.cpp) - Testrahmen:
 
 ```cpp
 01: void multiplyByTwo(int n)

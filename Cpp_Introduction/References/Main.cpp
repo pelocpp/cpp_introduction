@@ -17,6 +17,57 @@ namespace References
 
     void referencesUnderstanding()
     {
+        int anInteger;
+        int& rSomeRef = anInteger;
+
+        anInteger = 123;
+        std::cout << "anInteger: " << anInteger << std::endl;
+        std::cout << "rSomeRef:  " << rSomeRef << std::endl;
+
+        rSomeRef = 456;
+        std::cout << "anInteger: " << anInteger << std::endl;
+        std::cout << "rSomeRef:  " << rSomeRef << std::endl;
+    }
+
+    void referencesAndAddressOperator()
+    {
+        int anInteger;
+        int& rSomeRef = anInteger;
+
+        anInteger = 123;
+        std::cout << "anInteger:  " << anInteger << std::endl;
+        std::cout << "rSomeRef:   " << rSomeRef << std::endl;
+
+        std::cout << "&anInteger: " << &anInteger << std::endl;
+        std::cout << "&rSomeRef:  " << &rSomeRef << std::endl;
+    }
+
+    void referencesAndReAssignment()
+    {
+        int anInteger;
+        int& rSomeRef = anInteger;
+
+        anInteger = 123;
+        std::cout << "anInteger:      " << anInteger << std::endl;
+        std::cout << "rSomeRef:       " << rSomeRef << std::endl;
+        std::cout << "&anInteger:     " << &anInteger << std::endl;
+        std::cout << "&rSomeRef:      " << &rSomeRef << std::endl;
+        std::cout << std::endl;
+
+        int secondInteger = 456;
+
+        rSomeRef = secondInteger;
+
+        std::cout << "anInteger:      " << anInteger << std::endl;
+        std::cout << "secondInteger:  " << secondInteger << std::endl;
+        std::cout << "rSomeRef:       " << rSomeRef << std::endl;
+        std::cout << "&anInteger:     " << &anInteger << std::endl;
+        std::cout << "&secondInteger: " << &secondInteger << std::endl;
+        std::cout << "&rSomeRef:      " << &rSomeRef << std::endl;
+    }
+
+    void referencesVsPointers()
+    {
         int n = 123;
         int m;
 
@@ -46,8 +97,11 @@ void testReferences()
 {
     using namespace References;
 
-    scriptSnippets();
-    referencesUnderstanding();
+    //scriptSnippets();
+    //referencesUnderstanding();
+    //referencesAndAddressOperator();
+    referencesAndReAssignment();
+    //referencesVsPointers();
 }
 
 // ===========================================================================

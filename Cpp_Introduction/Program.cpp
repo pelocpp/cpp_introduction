@@ -7,6 +7,7 @@
 #include <iostream>
 
 // function prototypes
+extern void testHelloWorld();
 extern void testClassesObjects();
 extern void testProceduralVsOOProgramming();
 extern void testClassesObjectsImproved();
@@ -31,6 +32,7 @@ int main()
     // main entry points code examples
     try
     {
+        testHelloWorld();
         //testClassesObjects();
         //testProceduralVsOOProgramming();
         //testClassesObjectsImproved();

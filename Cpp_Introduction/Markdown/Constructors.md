@@ -194,14 +194,32 @@ zum Einsatz:
 
 ### Konvertierungskonstruktoren
 
+Zwei der Konstruktoren der Klasse `Time` rangieren unter der Bezeichnung *Konvertierungskonstruktor*:
 
-WEITER !!!!!!!!!!!!!!!!
+```cpp
+Time(int seconds);
+```
+
+und
+
+```cpp
+Time(const char*);
+```
 
 
+Beide Konstruktoren besitzen genau ein Argument, dessen Datentyp
+gewissermaßen dem *Quelldatentyp*  entspricht.
+Der *Zieldatentyp* wiederum ist gleich dem Typ der Klasse,
+es findet in den beiden Beispielen folglich eine Konvertierung
+von `int` nach `Time` bzw. von `const char*` nach `Time` statt:
 
-
-
-
+```cpp
+01: Time t1("09:30:00");          // conversion 'const char*' -> 'Time'
+02: t1.print();
+03: 
+04: Time t2(24 * 60 * 60 - 1);    // conversion 'int' -> 'Time'
+05: t2.print();
+```
 
 ---
 

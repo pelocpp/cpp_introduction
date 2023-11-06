@@ -61,6 +61,12 @@
     <Filter Include="Source Files\Static">
       <UniqueIdentifier>{a4973b10-46d2-433a-a665-1d4c21bba1f1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\HelloWorld">
+      <UniqueIdentifier>{b427578e-d18c-4159-a75f-e2ec6eade062}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises">
+      <UniqueIdentifier>{bfd29a6c-2782-4710-ab45-c54a1827936c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -145,6 +151,9 @@
     <None Include="Markdown\Inheritance.md">
       <Filter>Markdown</Filter>
     </None>
+    <None Include="Exercises\Exercises.md">
+      <Filter>Excercises</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -215,6 +224,9 @@
     </ClCompile>
     <ClCompile Include="Static\Main.cpp">
       <Filter>Source Files\Static</Filter>
+    </ClCompile>
+    <ClCompile Include="HelloWorld\Main.cpp">
+      <Filter>Source Files\HelloWorld</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

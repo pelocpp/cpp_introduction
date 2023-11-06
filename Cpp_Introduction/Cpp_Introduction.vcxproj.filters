@@ -301,5 +301,11 @@
     <Image Include="Markdown\PropertyPages.png">
       <Filter>Markdown</Filter>
     </Image>
+    <Image Include="Markdown\Github_Mobile_iPad.png">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\Github_Mobile_iPhone.png">
+      <Filter>Markdown</Filter>
+    </Image>
   </ItemGroup>
 </Project>

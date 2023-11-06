@@ -11,6 +11,29 @@ Alle Beispiel müssten aber auch mit dem GCC Compiler übersetzungsfähig sein.
 
 ---
 
+## GitHub Mobile
+
+GitHub-Repositories können auf mobilen Devices (IOS, Android) auch mit der jeweiligen
+*GitHub Mobile App* betrachten werden:
+
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="Github_Mobile_iPhone.png" width="150">
+</p>
+
+
+*Abbildung* 1: Ausschnitt des Repositories auf einem iPhone.
+
+Und hier zum Vergleich auf einem iPad:
+
+
+<img src="Github_Mobile_iPad.png" width="500">
+
+*Abbildung* 2: Ausschnitt des Repositories auf einem iPad.
+
+
+---
+
 ## Mehrere Dateien desselben Namens
 
 In diesem Projekt befinden sich viele Dateien mit demselben Namen wie
@@ -58,11 +81,11 @@ bzw.
 *(Properties -> C/C++ -> Output Files -> Objektdateiname)*
 
 
-Siehe hierzu auch *Abbildung* 1:
+Siehe hierzu auch *Abbildung* 3:
 
 <img src="PropertyPages.png" width="600">
 
-*Abbildung* 1: Einstellungen eines Visual Studio Projekts.
+*Abbildung* 3: Einstellungen eines Visual Studio Projekts.
 
 
 ---

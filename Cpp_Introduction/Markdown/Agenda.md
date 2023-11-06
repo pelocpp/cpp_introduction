@@ -104,9 +104,19 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
 
 
 ## [Vererbung](Inheritance.md)
+  * Entwicklung einer Hierarchie von Klassen
+  * Konstruktoren von abgeleiteten Klassen und Basisklassen
+  * Verwendung von `public`, `protected` und `private`
 
 
-## Polymorphismus
+## [Vererbung - weiterführende Themen](MoreInheritance.md)
+  * Überschreiben von Methoden
+  * Schlüsselwörter `virtual`, `override` und `final`
+  * Polymorphismus
+  * Schnittstellekonzept (Interface)
+  * Kontrakt mit mehreren Schnittstellen
+  * Abstrakten Basisklasse
+  * Unterschied Schnittstelle versus abstrakte Basisklasse
 
 
 ## [Templates / Schablonen](Templates.md)

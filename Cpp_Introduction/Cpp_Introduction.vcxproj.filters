@@ -67,6 +67,12 @@
     <Filter Include="Excercises">
       <UniqueIdentifier>{bfd29a6c-2782-4710-ab45-c54a1827936c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Excercises\Rectangle">
+      <UniqueIdentifier>{89c5bfe8-acc5-4bae-b402-de5e8fb87610}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Inheritance">
+      <UniqueIdentifier>{05bab861-b100-4bb6-a23d-1ccb47de87bf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -154,6 +160,12 @@
     <None Include="Exercises\Exercises.md">
       <Filter>Excercises</Filter>
     </None>
+    <None Include="Exercises\Exercises_Rectangle.md">
+      <Filter>Excercises</Filter>
+    </None>
+    <None Include="Markdown\MoreInheritance.md">
+      <Filter>Markdown</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -228,6 +240,21 @@
     <ClCompile Include="HelloWorld\Main.cpp">
       <Filter>Source Files\HelloWorld</Filter>
     </ClCompile>
+    <ClCompile Include="Exercises\Rectangle\Point.cpp">
+      <Filter>Excercises\Rectangle</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Rectangle\Rectangle.cpp">
+      <Filter>Excercises\Rectangle</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Rectangle\Rectangle_Main.cpp">
+      <Filter>Excercises\Rectangle</Filter>
+    </ClCompile>
+    <ClCompile Include="Inheritance\Main.cpp">
+      <Filter>Source Files\Inheritance</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Exercises.cpp">
+      <Filter>Excercises</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constructors\Time.h">
@@ -244,6 +271,12 @@
     </ClInclude>
     <ClInclude Include="RuleOfThree\BigData.h">
       <Filter>Source Files\RuleOfThree</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\Rectangle\Point.h">
+      <Filter>Excercises\Rectangle</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\Rectangle\Rectangle.h">
+      <Filter>Excercises\Rectangle</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

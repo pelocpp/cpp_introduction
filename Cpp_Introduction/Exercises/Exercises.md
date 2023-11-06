@@ -58,9 +58,10 @@ Folgende Aspekte werden betrachtet:
 -->
 
 
-#### [Klasse *Rectangle*](Examples/Rectangle/Resources/Readme.md)
+#### [Klasse *Rectangle*](./Exercises_Rectangle.md)
 
 Folgende Aspekte werden betrachtet:
+  * Klasse und Objekt
   * Konstruktoren
   * Zugriffsrechte (`private`, `public`)
   * *getter*/*setter*-Methoden

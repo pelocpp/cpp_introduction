@@ -5,6 +5,16 @@
 
 ---
 
+Technische Details>
+
+Unbeding Mobile Zugang herausarbeiten !!!
+
+---
+
+Copyrights entfernen 
+
+---
+
 Klasse Time: Methode `equals`
 
 ---
@@ -20,6 +30,12 @@ Allerdigs gibt es den Destruktor noch nicht .................
 
 
 ---
+
+Kopieren von Code Snippets
+
+
+---
+
 
 [//]: # (Dies ist ein Markdown Kommentar, brauche ich das ....)
 

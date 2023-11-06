@@ -209,7 +209,7 @@ SimpleClass
 
 ## Quellcode des Beispiels:
 
-[Main.cpp](..\DynamicMemoryManagement\Main.cpp)
+[Main.cpp](../DynamicMemoryManagement/Main.cpp)
 
 ---
 

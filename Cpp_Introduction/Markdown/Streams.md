@@ -178,7 +178,7 @@ Double: 123.456
 
 ## Quellcode des Beispiels:
 
-[Main.cpp](..\Streams\Main.cpp)
+[Main.cpp](../Streams/Main.cpp)
 
 ---
 

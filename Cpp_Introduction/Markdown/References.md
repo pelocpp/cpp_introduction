@@ -182,9 +182,9 @@ Ein Testrahmen mit 2 Objekten `now` und `later`:
 
 ## Quellcode des Beispiels:
 
-[Time.h](..\ClassesObjects\Time.h)<br />
-[Time.cpp](..\ClassesObjects\Time.cpp)<br />
-[Main.cpp](..\ClassesObjects\Main.cpp)
+[Time.h](../ClassesObjects/Time.h)<br />
+[Time.cpp](../ClassesObjects/Time.cpp)<br />
+[Main.cpp](../ClassesObjects/Main.cpp)
 
 ---
 

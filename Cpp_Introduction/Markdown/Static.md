@@ -111,7 +111,7 @@ Demzufolge kann man sie aufrufen, ohne ein Objekt der Klasse verfügbar haben zu 
 
 ## Quellcode des Beispiels:
 
-[Main.cpp](..\Static\Main.cpp)
+[Main.cpp](../Static/Main.cpp)
 
 ---
 

@@ -145,7 +145,7 @@ multiplyByTwo(123);
 
 ## Quellcode des Beispiels:
 
-[Main.cpp](..\ParameterPassingTechniques\Main.cpp)
+[Main.cpp](../ParameterPassingTechniques/Main.cpp)
 
 ---
 

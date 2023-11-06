@@ -147,7 +147,7 @@ entschieden.
 
 ## Quellcode des Beispiels:
 
-[Main.cpp](..\String\Main.cpp)
+[Main.cpp](../String/Main.cpp)
 
 ---
 

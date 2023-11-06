@@ -184,9 +184,9 @@ Datei *Time.cpp*:
 
 ## Quellcode des Beispiels:
 
-[Time.h](..\Constructors\Time.h)<br />
-[Time.cpp](..\Constructors\Time.cpp)<br />
-[Main.cpp](..\Constructors\Main.cpp)
+[Time.h](../Constructors/Time.h)<br />
+[Time.cpp](../Constructors/Time.cpp)<br />
+[Main.cpp](../Constructors/Main.cpp)
 
 ---
 

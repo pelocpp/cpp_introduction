@@ -44,7 +44,7 @@ int main()
         //testTemplates();
         //testStrings();
         //testExceptions();
-        testStreams();
+        //testStreams();
     }
     catch (const std::exception& ex) {
         std::cout << "Exception: " << ex.what() << std::endl;

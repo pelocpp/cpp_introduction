@@ -140,7 +140,7 @@ Calculator<double>: 777.777
 
 ## Quellcode des Beispiels:
 
-[Main.cpp](..\Templates\Main.cpp)
+[Main.cpp](../Templates/Main.cpp)
 
 ---
 

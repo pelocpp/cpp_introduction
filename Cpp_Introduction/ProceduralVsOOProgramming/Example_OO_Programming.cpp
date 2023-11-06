@@ -10,8 +10,21 @@ namespace Procedural_Versus_OO_Programming {
 
     class Circle
     {
-    public:
+    private:
         double m_radius;
+
+    public:
+        Circle()
+        {
+            m_radius = 0;
+        }
+
+        void setRadius(double radius)
+        {
+            if (radius > 0) {
+                m_radius = radius;
+            }
+        }
 
         double circumference()
         {
@@ -26,8 +39,21 @@ namespace Procedural_Versus_OO_Programming {
 
     class Square
     {
-    public:
+    private:
         double m_length;
+
+    public:
+        Square()
+        {
+            m_length = 0;
+        }
+
+        void setlength(double length)
+        {
+            if (length > 0) {
+                m_length = length;
+            }
+        }
 
         double circumference()
         {
@@ -49,13 +75,17 @@ void testComparisonOO()
     Square square;
 
     std::cout << "Enter Radius of Circle: ";
-    std::cin >> circle.m_radius;
+    double radius;
+    std::cin >> radius;
+    circle.setRadius(radius);
     
     std::cout << "Circumference of Circle: " << circle.circumference() << std::endl;
     std::cout << "Area of Circle: " << circle.area() << std::endl;
     
     std::cout << std::endl << "Enter Side Length of Square: ";
-    std::cin >> square.m_length;
+    double length;
+    std::cin >> length;
+    square.setlength(length);
     
     std::cout << "Circumference of Square: " << square.circumference() << std::endl;
     std::cout << "Area of Square: " << square.area() << std::endl;

@@ -104,7 +104,7 @@ Datei *Main.cpp*:
 
 ## Quellcode des Beispiels:
 
-[Main.cpp](..\Namespaces\Main.cpp)
+[Main.cpp](../Namespaces/Main.cpp)
 
 ---
 

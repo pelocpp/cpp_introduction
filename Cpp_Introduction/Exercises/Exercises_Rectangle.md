@@ -72,6 +72,16 @@ std::cout << "IsSquare:      " << rect.isSquare() << std::endl;
 
 ---
 
+## Quellcode der Lösungen:
+
+[*Point.h*](./Rectangle/Point.h)<br />
+[*Point.cpp*](./Rectangle/Point.cpp)<br />
+[*Rectangle.h*](./Rectangle/Rectangle.h)<br />
+[*Rectangle.cpp*](./Rectangle/Rectangle.cpp)<br />
+[*Rectangle_Main.cpp*](./Rectangle/Rectangle_Main.cpp)<br />
+
+---
+
 [Zurück](./Exercises.md)
 
 ---

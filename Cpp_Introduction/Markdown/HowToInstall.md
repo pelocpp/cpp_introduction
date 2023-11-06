@@ -18,7 +18,7 @@ GitHub-Repositories können auf mobilen Devices (IOS, Android) auch mit der jewei
 
 
 <p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="Github_Mobile_iPhone.png" width="150">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="Github_Mobile_iPhone.png" width="180">
 </p>
 
 
@@ -27,7 +27,7 @@ GitHub-Repositories können auf mobilen Devices (IOS, Android) auch mit der jewei
 Und hier zum Vergleich auf einem iPad:
 
 
-<img src="Github_Mobile_iPad.png" width="500">
+<img src="Github_Mobile_iPad.png" width="600">
 
 *Abbildung* 2: Ausschnitt des Repositories auf einem iPad.
 

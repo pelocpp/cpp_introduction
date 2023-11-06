@@ -290,9 +290,9 @@ Datei *Time.cpp*:
 
 ## Quellcode des Beispiels:
 
-[Time.h](../ClassesObjectsImproved/Time.h)<br />
-[Time.cpp](../ClassesObjectsImproved/Time.cpp)<br />
-[Main.cpp](../ClassesObjectsImproved/Main.cpp)
+[*Time.h*](../ClassesObjectsImproved/Time.h)<br />
+[*Time.cpp*](../ClassesObjectsImproved/Time.cpp)<br />
+[*Main.cpp*](../ClassesObjectsImproved/Main.cpp)
 
 ---
 

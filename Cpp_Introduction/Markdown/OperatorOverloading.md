@@ -447,9 +447,9 @@ auf den Modus *öffentlich* umgestellt &ndash; für *Freunde*.
 
 ## Quellcode des Beispiels:
 
-[Time.h](../OperatorOverloading/Time.h)<br />
-[Time.cpp](../OperatorOverloading/Time.cpp)<br />
-[Main.cpp](../OperatorOverloading/Main.cpp)
+[*Time.h*](../OperatorOverloading/Time.h)<br />
+[*Time.cpp*](../OperatorOverloading/Time.cpp)<br />
+[*Main.cpp*](../OperatorOverloading/Main.cpp)
 
 ---
 

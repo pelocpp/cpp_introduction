@@ -164,7 +164,7 @@ Was fällt Ihnen auf?
 
 ## Quellcode des Beispiels:
 
-[Main.cpp](../Exceptions/Main.cpp)
+[*Main.cpp*](../Exceptions/Main.cpp)
 
 ---
 

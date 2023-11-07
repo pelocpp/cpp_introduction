@@ -45,7 +45,7 @@ int &rInt = n;
 
 Wir betrachten ein Beispiel zu Referenzen:
 
-#### Datei [*Main.cpp*](../References/References.cpp):
+#### Datei [*Main.cpp*](../References/Main.cpp):
 
 ```cpp
 01: void referencesUnderstanding()
@@ -94,7 +94,7 @@ Genau das ist das
 Wesen der Referenzen &ndash; sie sind Alias-Adressen für das Ziel. 
 Das folgende Code-Fragment verdeutlicht diesen Sachverhalt:
 
-#### Datei [*Main.cpp*](../References/References.cpp):
+#### Datei [*Main.cpp*](../References/Main.cpp):
 
 ```cpp
 01: void referencesAndAddressOperator()
@@ -136,7 +136,7 @@ können und immer Alias-Adressen für ihr Ziel sind, wissen manchmal nicht, was be
 Referenz passiert. Was wie eine Neuzuweisung aussieht, stellt sich als Zuweisung eines neuen Wertes an das Ziel
 heraus. Diese Tatsache belegt Das folgende Code-Fragment:
 
-#### Datei [*Main.cpp*](../References/References.cpp):
+#### Datei [*Main.cpp*](../References/Main.cpp):
 
 ```cpp
 01: void referencesAndReAssignment()
@@ -206,7 +206,7 @@ zu referenzierenden Variablen vorhanden sein *muss*.
 
 ### Zeiger und Referenzen im Vergleich
 
-#### Datei [*Main.cpp*](../References/References.cpp):
+#### Datei [*Main.cpp*](../References/Main.cpp):
 
 ```cpp
 01: void referencesUnderstanding()

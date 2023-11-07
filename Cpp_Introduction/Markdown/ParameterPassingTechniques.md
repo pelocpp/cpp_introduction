@@ -48,7 +48,7 @@ Als Aktualparameter treten die beiden Variablen `x` und `y` sowohl die Konstante
 Bei der *Call-by-Value*-Aufrufmethode der Parameterübergabe werden die Werte der Aktualparameter
 in die formalen Parameter der Funktion kopiert.
 
-Es gibt folglich pro Parameter zwei verschiedenen Speicherorte, an denen der Wert eines Parameters vorhanden ist:
+Es gibt folglich pro Parameter zwei verschiedene Speicherorte, an denen der Wert eines Parameters vorhanden ist:
 
   * Einen originalen Speicherort, der den Wert des Aktualparameters als Inhalt hat.
   * Eine Funktionskopie, die denselben Inhalt wie der originale Speicherort hat, aber nur in der Funktion verfügbar ist.

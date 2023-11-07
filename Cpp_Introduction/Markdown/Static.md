@@ -23,6 +23,7 @@ ins Spiel bringen wollen?
 
 Etwa auf diese Weise?
 
+#### Datei [*Main.cpp*](../Static/Main.cpp):
 
 ```cpp
 01: class Math
@@ -53,7 +54,7 @@ Welche Nachteile besitzt diese Lösung?
 Manchmal möchte man aber Daten verwalten, die alle Objekte einer Klasse gemeinsam nutzen.
 
 Für einen Wert wie die Zahl *Pi* ergibt es keinen Sinn,
-in beiebig vielen Objekten einer Klasse `Math` denselben Wert (und damit eine Kopie) bereitzustellen.
+in beliebig vielen Objekten einer Klasse `Math` denselben Wert (und damit eine Kopie) bereitzustellen.
 
 Im Gegensatz zu normalen Elementvariablen werden statische Elementvariablen von allen Instanzen einer Klasse
 gemeinsam genutzt.
@@ -65,14 +66,13 @@ stehen, und Datenelementen, die normalerweise nur in einem einzelnen Objekt verf
 ### Statische Datenelemente (`static`)
 
 
-Statische Elementfunktionen sind vergleichbar mit statischen Elementvariablen: Sie existieren nicht in einem Objekt,
-sondern im Gültigkeitsbereich der Klasse.
+Statische Elementfunktionen sind vergleichbar mit statischen Elementvariablen:
+Sie existieren nicht in einem Objekt, sondern im Gültigkeitsbereich der Klasse.
 
-Demzufolge kann man sie aufrufen, ohne ein Objekt der Klasse verfügbar haben zu müssen.
+Demzufolge kann man sie aufrufen, ohne ein Objekt der Klasse verfügbar haben zu müssen,
+siehe das folgende Beispiel:
 
-
-## Beispiele
-
+#### Datei [*Main.cpp*](../Static/Main.cpp):
 
 ```cpp
 01: class Math

@@ -33,7 +33,7 @@ int main()
 Erstellen Sie mit der *Visual Studio* Entwicklungsumgebung ein C++&ndash;Projekt
 und bringen Sie das Programm zum Laufen. Sie sollten dann folgende Ausgabe erhalten:
 
-<img src="HelloWorld.png" width="500">
+<img src="HelloWorld.png" width="600">
 
 ---
 

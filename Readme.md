@@ -1,7 +1,7 @@
 # Einführung in die Programmiersprache C++
 
 <p align="center">
-  <img src="./Cpp_Introduction/Markdown/Cpp.png" width="200" height="200" align="center" />
+<img src="./Cpp_Introduction/Markdown/Cpp.png" width="200" height="200"/>
 </p>
 
 ## [Vorab](./Cpp_Introduction/Markdown/FirstOfAll.md)

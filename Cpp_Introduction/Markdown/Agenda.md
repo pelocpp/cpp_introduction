@@ -12,6 +12,11 @@ nach gewissen systematischen und methodischen Gesichtspunkten so zu gliedern und
 dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
 
 
+## [&ldquo;Hello World&rdquo;](HelloWorld.md) 
+  * Umgang mit der Entwicklungsumgebung
+  * Ein &ldquo;Hello World&rdquo; erstellen und ablaufen lassen
+
+
 ## [Erster Blick auf Klassen und Objekte](ClassesObjects.md) 
   * Dateiorganisation (Header-Dateien, Implementierungs-Dateien)
   * Begriffe *Klasse* und *Objekt*

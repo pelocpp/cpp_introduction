@@ -21,7 +21,7 @@ void testHelloWorld()
 {
     using namespace HelloWorld;
 
-    helloWorldClassic();
+    // helloWorldClassic();
     helloWorldCpp();
 }
 

@@ -30,12 +30,12 @@ extern void testExercises();
 // entry point
 int main()
 {
-    std::cout << "[Collection of introductionary C++ Code Examples - Copyright (C) 2019-2023 Peter Loos]" << std::endl;
+  //  std::cout << "[Collection of introductionary C++ Code Examples - Copyright (C) 2019-2023 Peter Loos]" << std::endl;
 
     // main entry points code examples
     try
     {
-        //testHelloWorld();
+        testHelloWorld();
         //testClassesObjects();
         //testProceduralVsOOProgramming();
         //testClassesObjectsImproved();
@@ -52,13 +52,13 @@ int main()
         //testStreams();
         //testInheritance();
 
-        testExercises();
+        //testExercises();
     }
     catch (const std::exception& ex) {
         std::cout << "Exception: " << ex.what() << std::endl;
     }
 
-    std::cout << "[Done.]" << std::endl;
+   // std::cout << "[Done.]" << std::endl;
     return 0;
 }
 

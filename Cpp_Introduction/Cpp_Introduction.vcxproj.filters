@@ -148,7 +148,7 @@
     <None Include="Markdown\Streams.md">
       <Filter>Markdown</Filter>
     </None>
-    <None Include="Markdown\HowToInstall.md">
+    <None Include="Markdown\InstallationGuide.md">
       <Filter>Markdown</Filter>
     </None>
     <None Include="Markdown\Static.md">
@@ -164,6 +164,9 @@
       <Filter>Excercises</Filter>
     </None>
     <None Include="Markdown\MoreInheritance.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\HelloWorld.md">
       <Filter>Markdown</Filter>
     </None>
   </ItemGroup>
@@ -305,6 +308,9 @@
       <Filter>Markdown</Filter>
     </Image>
     <Image Include="Markdown\Github_Mobile_iPhone.png">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\HelloWorld.png">
       <Filter>Markdown</Filter>
     </Image>
   </ItemGroup>

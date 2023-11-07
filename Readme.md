@@ -18,7 +18,7 @@
 
 ## [Literatur](./Cpp_Introduction/Markdown/Literature.md)
 
-## [Technische Hinweise](./Cpp_Introduction/Markdown/HowToInstall.md)
+## [Technische Hinweise](./Cpp_Introduction/Markdown/InstallationGuide.md)
 
 
 <!--

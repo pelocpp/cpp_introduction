@@ -32,8 +32,9 @@
     <None Include="Markdown\DynamicMemoryManagement.md" />
     <None Include="Markdown\Exceptions.md" />
     <None Include="Markdown\FirstOfAll.md" />
+    <None Include="Markdown\HelloWorld.md" />
     <None Include="Markdown\History.md" />
-    <None Include="Markdown\HowToInstall.md" />
+    <None Include="Markdown\InstallationGuide.md" />
     <None Include="Markdown\Inheritance.md" />
     <None Include="Markdown\Introduction.md" />
     <None Include="Markdown\Literature.md" />
@@ -98,6 +99,7 @@
     <Image Include="Markdown\Cpp.png" />
     <Image Include="Markdown\Github_Mobile_iPad.png" />
     <Image Include="Markdown\Github_Mobile_iPhone.png" />
+    <Image Include="Markdown\HelloWorld.png" />
     <Image Include="Markdown\OperatorsPrecedence.png" />
     <Image Include="Markdown\PropertyPages.png" />
     <Image Include="Markdown\WhatAreYouStudying.png" />

@@ -84,7 +84,7 @@ Folgende Aspekte werden betrachtet:
 
 ---
 
-#### [Zeichenketten / Klasse `std::string`](./Exercises_BankAccount.md)
+#### [Zeichenketten / Klasse `std::string`](./Exercises_DateToWord.md)
 
 Folgende Aspekte werden betrachtet:
   * Umgang mit der Klasse `std::string`

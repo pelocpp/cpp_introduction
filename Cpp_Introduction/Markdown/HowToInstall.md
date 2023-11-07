@@ -16,18 +16,16 @@ Alle Beispiel müssten aber auch mit dem GCC Compiler übersetzungsfähig sein.
 GitHub-Repositories können auf mobilen Devices (IOS, Android) auch mit der jeweiligen
 *GitHub Mobile App* betrachten werden:
 
-
-<p>
-  <img src="Github_Mobile_iPhone.png" align="center" width="180">
+<p align="center">
+<img src="Github_Mobile_iPhone.png" width="180">
 </p>
-
 
 *Abbildung* 1: Ausschnitt des Repositories auf einem iPhone.
 
 Und hier zum Vergleich auf einem iPad:
 
-<p>
-  <img src="Github_Mobile_iPad.png" align="center" width="600" align="center" >
+<p align="center">
+<img src="Github_Mobile_iPad.png" width="600">
 </p>
 
 *Abbildung* 2: Ausschnitt des Repositories auf einem iPad.

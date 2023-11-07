@@ -21,6 +21,7 @@
   <ItemGroup>
     <None Include="..\Readme.md" />
     <None Include="Exercises\Exercises.md" />
+    <None Include="Exercises\Exercises_BankAccount.md" />
     <None Include="Exercises\Exercises_Rectangle.md" />
     <None Include="Markdown\Agenda.md" />
     <None Include="Markdown\ClassesObjects.md" />
@@ -61,6 +62,8 @@
     <ClCompile Include="Constructors\Time.cpp" />
     <ClCompile Include="DynamicMemoryManagement\Main.cpp" />
     <ClCompile Include="Exceptions\Main.cpp" />
+    <ClCompile Include="Exercises\BankAccount\BankAccount.cpp" />
+    <ClCompile Include="Exercises\BankAccount\BankAccount_Main.cpp" />
     <ClCompile Include="Exercises\Exercises.cpp" />
     <ClCompile Include="Exercises\Rectangle\Point.cpp" />
     <ClCompile Include="Exercises\Rectangle\Rectangle.cpp" />
@@ -87,6 +90,7 @@
     <ClInclude Include="ClassesObjectsImproved\Time.h" />
     <ClInclude Include="ClassesObjects\Time.h" />
     <ClInclude Include="Constructors\Time.h" />
+    <ClInclude Include="Exercises\BankAccount\BankAccount.h" />
     <ClInclude Include="Exercises\Rectangle\Point.h" />
     <ClInclude Include="Exercises\Rectangle\Rectangle.h" />
     <ClInclude Include="OperatorOverloading\Time.h" />

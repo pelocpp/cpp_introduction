@@ -4,10 +4,12 @@
 
 // function prototypes
 extern void testRectangle();
+extern void testBankAccount();
 
 void testExercises()
 {
-    testRectangle();
+    //testRectangle();
+    testBankAccount();
 }
 
 // ===========================================================================

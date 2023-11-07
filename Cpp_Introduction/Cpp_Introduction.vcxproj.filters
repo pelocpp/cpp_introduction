@@ -73,6 +73,9 @@
     <Filter Include="Source Files\Inheritance">
       <UniqueIdentifier>{05bab861-b100-4bb6-a23d-1ccb47de87bf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Excercises\BankAccount">
+      <UniqueIdentifier>{bfcd318f-ab8f-464a-9045-bf9480cde01e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -169,6 +172,9 @@
     <None Include="Markdown\HelloWorld.md">
       <Filter>Markdown</Filter>
     </None>
+    <None Include="Exercises\Exercises_BankAccount.md">
+      <Filter>Excercises</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -258,6 +264,12 @@
     <ClCompile Include="Exercises\Exercises.cpp">
       <Filter>Excercises</Filter>
     </ClCompile>
+    <ClCompile Include="Exercises\BankAccount\BankAccount.cpp">
+      <Filter>Excercises\BankAccount</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\BankAccount\BankAccount_Main.cpp">
+      <Filter>Excercises\BankAccount</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constructors\Time.h">
@@ -280,6 +292,9 @@
     </ClInclude>
     <ClInclude Include="Exercises\Rectangle\Rectangle.h">
       <Filter>Excercises\Rectangle</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\BankAccount\BankAccount.h">
+      <Filter>Excercises\BankAccount</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

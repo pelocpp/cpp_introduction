@@ -9,7 +9,7 @@
 
 Es gibt verschiedene Möglichkeiten, Parameter an Methoden (Funktionen) zu übergeben.
 
-Vorab zur Nomenklatur:
+*Vorab zur Nomenklatur*:
 
 Die an die Funktion übergebenen Parameter werden als *Aktualparameter* (*actual parameter*) bezeichnet,
 während die von der Funktion empfangenen Parameter als *Formalparameter* (*formal parameter*) bezeichnet werden.
@@ -57,7 +57,7 @@ Alle innerhalb von Funktionen vorgenommenen Änderungen werden an den Funktionsko
 nicht in den tatsächlichen Parametern (originaler Speicherort) des Funktionsaufrufs widergespiegelt.
 
 
-### Parameterübergabemechanismus *Call-by-Address*
+### Parameterübergabemechanismus *Call-by-Reference*
 
 Bei der *Call-by-Reference*-Aufrufmethode wird die Adresse des Aktualparameters als formaler Parameter an die Funktion übergeben.
 
@@ -66,12 +66,15 @@ Bei der *Call-by-Reference*-Aufrufmethode wird die Adresse des Aktualparameters 
     spiegeln sich in den aktuellen Parametern des Aufrufs wider.
 
 
-### Parameterübergabemechanismus *Call-by-Reference*
+**Zur Abrundung**:
 
-Im Prinzip ist diese Aufrufmethode identisch zur *Call-by-Address*-Methode.
+### Parameterübergabemechanismus *Call-by-Address*
+
+Im Prinzip ist diese Aufrufmethode identisch zur *Call-by-Reference*-Methode.
 Da wir in C++ die beiden Sprachmittel *Zeiger* und *Referenz* haben,
 können Aktualparameter durch eine explizite Adresse (explizite Verwendung des Adress-Operators `&`)
-oder eben durch eine Referenz übergeben werden. Im zweiten Fall bedarf es keiner Gebrauchs des Adress-Operators,
+oder eben durch eine Referenz (Adresse wird implizit gebildet) übergeben werden.
+Im zweiten Fall bedarf es keines Gebrauchs des Adress-Operators,
 allerdings muss der Parameter der Funktion vom Typ *Referenz* sein.
 
 

@@ -35,7 +35,7 @@ int main()
     // main entry points code examples
     try
     {
-        testHelloWorld();
+        //testHelloWorld();
         //testClassesObjects();
         //testProceduralVsOOProgramming();
         //testClassesObjectsImproved();
@@ -52,7 +52,7 @@ int main()
         //testStreams();
         //testInheritance();
 
-        //testExercises();
+        testExercises();
     }
     catch (const std::exception& ex) {
         std::cout << "Exception: " << ex.what() << std::endl;

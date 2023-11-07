@@ -69,6 +69,20 @@ Folgende Aspekte werden betrachtet:
   * Objekte als Rückgabewert von Methoden
 
 
+---
+
+#### [Klasse *BankAccount*](./Exercises_BankAccount.md)
+
+Folgende Aspekte werden betrachtet:
+  * Klasse und Objekt
+  * Konstruktoren
+  * Zugriffsrechte (`private`, `public`)
+  * *getter*/*setter*-Methoden
+  * Realisierung einfacher Methoden
+  * Klassenvariablen
+
+
+
 <!--
 
 ---

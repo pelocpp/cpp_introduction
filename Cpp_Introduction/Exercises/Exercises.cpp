@@ -5,11 +5,13 @@
 // function prototypes
 extern void testRectangle();
 extern void testBankAccount();
+extern void testDateToWord();
 
 void testExercises()
 {
     //testRectangle();
-    testBankAccount();
+    //testBankAccount();
+    testDateToWord();
 }
 
 // ===========================================================================

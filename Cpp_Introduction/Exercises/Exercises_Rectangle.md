@@ -1,4 +1,4 @@
-# Beispiel Klasse `Rectangle`
+# Aufgabe Klasse `Rectangle`
 
 [Zurück](./Exercises.md)
 

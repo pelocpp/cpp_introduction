@@ -82,8 +82,9 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
   * Schlüsselwörter `using` und `namespace`
 
 
-## [Zeichenketten: Klasse `std::string`](String.md)
-  * Einbinden von Klassen aus der C++&ndash;Standardbibliothek
+## [Zeichenketten: Klasse `std::string`](Strings.md)
+  * Einbinden der Klasse `std::string` aus der C++&ndash;Standardbibliothek
+  * Die Klasse `std::string` exemplarisch betrachtet
 
 
 ## [Exceptions / Behandlung von Ausnahmen](Exceptions.md)
@@ -130,7 +131,10 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
 
 
 ## STL (Standard Template Library)
-
+  * Container
+  * Iteratoren
+  * Algorithmen
+  * Funktoren
 
 
 ---

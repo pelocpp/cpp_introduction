@@ -1,4 +1,4 @@
-# Beispiel Bankkonto
+# Aufgabe Klasse `BankAccount`
 
 ## Zielsetzung
 
@@ -128,3 +128,19 @@ if (accountJohn > accountJack) {
   * Zwei Konto-Objekte vergleichen
   * Ein Konto mit `std::cout` auf der Konsole ausgeben
   * Mehrere Konten in einem Array verwalten.
+
+
+
+---
+
+## Quellcode der Lösungen:
+
+[*BankAccount.h*](./BankAccount/BankAccount.h)<br />
+[*BankAccount.cpp*](./BankAccount/BankAccount.cpp)<br />
+[*BankAccount_Main.cpp*](./BankAccount/BankAccount_Main.cpp)<br />
+
+---
+
+[Zurück](./Exercises.md)
+
+---

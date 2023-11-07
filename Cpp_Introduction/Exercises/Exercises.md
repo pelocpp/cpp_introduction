@@ -82,6 +82,14 @@ Folgende Aspekte werden betrachtet:
   * Klassenvariablen
 
 
+---
+
+#### [Zeichenketten / Klasse `std::string`](./Exercises_BankAccount.md)
+
+Folgende Aspekte werden betrachtet:
+  * Umgang mit der Klasse `std::string`
+
+
 
 <!--
 

@@ -22,6 +22,7 @@
     <None Include="..\Readme.md" />
     <None Include="Exercises\Exercises.md" />
     <None Include="Exercises\Exercises_BankAccount.md" />
+    <None Include="Exercises\Exercises_DateToWord.md" />
     <None Include="Exercises\Exercises_Rectangle.md" />
     <None Include="Markdown\Agenda.md" />
     <None Include="Markdown\ClassesObjects.md" />
@@ -49,7 +50,7 @@
     <None Include="Markdown\RuleOfThree.md" />
     <None Include="Markdown\Static.md" />
     <None Include="Markdown\Streams.md" />
-    <None Include="Markdown\String.md" />
+    <None Include="Markdown\Strings.md" />
     <None Include="Markdown\Templates.md" />
     <None Include="Markdown\ToBeDone.md" />
   </ItemGroup>
@@ -68,6 +69,7 @@
     <ClCompile Include="Exercises\Rectangle\Point.cpp" />
     <ClCompile Include="Exercises\Rectangle\Rectangle.cpp" />
     <ClCompile Include="Exercises\Rectangle\Rectangle_Main.cpp" />
+    <ClCompile Include="Exercises\Strings\Strings_Main.cpp" />
     <ClCompile Include="HelloWorld\Main.cpp" />
     <ClCompile Include="Inheritance\Main.cpp" />
     <ClCompile Include="Namespaces\Main.cpp" />
@@ -83,7 +85,7 @@
     <ClCompile Include="RuleOfThree\Main.cpp" />
     <ClCompile Include="Static\Main.cpp" />
     <ClCompile Include="Streams\Main.cpp" />
-    <ClCompile Include="String\Main.cpp" />
+    <ClCompile Include="Strings\Main.cpp" />
     <ClCompile Include="Templates\Main.cpp" />
   </ItemGroup>
   <ItemGroup>

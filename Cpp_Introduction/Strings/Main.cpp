@@ -5,7 +5,7 @@
 #include <iostream>
 #include <string>
 
-namespace String
+namespace Strings
 {
     void testChar()
     {
@@ -67,6 +67,13 @@ namespace String
         std::cout << "s1 == s2           ==> " << std::boolalpha << b1 << std::endl;
         std::cout << "s1 == s3           ==> " << std::boolalpha << b2 << std::endl;
 
+        // method: substr
+        // retrieve a sub string
+        // first param = position of the first character to include
+        // second param = length of the substring
+        std::string sub = s1.substr(1, 3);
+        std::cout << "s1.substr(1, 3)    ==> " << std::boolalpha << sub << std::endl;
+        
         // index operator []
         s[8] = '?';
         std::cout << "s[8] = '?'         ==> " << s << std::endl;
@@ -91,7 +98,7 @@ namespace String
 
 void testStrings()
 {
-    using namespace String;
+    using namespace Strings;
 
     testChar();
     testString();

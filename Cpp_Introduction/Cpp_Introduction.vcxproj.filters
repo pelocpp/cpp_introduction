@@ -52,9 +52,6 @@
     <Filter Include="Source Files\Exceptions">
       <UniqueIdentifier>{60255ba8-ae53-42cf-85e6-bd9cbe74b91c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\String">
-      <UniqueIdentifier>{409d937a-5ac7-4c8f-825f-e075e2a300e6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Streams">
       <UniqueIdentifier>{8f7ec9fa-76c5-4ba1-95c8-0ef2df956c27}</UniqueIdentifier>
     </Filter>
@@ -75,6 +72,12 @@
     </Filter>
     <Filter Include="Excercises\BankAccount">
       <UniqueIdentifier>{bfcd318f-ab8f-464a-9045-bf9480cde01e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Strings">
+      <UniqueIdentifier>{409d937a-5ac7-4c8f-825f-e075e2a300e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\Strings">
+      <UniqueIdentifier>{51d393d5-b63c-4431-9bc5-acf58aa49115}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -118,7 +121,7 @@
     <None Include="Markdown\Exceptions.md">
       <Filter>Markdown</Filter>
     </None>
-    <None Include="Markdown\String.md">
+    <None Include="Markdown\Strings.md">
       <Filter>Markdown</Filter>
     </None>
     <None Include="Markdown\History.md">
@@ -173,6 +176,9 @@
       <Filter>Markdown</Filter>
     </None>
     <None Include="Exercises\Exercises_BankAccount.md">
+      <Filter>Excercises</Filter>
+    </None>
+    <None Include="Exercises\Exercises_DateToWord.md">
       <Filter>Excercises</Filter>
     </None>
   </ItemGroup>
@@ -237,9 +243,6 @@
     <ClCompile Include="Exceptions\Main.cpp">
       <Filter>Source Files\Exceptions</Filter>
     </ClCompile>
-    <ClCompile Include="String\Main.cpp">
-      <Filter>Source Files\String</Filter>
-    </ClCompile>
     <ClCompile Include="Streams\Main.cpp">
       <Filter>Source Files\Streams</Filter>
     </ClCompile>
@@ -269,6 +272,12 @@
     </ClCompile>
     <ClCompile Include="Exercises\BankAccount\BankAccount_Main.cpp">
       <Filter>Excercises\BankAccount</Filter>
+    </ClCompile>
+    <ClCompile Include="Strings\Main.cpp">
+      <Filter>Source Files\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Strings\Strings_Main.cpp">
+      <Filter>Excercises\Strings</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

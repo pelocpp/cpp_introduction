@@ -48,33 +48,33 @@ Man kann die Lebensdauer von Variablen in einem C++&ndash;Programm in drei Grupp
 
   * Globale Variablen:<br />
   Derartige Variablen werden außerhalb von Funktionen oder Klassen, also auf der obersten
-  Ebene eines Programms definiert. Dabei sollten sie stets mit einem Vorbelegungswert initialisiert werden.<br />
+  Ebene eines Programms definiert. Dabei sollten sie stets mit einem Vorbelegungswert initialisiert werden.<br /><br />
   Globale Variablen existieren so lange wie das Programm ausgeführt wird.
-  So gesehen sollte man sie behutsam einsetzen, das die bereits vor dem Start des Programms Speicher in Anspruch
-* nehmen &ndash; und diesen bis dem Ende des Programms auch nicht vorzeitig freigeben können.<br />
-  Man kann auf globale Variablen von überall im gesamten Programm zugreifen.
+  So gesehen sollte man sie behutsam einsetzen, da sie bereits vor dem Start
+  des Programms Speicher in Anspruch nehmen &ndash;
+  und diesen bis zum Ende des Programms auch nicht vorzeitig freigeben können.<br /><br />
+  Man kann auf globale Variablen von überall aus im gesamten Programm zugreifen.
 
   * Lokale Variablen:<br />
-  Lokal werden in Funktionen oder Methoden (oder in inneren Blöcken von Funktionen oder Methoden)
-  definiert.<br />
+  Lokale Variablen werden in Funktionen oder Methoden (oder in inneren Blöcken von Funktionen oder Methoden)
+  definiert.<br /><br />
   Sie werden wie gewohnt durch eine Deklaration erstellt
-  und durch das Schließen des Codeblockes zerstört.
-  Danach hat gibt es keine Möglichkeit mehr auf diese Variable zuzugreifen.<br />
+  und durch das Schließen des Blocks zerstört.
+  Danach gibt es keine Möglichkeit mehr auf diese Variablen zuzugreifen.<br /><br />
   Lokale Variablen werden nicht automatisch initialisiert,
   es ist eine manuelle Initialisierung durch den Programmierer im Quellcode erforderlich.
 
 
-  * Dynamisch Variablen:<br />
-  Unter dynamisch Variablen versteht man Variablen, die nach Bedarf angelegt werden
-  und wieder explizit zu löschen sind, wann man sie nicht mehr benötigt.
-  So gesehen stehen dynamische Variablen für eine optimale Inanspruchnahme des Speichers,
-  da globalen Variablen möglicherweise zu großzugig mit dem Speicher umgehen
-  und lokale Variablen nicht über Funktionsgrenzen hinweg verfügbar sind.<br />
-  Man kann beliebig viele Variablen dynamisch anlegen (solange Hauptspeicher verfügbar ist).<br />
+  * Dynamische Variablen:<br />
+  Unter dynamischen Variablen versteht man Variablen, die nach Bedarf angelegt werden
+  und dann wieder zu löschen sind, wann man sie nicht mehr benötigt.
+  So gesehen stehen dynamische Variablen für eine optimale Inanspruchnahme (Auslastung) des Speichers,
+  da globale Variablen möglicherweise zu großzügig mit dem Speicher umgehen
+  und lokale Variablen andererseits nicht über Funktionsgrenzen hinweg verfügbar sind.<br /><br />
+  Man kann beliebig viele Variablen dynamisch anlegen (solange Hauptspeicher verfügbar ist).<br /><br />
   Ihr großer Vorteil besteht darin, dass man mit ihrer Hilfe genau so viel Speicher anfordern kann,
   wie man für einen Programmablauf benötigt.<br />
   Zum Reservieren dynamischen Speichers gibt es die beiden Operatoren `new` und `delete`.
-
 
 ### Stack und Heap (Stapel und Halde)
 
@@ -162,15 +162,16 @@ nicht mehr anderweitig verwenden.
 *Achtung*:
 
 
-Es gibt den `delete`-Oprator in zwei Ausprägungen &ndash; also auch syntaktisch
-in zwei Schreib`weisen:
+Es gibt den `new`- und `delete`-Operator in zwei Ausprägungen &ndash; also auch syntaktisch
+in zwei Schreibweisen:
 
-  * `delete ptr` &ndash; ruft den skalaren Löschdestruktor auf.
-  * `delete [] ptr`  &ndash; ruft den Destruktor zum Löschen von Vektoren auf.
+  * `new` &ndash; Reserviert Speicher für eine einzelne Variable (Objekt).
+  * `new []` &ndash; Reserviert Speicher für ein Feld von Variablen (Objekten).
 
-  https://stackoverflow.com/questions/39283233/why-in-vc-both-delete-and-delete-uses-scalar-deleting-destructor
 
-  WEIER !!!!!!!!!!!!!!!
+  * `delete ptr` &ndash; Gibt Speicher einer einzelnen Variablen frei.
+  * `delete [] ptr` &ndash; Gibt Speicher eines Felds von Variablen (Objekten) frei.
+
 
 
 ### *Beispiel* 3: Reservieren und Freigeben eines Speicherbereichs für ein Objekt:

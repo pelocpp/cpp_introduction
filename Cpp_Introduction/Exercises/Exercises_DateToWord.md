@@ -6,16 +6,26 @@
 
 ## Zielsetzung
 
-Folgende C++&ndash;-Sprachmittel sollen zum Einsatz kommen:
+Folgende C++&ndash;Sprachmittel sollen zum Einsatz kommen:
 
   * Umgang mit der Klasse `std::string`
+  * Methoden `substr` und `append`
+  * *getter*-Methode `length`
+  * Index-Operator `operator []`, Konkatenationsoperator `+`
+  * Weitere Bibliotheksfunktionen `std::isdigit` und `std::stoi`
 
 
 ## Beschreibung
 
 Schreiben Sie eine Funktion `verifyDateFormat`, der ein `std::string`-Objekt übergeben wird.
 Diese Zeichenkette enthält ein Datum in der Form *dd.mm.jjjj*.
-Die Funktion überprüft den korrekten Aufbau der Zeichenkette.
+Die Funktion überprüft den korrekten Aufbau dieser Zeichenkette.
+
+*Beispiel*:
+
+```cpp
+bool isValid = verifyDateFormat("10.08.2000");
+```
 
 Schreiben Sie eine weitere Funktion `dateToWord`, die ebenfalls ein `std::string`-Objekt als Argument hat:
 
@@ -23,7 +33,7 @@ Schreiben Sie eine weitere Funktion `dateToWord`, die ebenfalls ein `std::string
 std::string dateToWord(std::string date);
 ```
 
-Diese Funktion wandelt dieses Datum so um, das der Monat als Wort ausgeschrieben ist.
+Diese Funktion wandelt dieses Datum so um, dass der Monat im Ergebnis der Funktion als Wort ausgeschrieben wird.
 Führende Nullen der Tagesangabe werden dabei gelöscht.
 
 Wenn der Funktion zum Beispiel *01.11.2023* übergeben wird,

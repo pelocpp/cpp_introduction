@@ -7,6 +7,44 @@
 
 ## Erläuterungen
 
+### Zeichen
+
+Zeichenketten werden in C und C++ auf den Datentyp `char` abgebildet:
+
+#### Datei [*Main.cpp*](../Strings/Main.cpp):
+
+```cpp
+01: void testChar()
+02: {
+03:     char ch;
+04:     int n;
+05: 
+06:     ch = '*';
+07:     std::cout << ch << std::endl;
+08: 
+09:     n = ch;
+10:     std::cout << n << std::endl;
+11: 
+12:     ch = 65;     // ASCII table: 'A'
+13:     std::cout << ch << std::endl;
+14: 
+15:     // printing ASCII table
+16:     for (int i = 0; i <= 127; i++) {
+17: 
+18:         std::cout << i << ": " << (char) i << std::endl;
+19:     }
+20: 
+21:     char digit('1');
+22:     bool b1 = std::isdigit(digit);
+23: 
+24:     char noDigit('!');
+25:     bool b2 = std::isdigit(noDigit);
+26: }
+```
+
+
+### Zeichenketten
+
 Zeichenketten werden in der Programmiersprache C auf den Datentyp `const char*` abgebildet.
 Es stehen in C auch Funktionen für Verkettung, Vergleich, Kopie usw. zur Verfügung,
 diese sind in ihrem Gebrauch jedoch nicht sehr einfach bzw. intuitiv.
@@ -26,9 +64,6 @@ Zur Benutzung der Klasse `std::string` muss ein entsprechendes STL-Headerfile ei
 Durch diese Anweisung wird die Klasse `string` aus dem Namensraum `std` bekannt gemacht,
 so daß für die korrekte Verwendung `std::string` verwendet werden muss.
 
-
-## Beispiele
-
 Das folgende Beispiel versucht, einige der bisher betrachteten objektorientierten Techniken
 an einer C++ Standardklasse zu demonstrieren bzw. zu beobachten:
 
@@ -41,6 +76,7 @@ an einer C++ Standardklasse zu demonstrieren bzw. zu beobachten:
 
 ### Die Klasse `std::string` exemplarisch betrachtet
 
+#### Datei [*Main.cpp*](../Strings/Main.cpp):
 
 ```cpp
 01: void testString()
@@ -82,33 +118,32 @@ an einer C++ Standardklasse zu demonstrieren bzw. zu beobachten:
 37:     std::cout << "s1 == s2           ==> " << std::boolalpha << b1 << std::endl;
 38:     std::cout << "s1 == s3           ==> " << std::boolalpha << b2 << std::endl;
 39: 
-40:     // method: substr
-41:     // retrieve a sub string
-42:     // first param = position of the first character to include
-43:     // second param = length of the substring
-44:     std::string sub = s1.substr(1, 3);
-45:     std::cout << "s1.substr(1, 3)    ==> " << std::boolalpha << sub << std::endl;
-46:         
-47:     // index operator []
-48:     s[8] = '?';
-49:     std::cout << "s[8] = '?'         ==> " << s << std::endl;
-50: 
-51:     // method: append
-52:     // append another std::string object
-53:     std::string result;
-54:     result = s1.append(s2);
-55:     std::cout << "s1.append(s2)      ==> " << result << std::endl;
-56: 
-57:     // operator +
-58:     // concatenating two strings (same as using method append)
-59:     result = s1 + s3;
-60:     std::cout << "s1 + s3            ==> " << result << std::endl;
-61: 
-62:     // just kidding you:
-63:     // using an operator with 'method call' syntax
-64:     result = operator+ (s1, s2);
-65:     std::cout << "s1 + s2            ==> " << result << std::endl;
-66: }
+40:     // method: substr - retrieve a substring
+41:     // first param = position of the first character to include
+42:     // second param = length of the substring
+43:     std::string sub = s1.substr(1, 3);
+44:     std::cout << "s1.substr(1, 3)    ==> " << std::boolalpha << sub << std::endl;
+45:         
+46:     // index operator []
+47:     s[2] = '?';
+48:     std::cout << "s[2] = '?'         ==> " << s << std::endl;
+49: 
+50:     // method: append
+51:     // append another std::string object
+52:     std::string result;
+53:     result = s1.append(s2);
+54:     std::cout << "s1.append(s2)      ==> " << result << std::endl;
+55: 
+56:     // operator +
+57:     // concatenating two strings (same as using method append)
+58:     result = s1 + s3;
+59:     std::cout << "s1 + s3            ==> " << result << std::endl;
+60: 
+61:     // converting a string to an integer
+62:     std::string number("123");
+63:     int value = std::stoi(number);
+64:     std::cout << "std::stoi(\"123\")   ==> " << value << std::endl;
+65: }
 ```
 
 *Ausgabe*:
@@ -122,10 +157,10 @@ s.append("!!!")    ==> 12ABC345!!!
 s1 == s2           ==> true
 s1 == s3           ==> false
 s1.substr(1, 3)    ==> 234
-s[8] = '?'         ==> 12ABC345?!!
+s[2] = '?'         ==> 12?BC345!!!
 s1.append(s2)      ==> 1234512345
 s1 + s3            ==> 1234512345123456
-s1 + s2            ==> 123451234512345
+std::stoi("123")   ==> 123
 ```
 
 

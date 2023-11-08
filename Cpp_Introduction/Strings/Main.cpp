@@ -4,6 +4,8 @@
 
 #include <iostream>
 #include <string>
+#include <cctype>
+#include <cstdlib>
 
 namespace Strings
 {
@@ -26,6 +28,12 @@ namespace Strings
 
             std::cout << i << ": " << (char) i << std::endl;
         }
+
+        char digit('1');
+        bool b1 = std::isdigit(digit);
+
+        char noDigit('!');
+        bool b2 = std::isdigit(noDigit);
     }
 
     void testString()
@@ -67,16 +75,15 @@ namespace Strings
         std::cout << "s1 == s2           ==> " << std::boolalpha << b1 << std::endl;
         std::cout << "s1 == s3           ==> " << std::boolalpha << b2 << std::endl;
 
-        // method: substr
-        // retrieve a sub string
+        // method: substr - retrieve a substring
         // first param = position of the first character to include
         // second param = length of the substring
         std::string sub = s1.substr(1, 3);
         std::cout << "s1.substr(1, 3)    ==> " << std::boolalpha << sub << std::endl;
         
         // index operator []
-        s[8] = '?';
-        std::cout << "s[8] = '?'         ==> " << s << std::endl;
+        s[2] = '?';
+        std::cout << "s[2] = '?'         ==> " << s << std::endl;
 
         // method: append
         // append another std::string object
@@ -89,10 +96,10 @@ namespace Strings
         result = s1 + s3;
         std::cout << "s1 + s3            ==> " << result << std::endl;
 
-        // just kidding you:
-        // using an operator with 'method call' syntax
-        result = operator+ (s1, s2);
-        std::cout << "s1 + s2            ==> " << result << std::endl;
+        // converting a string to an integer
+        std::string number("123");
+        int value = std::stoi(number);
+        std::cout << "std::stoi(\"123\")   ==> " << value << std::endl;
     }
 }
 

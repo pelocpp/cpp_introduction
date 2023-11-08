@@ -24,6 +24,7 @@ extern void testStrings();
 extern void testExceptions();
 extern void testStreams();
 extern void testInheritance();
+extern void testMoreInheritance();
 
 extern void testExercises();
 
@@ -52,8 +53,9 @@ int main()
         //testExceptions();
         //testStreams();
         //testInheritance();
+        //testMoreInheritance();
 
-        //testExercises();
+        testExercises();
     }
     catch (const std::exception& ex) {
         std::cout << "Exception: " << ex.what() << std::endl;

@@ -217,7 +217,7 @@ SimpleClass
 
 ## Übungen
 
-TBD: XXX
+[Aufgabe zur Klasse `DynamicArray`](../Exercises/Exercises_DynamicArray.md)
 
 
 ---

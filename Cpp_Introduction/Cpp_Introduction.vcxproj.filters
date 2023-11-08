@@ -79,6 +79,12 @@
     <Filter Include="Excercises\Strings">
       <UniqueIdentifier>{51d393d5-b63c-4431-9bc5-acf58aa49115}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\MoreInheritance">
+      <UniqueIdentifier>{5260111a-3e80-4a5e-9665-1b6dc794392c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\DynamicArray">
+      <UniqueIdentifier>{513f0937-91db-41bc-b95e-192d1709f579}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -181,6 +187,12 @@
     <None Include="Exercises\Exercises_DateToWord.md">
       <Filter>Excercises</Filter>
     </None>
+    <None Include="Exercises\Exercises_DynamicArray.md">
+      <Filter>Excercises</Filter>
+    </None>
+    <None Include="Markdown\StandardTemplateLibrary.md">
+      <Filter>Markdown</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -279,6 +291,15 @@
     <ClCompile Include="Exercises\Strings\Strings_Main.cpp">
       <Filter>Excercises\Strings</Filter>
     </ClCompile>
+    <ClCompile Include="MoreInheritance\Main.cpp">
+      <Filter>Source Files\MoreInheritance</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\DynamicArray\DynamicArray.cpp">
+      <Filter>Excercises\DynamicArray</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\DynamicArray\DynamicArray_Main.cpp">
+      <Filter>Excercises\DynamicArray</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constructors\Time.h">
@@ -304,6 +325,9 @@
     </ClInclude>
     <ClInclude Include="Exercises\BankAccount\BankAccount.h">
       <Filter>Excercises\BankAccount</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\DynamicArray\DynamicArray.h">
+      <Filter>Excercises\DynamicArray</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -154,12 +154,9 @@ Ein Testrahmen mit 2 Objekten `now` und `later`:
 
 ---
 
-
 ## Übungen
 
-TBD: Rectangle
-
-Methode equal ....
+[Aufgabe zur Klasse `Rectangle`](../Exercises/Exercises_Rectangle.md)
 
 ---
 

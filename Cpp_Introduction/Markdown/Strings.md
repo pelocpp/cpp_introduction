@@ -199,8 +199,7 @@ entschieden.
 
 ## Übungen
 
-TBD: TBD
-
+[Aufgabe zur Klasse `std::string`](../Exercises/Exercises_DateToWord.md)
 
 ---
 

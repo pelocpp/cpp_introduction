@@ -23,6 +23,7 @@
     <None Include="Exercises\Exercises.md" />
     <None Include="Exercises\Exercises_BankAccount.md" />
     <None Include="Exercises\Exercises_DateToWord.md" />
+    <None Include="Exercises\Exercises_DynamicArray.md" />
     <None Include="Exercises\Exercises_Rectangle.md" />
     <None Include="Markdown\Agenda.md" />
     <None Include="Markdown\ClassesObjects.md" />
@@ -48,6 +49,7 @@
     <None Include="Markdown\References.md" />
     <None Include="Markdown\Roadmap.md" />
     <None Include="Markdown\RuleOfThree.md" />
+    <None Include="Markdown\StandardTemplateLibrary.md" />
     <None Include="Markdown\Static.md" />
     <None Include="Markdown\Streams.md" />
     <None Include="Markdown\Strings.md" />
@@ -65,6 +67,8 @@
     <ClCompile Include="Exceptions\Main.cpp" />
     <ClCompile Include="Exercises\BankAccount\BankAccount.cpp" />
     <ClCompile Include="Exercises\BankAccount\BankAccount_Main.cpp" />
+    <ClCompile Include="Exercises\DynamicArray\DynamicArray.cpp" />
+    <ClCompile Include="Exercises\DynamicArray\DynamicArray_Main.cpp" />
     <ClCompile Include="Exercises\Exercises.cpp" />
     <ClCompile Include="Exercises\Rectangle\Point.cpp" />
     <ClCompile Include="Exercises\Rectangle\Rectangle.cpp" />
@@ -72,6 +76,7 @@
     <ClCompile Include="Exercises\Strings\Strings_Main.cpp" />
     <ClCompile Include="HelloWorld\Main.cpp" />
     <ClCompile Include="Inheritance\Main.cpp" />
+    <ClCompile Include="MoreInheritance\Main.cpp" />
     <ClCompile Include="Namespaces\Main.cpp" />
     <ClCompile Include="OperatorOverloading\Main.cpp" />
     <ClCompile Include="OperatorOverloading\Time.cpp" />
@@ -93,6 +98,7 @@
     <ClInclude Include="ClassesObjects\Time.h" />
     <ClInclude Include="Constructors\Time.h" />
     <ClInclude Include="Exercises\BankAccount\BankAccount.h" />
+    <ClInclude Include="Exercises\DynamicArray\DynamicArray.h" />
     <ClInclude Include="Exercises\Rectangle\Point.h" />
     <ClInclude Include="Exercises\Rectangle\Rectangle.h" />
     <ClInclude Include="OperatorOverloading\Time.h" />

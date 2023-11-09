@@ -7,6 +7,56 @@
 #include <cctype>
 #include <cstdlib>
 
+bool IsLeapYear(int year)
+{
+    return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+}
+
+int MaxNumOfDays(int month, int year)
+{
+    switch (month)
+    {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+        return 31;
+
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+        return 30;
+
+    case 2:
+        return (IsLeapYear(year)) ? 29 : 28;
+
+    default:
+        return 0;
+    }
+}
+
+bool IsValid(int day, int month, int year)
+{
+    if (year < 0) {
+        return false;
+    }
+
+    if (month < 1 || month > 12) {
+        return false;
+    }
+
+    if (day < 1 || day > MaxNumOfDays(month, year)) {
+        return false;
+    }
+
+    return true;
+}
+
+
 bool verifyDateFormat(std::string date)
 {
     // accepted format: "tt.mm.jjjj"
@@ -34,71 +84,41 @@ bool verifyDateFormat(std::string date)
 
 std::string dateToWord(std::string date)
 {
+    static std::string months[]{
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    };
+
     if (!verifyDateFormat(date)) {
         return "";
     }
 
+    // verify values
     std::string sDay = date.substr(0, 2);
     std::string sMonth = date.substr(3, 2);
     std::string sYear = date.substr(6, 4);
 
     // convert month string to int
+    int day = std::stoi(sDay);
     int month = std::stoi(sMonth);
+    int year = std::stoi(sYear);
 
-    std::string monthLabel;
-
-    switch (month)
-    {
-    case 1:
-        monthLabel = "January";
-        break;
-    case 2:
-        monthLabel = "February";
-        break;
-    case 3:
-        monthLabel = "March";
-        break;
-    case 4:
-        monthLabel = "April";
-        break;
-    case 5:
-        monthLabel = "May";
-        break;
-    case 6:
-        monthLabel = "June";
-        break;
-    case 7:
-        monthLabel = "July";
-        break;
-    case 8:
-        monthLabel = "August";
-        break;
-    case 9:
-        monthLabel = "September";
-        break;
-    case 10:
-        monthLabel = "October";
-        break;
-    case 11:
-        monthLabel = "November";
-        break;
-    case 12:
-        monthLabel = "December";
-        break;
-    default:
-        break;
+    if (! IsValid(day, month, year)) {
+        return "";
     }
 
+    std::string label = months[month - 1];
+
     // remove leading '0', if any
-    if (sDay.length() == 2 && sDay[0] == '0') {
+    if (sDay[0] == '0') {
         sDay = sDay[1];
     }
 
-    std::string word = sDay + ". " + monthLabel + " " + sYear;
+    std::string word = sDay + ". " + label + " " + sYear;
     return word;
 }
 
-void testDateToWord()
+void exerciseDateToWord()
 {
     // test 'verifyDateFormat'
     std::cout << std::boolalpha << verifyDateFormat("10.08.2000") << std::endl;
@@ -110,10 +130,26 @@ void testDateToWord()
     std::string s = dateToWord("12.08.2000");
     std::cout << s << std::endl;
 
-    s = dateToWord("01.11.2023");
+    s = dateToWord("01.13.2023");
     std::cout << s << std::endl;
+
+    s = dateToWord("32.12.2023");
+    std::cout << s << std::endl;
+
+    s = dateToWord("01.01.2023");
+    std::cout << s << std::endl;
+
+    s = dateToWord("31.12.2023");
+    std::cout << s << std::endl;
+}
+
+void exerciseStrings()
+{
+    exerciseDateToWord();
 }
 
 // ===========================================================================
 // End-of-File
 // ===========================================================================
+
+

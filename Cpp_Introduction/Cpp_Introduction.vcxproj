@@ -22,7 +22,7 @@
     <None Include="..\Readme.md" />
     <None Include="Exercises\Exercises.md" />
     <None Include="Exercises\Exercises_BankAccount.md" />
-    <None Include="Exercises\Exercises_DateToWord.md" />
+    <None Include="Exercises\Exercises_Strings.md" />
     <None Include="Exercises\Exercises_DynamicArray.md" />
     <None Include="Exercises\Exercises_Rectangle.md" />
     <None Include="Markdown\Agenda.md" />

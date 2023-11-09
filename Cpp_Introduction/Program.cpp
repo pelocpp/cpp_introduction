@@ -55,7 +55,7 @@ int main()
         //testInheritance();
         //testMoreInheritance();
 
-        //testExercises();
+        testExercises();
     }
     catch (const std::exception& ex) {
         std::cout << "Exception: " << ex.what() << std::endl;

@@ -184,7 +184,7 @@
     <None Include="Exercises\Exercises_BankAccount.md">
       <Filter>Excercises</Filter>
     </None>
-    <None Include="Exercises\Exercises_DateToWord.md">
+    <None Include="Exercises\Exercises_Strings.md">
       <Filter>Excercises</Filter>
     </None>
     <None Include="Exercises\Exercises_DynamicArray.md">

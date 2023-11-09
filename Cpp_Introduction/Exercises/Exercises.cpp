@@ -3,17 +3,17 @@
 // ===========================================================================
 
 // function prototypes
-extern void testRectangle();
-extern void testBankAccount();
-extern void testDateToWord();
-extern void testDynamicArray();
+extern void exerciseRectangle();
+extern void exerciseBankAccount();
+extern void exerciseStrings();
+extern void exerciseDynamicArray();
 
 void testExercises()
 {
-    //testRectangle();
-    //testBankAccount();
-    // testDateToWord();
-    testDynamicArray();
+    //exerciseRectangle();
+    //exerciseBankAccount();
+    exerciseStrings();
+    //exerciseDynamicArray();
 }
 
 // ===========================================================================

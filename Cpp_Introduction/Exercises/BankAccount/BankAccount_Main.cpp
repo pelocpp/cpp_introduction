@@ -4,7 +4,7 @@
 
 #include "BankAccount.h"
 
-void testBankAccount()
+void  exerciseBankAccount()
 {
     BankAccount firstAccount;
     firstAccount.print();

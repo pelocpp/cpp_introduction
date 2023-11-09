@@ -42,6 +42,13 @@ Für den Fall, dass eine Zeichenkette mit einem falschen Format übergeben wird,
 wird eine leere Zeichenkette zurückgegeben.
 
 
+*Hinweis*:
+
+In einer sehr guten Realisierung überprüfen Sie nicht nur das Format der Zeichenketten,
+sondern auch die Gültigkeit der Werte. Die beiden Zeichenketten `32.12.2023` und `01.13.2023`
+hätten somit ein korrektes Format, dennoch sind sie falsch.
+
+
 *Beispiel*:
 
 ```cpp

@@ -103,7 +103,7 @@ namespace Strings
     }
 }
 
-void testStrings()
+void testStringsExercise()
 {
     using namespace Strings;
 

@@ -12,6 +12,7 @@ Wir betrachten die Konzepte
   * Entwicklung einer Hierarchie von Klassen
   * Konstruktoren von abgeleiteten Klassen und Basisklassen
   * Verwendung von `public`, `protected` und `private`
+  * Überschreiben von Methoden (hier: Methode `draw`)
 
 an einem Beispiel:
 
@@ -43,18 +44,20 @@ Basisklasse `Rectangle`:
 21:     int getHeight() { return m_height; }
 22: 
 23:     // public interface
-24:     void drawBorder()
+24:     void eraseBackground()
 25:     {
-26:         std::cout
-27:             << "  Rectangle::drawBorder: width=" << m_width
-28:             << ", height: " << m_height << std::endl;
-29:     }
+26:         std::cout << "  Rectangle::eraseBackground" << std::endl;
+27:     }
+28: 
+29:     void draw() {
 30: 
-31:     void eraseBackground()
-32:     {
-33:         std::cout << "  Rectangle::eraseBackground" << std::endl;
-34:     }
-35: };
+31:         std::cout
+32:             << "Rectangle::draw [x=" << getX()
+33:             << ", y=" << getY() << "]" << std::endl;
+34: 
+35:         eraseBackground();
+36:     }
+37: };
 ```
 
 Abgeleitete Klasse `ColoredRectangle`:
@@ -74,17 +77,7 @@ Abgeleitete Klasse `ColoredRectangle`:
 10:     ColoredRectangle(int x, int y, int width, int height, double color)
 11:         : Rectangle(x, y, width, height), m_hsv(123)
 12:     {}
-13: 
-14:     // public interface
-15:     void draw() {
-16: 
-17:         eraseBackground();
-18:         drawBorder();
-19:         std::cout
-20:             << "ColoredRectangle::draw [x=" << getX()
-21:             << ", y=" << getY() << "]" << std::endl;
-22:     }
-23: };
+13: };
 ```
 
 Abgeleitete Klasse `TransparentRectangle`:
@@ -92,34 +85,22 @@ Abgeleitete Klasse `TransparentRectangle`:
 #### Datei [*Main.cpp*](../Inheritance/Main.cpp) - Testrahmen:
 
 ```cpp
-01: class TransparentRectangle : public Rectangle
-02: {
-03: private:
-04:     int m_opaque;  // transparency value
-05: 
-06: public:
-07:     // c'tor(s)
-08:     TransparentRectangle() 
-09:         : TransparentRectangle(0, 0, 0, 0, 0.0)
-10:     {}
-11: 
-12:     TransparentRectangle(int x, int y, int width, int height, double color)
-13:         : Rectangle(x, y, width, height), m_opaque(123) 
-14:     {}
-15: 
-16:     // public interface
-17:     void draw()
-18:     {
-19:         eraseBackground();
-20:         drawBorder();
-21: 
-22:         std::cout
-23:             << "TransparentRectangle::draw [x=" 
-24:             << getX() << ", y=" << getY() << "]" << std::endl;
-25:     }
-26: };
-```
+class TransparentRectangle : public Rectangle
+{
+private:
+    int m_opaque;  // transparency value
 
+public:
+    // c'tor(s)
+    TransparentRectangle() 
+        : TransparentRectangle(0, 0, 0, 0, 0.0)
+    {}
+
+    TransparentRectangle(int x, int y, int width, int height, double color)
+        : Rectangle(x, y, width, height), m_opaque(123) 
+    {}
+};
+```
 
 Testrahmen:
 
@@ -128,30 +109,34 @@ Testrahmen:
 ```cpp
 01: void testInheritance()
 02: {
-03:     using namespace Inheritance;
-04: 
-05:     ColoredRectangle cr(1, 1, 20, 30, 255);
-06:     TransparentRectangle tr(2, 2, 30, 40, 111.0);
-07: 
-08:     cr.draw();
-09:     tr.draw();
-10: }
+03:     ColoredRectangle cr(1, 1, 20, 30, 255);
+04:     TransparentRectangle tr(2, 2, 30, 40, 111.0);
+05: 
+06:     cr.draw();
+07:     tr.draw();
+08: }
 ```
-
 
 *Ausgabe*:
 
 
 ```
+Rectangle::draw [x=1, y=1]
   Rectangle::eraseBackground
-  Rectangle::drawBorder: width=20, height: 30
-ColoredRectangle::draw [x=1, y=1]
+Rectangle::draw [x=2, y=2]
   Rectangle::eraseBackground
-  Rectangle::drawBorder: width=30, height: 40
-TransparentRectangle::draw [x=2, y=2]
 ```
 
+## Weiterarbeit an diesem Beispiel
 
+Es wird von den beiden Klassen `ColoredRectangle` und `TransparentRectangle` 
+von der Vaterklasse `Rectangle` geerbt:
+
+  * Was ist der Nachteil dieser Vorhehensweise?
+  * Zeigen Sie auf, wie man diese Methode in den Klassen besser realisieren kann.
+
+Eine verbesserte Lösung finden Sie im Quellcode zu diesem Abschnitt
+im Namanesraum `InheritanceImproved` vor.
 
 ---
 

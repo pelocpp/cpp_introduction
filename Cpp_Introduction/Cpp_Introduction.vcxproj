@@ -22,6 +22,7 @@
     <None Include="..\Readme.md" />
     <None Include="Exercises\Exercises.md" />
     <None Include="Exercises\Exercises_BankAccount.md" />
+    <None Include="Exercises\Exercises_MoreBankAccounts.md" />
     <None Include="Exercises\Exercises_Strings.md" />
     <None Include="Exercises\Exercises_DynamicArray.md" />
     <None Include="Exercises\Exercises_Rectangle.md" />
@@ -70,6 +71,7 @@
     <ClCompile Include="Exercises\DynamicArray\DynamicArray.cpp" />
     <ClCompile Include="Exercises\DynamicArray\DynamicArray_Main.cpp" />
     <ClCompile Include="Exercises\Exercises.cpp" />
+    <ClCompile Include="Exercises\MoreBankAccounts\MoreBankAccounts.cpp" />
     <ClCompile Include="Exercises\Rectangle\Point.cpp" />
     <ClCompile Include="Exercises\Rectangle\Rectangle.cpp" />
     <ClCompile Include="Exercises\Rectangle\Rectangle_Main.cpp" />

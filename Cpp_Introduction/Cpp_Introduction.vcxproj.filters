@@ -85,6 +85,9 @@
     <Filter Include="Excercises\DynamicArray">
       <UniqueIdentifier>{513f0937-91db-41bc-b95e-192d1709f579}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Excercises\MoreBankAccounts">
+      <UniqueIdentifier>{e342862c-29d2-40ad-aa3c-f2dfa71e6743}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -193,6 +196,9 @@
     <None Include="Markdown\StandardTemplateLibrary.md">
       <Filter>Markdown</Filter>
     </None>
+    <None Include="Exercises\Exercises_MoreBankAccounts.md">
+      <Filter>Excercises</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -299,6 +305,9 @@
     </ClCompile>
     <ClCompile Include="Exercises\DynamicArray\DynamicArray_Main.cpp">
       <Filter>Excercises\DynamicArray</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\MoreBankAccounts\MoreBankAccounts.cpp">
+      <Filter>Excercises\MoreBankAccounts</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

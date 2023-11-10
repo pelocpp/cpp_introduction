@@ -12,7 +12,6 @@ namespace MoreInheritance
     public:
         virtual void draw() = 0;
         virtual void drawForeground() = 0;
-        virtual void drawBorder() = 0;
         virtual void eraseBackground() = 0;
     };
 
@@ -42,12 +41,6 @@ namespace MoreInheritance
             : m_x(x), m_y(y), m_width(width), m_height(height)
         {}
 
-        virtual void drawBorder() override final {
-            std::cout
-                << "  Rectangle::drawBorder: width=" << m_width
-                << ", height: " << m_height << std::endl;
-        }
-
         virtual void eraseBackground() override final {
             std::cout << "  Rectangle::eraseBackground" << std::endl;
         }
@@ -56,7 +49,6 @@ namespace MoreInheritance
             std::cout << "Rectangle::draw [x=" << m_x << ", y=" << m_y << "]" << std::endl;
             eraseBackground();
             drawForeground();
-            drawBorder();
         }
     };
 
@@ -64,13 +56,16 @@ namespace MoreInheritance
 
     class ColoredRectangle : public Rectangle
     {
+    private:
+        int m_color;  // representing some color model
+
     public:
         ColoredRectangle()
-            : ColoredRectangle(0, 0, 0, 0, 0.0)
+            : ColoredRectangle(0, 0, 0, 0, 0)
         {}
 
-        ColoredRectangle(int x, int y, int width, int height, double color)
-            : Rectangle(x, y, width, height), m_hsv(123)
+        ColoredRectangle(int x, int y, int width, int height, int color)
+            : Rectangle(x, y, width, height), m_color(123)
         {}
 
         void paint() {
@@ -82,30 +77,27 @@ namespace MoreInheritance
         virtual void drawForeground() override {
             std::cout << "  ColoredRectangle::drawForeground" << std::endl;
         }
-
-    private:
-        double m_hsv;  // hue, saturation, value
     };
 
     // =======================================================================
 
     class TransparentRectangle : public Rectangle
     {
+    private:
+        double m_opaque;   // representing some transparency model
+    
     public:
         TransparentRectangle() 
             : TransparentRectangle(0, 0, 0, 0, 0.0)
         {}
 
-        TransparentRectangle(int x, int y, int width, int height, double color)
-            : Rectangle(x, y, width, height), m_opaque(111)
+        TransparentRectangle(int x, int y, int width, int height, double transparency)
+            : Rectangle(x, y, width, height), m_opaque(transparency)
         {}
 
         virtual void drawForeground() override {
             std::cout << "  TransparentRectangle::drawForeground" << std::endl;
         }
-
-    private:
-        int m_opaque;  // transparency value
     };
 
     // =======================================================================
@@ -114,10 +106,10 @@ namespace MoreInheritance
     {
     public:
         HatchedColoredRectangle() 
-            : HatchedColoredRectangle(0, 0, 0, 0, 0.0, 0.0)
+            : HatchedColoredRectangle(0, 0, 0, 0, 0, 0.0)
         {}
 
-        HatchedColoredRectangle(int x, int y, int width, int height, double color, double strokeThickness)
+        HatchedColoredRectangle(int x, int y, int width, int height, int color, double strokeThickness)
             : ColoredRectangle(x, y, width, height, color), m_strokeThickness(strokeThickness)
         {}
 
@@ -182,8 +174,8 @@ void testMoreInheritance03()
 
 void testMoreInheritance()
 {
-    //testMoreInheritance01();
-    //testMoreInheritance02();
+    testMoreInheritance01();
+    testMoreInheritance02();
     testMoreInheritance03();
 }
 

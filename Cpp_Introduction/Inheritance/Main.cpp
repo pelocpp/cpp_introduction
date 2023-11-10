@@ -49,13 +49,13 @@ namespace Inheritance
     class ColoredRectangle : public Rectangle
     {
     private:
-        double m_color;  // representing some color model
+        int m_color;  // representing some color model
 
     public:
         // c'tor(s)
-        ColoredRectangle() : ColoredRectangle(0, 0, 0, 0, 0.0) {}
+        ColoredRectangle() : ColoredRectangle(0, 0, 0, 0, 0) {}
 
-        ColoredRectangle(int x, int y, int width, int height, double color)
+        ColoredRectangle(int x, int y, int width, int height, int color)
             : Rectangle(x, y, width, height), m_color(123)
         {}
     };
@@ -65,7 +65,7 @@ namespace Inheritance
     class TransparentRectangle : public Rectangle
     {
     private:
-        int m_opaque;  // transparency value
+        double m_opaque;  // representing some transparency model
 
     public:
         // c'tor(s)
@@ -73,8 +73,8 @@ namespace Inheritance
             : TransparentRectangle(0, 0, 0, 0, 0.0)
         {}
 
-        TransparentRectangle(int x, int y, int width, int height, double color)
-            : Rectangle(x, y, width, height), m_opaque(123) 
+        TransparentRectangle(int x, int y, int width, int height, double transparency)
+            : Rectangle(x, y, width, height), m_opaque(transparency)
         {}
     };
 }
@@ -126,13 +126,13 @@ namespace InheritanceImproved
     class ColoredRectangle : public Rectangle
     {
     private:
-        double m_color;  // hue, saturation, value
+        int m_color;   // representing some color model
 
     public:
         // c'tor(s)
-        ColoredRectangle() : ColoredRectangle(0, 0, 0, 0, 0.0) {}
+        ColoredRectangle() : ColoredRectangle(0, 0, 0, 0, 0) {}
 
-        ColoredRectangle(int x, int y, int width, int height, double color)
+        ColoredRectangle(int x, int y, int width, int height, int color)
             : Rectangle(x, y, width, height), m_color(123)
         {}
 
@@ -150,7 +150,7 @@ namespace InheritanceImproved
     class TransparentRectangle : public Rectangle
     {
     private:
-        int m_opaque;  // transparency value
+        int m_opaque;  // representing some transparency model
 
     public:
         // c'tor(s)

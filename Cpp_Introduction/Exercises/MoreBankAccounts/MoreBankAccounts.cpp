@@ -6,7 +6,7 @@
 
 namespace MoreBankAccounts {
 
-    // Vertrag // Kontrakt
+    // Interface 'IAccount'
     class IAccount
     {
     public:
@@ -22,42 +22,51 @@ namespace MoreBankAccounts {
 
     // ===========================================================================
 
-    // Abstrakte Basisklasse
+    // Abstract Base Class 'Account'
     class Account : public IAccount
     {
     protected:
-        int m_accountNumber;
+        int m_number;
         double m_balance;
 
+    private:
+        static int s_nextNumber;
+
     public:
-        // default c'tor / d'tor
-        Account(int account);
+        // default c'tor
+        Account() : m_balance(0)  {
+
+            // retrieve next available account number
+            m_number = s_nextNumber;
+            s_nextNumber++;
+        }
 
         // getter / setter
-        double getAccountNumber() final  override;
-        virtual double getBalance() final override;
+        double getAccountNumber() final override {
+            return m_number;
+        }
+
+        double getBalance() final override { 
+            return m_balance; 
+        }
 
         // public interface
-        void deposit(double amount) final override;
+        void deposit(double amount) final override {
+            m_balance += amount;
+        }
+
+        void print() override {
+            std::cout << "    [Nr. " << m_number << "]:" << std::endl;
+            std::cout << "    Balance = " << m_balance << ";" << std::endl;
+        }
     };
 
-    Account::Account(int accountNumber)
-        : m_accountNumber(accountNumber), m_balance(0) {}
-
-    void Account::deposit(double amount) {
-        m_balance += amount;
-    }
-
-    double Account::getAccountNumber() {
-        return m_accountNumber;
-    }
-
-    double Account::getBalance() {
-        return m_balance;
-    }
+    // initialization of static member variable
+    int Account::s_nextNumber = 10'000;
 
     // ===========================================================================
 
+     // Concrete Class 'CurrentAccount'
     class CurrentAccount final : public Account
     {
     private:
@@ -65,130 +74,100 @@ namespace MoreBankAccounts {
 
     public:
         // c'tors
-        CurrentAccount(int account);
-        CurrentAccount(int account, double limit);
-        virtual ~CurrentAccount() {};
+        CurrentAccount(double limit) : Account(), m_limit(1000.0) {}
 
         // getter / setter
-        double getLimit();
-        void setLimit(double limit);
+        double getLimit() {
+            return m_limit;
+        }
+
+        void setLimit(double limit) {
+            m_limit = limit;
+        }
 
         // public interface
-        bool withdraw(double amount) override;
-        void print() override;
+        bool withdraw(double amount) override {
+
+            if (m_balance + m_limit < amount)
+                return false;
+
+            m_balance -= amount;
+            return true;
+        }
+
+        void print() override {
+            std::cout << "CurrentAccount:" << std::endl;
+            Account::print();
+            std::cout << "    Limit = " << m_limit << ";" << std::endl;
+        }
     };
-
-    CurrentAccount::CurrentAccount(int accountNumber)
-        : CurrentAccount(accountNumber, 1000.0) {}
-
-    CurrentAccount::CurrentAccount(int account, double limit)
-        : Account(account), m_limit(limit) {}
-
-    bool CurrentAccount::withdraw(double amount) {
-        if (m_balance + m_limit < amount)
-            return false;
-
-        m_balance -= amount;
-        return true;
-    }
-
-    double CurrentAccount::getLimit() {
-        return m_limit;
-    }
-
-    void CurrentAccount::setLimit(double limit) {
-        m_limit = limit;
-    }
-
-    void CurrentAccount::print() {
-        std::cout << "CurrentAccount [Nr. " << m_accountNumber << "]:" << std::endl;
-        std::cout << "   Balance=" << m_balance << ";" << std::endl;
-        std::cout << "   Limit=" << m_limit << "." << std::endl;
-    }
 
     // ===========================================================================
 
+    // Concrete Class 'DepositAccount'
     class DepositAccount final : public Account
     {
     private:
         double m_interestRate;
 
     public:
-        // c'tors
-        DepositAccount(int account);
-        DepositAccount(int account, double interestRate);
-        virtual ~DepositAccount() {};
+        // c'tor
+        DepositAccount(double interestRate)
+            : Account(), m_interestRate(interestRate)
+        {};
 
         // public interface
-        bool withdraw(double amount) override;
-        void print() override;
+        bool withdraw(double amount) override {
 
-        void computeInterest(int days);
+            if (m_balance < amount)
+                return false;
+
+            m_balance -= amount;
+            return true;
+        }
+
+        void computeInterest(int days) {
+            double interest =
+                (days * m_interestRate * m_balance) / 365.0 / 100.0;
+
+            m_balance += interest;
+        }
 
         // getter / setter
-        double getInterestRate();
+        double getInterestRate() {
+            return m_interestRate;
+        }
+
+        void print() override {
+            std::cout << "DepositAccount:" << std::endl;
+            Account::print();
+            std::cout << "    InterestRate = " << m_interestRate << ";" << std::endl;
+        }
     };
-
-    DepositAccount::DepositAccount(int accountNumber)
-        : DepositAccount(accountNumber, 3.0) {}
-
-    DepositAccount::DepositAccount(int accountNumber, double interestRate)
-        : Account(accountNumber), m_interestRate(interestRate) {}
-
-    bool DepositAccount::withdraw(double amount) {
-        if (m_balance < amount)
-            return false;
-
-        m_balance -= amount;
-        return true;
-    }
-
-    void DepositAccount::computeInterest(int days) {
-        double interest =
-            (days * m_interestRate * m_balance) / 365.0 / 100.0;
-
-        m_balance += interest;
-    }
-
-    double DepositAccount::getInterestRate() {
-        return m_interestRate;
-    }
-
-    void DepositAccount::print() {
-        std::cout << "DepositAccount [Nr. " << m_accountNumber << "]:" << std::endl;
-        std::cout << "   Balance=" << m_balance << ";" << std::endl;
-        std::cout << "   InterestRate=" << m_interestRate << "." << std::endl;
-    }
 
     // ===========================================================================
 
+    // Concrete Class 'StudentsAccount'
     class StudentsAccount final : public Account
     {
     public:
         // c'tors
-        StudentsAccount(int accountNumber);
-        virtual ~StudentsAccount() {};
+        StudentsAccount() : Account() {}
 
         // public interface
-        bool withdraw(double amount) override;
-        void print() override;
+        bool withdraw(double amount) override {
+            if (m_balance < amount)
+                return false;
+
+            m_balance -= amount;
+            return true;
+        }
+
+        void print() override {
+            std::cout << "StudentsAccount:" << std::endl;
+            Account::print();
+        };
     };
-
-    StudentsAccount::StudentsAccount(int accountNumber)
-        : Account(accountNumber) {}
-
-    bool StudentsAccount::withdraw(double amount) {
-        if (m_balance < amount)
-            return false;
-
-        m_balance -= amount;
-        return true;
-    }
-
-    void StudentsAccount::print() {
-        std::cout << "StudentsAccount [Nr. " << m_accountNumber << "]:" << std::endl;
-        std::cout << "   Balance=" << m_balance << ";" << std::endl;
-    }
 }
 
 // ===========================================================================
@@ -197,17 +176,17 @@ void exerciseMoreBankAccounts()
 {
     using namespace MoreBankAccounts;
 
-    CurrentAccount ca(123456, 1000);
+    CurrentAccount ca(1000);
     ca.deposit(100);
     ca.withdraw(40);
     ca.print();
 
-    StudentsAccount sa(343434);
+    StudentsAccount sa;
     sa.deposit(50);
     sa.withdraw(25);
     sa.print();
 
-    DepositAccount da(654321, 4.0);
+    DepositAccount da(4.0);
     da.deposit(200);
     da.withdraw(120);
     da.computeInterest(31);

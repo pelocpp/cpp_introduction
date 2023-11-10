@@ -13,7 +13,7 @@ private:
     double m_balance;
     double m_interestRate;
 
-public:
+private:
     static int s_NextAccountNumber;
 
 public:

@@ -68,14 +68,14 @@ Abgeleitete Klasse `ColoredRectangle`:
 01: class ColoredRectangle : public Rectangle
 02: {
 03: private:
-04:     double m_hsv;  // hue, saturation, value
+04:     int m_color;  // representing some color model
 05: 
 06: public:
 07:     // c'tor(s)
-08:     ColoredRectangle() : ColoredRectangle(0, 0, 0, 0, 0.0) {}
+08:     ColoredRectangle() : ColoredRectangle(0, 0, 0, 0, 0) {}
 09: 
-10:     ColoredRectangle(int x, int y, int width, int height, double color)
-11:         : Rectangle(x, y, width, height), m_hsv(123)
+10:     ColoredRectangle(int x, int y, int width, int height, int color)
+11:         : Rectangle(x, y, width, height), m_color(123)
 12:     {}
 13: };
 ```
@@ -85,21 +85,21 @@ Abgeleitete Klasse `TransparentRectangle`:
 #### Datei [*Main.cpp*](../Inheritance/Main.cpp) - Testrahmen:
 
 ```cpp
-class TransparentRectangle : public Rectangle
-{
-private:
-    int m_opaque;  // transparency value
-
-public:
-    // c'tor(s)
-    TransparentRectangle() 
-        : TransparentRectangle(0, 0, 0, 0, 0.0)
-    {}
-
-    TransparentRectangle(int x, int y, int width, int height, double color)
-        : Rectangle(x, y, width, height), m_opaque(123) 
-    {}
-};
+01: class TransparentRectangle : public Rectangle
+02: {
+03: private:
+04:     double m_opaque;  // representing some transparency model
+05: 
+06: public:
+07:     // c'tor(s)
+08:     TransparentRectangle() 
+09:         : TransparentRectangle(0, 0, 0, 0, 0.0)
+10:     {}
+11: 
+12:     TransparentRectangle(int x, int y, int width, int height, double transparency)
+13:         : Rectangle(x, y, width, height), m_opaque(transparency)
+14:     {}
+15: };
 ```
 
 Testrahmen:
@@ -129,14 +129,15 @@ Rectangle::draw [x=2, y=2]
 
 ## Weiterarbeit an diesem Beispiel
 
-Es wird von den beiden Klassen `ColoredRectangle` und `TransparentRectangle` 
-von der Vaterklasse `Rectangle` geerbt:
+Es wird in den beiden Klassen `ColoredRectangle` und `TransparentRectangle` 
+von der Vaterklasse `Rectangle` eine Methode `draw` geerbt:
 
   * Was ist der Nachteil dieser Vorhehensweise?
-  * Zeigen Sie auf, wie man diese Methode in den Klassen besser realisieren kann.
+  * Zeigen Sie auf, wie man diese Methode in den Klassen `ColoredRectangle` und `TransparentRectangle`
+    besser realisieren kann.
 
 Eine verbesserte Lösung finden Sie im Quellcode zu diesem Abschnitt
-im Namanesraum `InheritanceImproved` vor.
+im Namensraum `InheritanceImproved` vor.
 
 ---
 

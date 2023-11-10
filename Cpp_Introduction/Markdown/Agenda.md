@@ -136,7 +136,6 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
   * Algorithmen
   * Funktoren
 
-
 ---
 
 [Zurück](../../Readme.md)

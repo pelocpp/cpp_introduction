@@ -19,7 +19,7 @@ Folgende C++&ndash;-Sprachmittel sollen zum Einsatz kommen:
 
 
 Erstellen Sie eine Klasse `Account`, die das Guthaben eines Kontos verwaltet.
-Die Kontonummer wird von der Klasse  `Account` mit Hilfe einer Klassenvariable bestimmt.
+Die Kontonummer wird von der Klasse `Account` mit Hilfe einer Klassenvariablen bestimmt.
 
 Die Klasse soll Methoden `deposit` zum Einzahlen und `withdrawal` zum Abheben besitzen.
 
@@ -34,7 +34,7 @@ ist der Klassenentwurf in mehreren Ebenen zu gestalten:
   * Schnittstelle `IAccount` &ndash; Beschreibung der Methoden der Klasse `Account`.<br />
     Oder anders formuliert: Was sollten alle Realisierungen einer Konto-Klasse für Methoden haben?
   * Klasse `Account` &ndash; Teilweise Realisierung der Methoden der Klasse `Account` &ndash; Beschreibung siehe weiter unten.
-  * Klassen `CurrentAccount` (Girokonto), `StudentsAccount` und `DepositAccount` (Sparbuch).
+  * Klassen `CurrentAccount` (Girokonto), `StudentsAccount` (Schülerkonto) und `DepositAccount` (Sparbuch).
 
 ---
 
@@ -72,43 +72,41 @@ Die Programmausgabe studieren Sie an folgenden Codefragmenten:
 CurrentAccount ca(1000);
 ca.deposit(100);
 ca.withdraw(40);
-std::cout << ca << std::endl;
+ca.print();
 
 StudentsAccount sa;
 sa.deposit(50);
 sa.withdraw(25);
-std::cout << sa << std::endl;
+sa.print();
 
 DepositAccount da(4.0);
 da.deposit(200);
 da.withdraw(120);
 da.computeInterest(31);
-std::cout << da << std::endl;
+da.print();
 ```
 
 *Ausgabe*:
 
 ```cpp
-Testing accounts:
-CurrentAccount [Nr. 10000]:
-   Balance=60;
-   Limit=1000.
-
-StudentsAccount [Nr. 10001]:
-   Balance=25;
-
-DepositAccount [Nr. 10002]:
-   Balance=80.2718;
-   InterestRate=4.
+CurrentAccount:
+    [Nr. 10000]:
+    Balance = 60;
+    Limit = 1000;
+StudentsAccount:
+    [Nr. 10001]:
+    Balance = 25;
+DepositAccount:
+    [Nr. 10002]:
+    Balance = 80.2718;
+    InterestRate = 4;
 ```
 
 ---
 
 ## Quellcode der Lösungen:
 
-[*DynamicArray.h*](./DynamicArray/DynamicArray.h)<br />
-[*DynamicArray.cpp*](./DynamicArray/DynamicArray.cpp)<br />
-[*DynamicArray_Main.cpp*](./DynamicArray/DynamicArray_Main.cpp)<br />
+[*MoreBankAccounts.cpp*](./MoreBankAccounts/MoreBankAccounts.cpp)<br />
 
 ---
 

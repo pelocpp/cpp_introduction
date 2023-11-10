@@ -52,6 +52,7 @@
     <None Include="Markdown\RuleOfThree.md" />
     <None Include="Markdown\StandardTemplateLibrary.md" />
     <None Include="Markdown\Static.md" />
+    <None Include="Markdown\STL.md" />
     <None Include="Markdown\Streams.md" />
     <None Include="Markdown\Strings.md" />
     <None Include="Markdown\Templates.md" />
@@ -91,6 +92,7 @@
     <ClCompile Include="RuleOfThree\BigData.cpp" />
     <ClCompile Include="RuleOfThree\Main.cpp" />
     <ClCompile Include="Static\Main.cpp" />
+    <ClCompile Include="STL\Main.cpp" />
     <ClCompile Include="Streams\Main.cpp" />
     <ClCompile Include="Strings\Main.cpp" />
     <ClCompile Include="Templates\Main.cpp" />

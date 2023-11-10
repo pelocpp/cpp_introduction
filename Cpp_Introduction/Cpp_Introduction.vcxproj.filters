@@ -88,6 +88,9 @@
     <Filter Include="Excercises\MoreBankAccounts">
       <UniqueIdentifier>{e342862c-29d2-40ad-aa3c-f2dfa71e6743}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\STL">
+      <UniqueIdentifier>{43d95c8f-5c6a-4714-8ebd-a946ad2ee2e8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -199,6 +202,9 @@
     <None Include="Exercises\Exercises_MoreBankAccounts.md">
       <Filter>Excercises</Filter>
     </None>
+    <None Include="Markdown\STL.md">
+      <Filter>Markdown</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -308,6 +314,9 @@
     </ClCompile>
     <ClCompile Include="Exercises\MoreBankAccounts\MoreBankAccounts.cpp">
       <Filter>Excercises\MoreBankAccounts</Filter>
+    </ClCompile>
+    <ClCompile Include="STL\Main.cpp">
+      <Filter>Source Files\STL</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

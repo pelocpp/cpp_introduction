@@ -4,7 +4,7 @@
 
 ---
 
-## Zielsetzung
+## Übersicht
 
 Folgende C++&ndash;-Sprachmittel sollen zum Einsatz kommen:
 

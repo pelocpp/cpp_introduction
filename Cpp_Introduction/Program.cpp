@@ -55,7 +55,7 @@ int main()
         //testStreams();
         //testInheritance();
         //testMoreInheritance();
-        testSTL();
+        //testSTL();
 
         //testExercises();
     }

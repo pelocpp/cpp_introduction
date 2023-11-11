@@ -1,6 +1,6 @@
 # Aufgabe Klasse `BankAccount`
 
-## Zielsetzung
+## Übersicht
 
 Zielsetzung ist eine Klasse `BankAccount`, die ein Bankkonto repräsentiert.
 

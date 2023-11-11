@@ -81,13 +81,45 @@ Folgende Aspekte werden betrachtet:
   * Realisierung einfacher Methoden
   * Klassenvariablen
 
-
 ---
 
 #### [Zeichenketten / Klasse `std::string`](./Exercises_Strings.md)
 
 Folgende Aspekte werden betrachtet:
   * Umgang mit der Klasse `std::string`
+  * Methoden `substr` und `append`
+  * *getter*-Methode `length`
+  * Index-Operator `operator []`, Konkatenationsoperator `+`
+  * Weitere Bibliotheksfunktionen `std::isdigit` und `std::stoi`
+
+---
+
+#### [Dynamische Daten / Klasse `DynamicArray`](./Exercises_DynamicArray.md)
+
+Folgende Aspekte werden betrachtet:
+  * Umgang mit den Operatoren `new` und `delete`
+  * Realisierung einer Klasse mit dynamischen Daten
+  * Handhabung der Regel *Rule-of-Three*
+
+---
+
+#### [Vererbung am Beispiel von Bankkonten](./Exercises_MoreBankAccounts.md)
+
+Folgende Aspekte werden betrachtet:
+  * Überschreiben von Methoden
+  * Schlüsselwörter `virtual`, `override` und `final`
+  * Schnittstellenkonzept (*Interface*)
+  * Abstrakte Basisklasse
+   
+---
+
+#### [STL- Standard Template Library](./Exercises_STL.md)
+
+Folgende Aspekte werden betrachtet:
+  * Zwei einfache, einführende Beispiel zur STL (*Standard Template Library*)
+  * Berechnung der Teuflischen Zahlenfolge und von Fibonacci Zahlen
+  * Grundlegende STL-Konzepte: STL-Container, Iteratoren, STL-Algorithmen und Funktionsobjekte
+  * `std::for_each`, `std::generate`, `std::vector`
 
 
 
@@ -133,23 +165,6 @@ Folgende Aspekte werden zum Thema &ldquo;Vererbung&rdquo; betrachtet:
   * Betrachtung von konkreten Klassen
   * Unterschied Schnittstelle versus abstrakte Basisklasse
 
----
-
-#### [Vererbung am Beispiel von Bankkonten und -institut](Examples/AccountsAndBank/Resources/Readme.md)
-
-Folgende Aspekte werden betrachtet:
-  * Übung zum Thema &ldquo;Vererbung&ldquo;
-  * Die Konzepte zum Vererben und Überschreiben von Methoden werden an einem realistischen Beispiel demonstriert.
-  * STL-Container `std::vector`
-
----
-
-#### [STL- Standard Template Library](Examples/STL/Resources/Readme.md)
-
-Folgende Aspekte werden betrachtet:
-  * Zwei einfache, einführende Beispiel zur STL (*Standard Template Library*)
-  * Berechnung der Teuflischen Zahlenfolge und von Fibonacci Zahlen
-  * Grundlegende STL-Konzepte: STL-Container, Iteratoren, STL-Algorithmen und Funktionsobjekte
 
 ---
 

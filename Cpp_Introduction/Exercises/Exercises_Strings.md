@@ -4,16 +4,15 @@
 
 ---
 
-## Zielsetzung
+## Übersicht
 
 Folgende C++&ndash;Sprachmittel sollen zum Einsatz kommen:
 
-  * Umgang mit der Klasse `std::string`
-  * Methoden `substr` und `append`
-  * *getter*-Methode `length`
-  * Index-Operator `operator []`, Konkatenationsoperator `+`
-  * Weitere Bibliotheksfunktionen `std::isdigit` und `std::stoi`
-
+    * Umgang mit der Klasse `std::string`
+    * Methoden `substr` und `append`
+    * *getter*-Methode `length`
+    * Index-Operator `operator []`, Konkatenationsoperator `+`
+    * Weitere Bibliotheksfunktionen `std::isdigit` und `std::stoi`
 
 ## Beschreibung
 

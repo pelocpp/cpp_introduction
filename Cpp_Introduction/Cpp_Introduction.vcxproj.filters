@@ -91,6 +91,9 @@
     <Filter Include="Source Files\STL">
       <UniqueIdentifier>{43d95c8f-5c6a-4714-8ebd-a946ad2ee2e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Excercises\STL">
+      <UniqueIdentifier>{0c8db045-27c5-4940-a07b-3000c1e1abc7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -205,6 +208,9 @@
     <None Include="Markdown\STL.md">
       <Filter>Markdown</Filter>
     </None>
+    <None Include="Exercises\Exercises_STL.md">
+      <Filter>Excercises</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -317,6 +323,9 @@
     </ClCompile>
     <ClCompile Include="STL\Main.cpp">
       <Filter>Source Files\STL</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\STL\STL_Main.cpp">
+      <Filter>Excercises\STL</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

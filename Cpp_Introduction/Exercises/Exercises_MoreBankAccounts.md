@@ -1,10 +1,10 @@
-# Aufgabe zu Bankkonten  und Vererbung
+# Aufgabe zu Bankkonten und Vererbung
 
 [Zurück](./Exercises.md)
 
 ---
 
-## Zielsetzung
+## Übersicht
 
 Folgende C++&ndash;-Sprachmittel sollen zum Einsatz kommen:
 
@@ -13,10 +13,8 @@ Folgende C++&ndash;-Sprachmittel sollen zum Einsatz kommen:
   * Schnittstellenkonzept (*Interface*)
   * Abstrakte Basisklasse
 
----
 
 ## Beschreibung
-
 
 Erstellen Sie eine Klasse `Account`, die das Guthaben eines Kontos verwaltet.
 Die Kontonummer wird von der Klasse `Account` mit Hilfe einer Klassenvariablen bestimmt.

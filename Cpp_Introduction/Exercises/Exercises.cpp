@@ -8,6 +8,7 @@ extern void exerciseBankAccount();
 extern void exerciseStrings();
 extern void exerciseDynamicArray();
 extern void exerciseMoreBankAccounts();
+extern void exerciseSTL();
 
 void testExercises()
 {
@@ -15,7 +16,8 @@ void testExercises()
     //exerciseBankAccount();
     //exerciseStrings();
     //exerciseDynamicArray();
-    exerciseMoreBankAccounts();
+    // exerciseMoreBankAccounts();
+    exerciseSTL();
 }
 
 // ===========================================================================

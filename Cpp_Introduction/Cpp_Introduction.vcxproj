@@ -23,6 +23,7 @@
     <None Include="Exercises\Exercises.md" />
     <None Include="Exercises\Exercises_BankAccount.md" />
     <None Include="Exercises\Exercises_MoreBankAccounts.md" />
+    <None Include="Exercises\Exercises_STL.md" />
     <None Include="Exercises\Exercises_Strings.md" />
     <None Include="Exercises\Exercises_DynamicArray.md" />
     <None Include="Exercises\Exercises_Rectangle.md" />
@@ -76,6 +77,7 @@
     <ClCompile Include="Exercises\Rectangle\Point.cpp" />
     <ClCompile Include="Exercises\Rectangle\Rectangle.cpp" />
     <ClCompile Include="Exercises\Rectangle\Rectangle_Main.cpp" />
+    <ClCompile Include="Exercises\STL\STL_Main.cpp" />
     <ClCompile Include="Exercises\Strings\Strings_Main.cpp" />
     <ClCompile Include="HelloWorld\Main.cpp" />
     <ClCompile Include="Inheritance\Main.cpp" />

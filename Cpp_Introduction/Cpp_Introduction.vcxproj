@@ -28,11 +28,15 @@
     <None Include="Exercises\Exercises_DynamicArray.md" />
     <None Include="Exercises\Exercises_Rectangle.md" />
     <None Include="Markdown\Agenda.md" />
+    <None Include="Markdown\cpp_call_by_reference.svg" />
     <None Include="Markdown\ClassesObjects.md" />
     <None Include="Markdown\ClassesObjectsImproved.md" />
     <None Include="Markdown\Constructors.md" />
+    <None Include="Markdown\cpp_call_by_value.svg" />
     <None Include="Markdown\cpp_deep_copy.svg" />
     <None Include="Markdown\cpp_flat_copy.svg" />
+    <None Include="Markdown\cpp_stack_vs_heap_01.svg" />
+    <None Include="Markdown\cpp_stack_vs_heap_02.svg" />
     <None Include="Markdown\cpp_standard_flat_copy.svg" />
     <None Include="Markdown\DynamicMemoryManagement.md" />
     <None Include="Markdown\Exceptions.md" />

@@ -211,6 +211,18 @@
     <None Include="Exercises\Exercises_STL.md">
       <Filter>Excercises</Filter>
     </None>
+    <None Include="Markdown\cpp_stack_vs_heap_01.svg">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\cpp_stack_vs_heap_02.svg">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\cpp_call_by_reference.svg">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\cpp_call_by_value.svg">
+      <Filter>Markdown</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">

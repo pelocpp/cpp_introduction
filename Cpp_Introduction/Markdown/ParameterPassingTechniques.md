@@ -57,6 +57,12 @@ Alle innerhalb von Funktionen vorgenommenen Änderungen werden an den Funktionsko
 nicht in den tatsächlichen Parametern (originaler Speicherort) des Funktionsaufrufs widergespiegelt.
 
 
+<img src="cpp_call_by_value.svg" width="320">
+
+*Abbildung* 1: Parameterübergabemechanismus *Call-by-Value*.
+
+
+
 ### Parameterübergabemechanismus *Call-by-Reference*
 
 Bei der *Call-by-Reference*-Aufrufmethode wird die Adresse des Aktualparameters als formaler Parameter an die Funktion übergeben.
@@ -64,6 +70,11 @@ Bei der *Call-by-Reference*-Aufrufmethode wird die Adresse des Aktualparameters 
   * Sowohl der Aktualparameter als auch der formale Parameter (Funktionskopie) beziehen sich damit auf denselben Speicherort.
   * Alle innerhalb der Funktion vorgenommenen Änderungen an den Funktionskopien
     spiegeln sich in den aktuellen Parametern des Aufrufs wider.
+
+
+<img src="cpp_call_by_reference.svg" width="450">
+
+*Abbildung* 2: Parameterübergabemechanismus *Call-by-Reference*.
 
 
 **Zur Abrundung**:

@@ -82,8 +82,20 @@ Lokale Variablen haben die Eigenschaft, dass sie nicht dauerhaft verfügbar sind.
 Kehrt eine Funktion zurück, werden ihre lokalen Variablen verworfen.
 So gesehen eignen sich lokale Variablen zum Beispiel zur Ablage von Zwischenergebnissen.
 
+<p align="center">
+<img src="cpp_stack_vs_heap_01.svg" width="300">
+</p>
+
+*Abbildung* 1: Der Stack und lokale Variablen.
+
 Der Vorteil von Variablen, die sich auf dem Heap befinden, liegt darin,
 daß der reservierte Speicher solange verfügbar bleibt, bis man ihn explizit wieder freigibt.
+
+<p align="center">
+<img src="cpp_stack_vs_heap_02.svg" width="600">
+</p>
+
+*Abbildung* 2: Die Halde und dynamisch allokierte Variablen.
 
 Wird ein bestimmter Speicherbereich (Variable, Array, Objekt) auf der Halde reserviert,
 während das Programm eine Funktion (Methode) abarbeitet,

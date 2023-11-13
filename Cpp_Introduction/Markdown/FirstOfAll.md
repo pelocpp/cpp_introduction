@@ -47,7 +47,7 @@ Einstiegsaufgabe schmackhaft zu machen:
 
 **Shoot yourself in the foot**.
 
-In Abhängigkeit von der von Ihnen präferierten Programmiersprache wären folgenden Lösungen denkbar:
+In Abhängigkeit von der von Ihnen präferierten Programmiersprache wären folgende Lösungen denkbar:
 
 **C**: &ldquo;*You shoot yourself in the foot.*&rdquo;
 

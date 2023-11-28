@@ -9,9 +9,9 @@
 class BankAccount
 {
 private:
-    int m_number;
-    double m_balance;
-    double m_interestRate;
+    const int  m_number;
+    double     m_balance;
+    double     m_interestRate;
 
 private:
     static int s_NextAccountNumber;
@@ -19,6 +19,7 @@ private:
 public:
     // c'tor
     BankAccount();
+    BankAccount(double start);
 
     // getter / setter
     double getAccountNumber() const;
@@ -33,6 +34,14 @@ public:
     // interest
     void setInterestRate(double rate);
     void updateInterest(int days);
+
+    // operators
+    bool operator== (const BankAccount& other);
+    bool operator!= (const BankAccount& other);
+    bool operator<  (const BankAccount& other);
+    bool operator<= (const BankAccount& other);
+    bool operator>  (const BankAccount& other);
+    bool operator>= (const BankAccount& other);
 };
 
 // ===========================================================================

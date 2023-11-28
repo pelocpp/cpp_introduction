@@ -8,15 +8,16 @@
 int BankAccount::s_NextAccountNumber = 10'000;
 
 // c'tor
-BankAccount::BankAccount()
+BankAccount::BankAccount(double start) : m_number(s_NextAccountNumber)
 {
-    // retrieve next available account number
-    m_number = s_NextAccountNumber;
+    // move to next available account number
     s_NextAccountNumber++;
 
     m_balance = 0.0;
     m_interestRate = 0.0;
 }
+
+BankAccount::BankAccount() : BankAccount(0.0) {}
 
 // getter / setter
 double BankAccount::getAccountNumber() const
@@ -54,7 +55,6 @@ void BankAccount::setInterestRate(double rate)
     m_interestRate = rate;
 }
 
-
 void BankAccount::updateInterest(int days)
 {
     double interest = (days * m_interestRate * m_balance) / 365.0 / 100.0;
@@ -66,6 +66,47 @@ void BankAccount::print()
 {
     std::cout << "BankAccount Nr. " << m_number << ":";
     std::cout << "   Balance=" << m_balance << "." << std::endl;
+}
+
+// operators
+bool BankAccount::operator== (const BankAccount& other) {
+
+    if (m_balance == other.m_interestRate) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+bool BankAccount::operator!= (const BankAccount& other) {
+
+    return ! (*this == other);
+}
+
+bool BankAccount::operator<  (const BankAccount& other) {
+
+    if (m_balance < other.m_interestRate) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+bool BankAccount::operator<= (const BankAccount& other) {
+
+    return (*this < other || *this == other);
+}
+
+bool BankAccount::operator>  (const BankAccount& other) {
+
+    return ! (*this <= other);
+}
+
+bool BankAccount::operator>= (const BankAccount& other) {
+
+    return !(*this < other);
 }
 
 // ===========================================================================

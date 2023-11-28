@@ -21,12 +21,14 @@ Folgende C++&ndash;-Sprachmittel sollen zum Einsatz kommen:
   * Konstruktoren
   * Zugriffsklassen
   * *getter*- und *setter*-Methoden
+  * Methoden
   * Klassenvariablen
+  * Überladen von Operatoren
 
 Betrachten Sie Details in der Arbeitsweise der Klasse `BankAccount` an folgendem Beispiel:
 
 ```cpp
-BankAccount myAccount (12345);
+BankAccount myAccount(50);
 myAccount.deposit(50);
 myAccount.withdraw(25);
 myAccount.print();
@@ -35,14 +37,17 @@ myAccount.print();
 *Ausgabe*:
 
 
-```cpp
-Konto Nr. 12345: Guthaben 25 Euro.
+```
+BankAccount Nr. 10000:   Balance=25.
 ```
 
 
 *Hinweise*:
 
-Bei der Kontoeröffnung ist die Kontonummer zu übergeben (dies werden wir verbessern).
+Die Kontonummer ist intern in der Klasse `BankAccount` geeignet durch eine Klassenvariable
+zu verwalten. Der erste Kunde erhält die Kontonummer 10.000, danach werden die Kontonummern
+in aufsteigender Reihenfolge vergeben.
+
 
 *Hinweise*:
 
@@ -59,7 +64,7 @@ Wie könnte man dies in einer Verbesserung der `withdraw`-Methode zum Ausdruck br
 
 
 ```cpp
-BankAccount myAccount (12345);
+BankAccount myAccount;
 myAccount.deposit(25);
 bool succeeded = myAccount.withdraw(50);
 if (! succeeded) {
@@ -105,10 +110,9 @@ Realisieren Sie für die Klasse `BankAccount` 6 Operatoren
 
 Dabei soll gelten:
 
-  * Zwei Konto-Objekte sind *gleich*, wenn *alle* ihre Instanzvariablen gleich sind,
-    die Kontonummer ausgenommen.
+  * Zwei Konto-Objekte sind genau dann *gleich*, wenn sie denselben Kontostand aufweisen.
 
-  * Ein Konto-Objekt sind *kleiner-oder-gleich* als ein anderes Konto-Objekt,
+  * Ein Konto-Objekt ist *kleiner-oder-gleich* als ein anderes Konto-Objekt,
     wenn die korrespondieren Kontostände (`m_balance`) kleiner oder gleich sind.
 
 
@@ -128,8 +132,6 @@ if (accountJohn > accountJack) {
 
 ### Weiterarbeit
 
-  * Die Klasse `Account` vergibt die Kontonummern selbst
-  * Zwei Konto-Objekte vergleichen
   * Ein Konto mit `std::cout` auf der Konsole ausgeben
   * Mehrere Konten in einem Array verwalten.
 

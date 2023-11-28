@@ -6,6 +6,11 @@
 
 void  exerciseBankAccount()
 {
+    BankAccount myAccount(50);
+    myAccount.deposit(50);
+    myAccount.withdraw(25);
+    myAccount.print();
+
     BankAccount firstAccount;
     firstAccount.print();
 

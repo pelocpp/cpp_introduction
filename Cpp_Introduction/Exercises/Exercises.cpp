@@ -12,11 +12,11 @@ extern void exerciseSTL();
 
 void testExercises()
 {
-    //exerciseRectangle();
-    //exerciseBankAccount();
-    //exerciseStrings();
-    //exerciseDynamicArray();
-    // exerciseMoreBankAccounts();
+    exerciseRectangle();
+    exerciseBankAccount();
+    exerciseStrings();
+    exerciseDynamicArray();
+    exerciseMoreBankAccounts();
     exerciseSTL();
 }
 

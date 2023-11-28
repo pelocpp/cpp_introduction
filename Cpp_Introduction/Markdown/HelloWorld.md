@@ -1,6 +1,6 @@
 # &ldquo;Hello World&rdquo;
 
-[Zurück](../../Readme.md)
+[Zurück](Agenda.md)
 
 ---
 
@@ -43,7 +43,7 @@ und bringen Sie das Programm zum Laufen. Sie sollten dann folgende Ausgabe erhal
 
 ---
 
-[Zurück](../../Readme.md)
+[Zurück](Agenda.md)
 
 ---
 

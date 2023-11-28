@@ -124,6 +124,7 @@
     <Image Include="Markdown\HelloWorld.png" />
     <Image Include="Markdown\OperatorsPrecedence.png" />
     <Image Include="Markdown\PropertyPages.png" />
+    <Image Include="Markdown\Thomas_Mahr_Cpp.jpg" />
     <Image Include="Markdown\WhatAreYouStudying.png" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

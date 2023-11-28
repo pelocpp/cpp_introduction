@@ -6,6 +6,13 @@
 
 ## C++
 
+  * Thomas Mahr, &ldquo;*Achtung C++: C++ und Objektorientierung wirklich verstehen*&rdquo;.</br>
+    Independently Published (7. März 2022), 398 Seiten. Sprache: Deutsch. ISBN-13: 979-8427916370.
+
+    <img src="Thomas_Mahr_Cpp.jpg" width="150">
+
+---
+
   * Dirk Louis, &ldquo;*C++ &ndash; Das komplette Starterkit für den einfachen Einstieg in die Programmierung*&rdquo;.</br>
     Hanser Fachbuch (9. April 2018), 490 Seiten. Sprache: Deutsch. ISBN-13: 978-3446445970, ISBN-10: 3446445978.
    

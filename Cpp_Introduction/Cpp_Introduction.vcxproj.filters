@@ -397,7 +397,7 @@
     <Image Include="Markdown\HelloWorld.png">
       <Filter>Markdown</Filter>
     </Image>
-    <Image Include="Markdown\Thomas_Mahr_Cpp.jpg">
+    <Image Include="Markdown\Buch_Thomas_Mahr.jpg">
       <Filter>Markdown</Filter>
     </Image>
   </ItemGroup>

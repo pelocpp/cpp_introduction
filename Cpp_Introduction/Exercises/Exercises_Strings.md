@@ -29,7 +29,7 @@ bool isValid = verifyDateFormat("10.08.2000");
 Schreiben Sie eine weitere Funktion `dateToWord`, die ebenfalls ein `std::string`-Objekt als Argument hat:
 
 ```cpp
-std::string dateToWord(std::string date);
+std::string dateToWord(const std::string& date);
 ```
 
 Diese Funktion wandelt dieses Datum so um, dass der Monat im Ergebnis der Funktion als Wort ausgeschrieben wird.

@@ -9,7 +9,7 @@
   * Thomas Mahr, &ldquo;*Achtung C++: C++ und Objektorientierung wirklich verstehen*&rdquo;.</br>
     Independently Published (7. März 2022), 398 Seiten. Sprache: Deutsch. ISBN-13: 979-8427916370.
 
-    <img src="Thomas_Mahr_Cpp.jpg" width="150">
+    <img src="Buch_Thomas_Mahr.jpg" width="150">
 
 ---
 

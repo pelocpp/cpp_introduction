@@ -113,7 +113,7 @@ Folgende Aspekte werden betrachtet:
    
 ---
 
-#### [STL- Standard Template Library](./Exercises_STL.md)
+#### [STL-Standard Template Library](./Exercises_STL.md)
 
 Folgende Aspekte werden betrachtet:
   * Zwei einfache, einführende Beispiel zur STL (*Standard Template Library*)

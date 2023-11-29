@@ -57,7 +57,7 @@ bool IsValid(int day, int month, int year)
 }
 
 
-bool verifyDateFormat(std::string date)
+bool verifyDateFormat(const std::string& date)
 {
     // accepted format: "tt.mm.jjjj"
 
@@ -82,7 +82,7 @@ bool verifyDateFormat(std::string date)
     return true;
 }
 
-std::string dateToWord(std::string date)
+std::string dateToWord(const std::string& date)
 {
     static std::string months[]{
         "January", "February", "March", "April", "May", "June",

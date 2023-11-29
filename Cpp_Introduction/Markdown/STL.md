@@ -390,14 +390,11 @@ an Hand einer Reihe von Beispielen:
 
 ---
 
-
 ## Übungen
 
-TBD: TBD 
-
+[Aufgabe zur STL - Standard Template Library](../Exercises/Exercises_STL.md)
 
 ---
-
 
 [Zurück](Agenda.md)
 

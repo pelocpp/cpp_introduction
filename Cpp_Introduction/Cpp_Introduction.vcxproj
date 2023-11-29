@@ -55,7 +55,6 @@
     <None Include="Markdown\References.md" />
     <None Include="Markdown\Roadmap.md" />
     <None Include="Markdown\RuleOfThree.md" />
-    <None Include="Markdown\StandardTemplateLibrary.md" />
     <None Include="Markdown\Static.md" />
     <None Include="Markdown\STL.md" />
     <None Include="Markdown\Streams.md" />

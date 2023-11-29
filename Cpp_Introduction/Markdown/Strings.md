@@ -195,13 +195,11 @@ entschieden.
 
 ---
 
-
 ## Übungen
 
 [Aufgabe zur Klasse `std::string`](../Exercises/Exercises_Strings.md)
 
 ---
-
 
 [Zurück](Agenda.md)
 

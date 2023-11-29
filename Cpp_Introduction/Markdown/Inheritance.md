@@ -147,14 +147,11 @@ im Namensraum `InheritanceImproved` vor.
 
 ---
 
-
 ## Übungen
 
-TBD: BAnk konto
-
+[Aufgabe zu Bankkonten und Vererbung](../Exercises/Exercises_MoreBankAccounts.md)
 
 ---
-
 
 [Zurück](Agenda.md)
 

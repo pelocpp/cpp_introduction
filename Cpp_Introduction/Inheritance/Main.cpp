@@ -150,7 +150,7 @@ namespace InheritanceImproved
     class TransparentRectangle : public Rectangle
     {
     private:
-        int m_opaque;  // representing some transparency model
+        double m_opaque;  // representing some transparency model
 
     public:
         // c'tor(s)
@@ -177,7 +177,6 @@ void testInheritance()
     using namespace Inheritance;
     // vs
     // using namespace InheritanceImproved;
-
 
     ColoredRectangle cr(1, 1, 20, 30, 255);
     TransparentRectangle tr(2, 2, 30, 40, 111.0);

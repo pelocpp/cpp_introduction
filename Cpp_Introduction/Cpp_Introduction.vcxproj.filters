@@ -199,9 +199,6 @@
     <None Include="Exercises\Exercises_DynamicArray.md">
       <Filter>Excercises</Filter>
     </None>
-    <None Include="Markdown\StandardTemplateLibrary.md">
-      <Filter>Markdown</Filter>
-    </None>
     <None Include="Exercises\Exercises_MoreBankAccounts.md">
       <Filter>Excercises</Filter>
     </None>

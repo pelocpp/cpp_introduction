@@ -42,6 +42,24 @@ Zeichenketten werden in C und C++ auf den Datentyp `char` abgebildet:
 26: }
 ```
 
+*Ausführung*:
+
+```
+*
+42
+A
+```
+
+Man beachte in dem Beispiel den Zusammenhang der beiden Datentypen `char` und `int`,
+siehe dazu auch die ASCII-Tabelle:
+
+<img src="ASCII_Table.png" width="500" />
+
+ASCII steht für *American Standard Code for Information Interchange*.
+Die Zeichen 0 bis 127 wurden schon vor langer Zeit festgelegt, als der ASCII-Code noch ein 7 Bit-Code
+war. Später hat IBM einen erweiterten ASCII-Code mit 8 Bit eingeführt, der zusätzlich die Zeichen 128 bis
+255 umfasst.
+
 
 ### Zeichenketten
 

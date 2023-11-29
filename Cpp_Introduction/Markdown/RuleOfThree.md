@@ -132,7 +132,7 @@ wenn er direkt zur Erzeugung eines Objekts aufgerufen wird:
 ```
 
 Das interessante an diesen beiden Anweisungen (Wertzuweisung und Objekterzeugung) ist,
-dass wir hierzu keinerlei Untertützung leisten müssen.
+dass wir hierzu keinerlei Unterstützung leisten müssen.
 
 C++ stellt hierzu Standardversionen eines Kopierkonstruktors und eines Zuweisungsoperators zur Verfügung,
 die bei Bedarf aufgerufen werden.
@@ -185,10 +185,10 @@ an Hand der Strategie des *flachen* Kopierens. Worin besteht das Problem?
 Eine korrekte Realisierung derartiger Klassen erreichen Sie nur,
 indem Sie sowohl für den Kopierkonstruktor als auch den Zuweisungsoperator
 eine Implementierung (Überladung) bereitstellen, die so implementiert wird,
-dass für jeden Zeiger ein eigener Speicherbereich mít `new` allokiert wird und anschließend der Inhalt,
+dass für jeden Zeiger ein eigener Speicherbereich mit `new` allokiert wird und anschließend der Inhalt,
 auf den der ursprüngliche Zeiger verweist, umkopiert wird.
 
-Man bezeichnet dies als das so geannte *tiefe* Kopieren (engl. *deep copy*),
+Man bezeichnet dies als das so genannte *tiefe* Kopieren (engl. *deep copy*),
 siehe dazu auch *Abbildung* 3:
 
 <img src="cpp_deep_copy.svg" width="600">
@@ -202,7 +202,7 @@ so wie in *Abbildung* 3 dargestellt, entnehmen Sie bitte dem folgenden Quellcode
 
 ### Die &ldquo;Rule of Three&rdquo;
 
-Die viel zierter &ldquo;Rule of Three&rdquo; &ndash; in manchen Büchern auch als &ldquo;Big-Three&rdquo; bezeichnet &ndash; 
+Die viel zierte &ldquo;Rule of Three&rdquo; &ndash; in manchen Büchern auch als &ldquo;Big-Three&rdquo; bezeichnet &ndash; 
 besagt nun einfach, dass jede C++&ndash;Klasse, die dynamische Daten allokiert, zwingend
 
   * einen Destruktor,
@@ -331,14 +331,11 @@ Datei *BigData.cpp*:
 
 ---
 
-
 ## Übungen
 
-TBD: Rectangle
-
+[Aufgabe zur Klasse `DynamicArray`](../Exercises/Exercises_DynamicArray.md)
 
 ---
-
 
 [Zurück](Agenda.md)
 

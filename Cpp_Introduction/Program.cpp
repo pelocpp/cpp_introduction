@@ -50,7 +50,7 @@ int main()
         //testRuleOfThree();
         //testNamespaces();
         //testTemplates();
-        //testStrings();
+        testStrings();
         //testExceptions();
         //testStreams();
         //testInheritance();

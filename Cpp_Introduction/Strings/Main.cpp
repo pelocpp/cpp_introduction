@@ -108,7 +108,7 @@ void testStrings()
     using namespace Strings;
 
     testChar();
-    testString();
+    // testString();
 }
 
 // ===========================================================================

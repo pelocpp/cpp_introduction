@@ -114,6 +114,7 @@
     <ClInclude Include="RuleOfThree\BigData.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Markdown\ASCII_Table.png" />
     <Image Include="Markdown\Buch_Dirk_Louis.png" />
     <Image Include="Markdown\Buch_Dummies.png" />
     <Image Include="Markdown\Buch_T_Will.png" />

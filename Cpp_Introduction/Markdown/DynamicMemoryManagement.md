@@ -22,7 +22,7 @@ Neben diesen Segmenten (Speicherbereiche) kennt eine CPU auch noch *Register*.
 Das bekannteste Register heiﬂt *Akkumulator* (*Accumulator*),
 in ihm werden in der Regel die Ergebnisse der Recheneinheit (*ALU*, *Arithmetic Logic Unit*) gespeichert.
 
-Bei Intel-CPUs gibt es eine direkte Zuordnung dieser Speicherbereich
+Bei Intel-CPUs gibt es eine direkte Zuordnung dieser Speicherbereiche
 zur Speichersegmentierung in der Intel x86-Computerbefehlssatzarchitektur:
 
 | Segmentregister  | Beschreibung |
@@ -226,11 +226,9 @@ SimpleClass
 
 ---
 
-
 ## ‹bungen
 
 [Aufgabe zur Klasse `DynamicArray`](../Exercises/Exercises_DynamicArray.md)
-
 
 ---
 

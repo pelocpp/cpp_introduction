@@ -24,7 +24,7 @@ Der Wert 10 muss zur Übersetzungszeit bekannt sein.
 
 An dieser Stelle kommt die dynamische Speicherverwaltung ins Spiel:
 Mit Hilfe der beiden Operatoren `new` und `delete` kann man eine Klasse `DynamicArray`,
-die im Prinzip dieselbe Funkionalität wie C++-Felder besitzt,
+die im Prinzip dieselbe Funktionalität wie C++-Felder besitzt,
 nur mit dem Unterschied, dass die Längenangabe sowohl zum Erzeugungszeitpunkt
 als auch während der Lebenszeit eines `DynamicArray`-Objekts änderbar ist.
 

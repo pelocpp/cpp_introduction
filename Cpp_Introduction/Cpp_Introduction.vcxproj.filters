@@ -400,5 +400,8 @@
     <Image Include="Markdown\Buch_Thomas_Mahr.jpg">
       <Filter>Markdown</Filter>
     </Image>
+    <Image Include="Markdown\ASCII_Table.png">
+      <Filter>Markdown</Filter>
+    </Image>
   </ItemGroup>
 </Project>

@@ -116,7 +116,7 @@ namespace Rectangle {
     Point Rectangle::center()
     {
         double x = m_x + m_width / 2.0;
-        double y = m_y + m_height / 2.0;
+        double y = m_y - m_height / 2.0;
         Point result(x, y);
         return result;
     }

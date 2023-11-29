@@ -78,6 +78,7 @@ an einer C++ Standardklasse zu demonstrieren bzw. zu beobachten:
 
 #### Datei [*Main.cpp*](../Strings/Main.cpp):
 
+
 ```cpp
 01: void testString()
 02: {
@@ -184,22 +185,20 @@ haben sich die Bibliotheksentwickler für die Bezeichner
   * `empty`
   * `capacity`
 
-
 entschieden.
-
 
 ---
 
 ## Quellcode des Beispiels:
 
-[*Main.cpp*](../String/Main.cpp)
+[*Main.cpp*](../Strings/Main.cpp)
 
 ---
 
 
 ## Übungen
 
-[Aufgabe zur Klasse `std::string`](../Exercises/Exercises_DateToWord.md)
+[Aufgabe zur Klasse `std::string`](../Exercises/Exercises_Strings.md)
 
 ---
 

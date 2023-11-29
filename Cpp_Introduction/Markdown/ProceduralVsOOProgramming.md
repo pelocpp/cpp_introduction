@@ -12,7 +12,7 @@
 Der Programmierer löst ein Problem mit Hilfe
 von Prozeduren (Unterprogrammen). Er nutzt also Funktionen, die
 er nach und nach aufruft, womit das Problem
-am Ende gelöst wird
+am Ende gelöst wird.
 
 ### Was bedeutet &ldquo;objektorientierte&rdquo; Programmierung
 
@@ -70,10 +70,10 @@ Im folgenden Beispiel greifen wir auf die Instanzvariable `m_radius` und `m_leng
 der beteiligten Objekte direkt zu. Es könnten bei falschen Eingabe damit
 auch falsche Werte in das Objekt gelangen (zum Beispiel ein negativer Radius für einen Kreis).
 Das muss aber so nicht sein.
-Über das Sprachmittel der Zugriffsklassen (PELO) gibt es neben `public`
+Über das Sprachmittel der *Zugriffsklassen* gibt es neben `public`
 eine weitere Zugriffsklasse `private`, die einen unkontrollierten Zugriff
-auf Instanzvariable untersagt. Mehr dazu im folgenden Abschnitt (PELO).
-
+auf Instanzvariablen untersagt. Mehr dazu im
+Abschnitt &ldquo;[*Vertiefungen zu Klassen und Objekten*](../Markdown/ClassesObjectsImproved.md)&rdquo;.
 
 ## Beispiele
 

@@ -14,7 +14,7 @@ BankAccount::BankAccount(double start) : m_number(s_NextAccountNumber)
     s_NextAccountNumber++;
 
     m_balance = 0.0;
-    m_interestRate = 0.0;
+    m_rate = 0.0;
 }
 
 BankAccount::BankAccount() : BankAccount(0.0) {}
@@ -32,8 +32,12 @@ double BankAccount::getBalance() const
 
 double BankAccount::getInterestRate() const
 {
+    return m_rate;
+}
 
-    return m_interestRate;
+void BankAccount::setInterestRate(double rate)
+{
+    m_rate = rate;
 }
 
 // public interface
@@ -50,14 +54,9 @@ void BankAccount::withdraw(double amount)
     m_balance -= amount;
 }
 
-void BankAccount::setInterestRate(double rate)
-{
-    m_interestRate = rate;
-}
-
 void BankAccount::updateInterest(int days)
 {
-    double interest = (days * m_interestRate * m_balance) / 365.0 / 100.0;
+    double interest = (days * m_rate * m_balance) / 365.0 / 100.0;
 
     m_balance += interest;
 }
@@ -71,7 +70,7 @@ void BankAccount::print()
 // operators
 bool BankAccount::operator== (const BankAccount& other) {
 
-    if (m_balance == other.m_interestRate) {
+    if (m_balance == other.m_rate) {
         return true;
     }
     else {
@@ -86,7 +85,7 @@ bool BankAccount::operator!= (const BankAccount& other) {
 
 bool BankAccount::operator<  (const BankAccount& other) {
 
-    if (m_balance < other.m_interestRate) {
+    if (m_balance < other.m_rate) {
         return true;
     }
     else {

@@ -93,6 +93,9 @@ void updateInterest (int days);
 ```
 
 auf. Der Parameter `days` gibt die Anzahl der Tage an, für die die Zinsen gutgeschrieben werden.
+Eine Berechnung der Zinsen erfolgt nach der Formel
+
+$$Zinsen = \frac{AnzahlTage}{365} * \frac{Zinssatz}{100} * Guthaben$$
 
 
 ### Erweiterung: Zwei Konto-Objekte vergleichen
@@ -103,7 +106,7 @@ um zwei Bankkonto-Objekte vergleichen zu können.
 Dies wollen wir nun erweitern &ndash; und mit Hilfe der Syntax für Operatoren
 auch lesbarer gestalten:
 
-Realisieren Sie für die Klasse `BankAccount` 6 Operatoren
+Realisieren Sie für die Klasse `BankAccount` die folgenden 6 Operatoren
 
 
 `==`, `!=`, `<`, `<=`, `>` und `>=`.
@@ -134,7 +137,6 @@ if (accountJohn > accountJack) {
 
   * Ein Konto mit `std::cout` auf der Konsole ausgeben
   * Mehrere Konten in einem Array verwalten.
-
 
 
 ---

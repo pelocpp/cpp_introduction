@@ -26,15 +26,15 @@ namespace MoreBankAccounts {
     class Account : public IAccount
     {
     protected:
-        int m_number;
-        double m_balance;
+        int        m_number;
+        double     m_balance;
 
     private:
         static int s_nextNumber;
 
     public:
         // default c'tor
-        Account() : m_balance(0)  {
+        Account() : m_balance(0) {
 
             // retrieve next available account number
             m_number = s_nextNumber;
@@ -67,13 +67,14 @@ namespace MoreBankAccounts {
     // ===========================================================================
 
      // Concrete Class 'CurrentAccount'
-    class CurrentAccount final : public Account
+    class CurrentAccount : public Account
     {
     private:
         double m_limit;
 
     public:
         // c'tors
+        CurrentAccount() : CurrentAccount(1000.0) {}
         CurrentAccount(double limit) : Account(), m_limit(1000.0) {}
 
         // getter / setter
@@ -108,13 +109,12 @@ namespace MoreBankAccounts {
     class DepositAccount final : public Account
     {
     private:
-        double m_interestRate;
+        double m_rate;
 
     public:
         // c'tor
-        DepositAccount(double interestRate)
-            : Account(), m_interestRate(interestRate)
-        {};
+        DepositAccount() : DepositAccount(3.0) {}
+        DepositAccount(double rate) : Account(), m_rate(rate) {}
 
         // public interface
         bool withdraw(double amount) override {
@@ -126,42 +126,39 @@ namespace MoreBankAccounts {
             return true;
         }
 
-        void computeInterest(int days) {
-            double interest =
-                (days * m_interestRate * m_balance) / 365.0 / 100.0;
+        // getter / setter
+        double getInterestRate() {
+            return m_rate;
+        }
+
+        void setInterestRate(double rate) {
+            m_rate = rate;
+        }
+
+        // interest
+        void updateInterest(int days)
+        {
+            double interest = (days * m_rate * m_balance) / 365.0 / 100.0;
 
             m_balance += interest;
         }
 
-        // getter / setter
-        double getInterestRate() {
-            return m_interestRate;
-        }
-
+        // public interface
         void print() override {
             std::cout << "DepositAccount:" << std::endl;
             Account::print();
-            std::cout << "    InterestRate = " << m_interestRate << ";" << std::endl;
+            std::cout << "    InterestRate = " << m_rate << ";" << std::endl;
         }
     };
 
     // ===========================================================================
 
     // Concrete Class 'StudentsAccount'
-    class StudentsAccount final : public Account
+    class StudentsAccount final : public CurrentAccount
     {
     public:
         // c'tors
-        StudentsAccount() : Account() {}
-
-        // public interface
-        bool withdraw(double amount) override {
-            if (m_balance < amount)
-                return false;
-
-            m_balance -= amount;
-            return true;
-        }
+        StudentsAccount() : CurrentAccount(0.0) {}
 
         void print() override {
             std::cout << "StudentsAccount:" << std::endl;
@@ -171,7 +168,6 @@ namespace MoreBankAccounts {
 }
 
 // ===========================================================================
-
 
 void exerciseMoreBankAccounts_01()
 {
@@ -190,7 +186,7 @@ void exerciseMoreBankAccounts_01()
     DepositAccount da(4.0);
     da.deposit(200);
     da.withdraw(120);
-    da.computeInterest(31);
+    da.updateInterest(31);
     da.print();
 }
 

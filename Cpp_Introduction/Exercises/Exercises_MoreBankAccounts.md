@@ -80,7 +80,7 @@ sa.print();
 DepositAccount da(4.0);
 da.deposit(200);
 da.withdraw(120);
-da.computeInterest(31);
+da.updateInterest(31);
 da.print();
 ```
 

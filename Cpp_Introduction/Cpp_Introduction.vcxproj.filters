@@ -94,6 +94,9 @@
     <Filter Include="Excercises\STL">
       <UniqueIdentifier>{0c8db045-27c5-4940-a07b-3000c1e1abc7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Excercises\References_Pointers">
+      <UniqueIdentifier>{12ae4579-ad4b-472d-bd4f-08a45d6bc846}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -335,6 +338,9 @@
     </ClCompile>
     <ClCompile Include="Exercises\STL\STL_Main.cpp">
       <Filter>Excercises\STL</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\References_Pointers\References_Pointers_Main.cpp">
+      <Filter>Excercises\References_Pointers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

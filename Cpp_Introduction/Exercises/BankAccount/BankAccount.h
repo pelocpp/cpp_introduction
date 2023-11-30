@@ -11,7 +11,7 @@ class BankAccount
 private:
     const int  m_number;
     double     m_balance;
-    double     m_interestRate;
+    double     m_rate;
 
 private:
     static int s_NextAccountNumber;

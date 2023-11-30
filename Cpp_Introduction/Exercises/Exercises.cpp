@@ -9,6 +9,7 @@ extern void exerciseStrings();
 extern void exerciseDynamicArray();
 extern void exerciseMoreBankAccounts();
 extern void exerciseSTL();
+extern void exerciseReferencesPointers();
 
 void testExercises()
 {
@@ -18,6 +19,8 @@ void testExercises()
     exerciseDynamicArray();
     exerciseMoreBankAccounts();
     exerciseSTL();
+
+    exerciseReferencesPointers();
 }
 
 // ===========================================================================

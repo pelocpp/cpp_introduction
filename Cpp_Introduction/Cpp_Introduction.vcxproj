@@ -80,6 +80,7 @@
     <ClCompile Include="Exercises\Rectangle\Point.cpp" />
     <ClCompile Include="Exercises\Rectangle\Rectangle.cpp" />
     <ClCompile Include="Exercises\Rectangle\Rectangle_Main.cpp" />
+    <ClCompile Include="Exercises\References_Pointers\References_Pointers_Main.cpp" />
     <ClCompile Include="Exercises\STL\STL_Main.cpp" />
     <ClCompile Include="Exercises\Strings\Strings_Main.cpp" />
     <ClCompile Include="HelloWorld\Main.cpp" />

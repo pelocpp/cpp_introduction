@@ -56,7 +56,7 @@ Die drei Klassen sollen folgende Eigenschaften aufweisen:
     Diese Methode besitzt als Parameter die Anzahl der Tage, für die die Zinsen gutzuschreiben sind.
     Die Zinsen sind nach der Formel
 
-    <img src="Bankkonto_Zinssatz.png" width="250">
+    <img src="Bankkonto_Zinssatz.png" width="300">
 
     zu berechnen.
 
@@ -86,7 +86,7 @@ da.print();
 
 *Ausgabe*:
 
-```cpp
+```
 CurrentAccount:
     [Nr. 10000]:
     Balance = 60;
@@ -98,6 +98,49 @@ DepositAccount:
     [Nr. 10002]:
     Balance = 80.2718;
     InterestRate = 4;
+```
+
+*Beispiel*:
+
+```cpp
+CurrentAccount ca(1000);
+ca.deposit(100);
+ca.print();
+
+StudentsAccount sa;
+sa.deposit(50);
+sa.print();
+
+DepositAccount da(4.0);
+da.deposit(200);
+da.print();
+
+IAccount* accounts[3]{ &ca, &sa, &da };
+
+double totalBalance = 0;
+for (int i = 0; i < 3; ++i) {
+
+    totalBalance += accounts[i]->getBalance();
+}
+
+std::cout << "Total Balance: " << totalBalance << std::endl;
+```
+
+*Ausgabe*:
+
+```
+CurrentAccount:
+    [Nr. 10000]:
+    Balance = 100;
+    Limit = 1000;
+StudentsAccount:
+    [Nr. 10001]:
+    Balance = 50;
+DepositAccount:
+    [Nr. 10002]:
+    Balance = 200;
+    InterestRate = 4;
+Total Balance: 350
 ```
 
 ---

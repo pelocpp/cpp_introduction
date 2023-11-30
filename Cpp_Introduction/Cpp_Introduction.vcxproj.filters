@@ -403,5 +403,8 @@
     <Image Include="Markdown\ASCII_Table.png">
       <Filter>Markdown</Filter>
     </Image>
+    <Image Include="Exercises\Bankkonto_Zinssatz.png">
+      <Filter>Excercises</Filter>
+    </Image>
   </ItemGroup>
 </Project>

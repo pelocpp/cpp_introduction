@@ -172,7 +172,8 @@ namespace MoreBankAccounts {
 
 // ===========================================================================
 
-void exerciseMoreBankAccounts()
+
+void exerciseMoreBankAccounts_01()
 {
     using namespace MoreBankAccounts;
 
@@ -191,6 +192,39 @@ void exerciseMoreBankAccounts()
     da.withdraw(120);
     da.computeInterest(31);
     da.print();
+}
+
+void exerciseMoreBankAccounts_02()
+{
+    using namespace MoreBankAccounts;
+
+    CurrentAccount ca(1000);
+    ca.deposit(100);
+    ca.print();
+
+    StudentsAccount sa;
+    sa.deposit(50);
+    sa.print();
+
+    DepositAccount da(4.0);
+    da.deposit(200);
+    da.print();
+
+    IAccount* accounts[3]{ &ca, &sa, &da };
+
+    double totalBalance = 0;
+    for (int i = 0; i < 3; ++i) {
+
+        totalBalance += accounts[i]->getBalance();
+    }
+
+    std::cout << "Total Balance: " << totalBalance << std::endl;
+}
+
+void exerciseMoreBankAccounts()
+{
+    exerciseMoreBankAccounts_01();
+    exerciseMoreBankAccounts_02();
 }
 
 // ===========================================================================

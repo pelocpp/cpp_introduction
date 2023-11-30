@@ -119,9 +119,9 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
   * Überschreiben von Methoden
   * Schlüsselwörter `virtual`, `override` und `final`
   * Polymorphismus
-  * Schnittstellekonzept (Interface)
+  * Schnittstellenkonzept (Interface)
   * Kontrakt mit mehreren Schnittstellen
-  * Abstrakten Basisklasse
+  * Abstrakte Basisklasse
   * Unterschied Schnittstelle versus abstrakte Basisklasse
 
 

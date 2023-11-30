@@ -17,7 +17,6 @@ die Beispiele auf dem Niveau für C++-Einsteiger
 ## Inhaltsverzeichnis:
 
 
-
 <!--
 
 

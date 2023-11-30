@@ -37,8 +37,8 @@ namespace Inheritance
         void draw() {
 
             std::cout
-                << "Rectangle::draw [x=" << getX()
-                << ", y=" << getY() << "]" << std::endl;
+                << "Rectangle::draw [x=" << m_x
+                << ", y=" << m_y << "]" << std::endl;
 
             eraseBackground();
         }
@@ -114,8 +114,8 @@ namespace InheritanceImproved
         void draw() {
 
             std::cout
-                << "Rectangle::draw [x=" << getX()
-                << ", y=" << getY() << "]" << std::endl;
+                << "Rectangle::draw [x=" << m_x
+                << ", y=" << m_y << "]" << std::endl;
 
             eraseBackground();
         }

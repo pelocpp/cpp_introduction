@@ -12,9 +12,9 @@ Wir betrachten die Konzepte
   * Überschreiben von Methoden
   * Schlüsselwörter `virtual`, `override` und `final`
   * Polymorphismus
-  * Schnittstellekonzept (Interface)
+  * Schnittstellenkonzept (Interface)
   * Kontrakt mit mehreren Schnittstellen
-  * Abstrakten Basisklasse
+  * Abstrakte Basisklasse
   * Unterschied Schnittstelle versus abstrakte Basisklasse
 
 an einem Beispiel:
@@ -144,10 +144,9 @@ Rectangle::draw [x=3, y=3]
 
 ---
 
-
 ## Übungen
 
-TBD: Rectangle
+[Aufgabe zu Bankkonten und Vererbung](../Exercises/Exercises_MoreBankAccounts.md)
 
 ---
 

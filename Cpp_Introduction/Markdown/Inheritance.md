@@ -52,8 +52,8 @@ Basisklasse `Rectangle`:
 29:     void draw() {
 30: 
 31:         std::cout
-32:             << "Rectangle::draw [x=" << getX()
-33:             << ", y=" << getY() << "]" << std::endl;
+32:             << "Rectangle::draw [x=" << m_x
+33:             << ", y=" << m_y << "]" << std::endl;
 34: 
 35:         eraseBackground();
 36:     }
@@ -144,12 +144,6 @@ im Namensraum `InheritanceImproved` vor.
 ## Quellcode des Beispiels:
 
 [*Main.cpp*](../Inheritance/Main.cpp)
-
----
-
-## Übungen
-
-[Aufgabe zu Bankkonten und Vererbung](../Exercises/Exercises_MoreBankAccounts.md)
 
 ---
 

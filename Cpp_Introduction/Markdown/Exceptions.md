@@ -14,10 +14,10 @@ und wären somit in der Lage, darauf zu reagieren:
 
 Entsprechende Gegenreaktionen könnten sein:
 
-  * Mit Hilfe des Rückgabewerts einer Funktion/Methode
-  * Durch die Übergabe einer Variablen per Referenz,
+  * Die Beschreibung durch den Rückgabewert einer Funktion/Methode.
+  * Die Übergabe einer Variablen per Referenz,
     die den Fehler dann in kodierter Form beschreibt.
-  * Durch das Beschreiben einer globalen Variablen
+  * Das Beschreiben einer globalen Variablen.
 
 Andere Fehler wiederum treten &ldquo;überraschend&rdquo; auf, und im schlimmsten Fall
 kommt es zu einem Absturz der Programms.
@@ -28,12 +28,12 @@ In C++ hat man ein weiteres Sprachmittel hinzugefügt:
 
 *Exceptions* (*Ausnahmen*) werden in C++ durch ein Objekt beschrieben,
 das aus dem Codeabschnitt, in dem das Problem / der Fehler / der Absturz auftritt,
-an einen anderen Abschnitt im Code übergeben wird, in dem das Problem behandelt werden soll.
+an einen anderen Abschnitt im Code übergeben wird, in dem das Problem dann behandelt werden soll.
 
 Der Typ der *Exception* (*Exceptions* sind Instanzen einer bestimmten Klasse) legt fest,
-welche Anweisungen im Code die weiterenBehandlung des Fehlers übernehmen,
-und der Inhalt des ausgelösten Objekts läßt sich für weiteren Informationen (Rückmeldungen)
-für den Anwender einsetzen.
+welche Anweisungen im Code die weitere Behandlung des Fehlers übernehmen.
+Der Inhalt des ausgelösten Objekts lässt sich zur weiteren Behandlung
+durch den Anwender einsetzen.
 
 
 ### Komponenten der Exception-Behandlung
@@ -168,14 +168,14 @@ Was fällt Ihnen auf?
 
 ---
 
-
 ## Übungen
 
-TBD: TBD  // Klasse Array
+[Aufgabe zur Klasse `DynamicArray`](../Exercises/Exercises_DynamicArray.md)
 
+Die Realisierung des Operators `[]` bzw. eine Methode `at`
+kann nun geeignet auf falsche Indices reagieren.
 
 ---
-
 
 [Zurück](Agenda.md)
 

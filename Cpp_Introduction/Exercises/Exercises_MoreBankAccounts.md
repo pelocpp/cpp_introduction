@@ -57,10 +57,24 @@ Die drei Klassen sollen folgende Eigenschaften aufweisen:
     Die Zinsen sind nach der Formel
 
     <img src="Bankkonto_Zinssatz.png" width="300">
+   
+    $$Zinsen = \frac{AnzahlTage}{365} * \frac{Zinssatz}{100} * Guthaben$$
 
     zu berechnen.
 
 ---
+
+Versuch mit GitHub Math:
+
+**The Cauchy-Schwarz Inequality**
+$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+
+
+$$Zinsen = \frac{AnzahlTage}{365} * \frac{Zinssatz}{100} * Guthaben$$
+
+---
+
+
 
 Die Programmausgabe studieren Sie an folgenden Codefragmenten:
 

@@ -97,6 +97,9 @@
     <Filter Include="Excercises\References_Pointers">
       <UniqueIdentifier>{12ae4579-ad4b-472d-bd4f-08a45d6bc846}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Excercises\DynamicArrayTemplate">
+      <UniqueIdentifier>{936b3ea6-6365-4288-a1df-3144aa9ba718}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -223,6 +226,12 @@
     <None Include="Markdown\cpp_call_by_value.svg">
       <Filter>Markdown</Filter>
     </None>
+    <None Include="Exercises\Exercises_References_Pointers.md">
+      <Filter>Excercises</Filter>
+    </None>
+    <None Include="Exercises\Exercises_DynamicArrayTemplate.md">
+      <Filter>Excercises</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -342,6 +351,12 @@
     <ClCompile Include="Exercises\References_Pointers\References_Pointers_Main.cpp">
       <Filter>Excercises\References_Pointers</Filter>
     </ClCompile>
+    <ClCompile Include="Exercises\DynamicArrayTemplate\DynamicArrayTemplate.cpp">
+      <Filter>Excercises\DynamicArrayTemplate</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\DynamicArrayTemplate\DynamicArrayTemplate_Main.cpp">
+      <Filter>Excercises\DynamicArrayTemplate</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constructors\Time.h">
@@ -370,6 +385,9 @@
     </ClInclude>
     <ClInclude Include="Exercises\DynamicArray\DynamicArray.h">
       <Filter>Excercises\DynamicArray</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\DynamicArrayTemplate\DynamicArrayTemplate.h">
+      <Filter>Excercises\DynamicArrayTemplate</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

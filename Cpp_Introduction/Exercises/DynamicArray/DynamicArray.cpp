@@ -93,7 +93,7 @@ void DynamicArray::print()
     for (size_t i = 0; i < m_size; ++i) {
         std::cout << m_data[i] << ' ';
     }
-    std::cout << "[Length: " << m_size << ']' << std::endl;;
+    std::cout << "[Length: " << m_size << ']' << std::endl;
 }
 
 // operators
@@ -103,7 +103,7 @@ int& DynamicArray::operator[] (size_t index)
     return m_data[index];
 }
 
-// copy semantics
+// copy semantics - copy constructor
 DynamicArray::DynamicArray(const DynamicArray& data) {
 
     // allocate buffer
@@ -116,6 +116,7 @@ DynamicArray::DynamicArray(const DynamicArray& data) {
     }
 }
 
+// copy semantics - assignment operator
 DynamicArray& DynamicArray::operator= (const DynamicArray& data) {
 
     // prevent self-assignment

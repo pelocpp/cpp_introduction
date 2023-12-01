@@ -22,7 +22,9 @@
     <None Include="..\Readme.md" />
     <None Include="Exercises\Exercises.md" />
     <None Include="Exercises\Exercises_BankAccount.md" />
+    <None Include="Exercises\Exercises_DynamicArrayTemplate.md" />
     <None Include="Exercises\Exercises_MoreBankAccounts.md" />
+    <None Include="Exercises\Exercises_References_Pointers.md" />
     <None Include="Exercises\Exercises_STL.md" />
     <None Include="Exercises\Exercises_Strings.md" />
     <None Include="Exercises\Exercises_DynamicArray.md" />
@@ -73,6 +75,8 @@
     <ClCompile Include="Exceptions\Main.cpp" />
     <ClCompile Include="Exercises\BankAccount\BankAccount.cpp" />
     <ClCompile Include="Exercises\BankAccount\BankAccount_Main.cpp" />
+    <ClCompile Include="Exercises\DynamicArrayTemplate\DynamicArrayTemplate.cpp" />
+    <ClCompile Include="Exercises\DynamicArrayTemplate\DynamicArrayTemplate_Main.cpp" />
     <ClCompile Include="Exercises\DynamicArray\DynamicArray.cpp" />
     <ClCompile Include="Exercises\DynamicArray\DynamicArray_Main.cpp" />
     <ClCompile Include="Exercises\Exercises.cpp" />
@@ -108,6 +112,7 @@
     <ClInclude Include="ClassesObjects\Time.h" />
     <ClInclude Include="Constructors\Time.h" />
     <ClInclude Include="Exercises\BankAccount\BankAccount.h" />
+    <ClInclude Include="Exercises\DynamicArrayTemplate\DynamicArrayTemplate.h" />
     <ClInclude Include="Exercises\DynamicArray\DynamicArray.h" />
     <ClInclude Include="Exercises\Rectangle\Point.h" />
     <ClInclude Include="Exercises\Rectangle\Rectangle.h" />

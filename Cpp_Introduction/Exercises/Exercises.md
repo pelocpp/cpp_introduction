@@ -82,6 +82,15 @@ Folgende Aspekte werden betrachtet:
 
 ---
 
+#### [Betrachtungen zur Parameterübergabe](./Exercises_References_Pointers.md)
+
+Folgende Aspekte werden betrachtet:
+  * Parameterübergabe *Call-by_Value*
+  * Parameterübergabe mit Zeigern
+  * Parameterübergabe mit Referenzen
+
+---
+
 #### [Zeichenketten / Klasse `std::string`](./Exercises_Strings.md)
 
 Folgende Aspekte werden betrachtet:
@@ -110,6 +119,13 @@ Folgende Aspekte werden betrachtet:
   * Schnittstellenkonzept (*Interface*)
   * Abstrakte Basisklasse
    
+---
+
+#### [Klassentemplate `DynamicArrayTemplate`](./DynamicArrayTemplate.md)
+
+Folgende Aspekte werden betrachtet:
+  * Templates
+
 ---
 
 #### [STL-Standard Template Library](./Exercises_STL.md)

@@ -36,11 +36,18 @@ Eine mögliche Schnittstelle einer Klasse `DynamicArray` könnte so aussehen:
 | Benutzerdefinierter Konstruktor | `DynamicArray(size_t size);`<br/>Legt ein Feld der Länge `size` an. |
 | *getter* `size()`  | `size_t size() const;`<br/>Liefert die aktuelle Länge zurück. |
 | `at`     | `int& at (size_t index);`<br/> Zugriff auf ein Element an der `index` Stelle. Bei ungültigem Index wird eine Ausnahme geworfen. |
-| Operator `[]`  | `int& operator[] (size_t index);`<br/>Wie Methode `at`, nur ohne Gültigkeitsüberprüfung des Index. |
-| `clear` | `void clear();`<br/>Gibt den dynamisch allokierten Speicher frei. |
+| Operator `[]` | `int& operator[] (size_t index);`<br/>Wie Methode `at`, nur ohne Gültigkeitsüberprüfung des Index. |
+| `fill` | `void fill(int value);`<br/>Belegt alle Elemente des Arrays mit dem Wert `value`. |
 | `resize` | `void resize(size_t newSize);`<br/>Ändert die Länge das Speicherbereichs. Dabei sind die vorhandenen Daten des aktuellen Felds in das neue Feld zuzukopieren. Ist die neue Länge kürzer als die vorhandene, gehen die Daten im oberen Teil des Felds verloren. Ist das neue Feld hingegen länger, kann das aktuelle Feld komplett umkopiert werden und die verbleibenden Elemente im oberen Bereich sind mit `0` vorzubelegen. |
+| `release` | `void release();`<br/>Gibt den dynamisch allokierten Speicher frei. |
+| `print` | `void print();`<br/>.Gibt alle Elemente des Arrays in der Konsole aus. |
+| `bool operator==` | `friend bool operator== (const DynamicArray& left, DynamicArray right);`<br/>Vergleicht zwei `DynamicArray`-Objekte auf Gleichheit. |
+| `bool operator!=` | `friend bool operator!= (const DynamicArray& left, DynamicArray right);`<br/>Vergleicht zwei `DynamicArray`-Objekte auf Ungleichheit. |
 
-*Tabelle* 1. Elemente der Klasse `DynamicArray`.
+*Tabelle* 1.
+
+Beachten Sie, dass neben den in *Tabelle* 1 aufgeführten Methoden
+auch noch das Reglwerk der &ldquo;Rule of Three&rdquo; vorhanden ist.
 
 ---
 

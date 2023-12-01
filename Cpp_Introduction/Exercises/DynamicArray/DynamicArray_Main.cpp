@@ -18,6 +18,18 @@ void exerciseDynamicArray02()
 {
     DynamicArray array(3);
     array.print();
+
+    array.fill(123);
+    array.print();
+
+    array.release();
+    array.print();
+}
+
+void exerciseDynamicArray03()
+{
+    DynamicArray array(3);
+    array.print();
     array[0] = 1;
     array[1] = 2;
     array[2] = 3;
@@ -35,7 +47,7 @@ void exerciseDynamicArray02()
     array.print();
 }
 
-void exerciseDynamicArray03()
+void exerciseDynamicArray04()
 {
     DynamicArray array1(3);
     DynamicArray array2(5);
@@ -46,7 +58,7 @@ void exerciseDynamicArray03()
     array1.print();
 }
 
-void exerciseDynamicArray04()
+void exerciseDynamicArray05()
 {
     DynamicArray array1(3);
     DynamicArray array2(array1);
@@ -60,6 +72,7 @@ void exerciseDynamicArray()
     exerciseDynamicArray02();
     exerciseDynamicArray03();
     exerciseDynamicArray04();
+    exerciseDynamicArray05();
 }
 
 // ===========================================================================

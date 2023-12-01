@@ -20,11 +20,13 @@ public:
 
     // getter / setter
     size_t size() const;
+    int& at(size_t index);
 
     // public interface
-    void print();
+    void fill(int value);
     void resize(size_t newSize);
-    int& at (size_t index);
+    void release();
+    void print();
 
     // operators
     int& operator[] (size_t index);

@@ -330,7 +330,7 @@
     <ClCompile Include="Exercises\DynamicArray\DynamicArray_Main.cpp">
       <Filter>Excercises\DynamicArray</Filter>
     </ClCompile>
-    <ClCompile Include="Exercises\MoreBankAccounts\MoreBankAccounts.cpp">
+    <ClCompile Include="Exercises\MoreBankAccounts\MoreBankAccounts_Main.cpp">
       <Filter>Excercises\MoreBankAccounts</Filter>
     </ClCompile>
     <ClCompile Include="STL\Main.cpp">

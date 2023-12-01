@@ -11,13 +11,13 @@ namespace MoreBankAccounts {
     {
     public:
         // getter/setter
-        virtual double getAccountNumber() = 0;
-        virtual double getBalance() = 0;
+        virtual double getAccountNumber() const = 0;
+        virtual double getBalance() const = 0;
 
         // public interface
-        virtual void deposit(double amount) = 0;
-        virtual bool withdraw(double amount) = 0;
-        virtual void print() = 0;
+        virtual void deposit(double) = 0;
+        virtual bool withdraw(double) = 0;
+        virtual void print() const = 0;
     };
 
     // ===========================================================================
@@ -26,15 +26,15 @@ namespace MoreBankAccounts {
     class Account : public IAccount
     {
     protected:
-        int        m_number;
-        double     m_balance;
+        int    m_number;
+        double m_balance;
 
     private:
         static int s_nextNumber;
 
     public:
         // default c'tor
-        Account() : m_balance(0) {
+        Account() : m_balance(0.0) {
 
             // retrieve next available account number
             m_number = s_nextNumber;
@@ -42,11 +42,11 @@ namespace MoreBankAccounts {
         }
 
         // getter / setter
-        double getAccountNumber() final override {
+        double getAccountNumber() const final override {
             return m_number;
         }
 
-        double getBalance() final override { 
+        double getBalance() const final override {
             return m_balance; 
         }
 
@@ -55,7 +55,7 @@ namespace MoreBankAccounts {
             m_balance += amount;
         }
 
-        void print() override {
+        void print() const override {
             std::cout << "    [Nr. " << m_number << "]:" << std::endl;
             std::cout << "    Balance = " << m_balance << ";" << std::endl;
         }
@@ -96,7 +96,7 @@ namespace MoreBankAccounts {
             return true;
         }
 
-        void print() override {
+        void print() const override {
             std::cout << "CurrentAccount:" << std::endl;
             Account::print();
             std::cout << "    Limit = " << m_limit << ";" << std::endl;
@@ -144,7 +144,7 @@ namespace MoreBankAccounts {
         }
 
         // public interface
-        void print() override {
+        void print() const override {
             std::cout << "DepositAccount:" << std::endl;
             Account::print();
             std::cout << "    InterestRate = " << m_rate << ";" << std::endl;
@@ -154,13 +154,22 @@ namespace MoreBankAccounts {
     // ===========================================================================
 
     // Concrete Class 'StudentsAccount'
-    class StudentsAccount final : public CurrentAccount
+    class StudentsAccount final : public Account
     {
     public:
         // c'tors
-        StudentsAccount() : CurrentAccount(0.0) {}
+        StudentsAccount() : Account() {}
 
-        void print() override {
+        bool withdraw(double amount) override {
+
+            if (m_balance < amount)
+                return false;
+
+            m_balance -= amount;
+            return true;
+        }
+
+        void print() const override {
             std::cout << "StudentsAccount:" << std::endl;
             Account::print();
         };

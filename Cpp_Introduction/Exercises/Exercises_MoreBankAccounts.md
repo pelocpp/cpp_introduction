@@ -62,6 +62,28 @@ Die drei Klassen sollen folgende Eigenschaften aufweisen:
 
 ---
 
+## Hinweis zur Realisierung
+
+Man könnte geneigt sein, die beiden Kontotypen *Studentenkonto* und *Girokonto* in Beziehung
+zueinander zu setzen. Zum Beispiel könnte man argumentieren, ein Studentenkonto &ldquo;ist-ein&rdquo; Girokonto
+mit Dispolimit 0. Oder auch anders herum: Ein Girokonto &ldquo;ist-ein&rdquo; Studentenkonto erweitert um
+das Feature eines Dispolimits.
+
+Warum führen beide Überlegungen nicht ans Ziel?
+
+*Antwort*:
+
+Überlegung 1:<br />
+Ein Studentenkonto ist *kein* Girokonto, weil es sonst die Methode `setLimit` des Girokontos erben würde.
+Dies ist aber nicht erwünscht.
+
+Überlegung 2:<br />
+Ein Girokonto ist *kein* Studentenkonto, weil es sonst die Methode `withdraw` des Studentenkonto ersetzen müsste.
+Technisch gesehen geht dies, konzeptionell ist diese Vorgehensweise aber eher fragwürdig.
+
+---
+
+
 Die Programmausgabe studieren Sie an folgenden Codefragmenten:
 
 *Beispiel*:

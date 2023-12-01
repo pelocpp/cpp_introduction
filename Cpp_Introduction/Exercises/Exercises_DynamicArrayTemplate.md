@@ -11,8 +11,8 @@ Folgende C++&ndash;Sprachmittel sollen zum Einsatz kommen:
 
 ## Beschreibung
 
-In der Aufgabe zu dynamischen Daten betrachteten wir eine Klasse für ein 
-dynamisch langes Array. Konkret ließen sich mit der Klasse `DynamicArray`
+In der Aufgabe zu [Dynamische Daten](./Exercises_DynamicArray.md) betrachteten wir eine Klasse für ein 
+flexibel langes Array. Konkret ließen sich mit der Klasse `DynamicArray`
 aber nur beliebig lange `int`-Felder anlegen.
 
 Erstellen Sie in dieser Aufgabe nun ein Klassentemplate `DynamicArrayTemplate`,

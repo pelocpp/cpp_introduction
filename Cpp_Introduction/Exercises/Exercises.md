@@ -121,7 +121,7 @@ Folgende Aspekte werden betrachtet:
    
 ---
 
-#### [Klassentemplate `DynamicArrayTemplate`](./DynamicArrayTemplate.md)
+#### [Klassentemplate `DynamicArrayTemplate`](./Exercises_DynamicArrayTemplate.md)
 
 Folgende Aspekte werden betrachtet:
   * Templates

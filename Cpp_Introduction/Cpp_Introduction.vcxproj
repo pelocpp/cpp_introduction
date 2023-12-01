@@ -75,7 +75,6 @@
     <ClCompile Include="Exceptions\Main.cpp" />
     <ClCompile Include="Exercises\BankAccount\BankAccount.cpp" />
     <ClCompile Include="Exercises\BankAccount\BankAccount_Main.cpp" />
-    <ClCompile Include="Exercises\DynamicArrayTemplate\DynamicArrayTemplate.cpp" />
     <ClCompile Include="Exercises\DynamicArrayTemplate\DynamicArrayTemplate_Main.cpp" />
     <ClCompile Include="Exercises\DynamicArray\DynamicArray.cpp" />
     <ClCompile Include="Exercises\DynamicArray\DynamicArray_Main.cpp" />

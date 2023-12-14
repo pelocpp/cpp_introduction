@@ -30,6 +30,7 @@
     <None Include="Exercises\Exercises_DynamicArray.md" />
     <None Include="Exercises\Exercises_Rectangle.md" />
     <None Include="Exercises\Exercises_Time.md" />
+    <None Include="Exercises\Exercises_Fraction.md" />
     <None Include="Markdown\Agenda.md" />
     <None Include="Markdown\cpp_call_by_reference.svg" />
     <None Include="Markdown\ClassesObjects.md" />
@@ -80,6 +81,8 @@
     <ClCompile Include="Exercises\DynamicArray\DynamicArray.cpp" />
     <ClCompile Include="Exercises\DynamicArray\DynamicArray_Main.cpp" />
     <ClCompile Include="Exercises\Exercises.cpp" />
+    <ClCompile Include="Exercises\Fraction\Fraction.cpp" />
+    <ClCompile Include="Exercises\Fraction\Fraction_Main.cpp" />
     <ClCompile Include="Exercises\MoreBankAccounts\MoreBankAccounts_Main.cpp" />
     <ClCompile Include="Exercises\Rectangle\Point.cpp" />
     <ClCompile Include="Exercises\Rectangle\Rectangle.cpp" />
@@ -116,6 +119,7 @@
     <ClInclude Include="Exercises\BankAccount\BankAccount.h" />
     <ClInclude Include="Exercises\DynamicArrayTemplate\DynamicArrayTemplate.h" />
     <ClInclude Include="Exercises\DynamicArray\DynamicArray.h" />
+    <ClInclude Include="Exercises\Fraction\Fraction.h" />
     <ClInclude Include="Exercises\Rectangle\Point.h" />
     <ClInclude Include="Exercises\Rectangle\Rectangle.h" />
     <ClInclude Include="Exercises\Time\Time.h" />

@@ -103,6 +103,9 @@
     <Filter Include="Excercises\Time">
       <UniqueIdentifier>{bc73bc6e-2ea8-4e65-a18a-b77b67943eb7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Excercises\Fraction">
+      <UniqueIdentifier>{51fcbb49-6d3b-423e-bdc0-70f882aa564d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -238,6 +241,9 @@
     <None Include="Exercises\Exercises_Time.md">
       <Filter>Excercises</Filter>
     </None>
+    <None Include="Exercises\Exercises_Fraction.md">
+      <Filter>Excercises</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -366,6 +372,12 @@
     <ClCompile Include="Exercises\Time\Time.cpp">
       <Filter>Excercises\Time</Filter>
     </ClCompile>
+    <ClCompile Include="Exercises\Fraction\Fraction.cpp">
+      <Filter>Excercises\Fraction</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Fraction\Fraction_Main.cpp">
+      <Filter>Excercises\Fraction</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constructors\Time.h">
@@ -400,6 +412,9 @@
     </ClInclude>
     <ClInclude Include="Exercises\Time\Time.h">
       <Filter>Excercises\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\Fraction\Fraction.h">
+      <Filter>Excercises\Fraction</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

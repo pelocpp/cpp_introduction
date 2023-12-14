@@ -15,7 +15,7 @@ die Minuten und Sekunden Werte zwischen 0 und 59.
 
 Weitere Hinweise zur Spezifikation einer Klasse `Time` finden Sie in den nachfolgenden Hinweisen vor:
 
-> Konstruktoren
+####  Konstruktoren
 
 ```cpp
 Time ();
@@ -30,7 +30,7 @@ Mit ihnen kann man ein `Time`-Objekt mit drei Werten `seconds`, `minutes` und `h
 oder man gibt nur einen Sekundenwert &ndash; im Bereich von 0 bis 86400 &ndash; vor.
 Alternativ lässt sich eine Uhrzeit auch durch eine Zeichenkette des Formats `"hh:mm:ss"` spezifizieren.
 
-> Methoden
+####  Methoden
 
 ```cpp
 void reset ();
@@ -50,7 +50,7 @@ wieder in einem `Time`-Objekt bereit. Mit der `reset`-Methode werden alle drei W
 zum Addieren oder Subtrahieren einer einzelnen Sekunde gibt es die zwei Methoden `increment` bzw. `decrement`.
 
 
-> Arithmetische Operatoren
+####  Arithmetische Operatoren
 
 ```cpp
 // arithmetic operators
@@ -76,7 +76,7 @@ Die Funktionsweise der Operatoren ist weitestgehend
 selbsterklärend &ndash; die beiden Operatoren `++` und `--` arbeiten analog wie `increment` bzw. `decrement`.
 
 
-> Vergleichsoperatoren
+####  Vergleichsoperatoren
 
 ```cpp
 friend bool operator== (const Time&, const Time&);
@@ -91,7 +91,7 @@ friend bool operator>  (const Time&, const Time&);
 
 Vergleich zweier Uhrzeiten.
 
-> Konvertierungsoperator
+####  Konvertierungsoperator
 
 ```cpp
 operator int();
@@ -101,7 +101,7 @@ operator int();
 
 Vergleich zweier Uhrzeiten.
 
-> Ein- und Ausgabe
+####  Ein- und Ausgabe
 
 ```cpp
 friend ostream& operator<< (ostream&, const Time&);

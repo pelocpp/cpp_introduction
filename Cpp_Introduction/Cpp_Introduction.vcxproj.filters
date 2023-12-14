@@ -100,6 +100,9 @@
     <Filter Include="Excercises\DynamicArrayTemplate">
       <UniqueIdentifier>{936b3ea6-6365-4288-a1df-3144aa9ba718}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Excercises\Time">
+      <UniqueIdentifier>{bc73bc6e-2ea8-4e65-a18a-b77b67943eb7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -232,6 +235,9 @@
     <None Include="Exercises\Exercises_DynamicArrayTemplate.md">
       <Filter>Excercises</Filter>
     </None>
+    <None Include="Exercises\Exercises_Time.md">
+      <Filter>Excercises</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -354,6 +360,12 @@
     <ClCompile Include="Exercises\DynamicArrayTemplate\DynamicArrayTemplate_Main.cpp">
       <Filter>Excercises\DynamicArrayTemplate</Filter>
     </ClCompile>
+    <ClCompile Include="Exercises\Time\Time_Main.cpp">
+      <Filter>Excercises\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Time\Time.cpp">
+      <Filter>Excercises\Time</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constructors\Time.h">
@@ -385,6 +397,9 @@
     </ClInclude>
     <ClInclude Include="Exercises\DynamicArrayTemplate\DynamicArrayTemplate.h">
       <Filter>Excercises\DynamicArrayTemplate</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\Time\Time.h">
+      <Filter>Excercises\Time</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

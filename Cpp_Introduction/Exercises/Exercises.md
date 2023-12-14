@@ -26,18 +26,6 @@ Folgende Aspekte werden betrachtet:
   * Operatoren zur Bitmanipulation: `&`, `|`, `^` und `~` sowie die beiden Shift-Operatoren `<<` und `>>`
   * Kleinere Beispiele auf Basis der Bitmanipulationsoperatoren.
 
----
-
-#### [Klasse *Time*](Examples/Time/Resources/Readme.md)
-
-Folgende Aspekte werden betrachtet:
-  * Prinzipielle Realisierung einer einfachen Klasse *ohne* dynamische Daten im Instanzvariablenbereich
-  * Konstruktoren
-  * Zugriffsrechte (`private`, `public`)
-  * Überladen von Operatoren
-  * `friend`-Mechanismus
-  * *getter*/*setter*-Methoden
-  * Objekte als Rückgabewert von Methoden
 
 ---
 
@@ -79,6 +67,19 @@ Folgende Aspekte werden betrachtet:
   * *getter*/*setter*-Methoden
   * Realisierung einfacher Methoden
   * Klassenvariablen
+
+---
+
+#### [Klasse *Time*](./Exercises_Time.md)
+
+Folgende Aspekte werden betrachtet:
+  * Prinzipielle Realisierung einer einfachen Klasse *ohne* dynamische Daten im Instanzvariablenbereich
+  * Konstruktoren
+  * Zugriffsrechte (`private`, `public`)
+  * Überladen von Operatoren
+  * `friend`-Mechanismus
+  * *getter*/*setter*-Methoden
+  * Objekte als Rückgabewert von Methoden
 
 ---
 

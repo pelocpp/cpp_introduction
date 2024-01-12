@@ -111,7 +111,7 @@ rm:.o no such file or directory
 
 
 Fehlt eine Antwort? Weitere &ldquo;Abgrenzungen&rdquo; finden Sie
-[hier](http://www.toodarkpark.org/computers/humor/shoot-self-in-foot.html).
+[hier](https://www-users.york.ac.uk/~ss44/joke/foot.htm).
 
 ---
 

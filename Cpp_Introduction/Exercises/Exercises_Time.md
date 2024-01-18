@@ -1,4 +1,4 @@
-# Aufgabe Klasse `BankAccount`
+# Aufgabe Klasse `Time`
 
 [Zurück](./Exercises.md)
 

@@ -87,7 +87,7 @@ Folgende Aspekte werden betrachtet:
 #### [Betrachtungen zur Parameterübergabe](./Exercises_References_Pointers.md)
 
 Folgende Aspekte werden betrachtet:
-  * Parameterübergabe *Call-by_Value*
+  * Parameterübergabe mit Kopien
   * Parameterübergabe mit Zeigern
   * Parameterübergabe mit Referenzen
 

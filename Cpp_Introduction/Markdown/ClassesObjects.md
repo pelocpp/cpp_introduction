@@ -27,8 +27,8 @@ Für den Einstieg betrachten wir nur die Methode `increment` (erhöhe die Uhrzeit 
 *Hinweis*: Beachten Sie bei der Realisierung:
 Typischerweise ist die Realisierung einer Klasse auf 2 Dateien aufgeteilt:
 
-  * Header-Datei (Dateiendung *.cpp*):<br/>
-  * Implementierungs-Datei (Dateiendung *.h*):<br/>Realisierung der Methoden der Klasse
+  * Header-Datei (Dateiendung *.h*):<br/>
+  * Implementierungs-Datei (Dateiendung *.cpp*):<br/>Realisierung der Methoden der Klasse
 
 #### Datei [*Time.h*](../ClassesObjects/Time.h):
 

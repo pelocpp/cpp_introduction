@@ -231,15 +231,6 @@ von `int` nach `Time` bzw. von `const char*` nach `Time` statt:
 
 ---
 
-
-## Übungen
-
-TBD: Rectangle
-
-
----
-
-
 [Zurück](Agenda.md)
 
 ---

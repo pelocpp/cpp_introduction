@@ -144,11 +144,9 @@ Calculator<double>: 777.777
 
 ---
 
-
 ## Übungen
 
-TBD: TBD  // Klasse Array
-
+[Aufgabe zur Klasse `DynamicArrayTemplate`](../Exercises/Exercises_DynamicArrayTemplate.md)
 
 ---
 

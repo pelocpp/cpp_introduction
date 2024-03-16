@@ -246,10 +246,9 @@ zu referenzierenden Variablen vorhanden sein *muss*.
 
 ## Übungen
 
-TBD: 
+[Aufgabe zur Parameterübergabe](../Exercises/Exercises_References_Pointers.md)
 
 ---
-
 
 [Zurück](Agenda.md)
 

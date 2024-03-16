@@ -4,28 +4,28 @@
 
 #include <iostream>
 
-void swap(int n, int m)
+static void swap(int n, int m)
 {
     int tmp = n;
     n = m;
     m = tmp;
 }
 
-void swapPointers(int* n, int* m)
+static void swapPointers(int* n, int* m)
 {
     int tmp = *n;
     *n = *m;
     *m = tmp;
 }
 
-void swapReferences(int& n, int& m)
+static void swapReferences(int& n, int& m)
 {
     int tmp = n;
     n = m;
     m = tmp;
 }
 
-void exerciseReferencesPointers01()
+static void exerciseReferencesPointers01()
 {
     int a = 1;
     int b = 2;
@@ -37,7 +37,7 @@ void exerciseReferencesPointers01()
     std::cout << "a: " << a << " - b: " << b << std::endl;
 }
 
-void exerciseReferencesPointers02()
+static void exerciseReferencesPointers02()
 {
     int a = 1;
     int b = 2;
@@ -49,7 +49,7 @@ void exerciseReferencesPointers02()
     std::cout << "a: " << a << " - b: " << b << std::endl;
 }
 
-void exerciseReferencesPointers03()
+static void exerciseReferencesPointers03()
 {
     int a = 1;
     int b = 2;

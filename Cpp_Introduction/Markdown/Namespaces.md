@@ -108,15 +108,6 @@ Datei *Main.cpp*:
 
 ---
 
-
-## Übungen
-
-TBD: Rectangle
-
-
----
-
-
 [Zurück](Agenda.md)
 
 ---

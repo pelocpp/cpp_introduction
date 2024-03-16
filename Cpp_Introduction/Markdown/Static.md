@@ -106,7 +106,6 @@ siehe das folgende Beispiel:
 13: }
 ```
 
-
 ---
 
 ## Quellcode des Beispiels:
@@ -114,15 +113,6 @@ siehe das folgende Beispiel:
 [*Main.cpp*](../Static/Main.cpp)
 
 ---
-
-
-## Übungen
-
-TBD: Rectangle
-
-
----
-
 
 [Zurück](Agenda.md)
 

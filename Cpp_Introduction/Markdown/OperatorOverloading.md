@@ -453,14 +453,11 @@ auf den Modus *öffentlich* umgestellt &ndash; für *Freunde*.
 
 ---
 
-
 ## Übungen
 
-TBD: Weitere Operatoren
-
+[Aufgabe zur Klasse `Fraction`](../Exercises/Exercises_Fraction.md)
 
 ---
-
 
 [Zurück](Agenda.md)
 

@@ -2,7 +2,7 @@
 // https://github.com/pelocpp // https://peterloos.de
 // =====================================================================================
 
-#pragma message("Collection of introductionary C++ Code Examples - Copyright (C) 2019-2023 Peter Loos")
+#pragma message("Collection of introductionary C++ Code Examples - Copyright (C) 2019-2024 Peter Loos")
 
 #include <iostream>
 
@@ -33,7 +33,7 @@ extern void testExercises();
 int main()
 {
 
-    std::cout << "[Collection of introductionary C++ Code Examples - Copyright (C) 2019-2023 Peter Loos]" << std::endl;
+    std::cout << "[Collection of introductionary C++ Code Examples - Copyright (C) 2019-2024 Peter Loos]" << std::endl;
 
     // main entry points code examples
     try
@@ -57,7 +57,7 @@ int main()
         //testMoreInheritance();
         //testSTL();
 
-        testExercises();
+        //testExercises();
     }
     catch (const std::exception& ex) {
         std::cout << "Exception: " << ex.what() << std::endl;

@@ -180,16 +180,8 @@ Double: 123.456
 
 [*Main.cpp*](../Streams/Main.cpp)
 
----
-
-
-## Übungen
-
-TBD: TBD 
-
 
 ---
-
 
 [Zurück](Agenda.md)
 

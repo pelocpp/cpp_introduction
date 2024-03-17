@@ -14,7 +14,7 @@ Folgende C++&ndash;Sprachmittel sollen zum Einsatz kommen:
 ## Beschreibung
 
 Der Datentyp *Array* steht in C++ für Felder fester Länge.
-Es gibt keinerlei Möglichkeit, nach dem Erzeugen eines Felds dessen Länge zu ändern.
+Es gibt keinerlei Möglichkeit, nach dem Erzeugen eines Felds seine Länge zu ändern.
 
 ```cpp
 int numbers[10];
@@ -27,6 +27,48 @@ Mit Hilfe der beiden Operatoren `new` und `delete` kann man eine Klasse `Dynamic
 die im Prinzip dieselbe Funktionalität wie C++-Felder besitzt,
 nur mit dem Unterschied, dass die Längenangabe sowohl zum Erzeugungszeitpunkt
 als auch während der Lebenszeit eines `DynamicArray`-Objekts änderbar ist.
+
+Diese Flexibilität wird erreicht, indem die Daten des Felds in einem Speicherbereich auf dem Halde (*Heap*) abgelegt werden.
+Bei Bedarf, zum Beispiel, wenn der Datenbereich zu klein geworden ist, kann man auf der Halde ein größeres Stück Speicher reservieren.
+
+Implementieren Sie eine Klasse `DynamicArray`, die diese Eigenschaft besitzt.
+Ein Objekt dieser Klasse sollte wie in *Abbildung* 1 gezeigt aussehen:
+
+<img src="DynamicArray/Resources/cpp_dynamic_array_01.svg" width="550">
+
+*Abbildung* 1. Instanzdatenbereich eines `DynamicArray`-Objekts mit dynamisch allokiertem Datenpuffer.
+
+Wir erkennen in *Abbildung* 1 zwei Instanzvariablen in der Klasse `DynamicArray`: `m_data` und `m_length`.
+`m_data` enthält die Adresse eines Stück Speichers, das sich auf der Halde befindet und mit dem `new`-Operator angelegt worden ist.
+Die Länge dieses Speicherbereichs wird in der zweiten Instanzvariablen `m_length` festgehalten.
+
+Die Problematik, wenn der dynamisch allokierte Datenpuffer zu klein wird, haben wir bereits angesprochen.
+*Abbildung* 2 soll veranschaulichen, wie wir mit einem größeren Datenpuffer größere Anforderungen erfüllen können.
+
+<img src="DynamicArray/Resources/cpp_dynamic_array_02.svg" width="550">
+
+*Abbildung* 2. Instanzdatenbereich eines `DynamicArray`-Objekts mit dynamisch allokiertem Datenpuffer.
+
+
+In den *Abbildung* 3 und *Abbildung* 4 sprechen wir ein letztes Problem in der Realisierung der `DynamicArray`-Klasse an:
+Die Wertzuweisung zweier `DynamicArray`-Objekte. In einem ersten Ansatz könnte man der Ansicht sein,
+dass diese einfach mit dem Kopieren der beteiligten Instanzvariablen zu bewerkstelligen ist.
+*Abbildung* 3 versucht darzustellen, dass dies nicht zu einer Realisierung führt, die man als korrekt ansehen kann:
+Die beiden in *Abbildung* 3 dargestellten `DynamicArray`-Objekt haben einen gemeinsamen Datenbereich auf Grund des kopierten Zeigers.
+Dies ist nicht das, was man als eine echte Kopie bezeichnen kann.
+
+<img src="DynamicArray/Resources/cpp_dynamic_array_03.svg" width="550">
+
+*Abbildung* 3. Falscher Ansatz beim Kopieren eines `DynamicArray`-Objekts.
+
+*Abbildung* 4 veranschaulicht, wie hier korrekt vorzugehen ist: Eine Kopie eines `DynamicArray`-Objekts muss einen neuen, separaten
+Datenbereich erhalten:
+
+<img src="DynamicArray/Resources/cpp_dynamic_array_04.svg" width="550">
+
+*Abbildung* 4. Korrekter Ansatz beim Kopieren eines `DynamicArray`-Objekts.
+
+
 
 Eine mögliche Schnittstelle einer Klasse `DynamicArray` könnte so aussehen:
 

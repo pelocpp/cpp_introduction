@@ -20,6 +20,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Readme.md" />
+    <None Include="Exercises\DynamicArray\Resources\cpp_dynamic_array_01.svg" />
+    <None Include="Exercises\DynamicArray\Resources\cpp_dynamic_array_02.svg" />
+    <None Include="Exercises\DynamicArray\Resources\cpp_dynamic_array_03.svg" />
+    <None Include="Exercises\DynamicArray\Resources\cpp_dynamic_array_04.svg" />
     <None Include="Exercises\Exercises.md" />
     <None Include="Exercises\Exercises_BankAccount.md" />
     <None Include="Exercises\Exercises_DynamicArrayTemplate.md" />

@@ -335,6 +335,8 @@ Datei *BigData.cpp*:
 
 [Aufgabe zur Klasse `DynamicArray`](../Exercises/Exercises_DynamicArray.md)
 
+[Aufgabe zur Klasse `String`](../Exercises/Exercises_String.md)
+
 ---
 
 [Zurück](Agenda.md)

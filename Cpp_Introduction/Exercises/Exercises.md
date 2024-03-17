@@ -113,7 +113,7 @@ Folgende Aspekte werden betrachtet:
 
 ---
 
-#### [Klasse `String`](./Exercises_String.md)
+#### [Dynamische Daten / Klasse `String`](./Exercises_String.md)
 
 Folgende Aspekte werden betrachtet:
   * Prinzipielle Realisierung einer einfachen Klasse *mit* dynamischen Daten im Instanzvariablenbereich
@@ -134,7 +134,7 @@ Folgende Aspekte werden betrachtet:
    
 ---
 
-#### [Klassentemplate `DynamicArrayTemplate`](./Exercises_DynamicArrayTemplate.md)
+#### [Templateklasse `DynamicArrayTemplate`](./Exercises_DynamicArrayTemplate.md)
 
 Folgende Aspekte werden betrachtet:
   * Templates

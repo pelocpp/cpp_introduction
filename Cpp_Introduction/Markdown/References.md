@@ -258,7 +258,7 @@ zu referenzierenden Variablen vorhanden sein *muss*.
 
 ## Aufgaben
 
-[Aufgabe zur Parameterübergabe](../Exercises/Exercises_References_Pointers.md)
+[Aufgabe zur Funktion `swap`](../Exercises/Exercises_References_Pointers.md)
 
 ---
 

@@ -392,7 +392,7 @@ an Hand einer Reihe von Beispielen:
 
 ## Aufgaben
 
-[Aufgabe zur STL - Standard Template Library](../Exercises/Exercises_STL.md)
+[Aufgabe zur STL](../Exercises/Exercises_STL.md)
 
 ---
 

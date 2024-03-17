@@ -112,6 +112,9 @@
     <Filter Include="Excercises\String\Resources">
       <UniqueIdentifier>{3b517a1f-a6ce-4412-8832-0886d0957db5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Excercises\DynamicArray\Resources">
+      <UniqueIdentifier>{0e3e1ee3-6a62-4666-96b7-96876329f67f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -258,6 +261,18 @@
     </None>
     <None Include="Exercises\Exercises_String.md">
       <Filter>Excercises</Filter>
+    </None>
+    <None Include="Exercises\DynamicArray\Resources\cpp_dynamic_array_01.svg">
+      <Filter>Excercises\DynamicArray\Resources</Filter>
+    </None>
+    <None Include="Exercises\DynamicArray\Resources\cpp_dynamic_array_02.svg">
+      <Filter>Excercises\DynamicArray\Resources</Filter>
+    </None>
+    <None Include="Exercises\DynamicArray\Resources\cpp_dynamic_array_03.svg">
+      <Filter>Excercises\DynamicArray\Resources</Filter>
+    </None>
+    <None Include="Exercises\DynamicArray\Resources\cpp_dynamic_array_04.svg">
+      <Filter>Excercises\DynamicArray\Resources</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

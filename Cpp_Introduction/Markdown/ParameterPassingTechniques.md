@@ -165,7 +165,7 @@ multiplyByTwo(123);
 
 ## Aufgaben
 
-[Funktion `swap`](../Exercises/Exercises_References_Pointers.md)
+[Aufgabe zur Funktion `swap`](../Exercises/Exercises_References_Pointers.md)
 
 ---
 

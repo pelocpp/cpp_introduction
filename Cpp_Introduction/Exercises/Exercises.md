@@ -113,6 +113,17 @@ Folgende Aspekte werden betrachtet:
 
 ---
 
+#### [Klasse `String`](./Exercises_String.md)
+
+Folgende Aspekte werden betrachtet:
+  * Prinzipielle Realisierung einer einfachen Klasse *mit* dynamischen Daten im Instanzvariablenbereich
+  * Konstruktoren und Destruktor (*Big&ndash;Three*)
+  * Zugriffsrechte (`private`, `public`)
+  * Überladen von Operatoren
+  * `friend`-Mechanismus
+
+---
+
 #### [Vererbung am Beispiel von Bankkonten](./Exercises_MoreBankAccounts.md)
 
 Folgende Aspekte werden betrachtet:
@@ -153,16 +164,6 @@ Folgende Aspekte werden betrachtet:
   * Verbesserung des Laufverzeitverhaltens: Implementierung der Move-Semantik ("*Big-Five*" / Variante 3 und 4)
   * Betrachtung des *Swap-Idioms* als eine Möglichkeit zur Umsetzung der Move-Semantik
 
----
-
-#### [Klasse *String*](Examples/String/Resources/Readme.md)
-
-Folgende Aspekte werden betrachtet:
-  * Prinzipielle Realisierung einer einfachen Klasse *mit* dynamischen Daten im Instanzvariablenbereich
-  * Konstruktoren und Destruktor im Zusammenspiel (*Big&ndash;Three*)
-  * Zugriffsrechte (`private`, `public`)
-  * Überladen von Operatoren
-  * `friend`-Mechanismus
 
 ---
 

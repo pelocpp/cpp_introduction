@@ -11,18 +11,19 @@ String::String()
 {
     // empty string
     m_len = 0;
-    m_ptr = (char*)0;
+    m_ptr = (char*) 0;
 }
 
-String::String(const String & s)
+String::String(const String& s)
 {
     // allocate buffer
     m_len = s.m_len;
     m_ptr = new char[m_len];
 
-    // copy object
-    for (int i = 0; i < m_len; i++)
+    // copy contents of buffer
+    for (int i = 0; i < m_len; i++) {
         m_ptr[i] = s.m_ptr[i];
+    }
 }
 
 String::String(const char* s)
@@ -69,12 +70,17 @@ bool String::insert(const String & s, int ofs)
     // allocate new buffer
     char* tmp = new char[m_len + s.m_len];
 
-    for (int i = 0; i < ofs; i++)      // copy first part
+    for (int i = 0; i < ofs; i++) {       // copy first part
         tmp[i] = m_ptr[i];
-    for (int i = 0; i < s.m_len; i++)  // copy string to insert
+    }
+    
+    for (int i = 0; i < s.m_len; i++) {   // copy string to insert
         tmp[ofs + i] = s.m_ptr[i];
-    for (int i = ofs; i < m_len; i++)  // copy second part
+    }
+
+    for (int i = ofs; i < m_len; i++) {   // copy second part
         tmp[s.m_len + i] = m_ptr[i];
+    }
 
     delete[] m_ptr;   // release old buffer
     m_ptr = tmp;      // switch buffer
@@ -97,10 +103,13 @@ bool String::remove(int ofs, int num)
     char* tmp = new char[m_len - num];
 
     // copy remaining parts
-    for (int i = 0; i < ofs; i++)            // first part
+    for (int i = 0; i < ofs; i++) {            // first part
         tmp[i] = m_ptr[i];
-    for (int i = ofs + num; i < m_len; i++)  // second part
+    }
+
+    for (int i = ofs + num; i < m_len; i++) {  // second part
         tmp[i - num] = m_ptr[i];
+    }
 
     delete[] m_ptr; // release old buffer
     m_ptr = tmp;    // switch buffer
@@ -112,24 +121,32 @@ bool String::remove(int ofs, int num)
 String String::subString(int ofs, int num) const
 {
     String empty;
-    if (ofs < 0)
+
+    if (ofs < 0) {
         return empty;
-    if (ofs > m_len)
+    }
+
+    if (ofs > m_len) {
         return empty;
-    if (ofs + num > m_len)
+    }
+        
+    if (ofs + num > m_len) {
         return empty;
+    }
 
     // allocate temporary buffer
     char* tmp = new char[num + 1];
 
     // copy partial string
-    for (int i = 0; i < num; i++)
+    for (int i = 0; i < num; i++) {
         tmp[i] = m_ptr[ofs + i];
+    }
+    
     tmp[num] = '\0'; // terminate buffer
 
     // create result object
     String s(tmp);
-    delete[] tmp; // release temporary buffer
+    delete[] tmp;    // release temporary buffer
     return s;
 }
 
@@ -154,16 +171,20 @@ int String::find(const String & s) const
 
 void String::toUpper()
 {
-    for (int i = 0; i < m_len; i++)
-        if (m_ptr[i] >= 'a' && m_ptr[i] <= 'z')
+    for (int i = 0; i < m_len; i++) {
+        if (m_ptr[i] >= 'a' && m_ptr[i] <= 'z') {
             m_ptr[i] -= ('a' - 'A');
+        }
+    }
 }
 
 void String::toLower()
 {
-    for (int i = 0; i < m_len; i++)
-        if (m_ptr[i] >= 'A' && m_ptr[i] <= 'Z')
+    for (int i = 0; i < m_len; i++) {
+        if (m_ptr[i] >= 'A' && m_ptr[i] <= 'Z') {
             m_ptr[i] += ('a' - 'A');
+        }
+    }
 }
 
 String String::left(int num) const
@@ -181,7 +202,7 @@ String & String::operator= (const String & s)
 {
     if (this != &s)
     {
-        // delete old string
+        // delete old string (left side)
         delete[] m_ptr;
 
         // allocate new buffer
@@ -189,8 +210,9 @@ String & String::operator= (const String & s)
         m_ptr = new char[m_len];
 
         // deep copy
-        for (int i = 0; i < m_len; i++)
+        for (int i = 0; i < m_len; i++) {
             m_ptr[i] = s.m_ptr[i];
+        }
     }
 
     return *this;
@@ -213,12 +235,15 @@ const String & operator+= (String & s1, const String & s2)
 // comparison operators
 bool operator== (const String & s1, const String & s2)
 {
-    if (s1.m_len != s2.m_len)
+    if (s1.m_len != s2.m_len) {
         return false;
+    }
 
-    for (int i = 0; i < s1.m_len; i++)
-        if (s1.m_ptr[i] != s2.m_ptr[i])
+    for (int i = 0; i < s1.m_len; i++) {
+        if (s1.m_ptr[i] != s2.m_ptr[i]) {
             return false;
+        }
+    }
 
     return true;
 }
@@ -232,8 +257,11 @@ bool operator!= (const String & s1, const String & s2)
 std::ostream & operator<< (std::ostream & os, const String & s)
 {
     os << '"';
-    for (int i = 0; i < s.m_len; i++)
+
+    for (int i = 0; i < s.m_len; i++) {
         os << s.m_ptr[i];
+    }
+    
     os << "\"[" << s.m_len << ']';
 
     return os;
@@ -247,16 +275,18 @@ std::istream & operator>> (std::istream & is, String & s)
 
     // calculate length of string
     int len = 0;
-    while (line[len] != '\0')
+    while (line[len] != '\0') {
         len++;
+    }
 
     // release old buffer, if any
     delete[] s.m_ptr;
 
     // allocate new buffer and copy string
     s.m_ptr = new char[len];
-    for (int i = 0; i < len; i++)
+    for (int i = 0; i < len; i++) {
         s.m_ptr[i] = line[i];
+    }
 
     // adjust buffer length
     s.m_len = len;

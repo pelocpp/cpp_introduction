@@ -12,7 +12,7 @@ Wir betrachten die grundlegenden Konzepte
   * Container
   * Iteratoren
   * Algorithmen
-  * Funktoren
+  * Aufrufbare Objekte
    
 an Hand einer Reihe von Beispielen:
 
@@ -214,7 +214,7 @@ an Hand einer Reihe von Beispielen:
 
 ---
 
-### Funktoren / *Callable Objects*
+### Aufrufbare Objekte / *Callable Objects*
 
 [*Main.cpp*](../STL/Main.cpp)
 

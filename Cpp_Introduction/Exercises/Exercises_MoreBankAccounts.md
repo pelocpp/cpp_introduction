@@ -169,7 +169,7 @@ Total Balance: 350
 
 ## Quellcode der Lösungen:
 
-[*MoreBankAccounts.cpp*](./MoreBankAccounts/MoreBankAccounts.cpp)<br />
+[*MoreBankAccounts.cpp*](./MoreBankAccounts/MoreBankAccounts_Main.cpp)<br />
 
 ---
 

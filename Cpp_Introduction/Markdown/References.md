@@ -7,18 +7,29 @@
 
 ## Erläuterungen
 
-Zeiger (Pointer) der Programmiersprache C sind eine Möglichkeit,
+*Zeiger* (*Pointer*) der Programmiersprache C sind eine Möglichkeit,
 um auf Objekte (Variablen) indirekt zugreifen zu können.
 
-Referenzen bieten nahezu die gleichen Möglichkeiten wie Zeiger, aber mit einer wesentlich *einfacheren*
-Syntax.
+<img src="cpp_pointer_01.svg" width="300">
+
+*Abbildung* 1: Eine Variable und ein Zeiger, der auf die Variable zeigt.
+
+
+*Referenzen* bieten nahezu die gleichen Möglichkeiten wie Zeiger, aber mit einer wesentlich *einfacheren*
+Syntax:
+
+
+<img src="cpp_pointer_02.svg" width="600">
+
+*Abbildung* 2: Ein Zeiger und eine Referenz, die auf dieselbe Variable verweisen.
+
 
 Es ist wichtig zu verstehen, 
 
-  * was Referenzen sind
-  * wie sich Referenzen von Zeigern unterscheiden
-  * wie man Referenzen erzeugt und verwendet
-  * welche Beschränkungen für Referenzen gelten
+  * was Referenzen sind,
+  * wie sich Referenzen von Zeigern unterscheiden,
+  * wie man Referenzen erzeugt und verwendet,
+  * welche Beschränkungen für Referenzen gelten und
   * wie man Werte und Objekte in und aus Funktionen (Methoden) als Referenz übergibt.
 
 
@@ -36,11 +47,11 @@ Die Deklaration einer Referenz besteht aus dem Typ des Zielobjekts,
 gefolgt vom Referenzoperator (`&`) und dem Namen der Referenz.
 
 Viele Programmierer stellen Referenzvariablen ein `r` voran.
-Zum Beispiel erzeugt man für eine int-Variable einInt eine Referenz mit der folgenden Anweisung:
+Zum Beispiel erzeugt man für eine int-Variable `ri` eine Referenz mit der folgenden Anweisung:
 
 ```cpp
 int n = 123;
-int &rInt = n;
+int &ri = n;
 ```
 
 Wir betrachten ein Beispiel zu Referenzen:
@@ -68,13 +79,13 @@ In Zeile 4 wird `rSomeRef` als Referenz auf `int` deklariert
 und mit `anInteger` initialisiert.
 
 Wenn man eine Referenz deklariert, aber nicht initialisiert, erhält man einen
-Compiler-Fehler. Referenzen müssen initialisiert werden.
+Übersetzungsfehler. Referenzen müssen initialisiert werden.
 
 Zeile 6 weist `anInteger` den Wert 123 zu. Die Anweisungen in den Zeilen 7 und 8 geben die Werte in `anInteger`
 und `rSomeRef` aus. Natürlich sind sie gleich, da `rSomeRef` lediglich die Referenz auf `anInteger` ist.
 
-In Zeile 10 steht die Zuweisung von 456 an `rSomeRef`. Da es sich um eine Referenz handelt, eine Alias-Adresse
-für `anInteger`, bezieht sich die Zuweisung von 456 auf `anInteger`, wie es die Ausgaben in den Zeilen 11 und 12
+In Zeile 10 steht die Zuweisung von 456 an `rSomeRef`. Da es sich um eine Referenz handelt,
+bezieht sich die Zuweisung von 456 auf `anInteger`, wie es die Ausgaben in den Zeilen 11 und 12
 belegen.
 
 *Ausgabe*:
@@ -125,7 +136,7 @@ Die Ausgabe zeigt diesmal die Adressen der beiden Variablen &ndash; sie sind ide
 
 C++ bietet keine Möglichkeit, auf die Adresse der Referenz selbst
 zuzugreifen, da sie im Gegensatz zu einem Zeiger oder einer anderen Variablen nicht von Bedeutung ist.
-Referenzen werden bei ihrer Erzeugung initialisiert und agieren immer als Synonyme für ihre Ziele, selbst wenn
+Referenzen werden bei ihrer Erzeugung initialisiert und agieren immer als Synonym für ihre Ziel, selbst wenn
 man den Adreßoperator anwendet.
 
 
@@ -134,7 +145,7 @@ man den Adreßoperator anwendet.
 Selbst erfahrene C++-Programmierer, die die Regel kennen, daß Referenzen nicht erneut zugewiesen werden
 können und immer Alias-Adressen für ihr Ziel sind, wissen manchmal nicht, was beim erneuten Zuweisen einer
 Referenz passiert. Was wie eine Neuzuweisung aussieht, stellt sich als Zuweisung eines neuen Wertes an das Ziel
-heraus. Diese Tatsache belegt Das folgende Code-Fragment:
+heraus. Diese Tatsache belegt das folgende Code-Fragment:
 
 #### Datei [*Main.cpp*](../References/Main.cpp):
 
@@ -198,8 +209,9 @@ Tatsächlich sind die in den Zeilen 17 bis 19 ausgegebenen Werte von `anInteger` 
 ### Null-Zeiger und Null-Referenzen
 
 Wenn man Zeiger löscht oder nicht initialisiert, sollte man ihnen Null (`0` bzw. `nullptr`) zuweisen.
-Für Referenzen gilt das nicht. In der Tat darf eine Referenz nicht Null sein,
-und ein Programm mit einer Referenz auf ein Null-Objekt ist unzulässig.
+Für Referenzen gilt das nicht. In der Tat darf eine Referenz nicht Null sein.
+Ein Programm mit einer Referenz auf ein Null-Objekt ist unzulässig.
+
 Es ist aber auch nicht so einfach, eine Referenz gleich Null zu erzeugen,
 da bei der Deklaration einer Referenz eine Vorbelegung mit der anderen,
 zu referenzierenden Variablen vorhanden sein *muss*.

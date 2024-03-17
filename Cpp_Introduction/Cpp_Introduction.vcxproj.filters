@@ -244,6 +244,12 @@
     <None Include="Exercises\Exercises_Fraction.md">
       <Filter>Excercises</Filter>
     </None>
+    <None Include="Markdown\cpp_pointer_01.svg">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\cpp_pointer_02.svg">
+      <Filter>Markdown</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">

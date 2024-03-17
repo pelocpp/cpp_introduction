@@ -38,7 +38,7 @@ Eine mögliche Schnittstelle einer Klasse `DynamicArray` könnte so aussehen:
 | `at`     | `int& at (size_t index);`<br/> Zugriff auf ein Element an der `index` Stelle. Bei ungültigem Index wird eine Ausnahme geworfen. |
 | Operator `[]` | `int& operator[] (size_t index);`<br/>Wie Methode `at`, nur ohne Gültigkeitsüberprüfung des Index. |
 | `fill` | `void fill(int value);`<br/>Belegt alle Elemente des Arrays mit dem Wert `value`. |
-| `resize` | `void resize(size_t newSize);`<br/>Ändert die Länge das Speicherbereichs. Dabei sind die vorhandenen Daten des aktuellen Felds in das neue Feld zuzukopieren. Ist die neue Länge kürzer als die vorhandene, gehen die Daten im oberen Teil des Felds verloren. Ist das neue Feld hingegen länger, kann das aktuelle Feld komplett umkopiert werden und die verbleibenden Elemente im oberen Bereich sind mit `0` vorzubelegen. |
+| `resize` | `void resize(size_t newSize);`<br/>.Ändert die Länge das Speicherbereichs. Die vorhandenen Daten im Feld sollen dabei &ndash; soweit möglich &ndash; erhalten bleiben, sprich: Ist die neue Länge kürzer im Vergleich zur aktuellen Länge, spielen die Daten im oberen Teil des Felds keine Rolle mehr. Ist die neue Länge größer, ist das aktuelle Feld komplett umzukopieren und die zusätzlichen Elemente im oberen Bereich sind mit `0` vorzubelegen. |
 | `release` | `void release();`<br/>Gibt den dynamisch allokierten Speicher frei. |
 | `print` | `void print();`<br/>.Gibt alle Elemente des Arrays in der Konsole aus. |
 | `bool operator==` | `friend bool operator== (const DynamicArray& left, DynamicArray right);`<br/>Vergleicht zwei `DynamicArray`-Objekte auf Gleichheit. |

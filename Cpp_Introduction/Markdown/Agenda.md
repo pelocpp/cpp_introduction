@@ -134,7 +134,7 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
   * Container
   * Iteratoren
   * Algorithmen
-  * Funktoren
+  * Aufrufbare Objekte
 
 ---
 

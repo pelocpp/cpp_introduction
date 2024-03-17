@@ -331,7 +331,7 @@ Datei *BigData.cpp*:
 
 ---
 
-## Übungen
+## Aufgaben
 
 [Aufgabe zur Klasse `DynamicArray`](../Exercises/Exercises_DynamicArray.md)
 

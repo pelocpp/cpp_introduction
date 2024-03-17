@@ -4,7 +4,7 @@
 
 #include "Time.h"
 
-void testCtors()
+static void testCtors()
 {
     Time t1;
     std::cout << t1 << std::endl;
@@ -16,7 +16,7 @@ void testCtors()
     std::cout << t4 << std::endl;
 }
 
-void testAdd()
+static void testAdd()
 {
     // testing 'Add'
     Time t1(0, 0, 12);
@@ -28,7 +28,7 @@ void testAdd()
     }
 }
 
-void testDiff()
+static void testDiff()
 {
     // testing 'Diff'
     Time t1;
@@ -39,7 +39,7 @@ void testDiff()
     std::cout << t3 << std::endl;
 }
 
-void testArithmeticOperators()
+static void testArithmeticOperators()
 {
     // testing operators
     Time t1(15, 30, 6);
@@ -53,7 +53,7 @@ void testArithmeticOperators()
     std::cout << t2 << std::endl;
 }
 
-void testIncrementOperators()
+static void testIncrementOperators()
 {
     // testing 'Increment'
     Time t(55, 59, 23);
@@ -64,7 +64,7 @@ void testIncrementOperators()
     }
 }
 
-void testIncrementDecrementOperators()
+static void testIncrementDecrementOperators()
 {
     // testing increment/decrement operator
     Time t1(0, 0, 12);
@@ -78,7 +78,7 @@ void testIncrementDecrementOperators()
     std::cout << t2 << std::endl;
 }
 
-void testConversion()
+static void testConversion()
 {
     Time t;
     t = 60 * 60 + 60 + 1;
@@ -86,7 +86,7 @@ void testConversion()
     std::cout << "Seconds: " << (int)t << std::endl;
 }
 
-void testInputOutput()
+static void testInputOutput()
 {
     Time t;
     std::cin >> t;

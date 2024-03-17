@@ -4,7 +4,7 @@
 
 #include "DynamicArray.h"
 
-void exerciseDynamicArray01()
+static void testDynamicArray01()
 {
     DynamicArray array(3);
     array.print();
@@ -14,7 +14,7 @@ void exerciseDynamicArray01()
     array.print();
 }
 
-void exerciseDynamicArray02()
+static void testDynamicArray02()
 {
     DynamicArray array(3);
     array.print();
@@ -26,7 +26,7 @@ void exerciseDynamicArray02()
     array.print();
 }
 
-void exerciseDynamicArray03()
+static void testDynamicArray03()
 {
     DynamicArray array(3);
     array.print();
@@ -47,7 +47,7 @@ void exerciseDynamicArray03()
     array.print();
 }
 
-void exerciseDynamicArray04()
+static void testDynamicArray04()
 {
     DynamicArray array1(3);
     DynamicArray array2(5);
@@ -58,7 +58,7 @@ void exerciseDynamicArray04()
     array1.print();
 }
 
-void exerciseDynamicArray05()
+static void testDynamicArray05()
 {
     DynamicArray array1(3);
     DynamicArray array2(array1);
@@ -68,11 +68,11 @@ void exerciseDynamicArray05()
 
 void exerciseDynamicArray()
 {
-    exerciseDynamicArray01();
-    exerciseDynamicArray02();
-    exerciseDynamicArray03();
-    exerciseDynamicArray04();
-    exerciseDynamicArray05();
+    testDynamicArray01();
+    testDynamicArray02();
+    testDynamicArray03();
+    testDynamicArray04();
+    testDynamicArray05();
 }
 
 // ===========================================================================

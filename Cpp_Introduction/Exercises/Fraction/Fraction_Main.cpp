@@ -4,7 +4,7 @@
 
 #include "Fraction.h"
 
-void TestUnaryOperators()
+static void testUnaryOperators()
 {
     Fraction f(1, 2);
     std::cout << "f  = " << f << std::endl;
@@ -14,7 +14,7 @@ void TestUnaryOperators()
     std::cout << "~f = " << f << std::endl;
 }
 
-void TestBinaryOperators()
+static void testBinaryOperators()
 {
     Fraction a(1, 7);
     Fraction b(3, 7);
@@ -39,7 +39,7 @@ void TestBinaryOperators()
     std::cout << "a / b = " << c << std::endl;
 }
 
-void TestArithmeticAssigmentOperators()
+static void testArithmeticAssigmentOperators()
 {
     Fraction a(1, 7);
     Fraction b(3, 7);
@@ -62,7 +62,7 @@ void TestArithmeticAssigmentOperators()
     std::cout << c << std::endl;
 }
 
-void TestComparisonOperators()
+static void testComparisonOperators()
 {
     Fraction f(1, 2);
     Fraction g(1, 3);
@@ -78,7 +78,7 @@ void TestComparisonOperators()
     std::cout << "f != g: " << (f != g) << std::endl;
 }
 
-void TestTypeConversionOperators()
+static void testTypeConversionOperators()
 {
     Fraction a;
 
@@ -90,14 +90,14 @@ void TestTypeConversionOperators()
     std::cout << a << std::endl;
 }
 
-void TestTypeConversionOperator02()
+static void testTypeConversionOperator02()
 {
     Fraction f(1, 7);
     double d = f;
     std::cout << "d: " << d << std::endl;
 }
 
-void TestIncrementOperators()
+static void testIncrementOperators()
 {
     Fraction f(1, 2);
     Fraction g;
@@ -117,7 +117,7 @@ void TestIncrementOperators()
     std::cout << "g: " << g << std::endl;
 }
 
-void TestInputOutput()
+static void testInputOutput()
 {
     Fraction f(1, 2);
     std::cout << "f: " << f << std::endl;
@@ -131,14 +131,14 @@ void TestInputOutput()
 
 void exerciseFraction()
 {
-    TestUnaryOperators();
-    TestBinaryOperators();
-    TestArithmeticAssigmentOperators();
-    TestComparisonOperators();
-    TestTypeConversionOperators();
-    TestTypeConversionOperator02();
-    TestIncrementOperators();
-    TestInputOutput();
+    testUnaryOperators();
+    testBinaryOperators();
+    testArithmeticAssigmentOperators();
+    testComparisonOperators();
+    testTypeConversionOperators();
+    testTypeConversionOperator02();
+    testIncrementOperators();
+    testInputOutput();
 }
 
 // ===========================================================================

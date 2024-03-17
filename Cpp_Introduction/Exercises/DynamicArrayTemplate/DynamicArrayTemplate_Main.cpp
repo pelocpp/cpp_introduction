@@ -4,7 +4,7 @@
 
 #include "DynamicArrayTemplate.h"
 
-void exerciseDynamicArrayTemplate01()
+static void testDynamicArrayTemplate01()
 {
     DynamicArrayTemplate<int> da;
     da.print();
@@ -17,7 +17,7 @@ void exerciseDynamicArrayTemplate01()
 }
 
 
-void exerciseDynamicArrayTemplate02()
+static void testDynamicArrayTemplate02()
 {
     DynamicArrayTemplate<double> da(7);
 
@@ -28,7 +28,7 @@ void exerciseDynamicArrayTemplate02()
     da.print();
 }
 
-void exerciseDynamicArrayTemplate03()
+static void testDynamicArrayTemplate03()
 {
     DynamicArrayTemplate<std::string> da(5);
 
@@ -39,7 +39,7 @@ void exerciseDynamicArrayTemplate03()
     da.print();
 }
 
-void exerciseDynamicArrayTemplate04()
+static void testDynamicArrayTemplate04()
 {
     DynamicArrayTemplate<std::string> array(3);
     array[0] = "one";
@@ -48,7 +48,7 @@ void exerciseDynamicArrayTemplate04()
     array.print();
 }
 
-void exerciseDynamicArrayTemplate05()
+static void testDynamicArrayTemplate05()
 {
     DynamicArrayTemplate<std::string> array(3);
 
@@ -59,7 +59,7 @@ void exerciseDynamicArrayTemplate05()
     array.print();
 }
 
-void exerciseDynamicArrayTemplate06()
+static void testDynamicArrayTemplate06()
 {
     DynamicArrayTemplate<std::string> array(3);
     array[0] = "one";
@@ -79,7 +79,7 @@ void exerciseDynamicArrayTemplate06()
     array.print();
 }
 
-void exerciseDynamicArrayTemplate07()
+static void testDynamicArrayTemplate07()
 {
     DynamicArrayTemplate<std::string> array1(3);
     array1.fill("<empty>");
@@ -94,7 +94,7 @@ void exerciseDynamicArrayTemplate07()
     array1.print();
 }
 
-void exerciseDynamicArrayTemplate08()
+static void testDynamicArrayTemplate08()
 {
     DynamicArrayTemplate<std::string> array1(3);
     array1.fill("<empty>");
@@ -104,7 +104,7 @@ void exerciseDynamicArrayTemplate08()
     array2.print();
 }
 
-void exerciseDynamicArrayTemplate09()
+static void testDynamicArrayTemplate09()
 {
     DynamicArrayTemplate<std::string> array1(3);
     array1.fill("<empty>");
@@ -118,15 +118,15 @@ void exerciseDynamicArrayTemplate09()
 
 void exerciseDynamicArrayTemplate()
 {
-    exerciseDynamicArrayTemplate01();
-    exerciseDynamicArrayTemplate02();
-    exerciseDynamicArrayTemplate03();
-    exerciseDynamicArrayTemplate04();
-    exerciseDynamicArrayTemplate05();
-    exerciseDynamicArrayTemplate06();
-    exerciseDynamicArrayTemplate07();
-    exerciseDynamicArrayTemplate08();
-    exerciseDynamicArrayTemplate09();
+    testDynamicArrayTemplate01();
+    testDynamicArrayTemplate02();
+    testDynamicArrayTemplate03();
+    testDynamicArrayTemplate04();
+    testDynamicArrayTemplate05();
+    testDynamicArrayTemplate06();
+    testDynamicArrayTemplate07();
+    testDynamicArrayTemplate08();
+    testDynamicArrayTemplate09();
 }
 
 // ===========================================================================

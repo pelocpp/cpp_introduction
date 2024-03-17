@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-namespace Rectangle {
+namespace Rectangles {
 
     class Point
     {

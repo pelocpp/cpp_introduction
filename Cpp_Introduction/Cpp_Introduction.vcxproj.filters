@@ -106,6 +106,12 @@
     <Filter Include="Excercises\Fraction">
       <UniqueIdentifier>{51fcbb49-6d3b-423e-bdc0-70f882aa564d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Excercises\String">
+      <UniqueIdentifier>{6482d893-5632-4242-a8ac-7f966e755c12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\String\Resources">
+      <UniqueIdentifier>{3b517a1f-a6ce-4412-8832-0886d0957db5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -250,6 +256,9 @@
     <None Include="Markdown\cpp_pointer_02.svg">
       <Filter>Markdown</Filter>
     </None>
+    <None Include="Exercises\Exercises_String.md">
+      <Filter>Excercises</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -384,6 +393,15 @@
     <ClCompile Include="Exercises\Fraction\Fraction_Main.cpp">
       <Filter>Excercises\Fraction</Filter>
     </ClCompile>
+    <ClCompile Include="Exercises\String\String_Main.cpp">
+      <Filter>Excercises\String</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\String\String.cpp">
+      <Filter>Excercises\String</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\MoreBankAccounts\MoreBankAccounts.h">
+      <Filter>Excercises\MoreBankAccounts</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constructors\Time.h">
@@ -422,6 +440,9 @@
     <ClInclude Include="Exercises\Fraction\Fraction.h">
       <Filter>Excercises\Fraction</Filter>
     </ClInclude>
+    <ClInclude Include="Exercises\String\String.h">
+      <Filter>Excercises\String</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Markdown\Cpp.png">
@@ -459,6 +480,9 @@
     </Image>
     <Image Include="Markdown\ASCII_Table.png">
       <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Exercises\String\Resources\String.png">
+      <Filter>Excercises\String\Resources</Filter>
     </Image>
   </ItemGroup>
 </Project>

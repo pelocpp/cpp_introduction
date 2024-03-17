@@ -163,9 +163,9 @@ multiplyByTwo(123);
 
 ---
 
-## Übungen
+## Aufgaben
 
-Funktion swap
+[Funktion `swap`](../Exercises/Exercises_References_Pointers.md)
 
 ---
 

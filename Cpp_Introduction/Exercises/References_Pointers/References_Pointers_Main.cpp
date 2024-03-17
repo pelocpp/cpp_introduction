@@ -25,7 +25,7 @@ static void swapReferences(int& n, int& m)
     m = tmp;
 }
 
-static void exerciseReferencesPointers01()
+static void testReferencesPointers01()
 {
     int a = 1;
     int b = 2;
@@ -37,7 +37,7 @@ static void exerciseReferencesPointers01()
     std::cout << "a: " << a << " - b: " << b << std::endl;
 }
 
-static void exerciseReferencesPointers02()
+static void testReferencesPointers02()
 {
     int a = 1;
     int b = 2;
@@ -49,7 +49,7 @@ static void exerciseReferencesPointers02()
     std::cout << "a: " << a << " - b: " << b << std::endl;
 }
 
-static void exerciseReferencesPointers03()
+static void testReferencesPointers03()
 {
     int a = 1;
     int b = 2;
@@ -63,9 +63,9 @@ static void exerciseReferencesPointers03()
 
 void exerciseReferencesPointers()
 {
-    exerciseReferencesPointers01();
-    exerciseReferencesPointers02();
-    exerciseReferencesPointers03();
+    testReferencesPointers01();
+    testReferencesPointers02();
+    testReferencesPointers03();
 }
 
 // ===========================================================================

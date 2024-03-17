@@ -4,7 +4,7 @@
 
 #include "Point.h"
 
-namespace Rectangle {
+namespace Rectangles {
 
     // c'tor(s)
     Point::Point() : Point(0, 0) {}

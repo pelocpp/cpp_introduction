@@ -213,7 +213,7 @@ entschieden.
 
 ---
 
-## Übungen
+## Aufgaben
 
 [Aufgabe zur Klasse `std::string`](../Exercises/Exercises_Strings.md)
 

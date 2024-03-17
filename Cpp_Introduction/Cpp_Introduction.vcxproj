@@ -26,6 +26,7 @@
     <None Include="Exercises\Exercises_MoreBankAccounts.md" />
     <None Include="Exercises\Exercises_References_Pointers.md" />
     <None Include="Exercises\Exercises_STL.md" />
+    <None Include="Exercises\Exercises_String.md" />
     <None Include="Exercises\Exercises_Strings.md" />
     <None Include="Exercises\Exercises_DynamicArray.md" />
     <None Include="Exercises\Exercises_Rectangle.md" />
@@ -85,6 +86,7 @@
     <ClCompile Include="Exercises\Exercises.cpp" />
     <ClCompile Include="Exercises\Fraction\Fraction.cpp" />
     <ClCompile Include="Exercises\Fraction\Fraction_Main.cpp" />
+    <ClCompile Include="Exercises\MoreBankAccounts\MoreBankAccounts.h" />
     <ClCompile Include="Exercises\MoreBankAccounts\MoreBankAccounts_Main.cpp" />
     <ClCompile Include="Exercises\Rectangle\Point.cpp" />
     <ClCompile Include="Exercises\Rectangle\Rectangle.cpp" />
@@ -92,6 +94,8 @@
     <ClCompile Include="Exercises\References_Pointers\References_Pointers_Main.cpp" />
     <ClCompile Include="Exercises\STL\STL_Main.cpp" />
     <ClCompile Include="Exercises\Strings\Strings_Main.cpp" />
+    <ClCompile Include="Exercises\String\String_Main.cpp" />
+    <ClCompile Include="Exercises\String\String.cpp" />
     <ClCompile Include="Exercises\Time\Time_Main.cpp" />
     <ClCompile Include="Exercises\Time\Time.cpp" />
     <ClCompile Include="HelloWorld\Main.cpp" />
@@ -124,11 +128,13 @@
     <ClInclude Include="Exercises\Fraction\Fraction.h" />
     <ClInclude Include="Exercises\Rectangle\Point.h" />
     <ClInclude Include="Exercises\Rectangle\Rectangle.h" />
+    <ClInclude Include="Exercises\String\String.h" />
     <ClInclude Include="Exercises\Time\Time.h" />
     <ClInclude Include="OperatorOverloading\Time.h" />
     <ClInclude Include="RuleOfThree\BigData.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Exercises\String\Resources\String.png" />
     <Image Include="Markdown\ASCII_Table.png" />
     <Image Include="Markdown\Buch_Dirk_Louis.png" />
     <Image Include="Markdown\Buch_Dummies.png" />

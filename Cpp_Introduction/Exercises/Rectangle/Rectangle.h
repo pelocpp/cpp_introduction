@@ -8,7 +8,7 @@
 
 #include "Point.h"
 
-namespace Rectangle {
+namespace Rectangles {
 
     class Rectangle
     {

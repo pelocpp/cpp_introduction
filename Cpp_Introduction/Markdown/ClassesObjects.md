@@ -154,7 +154,7 @@ Ein Testrahmen mit 2 Objekten `now` und `later`:
 
 ---
 
-## Übungen
+## Aufgaben
 
 [Aufgabe zur Klasse `Rectangle`](../Exercises/Exercises_Rectangle.md)
 

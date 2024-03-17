@@ -6,7 +6,7 @@
 
 ## Übersicht
 
-In dieser Übung entwerfen wir für Objekte, die eine Uhrzeit mit Stunden-, Minuten- und Sekundenanteil repräsentieren,
+In dieser Aufgabe entwerfen wir für Objekte, die eine Uhrzeit mit Stunden-, Minuten- und Sekundenanteil repräsentieren,
 eine geeignete Klasse `Time`. Die Stunde kann Werte zwischen 0 und 23 einnehmen,
 die Minuten und Sekunden Werte zwischen 0 und 59.
 

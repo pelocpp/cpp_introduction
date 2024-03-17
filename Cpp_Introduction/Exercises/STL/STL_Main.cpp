@@ -6,11 +6,11 @@
 #include <algorithm>
 #include <vector>
 
-void printToConsole(int value) {
+static void printToConsole(int value) {
     std::cout << ">: " << value << std::endl;
 }
 
-void exerciseDevilsSequence()
+static void testDevilsSequence()
 {
     std::vector<int> devilsSequenceFolge;
 
@@ -65,7 +65,7 @@ public:
     }
 };
 
-void exerciseFibonacci()
+static void testFibonacci()
 {
     std::vector<int> sequence(20);
 
@@ -86,8 +86,8 @@ void exerciseFibonacci()
 
 void exerciseSTL()
 {
-    exerciseDevilsSequence();
-    exerciseFibonacci();
+    testDevilsSequence();
+    testFibonacci();
 }
 
 // ===========================================================================

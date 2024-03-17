@@ -144,7 +144,7 @@ Rectangle::draw [x=3, y=3]
 
 ---
 
-## Übungen
+## Aufgaben
 
 [Aufgabe zu Bankkonten und Vererbung](../Exercises/Exercises_MoreBankAccounts.md)
 

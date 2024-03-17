@@ -7,12 +7,12 @@
 #include <cctype>
 #include <cstdlib>
 
-bool IsLeapYear(int year)
+static bool isLeapYear(int year)
 {
     return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
 }
 
-int MaxNumOfDays(int month, int year)
+static int maxNumOfDays(int month, int year)
 {
     switch (month)
     {
@@ -32,14 +32,14 @@ int MaxNumOfDays(int month, int year)
         return 30;
 
     case 2:
-        return (IsLeapYear(year)) ? 29 : 28;
+        return (isLeapYear(year)) ? 29 : 28;
 
     default:
         return 0;
     }
 }
 
-bool IsValid(int day, int month, int year)
+static bool IsValid(int day, int month, int year)
 {
     if (year < 0) {
         return false;
@@ -49,7 +49,7 @@ bool IsValid(int day, int month, int year)
         return false;
     }
 
-    if (day < 1 || day > MaxNumOfDays(month, year)) {
+    if (day < 1 || day > maxNumOfDays(month, year)) {
         return false;
     }
 
@@ -57,7 +57,7 @@ bool IsValid(int day, int month, int year)
 }
 
 
-bool verifyDateFormat(const std::string& date)
+static bool verifyDateFormat(const std::string& date)
 {
     // accepted format: "tt.mm.jjjj"
 
@@ -82,7 +82,7 @@ bool verifyDateFormat(const std::string& date)
     return true;
 }
 
-std::string dateToWord(const std::string& date)
+static std::string dateToWord(const std::string& date)
 {
     static std::string months[]{
         "January", "February", "March", "April", "May", "June",
@@ -118,7 +118,7 @@ std::string dateToWord(const std::string& date)
     return word;
 }
 
-void exerciseDateToWord()
+static void testDateToWord()
 {
     // test 'verifyDateFormat'
     std::cout << std::boolalpha << verifyDateFormat("10.08.2000") << std::endl;
@@ -145,7 +145,7 @@ void exerciseDateToWord()
 
 void exerciseStrings()
 {
-    exerciseDateToWord();
+    testDateToWord();
 }
 
 // ===========================================================================

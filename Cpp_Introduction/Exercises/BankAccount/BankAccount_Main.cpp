@@ -4,7 +4,7 @@
 
 #include "BankAccount.h"
 
-void  exerciseBankAccount()
+void exerciseBankAccount()
 {
     BankAccount myAccount(50);
     myAccount.deposit(50);

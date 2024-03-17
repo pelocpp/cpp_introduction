@@ -47,7 +47,7 @@ Eine mögliche Schnittstelle einer Klasse `DynamicArray` könnte so aussehen:
 *Tabelle* 1.
 
 Beachten Sie, dass neben den in *Tabelle* 1 aufgeführten Methoden
-auch noch das Reglwerk der &ldquo;Rule of Three&rdquo; vorhanden ist.
+auch noch das Regelwerk der &ldquo;Rule of Three&rdquo; vorhanden ist.
 
 ---
 

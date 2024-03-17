@@ -272,7 +272,7 @@ Mit dem `this`-Operator könnte man die *setter*-Methode korrekt realisieren:
 
 ---
 
-## Übungen
+## Aufgaben
 
 [Aufgabe zur Klasse `Rectangle`](../Exercises/Exercises_Rectangle.md)
 

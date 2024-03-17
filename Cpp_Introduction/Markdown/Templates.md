@@ -144,7 +144,7 @@ Calculator<double>: 777.777
 
 ---
 
-## Übungen
+## Aufgaben
 
 [Aufgabe zur Klasse `DynamicArrayTemplate`](../Exercises/Exercises_DynamicArrayTemplate.md)
 

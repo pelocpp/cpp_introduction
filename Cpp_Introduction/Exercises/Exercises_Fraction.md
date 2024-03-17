@@ -6,18 +6,7 @@
 
 ## Einführung
 
-In dieser Übung wollen wir uns der Klasse `Fraction` in einer zusammenfassenden Betrachtung annehmen.
-
----
-
-*Hinweis*:
-Der Quellcode im Repository zu dieser Übung ist bewußt sehr elementar gehalten.
-Oder um es anders zu formulieren: Viele der syntaktischen Neuerungen von C++ 11/14/17/20
-sind bewußt außer Acht gelassen worden.
-Es ist dem interessierten Leser überlassen, diese Neuerungen einzuarbeiten.
-
----
-
+In dieser Aufgabe wollen wir uns der Klasse `Fraction` in einer zusammenfassenden Betrachtung annehmen.
 Folgenden Eigenschaften sollen in Ihrer Realisierung der Klasse `Fraction` Berücksichtigung finden:
 
   * Objekte der Klasse `Fraction` sollen die von ihr verwaltete rationale Zahl immer in einer

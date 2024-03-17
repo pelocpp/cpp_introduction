@@ -256,7 +256,7 @@ zu referenzierenden Variablen vorhanden sein *muss*.
 
 ---
 
-## Übungen
+## Aufgaben
 
 [Aufgabe zur Parameterübergabe](../Exercises/Exercises_References_Pointers.md)
 

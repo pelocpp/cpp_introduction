@@ -4,7 +4,7 @@
 
 #include "Rectangle.h"
 
-namespace Rectangle {
+namespace Rectangles {
 
     // c'tor(s)
     Rectangle::Rectangle(double x, double y, double width, double height)

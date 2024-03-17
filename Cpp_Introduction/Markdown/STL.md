@@ -390,7 +390,7 @@ an Hand einer Reihe von Beispielen:
 
 ---
 
-## Übungen
+## Aufgaben
 
 [Aufgabe zur STL - Standard Template Library](../Exercises/Exercises_STL.md)
 

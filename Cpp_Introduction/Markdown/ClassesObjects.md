@@ -12,7 +12,7 @@ in einem gemeinsamen Sprachkonstrukt.
 
 Eine Klasse steht für die Beschreibung (Bauplan) eines solchen Datentyps,
 reale Variablen dieses Datentyps bezeichnet man in der objektorientierten Programmierung
-als *Objekte*.
+als *Objekte* oder auch *Instanzen*.
 
 Das Sprachkonstrukt einer Klasse definiert einen so genannten *abstrakten Datentyp*,
 die Menge der gekapselten Daten (so genannte *Instanzvariablen*) und Funktionen

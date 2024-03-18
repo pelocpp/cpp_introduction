@@ -10,7 +10,7 @@ um diverse Features von C++ zu demonstrieren.
 
 Im Großen und Ganzen wurde dabei versucht,
 die Beispiele auf dem Niveau für C++-Einsteiger
-(mit Kenntnissen anderer Programmiersprachen wie zum Beipiel C oder Java) zu halten.
+(mit Kenntnissen anderer Programmiersprachen wie zum Beispiel C oder Java) zu halten.
 
 ---
 

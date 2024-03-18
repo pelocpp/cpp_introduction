@@ -31,7 +31,7 @@ Ziel dieses Repositories ist es, auf die wesentlichen Sprachkonzepte
 von C++ einzugehen!
 
 Hierbei wurde versucht, die Erläuterungen und Beispiele auf dem Niveau von C++
-für *Einsteiger* (mit elementaren Kenntnissen anderer Programmiersprachen wie zum Beipiel C oder Java) zu halten.
+für *Einsteiger* (mit elementaren Kenntnissen anderer Programmiersprachen wie zum Beispiel C oder Java) zu halten.
 Features von C++, die vor allem unter den Begrifflichkeiten 
 *Modern C++*, *C++ 11*, *C++ 14* etc. anzufinden sind, wurden bewusst außer Acht gelassen.
 

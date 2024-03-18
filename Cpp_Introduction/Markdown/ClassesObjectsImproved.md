@@ -234,7 +234,7 @@ Lassen Sie mich versuchen, den *setter* für den Stundenanteil zu realisieren:
 09: }
 ```
 
-Erkennen Sie in Zeile 3 das Problem? Richtig, der Bezeichner `hours` wird zweimal verwendet:
+Erkennen Sie in Zeile 4 das Problem? Richtig, der Bezeichner `hours` wird zweimal verwendet:
 
   * Als Instanzvariable der Klasse `Time`
   * Als Parameter der *setter*-Methode `setHours`

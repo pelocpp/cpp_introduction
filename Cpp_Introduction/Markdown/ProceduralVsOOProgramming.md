@@ -77,7 +77,7 @@ Abschnitt &ldquo;[*Vertiefungen zu Klassen und Objekten*](../Markdown/ClassesObj
 
 ## Beispiele
 
-#### Datei [*Example_Procedural_Programming.cpp*](../ProceduralVsOOProgramming/Example_Procedural_Programming.cpp)*:
+#### Datei [*Example_Procedural_Programming.cpp*](../ProceduralVsOOProgramming/Example_Procedural_Programming.cpp):
 
 
 ```cpp
@@ -105,7 +105,7 @@ Abschnitt &ldquo;[*Vertiefungen zu Klassen und Objekten*](../Markdown/ClassesObj
 22: }
 ```
 
-#### Datei [*Example_Procedural_Programming.cpp* - Testrahmen](../ProceduralVsOOProgramming/Example_Procedural_Programming.cpp)*:
+#### Datei [*Example_Procedural_Programming.cpp* - Testrahmen](../ProceduralVsOOProgramming/Example_Procedural_Programming.cpp):
 
 Ein Testrahmen zur prozeduralen Programmierung:
 
@@ -129,7 +129,7 @@ Ein Testrahmen zur prozeduralen Programmierung:
 17: }
 ```
 
-#### Datei [*Example_OO_Programming.cpp*](../ProceduralVsOOProgramming/Example_OO_Programming.cpp)*:
+#### Datei [*Example_OO_Programming.cpp*](../ProceduralVsOOProgramming/Example_OO_Programming.cpp):
 
 
 ```cpp
@@ -194,7 +194,7 @@ Ein Testrahmen zur prozeduralen Programmierung:
 59: };
 ```
 
-#### Datei [*Example_OO_Programming.cpp* - Testrahmen](../ProceduralVsOOProgramming/Example_OO_Programming.cpp)*:
+#### Datei [*Example_OO_Programming.cpp* - Testrahmen](../ProceduralVsOOProgramming/Example_OO_Programming.cpp):
 
 Ein Testrahmen zur objektorientierten Programmierung:
 

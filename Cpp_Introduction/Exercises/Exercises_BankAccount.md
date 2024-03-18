@@ -1,4 +1,4 @@
-# Aufgabe Klasse `BankAccount`
+# Aufgabe zur Klasse `BankAccount`
 
 [Zurück](./Exercises.md)
 

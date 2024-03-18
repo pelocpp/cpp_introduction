@@ -168,7 +168,7 @@ Was fällt Ihnen auf?
 
 ---
 
-## Übungen
+## Aufgaben
 
 [Aufgabe zur Klasse `DynamicArray`](../Exercises/Exercises_DynamicArray.md)
 

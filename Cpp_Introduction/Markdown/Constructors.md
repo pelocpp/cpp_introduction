@@ -231,6 +231,12 @@ von `int` nach `Time` bzw. von `const char*` nach `Time` statt:
 
 ---
 
+## Aufgaben
+
+[Aufgabe zur Klasse `BankAccount`](../Exercises/Exercises_BankAccount.md)
+
+---
+
 [Zurück](Agenda.md)
 
 ---

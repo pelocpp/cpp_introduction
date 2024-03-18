@@ -114,6 +114,12 @@ siehe das folgende Beispiel:
 
 ---
 
+## Aufgaben
+
+[Aufgabe zur Klasse `BankAccount`](../Exercises/Exercises_BankAccount.md)
+
+---
+
 [Zurück](Agenda.md)
 
 ---

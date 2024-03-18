@@ -453,7 +453,7 @@ auf den Modus *öffentlich* umgestellt &ndash; für *Freunde*.
 
 ---
 
-## Übungen
+## Aufgaben
 
 [Aufgabe zur Klasse `Fraction`](../Exercises/Exercises_Fraction.md)
 

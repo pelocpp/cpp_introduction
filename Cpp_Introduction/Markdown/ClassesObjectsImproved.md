@@ -276,6 +276,8 @@ Mit dem `this`-Operator könnte man die *setter*-Methode korrekt realisieren:
 
 [Aufgabe zur Klasse `Rectangle`](../Exercises/Exercises_Rectangle.md)
 
+[Aufgabe zur Klasse `BankAccount`](../Exercises/Exercises_BankAccount.md)
+
 ---
 
 [Zurück](Agenda.md)

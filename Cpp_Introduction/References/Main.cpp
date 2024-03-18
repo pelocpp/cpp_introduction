@@ -97,11 +97,11 @@ void testReferences()
 {
     using namespace References;
 
-    //scriptSnippets();
-    //referencesUnderstanding();
-    //referencesAndAddressOperator();
+    scriptSnippets();
+    referencesUnderstanding();
+    referencesAndAddressOperator();
     referencesAndReAssignment();
-    //referencesVsPointers();
+    referencesVsPointers();
 }
 
 // ===========================================================================

@@ -11,8 +11,8 @@ Es gibt verschiedene Möglichkeiten, Parameter an Methoden (Funktionen) zu überge
 
 *Vorab zur Nomenklatur*:
 
-Die an die Funktion übergebenen Parameter werden als *Aktualparameter* (*actual parameter*) bezeichnet,
-während die von der Funktion empfangenen Parameter als *Formalparameter* (*formal parameter*) bezeichnet werden.
+Die an die Funktion übergebenen Parameter werden als *Aktualparameter* (*Actual Parameter*) bezeichnet,
+während die von der Funktion empfangenen Parameter als *Formalparameter* (*Formal Parameter*) bezeichnet werden.
 
 *Beispiel*:
 
@@ -87,6 +87,10 @@ können Aktualparameter durch eine explizite Adresse (explizite Verwendung des Ad
 oder eben durch eine Referenz (Adresse wird implizit gebildet) übergeben werden.
 Im zweiten Fall bedarf es keines Gebrauchs des Adress-Operators,
 allerdings muss der Parameter der Funktion vom Typ *Referenz* sein.
+
+<img src="cpp_call_by_address.svg" width="450">
+
+*Abbildung* 3: Parameterübergabemechanismus *Call-by-Address*.
 
 
 ## Beispiele

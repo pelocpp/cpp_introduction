@@ -57,10 +57,9 @@ Alle innerhalb von Funktionen vorgenommenen Änderungen werden an den Funktionsko
 nicht in den tatsächlichen Parametern (originaler Speicherort) des Funktionsaufrufs widergespiegelt.
 
 
-<img src="cpp_call_by_value.svg" width="320">
+<img src="cpp_call_by_value.svg" width="360">
 
 *Abbildung* 1: Parameterübergabemechanismus *Call-by-Value*.
-
 
 
 ### Parameterübergabemechanismus *Call-by-Reference*
@@ -72,14 +71,12 @@ Bei der *Call-by-Reference*-Aufrufmethode wird die Adresse des Aktualparameters 
     spiegeln sich in den aktuellen Parametern des Aufrufs wider.
 
 
-<img src="cpp_call_by_reference.svg" width="450">
+<img src="cpp_call_by_reference.svg" width="500">
 
 *Abbildung* 2: Parameterübergabemechanismus *Call-by-Reference*.
 
 
-**Zur Abrundung**:
-
-### Parameterübergabemechanismus *Call-by-Address*
+### Zur Abrundung: Parameterübergabemechanismus *Call-by-Address*
 
 Im Prinzip ist diese Aufrufmethode identisch zur *Call-by-Reference*-Methode.
 Da wir in C++ die beiden Sprachmittel *Zeiger* und *Referenz* haben,
@@ -88,7 +85,7 @@ oder eben durch eine Referenz (Adresse wird implizit gebildet) übergeben werden.
 Im zweiten Fall bedarf es keines Gebrauchs des Adress-Operators,
 allerdings muss der Parameter der Funktion vom Typ *Referenz* sein.
 
-<img src="cpp_call_by_address.svg" width="450">
+<img src="cpp_call_by_address.svg" width="500">
 
 *Abbildung* 3: Parameterübergabemechanismus *Call-by-Address*.
 

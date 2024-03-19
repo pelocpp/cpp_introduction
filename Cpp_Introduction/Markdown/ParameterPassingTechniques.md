@@ -175,7 +175,7 @@ die die Differenz zweier Uhrzeiten berechnet:
 ```
 
 Machbar, allerdings wird beim Aufruf von `diff` eine Kopie erzeugt und an  `diff` übergeben.
-Das kostet unnütze verbrauchte Laufzeit.
+Das kostet unnütz verbrauchte Laufzeit.
 
 2. Ansatz:
 
@@ -196,7 +196,7 @@ Nachteilig ist, dass in der Realisierung von `diff` das Originalobjekt modifizie
 Besser, es wird eine Referenz an `diff` übergeben und verhindert,
 dass `diff` das Originalobjekt durch Verwendung des Alias-Namens verändert.
 Allerdings könnte das Objekt, an dem die `diff`-Methode aufgerufen wird,
-ebenfalls seine Instanzvariablen verändern.
+seine eigenen Instanzvariablen verändern.
 
 4. Ansatz:
 
@@ -204,7 +204,7 @@ ebenfalls seine Instanzvariablen verändern.
  Time diff(const Time& other) const;
 ```
 
-Optimale Realisierung. `diff` operiert auf einem Alias-Objekt, also laufzeit-optimal mit einer Referenz.
+Optimale Realisierung: `diff` operiert auf einem Alias-Objekt, also laufzeit-optimal mit einer Referenz.
 Weder das übergebene Objekt noch das rufende Objekt können in der Realisierung
 von `diff` verändert werden.
 
@@ -212,7 +212,6 @@ von `diff` verändert werden.
 ### Schlüsselwort `const`
 
 In den letzten Beispiel wurde viel das Schlüsselwort `const` eingesetzt.
-
 Dies kann Nebenwirkungen bzgl. unterlagerter Methoden haben.
 
 Ein Beispiel hierzu:
@@ -223,13 +222,13 @@ Ruft man im Kontext einer Methode `diff` mit der Signatur
  Time diff(const Time& other) const;
 ```
 
-weitere, unterlagerte Methoden &ndash; entweder am Objekt `other` oder am gerufenen Objekt (`*this*`) &ndash; auf,
+weitere, unterlagerte Methoden auf &ndash; entweder am Objekt `other` oder am gerufenen Objekt (`*this`) &ndash;,
 dann müssen diese Methoden ebenfalls als `const` definiert sein, siehe zum Beispiel
-die *getter* der Klasse:
+die *getter* der `Time`-Klasse:
 
 
 ```cpp
-// getter // setter
+// getter
 int getSeconds() const { return m_seconds; }
 int getMinutes() const { return m_minutes; }
 int getHours() const { return m_hours; }
@@ -246,11 +245,10 @@ int timeToSeconds() const;
 
 ## Quellcode des Beispiels:
 
-[*Main_ParametersPassing.cpp*](../ParameterPassingTechniques/Main_ParametersPassing.cpp)
-
-[*Time.cpp*](../ParameterPassingTechniques/Time.cpp)
-[*Time.h*](../ParameterPassingTechniques/Time.h)
-[*Main_Time.cpp*](../ParameterPassingTechniques/Main_Time.cpp)
+[*Main_ParametersPassing.cpp*](../ParameterPassingTechniques/Main_ParametersPassing.cpp)<br />
+[*Time.cpp*](../ParameterPassingTechniques/Time.cpp)<br />
+[*Time.h*](../ParameterPassingTechniques/Time.h)<br />
+[*Main_Time.cpp*](../ParameterPassingTechniques/Main_Time.cpp)<br />
 
 ---
 

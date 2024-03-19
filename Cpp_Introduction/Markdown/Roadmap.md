@@ -12,7 +12,7 @@ Einteilung für ein 5-Tage Seminar:
 | **Tag 2** | Referenzen<br />Technik der Übergabe von Parametern<br />Überladen von Operatoren<br />Ein- und Ausgabe mit Streams<br />Namensräume<br />Zeichenketten: Klasse `std::string`<br />Exceptions / Behandlung von Ausnahmen |
 | **Tag 3** | Dynamische Speicherverwaltung<br />&ldquo;Rule of Three&rdquo;: Kopierkonstruktor, Wertzuweisungsoperator und Destruktor |
 | **Tag 4** | Vererbung<br />Templates / Schablonen |
-| **Tag 5** | Templates<br />STL (Standard Template Library) |
+| **Tag 5** | STL-Konzepte Container, Iteratoren, Algorithmen und aufrufbare Objekte<br />Beispiele zur STL |
 
 
 ---

@@ -108,7 +108,9 @@
     <ClCompile Include="Namespaces\Main.cpp" />
     <ClCompile Include="OperatorOverloading\Main.cpp" />
     <ClCompile Include="OperatorOverloading\Time.cpp" />
-    <ClCompile Include="ParameterPassingTechniques\Main.cpp" />
+    <ClCompile Include="ParameterPassingTechniques\Main_ParametersPassing.cpp" />
+    <ClCompile Include="ParameterPassingTechniques\Main_Time.cpp" />
+    <ClCompile Include="ParameterPassingTechniques\Time.cpp" />
     <ClCompile Include="ProceduralVsOOProgramming\Example_OO_Programming.cpp" />
     <ClCompile Include="ProceduralVsOOProgramming\Example_Procedural_Programming.cpp" />
     <ClCompile Include="ProceduralVsOOProgramming\Main.cpp" />
@@ -135,6 +137,7 @@
     <ClInclude Include="Exercises\String\String.h" />
     <ClInclude Include="Exercises\Time\Time.h" />
     <ClInclude Include="OperatorOverloading\Time.h" />
+    <ClInclude Include="ParameterPassingTechniques\Time.h" />
     <ClInclude Include="RuleOfThree\BigData.h" />
   </ItemGroup>
   <ItemGroup>

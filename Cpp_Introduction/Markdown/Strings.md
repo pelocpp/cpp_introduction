@@ -9,7 +9,7 @@
 
 ### Zeichen
 
-Zeichenketten werden in C und C++ auf den Datentyp `char` abgebildet:
+Zeichen werden in C und C++ auf den Datentyp `char` abgebildet:
 
 #### Datei [*Main.cpp*](../Strings/Main.cpp):
 

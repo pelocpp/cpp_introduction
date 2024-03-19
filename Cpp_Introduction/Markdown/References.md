@@ -47,7 +47,7 @@ Die Deklaration einer Referenz besteht aus dem Typ des Zielobjekts,
 gefolgt vom Referenzoperator (`&`) und dem Namen der Referenz.
 
 Viele Programmierer stellen Referenzvariablen ein `r` voran.
-Zum Beispiel erzeugt man für eine int-Variable `ri` eine Referenz mit der folgenden Anweisung:
+Zum Beispiel erzeugt man für eine `int`-Variable `ri` eine Referenz mit der folgenden Anweisung:
 
 ```cpp
 int n = 123;

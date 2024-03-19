@@ -288,7 +288,7 @@
     <ClCompile Include="References\Main.cpp">
       <Filter>Source Files\References</Filter>
     </ClCompile>
-    <ClCompile Include="ParameterPassingTechniques\Main.cpp">
+    <ClCompile Include="ParameterPassingTechniques\Main_ParametersPassing.cpp">
       <Filter>Source Files\ParameterPassingTechniques</Filter>
     </ClCompile>
     <ClCompile Include="ClassesObjects\Main.cpp">
@@ -417,6 +417,12 @@
     <ClCompile Include="Exercises\MoreBankAccounts\MoreBankAccounts.h">
       <Filter>Excercises\MoreBankAccounts</Filter>
     </ClCompile>
+    <ClCompile Include="ParameterPassingTechniques\Time.cpp">
+      <Filter>Source Files\ParameterPassingTechniques</Filter>
+    </ClCompile>
+    <ClCompile Include="ParameterPassingTechniques\Main_Time.cpp">
+      <Filter>Source Files\ParameterPassingTechniques</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constructors\Time.h">
@@ -457,6 +463,9 @@
     </ClInclude>
     <ClInclude Include="Exercises\String\String.h">
       <Filter>Excercises\String</Filter>
+    </ClInclude>
+    <ClInclude Include="ParameterPassingTechniques\Time.h">
+      <Filter>Source Files\ParameterPassingTechniques</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

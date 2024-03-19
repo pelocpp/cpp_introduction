@@ -158,9 +158,99 @@ multiplyByTwo(123);
 
 ---
 
+## Anwendung der Parameterübergabetechnik auf Methoden einer Klasse
+
+### Design einer Methoden-Schnittstelle
+
+Wenn Sie Methoden eine Klasse definieren, die Parameter besitzt,
+sollten Sie genau darauf achten, wie Sie die Schnittstelle der Methode definieren.
+
+Betrachten wir als Beispiel eine Methode `diff` der Klasse `Time`,
+die die Differenz zweier Uhrzeiten berechnet:
+
+1. Ansatz:
+
+```cpp
+ Time diff(Time other);
+```
+
+Machbar, allerdings wird beim Aufruf von `diff` eine Kopie erzeugt und an  `diff` übergeben.
+Das kostet unnütze verbrauchte Laufzeit.
+
+2. Ansatz:
+
+```cpp
+ Time diff(Time& other);
+```
+
+Besser, es wird eine Referenz an `diff` übergeben und damit keine überflüssige Kopie erzeugt.
+Nachteilig ist, dass in der Realisierung von `diff` das Originalobjekt modifiziert werden könnte.
+`diff` verwendet einen Alias-Namen.
+
+3. Ansatz:
+
+```cpp
+ Time diff(const Time& other);
+```
+
+Besser, es wird eine Referenz an `diff` übergeben und verhindert,
+dass `diff` das Originalobjekt durch Verwendung des Alias-Namens verändert.
+Allerdings könnte das Objekt, an dem die `diff`-Methode aufgerufen wird,
+ebenfalls seine Instanzvariablen verändern.
+
+4. Ansatz:
+
+```cpp
+ Time diff(const Time& other) const;
+```
+
+Optimale Realisierung. `diff` operiert auf einem Alias-Objekt, also laufzeit-optimal mit einer Referenz.
+Weder das übergebene Objekt noch das rufende Objekt können in der Realisierung
+von `diff` verändert werden.
+
+
+### Schlüsselwort `const`
+
+In den letzten Beispiel wurde viel das Schlüsselwort `const` eingesetzt.
+
+Dies kann Nebenwirkungen bzgl. unterlagerter Methoden haben.
+
+Ein Beispiel hierzu:
+
+Ruft man im Kontext einer Methode `diff` mit der Signatur
+
+```cpp
+ Time diff(const Time& other) const;
+```
+
+weitere, unterlagerte Methoden &ndash; entweder am Objekt `other` oder am gerufenen Objekt (`*this*`) &ndash; auf,
+dann müssen diese Methoden ebenfalls als `const` definiert sein, siehe zum Beispiel
+die *getter* der Klasse:
+
+
+```cpp
+// getter // setter
+int getSeconds() const { return m_seconds; }
+int getMinutes() const { return m_minutes; }
+int getHours() const { return m_hours; }
+```
+
+Im aktuellen Beispiel der `diff`-Methoden verwenden wir eine Hilfsmethode `timeToSeconds`,
+ihre Schnittstelle muss so aussehen:
+
+```cpp
+int timeToSeconds() const;
+```
+
+---
+
 ## Quellcode des Beispiels:
 
-[*Main.cpp*](../ParameterPassingTechniques/Main.cpp)
+[*Main_ParametersPassing.cpp*](../ParameterPassingTechniques/Main_ParametersPassing.cpp)
+
+[*Time.cpp*](../ParameterPassingTechniques/Time.cpp)
+[*Time.h*](../ParameterPassingTechniques/Time.h)
+[*Main_Time.cpp*](../ParameterPassingTechniques/Main_Time.cpp)
 
 ---
 
@@ -173,5 +263,3 @@ multiplyByTwo(123);
 [Zurück](Agenda.md)
 
 ---
-
-

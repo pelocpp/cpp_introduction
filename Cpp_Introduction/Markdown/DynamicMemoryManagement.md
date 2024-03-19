@@ -73,7 +73,7 @@ Man kann die Lebensdauer von Variablen in einem C++&ndash;Programm in drei Grupp
   und lokale Variablen andererseits nicht über Funktionsgrenzen hinweg verfügbar sind.<br /><br />
   Man kann beliebig viele Variablen dynamisch anlegen (solange Hauptspeicher verfügbar ist).<br /><br />
   Ihr großer Vorteil besteht darin, dass man mit ihrer Hilfe genau so viel Speicher anfordern kann,
-  wie man für einen Programmablauf benötigt.<br />
+  wie man für einen Programmablauf benötigt.<br /><br />
   Zum Reservieren dynamischen Speichers gibt es die beiden Operatoren `new` und `delete`.
 
 ### Stack und Heap (Stapel und Halde)

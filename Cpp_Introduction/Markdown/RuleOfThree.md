@@ -57,7 +57,7 @@ Nun betrachten wir ein extrem kurzes Anwendungsbeispiel mit einem `BigData`-Obje
 
 So kurz dieses Beispiel auch sein mag: Es ist falsch! Erkennen Sie den Fehler?
 
-### Ein Destruktor zum automatisierten Freigeben von allokierten Speicher
+### Ein Destruktor zum automatisierten Freigeben von allokiertem Speicher
 
 Wenn im Konstruktor &ndash; oder auch in einer der Methoden der `BigData`-Klasse &ndash; `new` aufgerufen wird,
 dann muss zwingend an anderer Stelle ein Aufruf von `delete` vorhanden sein.

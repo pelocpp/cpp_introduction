@@ -102,7 +102,7 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
 
 ## [&ldquo;Rule of Three&rdquo;: Kopierkonstruktor, Wertzuweisungsoperator und Destruktor](RuleOfThree.md)
   * Objekte mit dynamischen Daten
-  * Ein Destruktor zum automatisierten Freigeben von allokierten Speicher
+  * Ein Destruktor zum automatisierten Freigeben von allokiertem Speicher
   * Objekte kopieren und zuweisen
   * *Flat Copy* versus *Deep Copy*
   * Überladen von Kopierkonstruktor und Wertzuweisungsoperator

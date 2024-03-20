@@ -5,7 +5,7 @@
 ---
 
 <p align="center">
-<img src="./Cpp_Introduction/Markdown/Embedded_Cpp.jpg" width="600" />
+<img src="./Embedded_Cpp.jpg" width="700" />
 </p>
 
 ---
@@ -17,6 +17,7 @@ die sprachlichen Konstrukte für einen Einstieg
 nach gewissen systematischen und methodischen Gesichtspunkten so zu gliedern und zusammenzufassen,
 dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
 
+---
 
 ## [&ldquo;Hello World&rdquo;](HelloWorld.md) 
   * Umgang mit der Entwicklungsumgebung

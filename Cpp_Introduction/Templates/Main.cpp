@@ -11,18 +11,18 @@ namespace Templates {
     {
     public:
         static int add(int x, int y) { return x + y; }
-        static int sub(int x, int y) { return x + y; }
-        static int mul(int x, int y) { return x + y; }
-        static int div(int x, int y) { return x + y; }
+        static int sub(int x, int y) { return x - y; }
+        static int mul(int x, int y) { return x * y; }
+        static int div(int x, int y) { return x / y; }
     };
 
     class DoubleCalculator
     {
     public:
         static double add(double x, double y) { return x + y; }
-        static double sub(double x, double y) { return x + y; }
-        static double mul(double x, double y) { return x + y; }
-        static double div(double x, double y) { return x + y; }
+        static double sub(double x, double y) { return x - y; }
+        static double mul(double x, double y) { return x * y; }
+        static double div(double x, double y) { return x / y; }
     };
 
     // implementation of a SINGLE calculator class - using templates technique
@@ -31,9 +31,9 @@ namespace Templates {
     {
     public:
         static T add(T x, T y) { return x + y; }
-        static T sub(T x, T y) { return x + y; }
-        static T mul(T x, T y) { return x + y; }
-        static T div(T x, T y) { return x + y; }
+        static T sub(T x, T y) { return x - y; }
+        static T mul(T x, T y) { return x * y; }
+        static T div(T x, T y) { return x / y; }
     };
 }
 

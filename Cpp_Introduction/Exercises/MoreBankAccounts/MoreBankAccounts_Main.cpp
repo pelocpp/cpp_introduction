@@ -59,10 +59,35 @@ static void testMoreBankAccounts_02()
     std::cout << "Total Balance: " << totalBalance << std::endl;
 }
 
+static void testMoreBankAccounts_03()
+{
+    using namespace MoreBankAccounts;
+
+    CurrentAccount ca(1000);
+    ca.deposit(100);
+    ca.print();
+
+    StudentsAccount sa;
+    sa.deposit(50);
+    sa.print();
+
+    DepositAccount da(4.0);
+    da.deposit(200);
+    da.print();
+
+    IAccount* accounts[3]{ &ca, &sa, &da };
+
+    for (int i = 0; i < 3; ++i) {
+
+        accounts[i]->withdraw(1);  // note: different methods
+    }
+}
+
 void exerciseMoreBankAccounts()
 {
     testMoreBankAccounts_01();
     testMoreBankAccounts_02();
+    testMoreBankAccounts_03();
 }
 
 // ===========================================================================

@@ -508,5 +508,8 @@
     <Image Include="Exercises\String\Resources\String.png">
       <Filter>Excercises\String\Resources</Filter>
     </Image>
+    <Image Include="Markdown\Embedded_Cpp.jpg">
+      <Filter>Markdown</Filter>
+    </Image>
   </ItemGroup>
 </Project>

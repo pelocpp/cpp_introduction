@@ -147,6 +147,7 @@
     <Image Include="Markdown\Buch_Dummies.png" />
     <Image Include="Markdown\Buch_T_Will.png" />
     <Image Include="Markdown\Cpp.png" />
+    <Image Include="Markdown\Embedded_Cpp.jpg" />
     <Image Include="Markdown\Github_Mobile_iPad.png" />
     <Image Include="Markdown\Github_Mobile_iPhone.png" />
     <Image Include="Markdown\HelloWorld.png" />

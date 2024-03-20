@@ -81,11 +81,11 @@ Natürlich müsste in der Realisierung von `release` der entsprechende `delete`-Au
 03: }
 ```
 
-So etwas Ähniches gibt es auch in C++,
+So etwas Ähnliches gibt es auch in C++,
 nur mit 2 Unterschieden:
 
   * Die Methode `release` heißt in C++ Destruktor, ihr Name ist identisch mit dem Klassennamen
-    und einem vorangestellten Tilde-Symbol ('`~`')
+    und einem vorangestellten Tilde-Symbol ('`~`').
   * Ein Aufruf des Destruktors wird vom Compiler am Ende eines Blocks, der `BigData`-Objekte enthält,
     automatisch abgesetzt. Wir rufen den Destruktor also nicht explizit auf, er wird implizit aufgerufen.
 

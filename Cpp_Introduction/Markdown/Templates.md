@@ -52,18 +52,18 @@ Vergleichen Sie beide Realisierungen:
 03: {
 04: public:
 05:     static int add(int x, int y) { return x + y; }
-06:     static int sub(int x, int y) { return x + y; }
-07:     static int mul(int x, int y) { return x + y; }
-08:     static int div(int x, int y) { return x + y; }
+06:     static int sub(int x, int y) { return x - y; }
+07:     static int mul(int x, int y) { return x * y; }
+08:     static int div(int x, int y) { return x / y; }
 09: };
 10: 
 11: class DoubleCalculator
 12: {
 13: public:
 14:     static double add(double x, double y) { return x + y; }
-15:     static double sub(double x, double y) { return x + y; }
-16:     static double mul(double x, double y) { return x + y; }
-17:     static double div(double x, double y) { return x + y; }
+15:     static double sub(double x, double y) { return x - y; }
+16:     static double mul(double x, double y) { return x * y; }
+17:     static double div(double x, double y) { return x / y; }
 18: };
 ```
 
@@ -105,9 +105,9 @@ DoubleCalculator: 777.777
 04: {
 05: public:
 06:     static T add(T x, T y) { return x + y; }
-07:     static T sub(T x, T y) { return x + y; }
-08:     static T mul(T x, T y) { return x + y; }
-09:     static T div(T x, T y) { return x + y; }
+07:     static T sub(T x, T y) { return x - y; }
+08:     static T mul(T x, T y) { return x * y; }
+09:     static T div(T x, T y) { return x / y; }
 10: };
 ```
 

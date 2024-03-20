@@ -4,6 +4,12 @@
 
 ---
 
+<p align="center">
+<img src="./Cpp_Introduction/Markdown/Embedded_Cpp.jpg" width="600" />
+</p>
+
+---
+
 Es ist nicht einfach, bei dem enormen Umfang von sprachlichen Konstrukten,
 Erweiterungen und Neuerungen von C++ den Überblick zu behalten.
 Das von mir zusammengestellte Inhaltsverzeichnis unternimmt den Versuch,

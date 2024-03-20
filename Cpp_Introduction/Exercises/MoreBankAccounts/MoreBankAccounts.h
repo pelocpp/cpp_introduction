@@ -64,7 +64,7 @@ namespace MoreBankAccounts {
     // ===========================================================================
 
     // Concrete Class 'CurrentAccount'
-    class CurrentAccount : public Account
+    class CurrentAccount final : public Account
     {
     private:
         double m_limit;

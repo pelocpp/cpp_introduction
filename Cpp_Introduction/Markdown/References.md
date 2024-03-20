@@ -7,12 +7,32 @@
 
 ## Erläuterungen
 
+Variablen sind Bezeichner, denen ein Datentyp zugeordnet ist.
+Eine Variable 
+
+```cpp
+int zahl = 5;
+```
+
+wird auf Grund ihrer Deklaration vom Typ `int` im Speicher so angeordnet,
+dass sie &ndash; auf den meisten Rechern in 4 Bytes &ndash; einen ganzzahligen Wert
+aufnehmen kann. Auf die Adresse, an der diese Variable im Speicher liegt, hat die Programmierer
+so gut wie keinen Einfluss. Es sind Tools wie der *Linker* und der *Loader*,
+die hierfür die Entscheidungen treffen.
+
+<img src="cpp_variable_vs_pointer.svg" width="550">
+
+*Abbildung* 1: Zwei Variablen `zahl` und `zeiger_auf_int_variable` im Speicher.
+
+
 *Zeiger* (*Pointer*) der Programmiersprache C sind eine Möglichkeit,
 um auf Objekte (Variablen) indirekt zugreifen zu können.
+&bdquo;Indirekt&rdquo; bedeutet in diesem Fall, dass auch Adressen ins Spiel kommen:
+
 
 <img src="cpp_pointer_01.svg" width="300">
 
-*Abbildung* 1: Eine Variable und ein Zeiger, der auf die Variable zeigt.
+*Abbildung* 2: Eine Variable und ein Zeiger, der auf die Variable zeigt.
 
 
 *Referenzen* bieten nahezu die gleichen Möglichkeiten wie Zeiger, aber mit einer wesentlich *einfacheren*
@@ -21,7 +41,7 @@ Syntax:
 
 <img src="cpp_pointer_02.svg" width="600">
 
-*Abbildung* 2: Ein Zeiger und eine Referenz, die auf dieselbe Variable verweisen.
+*Abbildung* 3: Ein Zeiger und eine Referenz, die auf dieselbe Variable verweisen.
 
 
 Es ist wichtig zu verstehen, 

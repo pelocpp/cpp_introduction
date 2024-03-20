@@ -274,6 +274,9 @@
     <None Include="Exercises\DynamicArray\Resources\cpp_dynamic_array_04.svg">
       <Filter>Excercises\DynamicArray\Resources</Filter>
     </None>
+    <None Include="Markdown\cpp_variable_vs_pointer.svg">
+      <Filter>Markdown</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">

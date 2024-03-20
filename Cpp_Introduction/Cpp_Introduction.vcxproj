@@ -49,6 +49,7 @@
     <None Include="Markdown\cpp_stack_vs_heap_01.svg" />
     <None Include="Markdown\cpp_stack_vs_heap_02.svg" />
     <None Include="Markdown\cpp_standard_flat_copy.svg" />
+    <None Include="Markdown\cpp_variable_vs_pointer.svg" />
     <None Include="Markdown\DynamicMemoryManagement.md" />
     <None Include="Markdown\Exceptions.md" />
     <None Include="Markdown\FirstOfAll.md" />

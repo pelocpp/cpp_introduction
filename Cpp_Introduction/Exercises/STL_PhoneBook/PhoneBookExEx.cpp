@@ -1,13 +1,25 @@
+// ===============================================================================
+// IPhoneBook.h
+// ===============================================================================
+
 #include <iostream>
 #include <string>
 #include <map>
 #include <algorithm>
 
-#include "PhoneBookExEx.h"
+#include <iostream>
+#include <string>
+#include <map>
+#include <tuple>
+#include <algorithm>
+#include <forward_list>
 
-namespace PhoneBookUnorderedMapBased
+
+#include "PhoneBookEx.h"
+
+namespace PhoneBookMapBased
 {
-    std::pair<std::string, std::string> PhoneBook::getNamesFromKey(std::string key)
+    std::pair<std::string, std::string> PhoneBook::getNamesFromKey(const std::string& key)
     {
         size_t pos = key.find("_");
 
@@ -16,13 +28,13 @@ namespace PhoneBookUnorderedMapBased
         std::string last = key.substr(pos + 1, key.size() - (pos + 1));
 
         // short version of returning a std::pair<>  // man kann den Typ weglassen
-        return { first, last };
+        return std::pair<std::string, std::string>{ first, last };
 
         // long version of returning a std::pair<>
         // return std::pair<std::string, std::string> { first, last };
     }
 
-    void PhoneBook::insert(const std::string& first, const std::string& last, long number)
+    bool PhoneBook::insert(const std::string& first, const std::string& last, long number)
     {
         // bauen Schlüssel ( "Hubert", "Mueller" ==> "Hubert Mueller" )
 
@@ -37,6 +49,8 @@ namespace PhoneBookUnorderedMapBased
 
         // a) Die kürzeste und eleganteste
         // m_map[key] = number;
+
+        return true;
     }
 
     bool PhoneBook::search(const std::string& first, const std::string& last, long& number)
@@ -67,32 +81,32 @@ namespace PhoneBookUnorderedMapBased
     }
 
     // 1. Realisierung
-    std::ostream& operator << (std::ostream& os, const PhoneBook& pb)
-    {
-        // Range-Based Loop:  Mit Index ergänzt
-        for ( int i = 0; const std::pair<std::string, long>& entry : pb.m_map )
-        {
-            std::string key = entry.first;
-            long number = entry.second;
+    //std::ostream& operator << (std::ostream& os, const PhoneBook& pb)
+    //{
+    //    // Range-Based Loop:  Mit Index ergänzt
+    //    for ( int i = 0; const std::pair<std::string, long>& entry : pb.m_map )
+    //    {
+    //        std::string key = entry.first;
+    //        long number = entry.second;
 
-            // Hans_Mueller  ===> "Hans",  "Mueller" 
-            // find und subtring
+    //        // Hans_Mueller  ===> "Hans",  "Mueller" 
+    //        // find und subtring
 
-            size_t pos = key.find("_");
+    //        size_t pos = key.find("_");
 
-            // substr : sub string == Teil Zeichenkette
-            std::string first = key.substr(0, pos);
-            std::string last = key.substr(pos + 1, key.size() - (pos+1));
+    //        // substr : sub string == Teil Zeichenkette
+    //        std::string first = key.substr(0, pos);
+    //        std::string last = key.substr(pos + 1, key.size() - (pos+1));
 
-            os << "Eintrag " << i << ": " 
-            << first << " " << last 
-            << ": " << number << '\n';
+    //        os << "Eintrag " << i << ": " 
+    //        << first << " " << last 
+    //        << ": " << number << '\n';
 
-             ++i;
-        }
+    //         ++i;
+    //    }
 
-        return os;
-    }
+    //    return os;
+    //}
 
     bool PhoneBook::contains(const std::string& first, const std::string& last)
     {
@@ -107,9 +121,11 @@ namespace PhoneBookUnorderedMapBased
     {
         std::string key{ first + "_" + last };
 
-        size_t numErased = m_map.erase(key);
+        //size_t numErased = m_map.erase(key);
 
-        return (numErased == 1) ? true : false;
+        //return (numErased == 1) ? true : false;
+
+        return true;
     }
 
     std::forward_list<std::string> PhoneBook::getNames()
@@ -124,16 +140,19 @@ namespace PhoneBookUnorderedMapBased
             m_map.begin(),
             m_map.end(),
 
-            std::front_insert_iterator(result),
+            std::front_insert_iterator<std::forward_list<std::string>>(result),
 
             [this](const auto& entry) {
 
                 std::string key = entry.first;  // std::pair
 
                 // structured binding
-                const auto& [vorname, nachname] = getNamesFromKey(key);
+          //      const auto& [vorname, nachname] = getNamesFromKey(key);
 
-                std::string name{ vorname + " " + nachname };
+                std::pair<std::string, std::string> names = getNamesFromKey(key);
+                std::string name{ names.first + " " + names.second };
+
+//                std::string name{ vorname + " " + nachname };
 
                 return name;
             }
@@ -142,32 +161,33 @@ namespace PhoneBookUnorderedMapBased
         return result;
     }
 
-    std::vector<std::string> PhoneBook::getNamesEx()
-    {
-        std::vector<std::string> result;
+    // virtual std::forward_list<std::string> getNames() override;
+    //std::forward_list<std::string> PhoneBook::getNames()
+    //{
+    //    std::forward_list<std::string> result;
 
-        std::transform(
+    //    std::transform(
 
-            m_map.begin(),
-            m_map.end(),
+    //        m_map.begin(),
+    //        m_map.end(),
 
-            std::back_inserter(result),  // Es wird ein LEERER Vektor mit push_back gefüllt
+    //        std::back_inserter(result),  // Es wird ein LEERER Vektor mit push_back gefüllt
 
-            [this](const auto& entry) {
+    //        [this](const auto& entry) {
 
-                std::string key = entry.first;  // std::pair
+    //            std::string key = entry.first;  // std::pair
 
-                // structured binding
-                const auto& [vorname, nachname] = getNamesFromKey(key);
+    //            // structured binding
+    //            const auto& [vorname, nachname] = getNamesFromKey(key);
 
-                std::string name{ vorname + " " + nachname };
+    //            std::string name{ vorname + " " + nachname };
 
-                return name;
-            }
-        );
+    //            return name;
+    //        }
+    //    );
 
-        return result;
-    }
+    //    return result;
+    //}
 
     void PhoneBook::sort()
     {

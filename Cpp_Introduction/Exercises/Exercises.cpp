@@ -14,6 +14,7 @@ extern void exerciseString();
 extern void exerciseMoreBankAccounts();
 extern void exerciseDynamicArrayTemplate();
 extern void exerciseSTL();
+extern void exercisePhoneBook();
 
 void testExercises()
 {
@@ -28,6 +29,7 @@ void testExercises()
     exerciseMoreBankAccounts();
     exerciseDynamicArrayTemplate();
     exerciseSTL();
+    exercisePhoneBook();
 }
 
 // ===========================================================================

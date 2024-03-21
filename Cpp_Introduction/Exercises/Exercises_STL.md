@@ -1,4 +1,4 @@
-# Aufgabe zur STL &ndash; Standard Template Library
+# Zwei einführende Aufgaben zur STL
 
 [Zurück](./Exercises.md)
 

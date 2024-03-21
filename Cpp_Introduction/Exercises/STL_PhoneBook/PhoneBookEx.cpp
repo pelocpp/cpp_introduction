@@ -9,11 +9,14 @@
 
 namespace PhoneBookMapBased
 {
-
     bool PhoneBookComparator::operator()(const std::string& left, const std::string& right) const
     {
-        const auto& [first1, last1] = PhoneBook::getNamesFromKey(left);
-        const auto& [first2, last2] = PhoneBook::getNamesFromKey(right);
+        //const auto& [first1, last1] = PhoneBook::getNamesFromKey(left);
+        //const auto& [first2, last2] = PhoneBook::getNamesFromKey(right);
+
+        const std::pair<std::string, std::string> last1 = PhoneBook::getNamesFromKey(left);
+        const std::pair<std::string, std::string> last2 = PhoneBook::getNamesFromKey(right);
+
         return (last1 < last2);
     }
 
@@ -34,15 +37,16 @@ namespace PhoneBookMapBased
 
     bool PhoneBook::insert(const std::string& first, const std::string& last, long number)
     {
-        std::string key = getKeyFromNames(first, last);
+        //std::string key = getKeyFromNames(first, last);
 
-        auto position = m_map.find(key);
+        //auto position = m_map.find(key);
 
-        if (position != m_map.end()) {
-            return false;
-        }
+        //if (position != m_map.end()) {
+        //    return false;
+        //}
 
-        m_map.emplace(key, number);
+        //m_map.emplace(key, number);
+
         return true;
     }
 
@@ -54,53 +58,64 @@ namespace PhoneBookMapBased
 
     bool PhoneBook::search(const std::string& first, const std::string& last, long& number)
     {
-        std::string key = getKeyFromNames(first, last);
+        //std::string key = getKeyFromNames(first, last);
 
-        std::map<std::string, long>::iterator pos = m_map.find(key);
+        //std::unordered_map<std::string, long>::iterator pos = m_map.find(key);
 
-        // auto result = m_map.find(key);
+        //// auto result = m_map.find(key);
 
-        if (pos == m_map.end()) {
-            std::cout << "Key" + key << " not found";
-            return false;
-        }
-        else {
-            std::pair<std::string, long> entry = *pos;
-            number = entry.second;
-            std::cout << "At Key " + key << " found number: " << number;
-            return true;
-        }
+        //if (pos == m_map.end()) {
+        //    std::cout << "Key" + key << " not found";
+        //    return false;
+        //}
+        //else {
+        //    std::pair<std::string, long> entry = *pos;
+        //    number = entry.second;
+        //    std::cout << "At Key " + key << " found number: " << number;
+        //    return true;
+        //}
+
+        // TO BE DONE
+        return true;
     }
 
     bool PhoneBook::contains(const std::string& first, const std::string& last)
     {
-        std::string key = getKeyFromNames(first, last);
-        auto result = m_map.find(key);
-        return (result == m_map.end()) ? false : true;
+        //std::string key = getKeyFromNames(first, last);
+        //auto result = m_map.find(key);
+        //return (result == m_map.end()) ? false : true;
+
+        // TO BE DONE
+        return true;
     }
 
     bool PhoneBook::remove(const std::string& first, const std::string& last)
     {
         std::string key = getKeyFromNames(first, last);
-        size_t numErased = m_map.erase(key);
-        return (numErased == 1) ? true : false;
+
+        // komische Fehlermedlung
+        // size_t numErased = m_map.erase(key);
+        // return (numErased == 1) ? true : false;
+
+        // TO BE DONE
+        return true;
     }
 
-    std::ostream& operator << (std::ostream& os, const PhoneBook& book)
-    {
-        for (int i = 1; const auto& [first, last, number] : book) {
-            os
-                << i << ": "
-                << "First Name: " << first
-                << ", Last Name: " << last
-                << ", Phone: " << number
-                << std::endl;
+    //std::ostream& operator << (std::ostream& os, const PhoneBook& book)
+    //{
+    //    for (int i = 1; const auto& [first, last, number] : book) {
+    //        os
+    //            << i << ": "
+    //            << "First Name: " << first
+    //            << ", Last Name: " << last
+    //            << ", Phone: " << number
+    //            << std::endl;
 
-            ++i;
-        }
+    //        ++i;
+    //    }
 
-        return os;
-    }
+    //    return os;
+    //}
 
     //std::ostream& operator << (std::ostream& os, const PhoneBook& book)
     //{
@@ -136,11 +151,11 @@ namespace PhoneBookMapBased
         std::transform(
             m_map.begin(),
             m_map.end(),
-            std::front_insert_iterator(result),
+            std::front_insert_iterator<std::forward_list<std::string>>(result),
             [this](const auto& entry) {
                 std::string key = entry.first;
-                const auto& [first, last] = getNamesFromKey(key);
-                std::string name{ first + " " + last };
+                std::pair<std::string, std::string> names = getNamesFromKey(key);
+                std::string name{ names.first + " " + names.second };
                 return name;
             }
         );

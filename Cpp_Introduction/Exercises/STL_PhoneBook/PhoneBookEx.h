@@ -1,8 +1,12 @@
+// ===============================================================================
+// PhoneBook.h // Using std::unordered_map
+// ===============================================================================
+
 #pragma once
 
 #include <iostream>
 #include <string>
-#include <map>
+#include <unordered_map>
 #include <forward_list>
 #include <tuple>
 
@@ -22,65 +26,65 @@ namespace PhoneBookMapBased
         friend struct PhoneBookComparator;
 
     private:
-        std::map<std::string, long, PhoneBookComparator> m_map;
+        std::unordered_map<std::string, long, PhoneBookComparator> m_map;
 
     private:
 
-        class PhoneBookIterator
-        {
-        private:
-            std::map<std::string, long, PhoneBookComparator>::iterator m_position;
-            PhoneBook& m_outer;  // back reference
+        //class PhoneBookIterator
+        //{
+        //private:
+        //    std::map<std::string, long, PhoneBookComparator>::iterator m_position;
+        //    PhoneBook& m_outer;  // back reference
 
-        public:
-            PhoneBookIterator(PhoneBook& outer, std::map<std::string, long, PhoneBookComparator>::iterator position)
-                : m_outer{ outer } , m_position{ position } {}
+        //public:
+        //    PhoneBookIterator(PhoneBook& outer, std::map<std::string, long, PhoneBookComparator>::iterator position)
+        //        : m_outer{ outer } , m_position{ position } {}
 
-            bool operator != (const PhoneBookIterator& other) {
-                return m_position != other.m_position;
-            }
+        //    bool operator != (const PhoneBookIterator& other) {
+        //        return m_position != other.m_position;
+        //    }
 
-            void operator++ () {
-                m_position++;
-            }
+        //    void operator++ () {
+        //        m_position++;
+        //    }
 
-            std::tuple<std::string, std::string, long> operator* () {
+        //    std::tuple<std::string, std::string, long> operator* () {
 
-                const auto& [key, number] = *m_position;
-                const auto& [first, last] = PhoneBook::getNamesFromKey(key);
-                return { first, last, number };
-            }
-        };
+        //        const auto& [key, number] = *m_position;
+        //        const auto& [first, last] = PhoneBook::getNamesFromKey(key);
+        //        return { first, last, number };
+        //    }
+        //};
 
-        class ConstPhoneBookIterator
-        {
-        private:
-            std::map<std::string, long, PhoneBookComparator>::const_iterator m_position;
+        //class ConstPhoneBookIterator
+        //{
+        //private:
+        //    std::map<std::string, long, PhoneBookComparator>::const_iterator m_position;
 
-            const PhoneBook& m_outer;  // back reference
+        //    const PhoneBook& m_outer;  // back reference
 
-        public:
-            ConstPhoneBookIterator(const PhoneBook& outer, std::map<std::string, long, PhoneBookComparator>::const_iterator position)
-                : m_outer{ outer }, m_position{ position } {}
+        //public:
+        //    ConstPhoneBookIterator(const PhoneBook& outer, std::map<std::string, long, PhoneBookComparator>::const_iterator position)
+        //        : m_outer{ outer }, m_position{ position } {}
 
-            bool operator != (const ConstPhoneBookIterator& other) {
-                return m_position != other.m_position;
-            }
+        //    bool operator != (const ConstPhoneBookIterator& other) {
+        //        return m_position != other.m_position;
+        //    }
 
-            void operator++ () {
-                m_position++;
-            }
+        //    void operator++ () {
+        //        m_position++;
+        //    }
 
-            const std::tuple<std::string, std::string, long> operator* () const {
+        //    const std::tuple<std::string, std::string, long> operator* () const {
 
-                const auto& [key, number] = *m_position;
-                const auto& [first, last] = PhoneBook::getNamesFromKey(key);
-                return { first, last, number };
-            }
-        };
+        //        const auto& [key, number] = *m_position;
+        //        const auto& [first, last] = PhoneBook::getNamesFromKey(key);
+        //        return { first, last, number };
+        //    }
+        //};
 
-        using iterator = class PhoneBookIterator;
-        using const_iterator = class ConstPhoneBookIterator;
+        //using iterator = class PhoneBookIterator;
+        //using const_iterator = class ConstPhoneBookIterator;
 
 
     public:
@@ -96,10 +100,10 @@ namespace PhoneBookMapBased
         // iterator support
         //PhoneBookIterator begin() { return PhoneBookIterator{ *this, m_map.begin() }; }
         //PhoneBookIterator end() { return PhoneBookIterator{ *this, m_map.end() }; }
-        ConstPhoneBookIterator begin() const { return ConstPhoneBookIterator(*this, m_map.begin() ); }
-        ConstPhoneBookIterator end() const { return ConstPhoneBookIterator{ *this, m_map.end() }; }
+        //ConstPhoneBookIterator begin() const { return ConstPhoneBookIterator(*this, m_map.begin() ); }
+        //ConstPhoneBookIterator end() const { return ConstPhoneBookIterator{ *this, m_map.end() }; }
 
-        friend std::ostream& operator<< (std::ostream& os, const PhoneBook& pb);
+     //   friend std::ostream& operator<< (std::ostream& os, const PhoneBook& pb);
 
     private:
         static std::pair<std::string, std::string> getNamesFromKey(const std::string&);

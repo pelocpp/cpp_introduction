@@ -1,4 +1,4 @@
-# Aufgabe Klasse `String`
+# Aufgabe zur STL: Klasse `Phonebook`
 
 [Zurück](./Exercises.md)
 

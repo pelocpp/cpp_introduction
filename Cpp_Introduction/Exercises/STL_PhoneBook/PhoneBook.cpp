@@ -6,22 +6,12 @@ namespace PhoneBookVectorBased
 {
     bool PhoneBook::insert(const std::string& first, const std::string& last, long number)
     {
-        //std::vector<int> vec;
-
-        //auto x = vec.cbegin(); // iterator begin()
-        //                       // const_iterator cbegin()
-
-        //std::vector<int>::iterator x1;
-        //std::vector<int>::const_iterator x1;
-
-        ////using iterator = _Vector_iterator<_Scary_val>;
-        ////using const_iterator = _Vector_const_iterator<_Scary_val>;
-
         if (contains(first, last)) {
             return false;
         }
 
-        m_entries.emplace_back(first, last, number); 
+        m_entries.push_back(Entry (first, last, number));
+        // m_entries.emplace_back(first, last, number); 
         return true;
     }
 
@@ -105,7 +95,7 @@ namespace PhoneBookVectorBased
         std::transform( 
             m_entries.begin(),
             m_entries.end(), 
-           std::front_insert_iterator(result),
+            std::front_insert_iterator<std::forward_list<std::string>>(result),
             [] (const auto& entry) {
                 std::string name{ entry.m_first + " " + entry.m_last };
                 return name;
@@ -115,25 +105,25 @@ namespace PhoneBookVectorBased
         return result;
     }
 
-    std::vector<PhoneBook::Entry>::iterator PhoneBook::begin()
-    {
-        return m_entries.begin();
-    }
+    //std::vector<PhoneBook::Entry>::iterator PhoneBook::begin()
+    //{
+    //    return m_entries.begin();
+    //}
 
-    std::vector<PhoneBook::Entry>::iterator PhoneBook::end()
-    {
-        return m_entries.end();
-    }
+    //std::vector<PhoneBook::Entry>::iterator PhoneBook::end()
+    //{
+    //    return m_entries.end();
+    //}
 
-    std::vector<PhoneBook::Entry>::const_iterator PhoneBook::begin() const
-    {
-        return m_entries.begin();
-    }
+    //std::vector<PhoneBook::Entry>::const_iterator PhoneBook::begin() const
+    //{
+    //    return m_entries.begin();
+    //}
 
-    std::vector<PhoneBook::Entry>::const_iterator PhoneBook::end() const
-    {
-        return m_entries.end();
-    }
+    //std::vector<PhoneBook::Entry>::const_iterator PhoneBook::end() const
+    //{
+    //    return m_entries.end();
+    //}
 
     bool operator< (const PhoneBook::Entry& entry1, const PhoneBook::Entry& entry2)
     {
@@ -156,21 +146,21 @@ namespace PhoneBookVectorBased
     //    return os;
     //}
 
-    std::ostream& operator << (std::ostream& os, const PhoneBook& book)
-    {
-        for (int i = 1; const auto& [first, last, number] : book) {
+    //std::ostream& operator << (std::ostream& os, const PhoneBook& book)
+    //{
+    //    for (int i = 1; const auto& [first, last, number] : book) {
 
-            os
-                << i << ": "
-                << "First Name: " << first
-                << ", Last Name: " << last
-                << ", Phone: " << number
-                << std::endl;
+    //        os
+    //            << i << ": "
+    //            << "First Name: " << first
+    //            << ", Last Name: " << last
+    //            << ", Phone: " << number
+    //            << std::endl;
 
-            ++i;
-        }
+    //        ++i;
+    //    }
 
-        return os;
-    }
+    //    return os;
+    //}
 }
 

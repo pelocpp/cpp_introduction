@@ -4,7 +4,6 @@
 
 #include "PhoneBook.h"
 #include "PhoneBookEx.h"
-#include "PhoneBookShared.h"
 
 //using namespace PhoneBookVectorBased;
 using namespace PhoneBookMapBased;
@@ -182,11 +181,9 @@ void test_benchmark()
 
 
 // Hauptprogramm
-int main ()
+void exercisePhoneBook()
 {
     test_01();
     //test_02();
     //test_benchmark();
-
-    return 0;
 }

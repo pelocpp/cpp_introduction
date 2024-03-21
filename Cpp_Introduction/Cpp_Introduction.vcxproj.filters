@@ -438,9 +438,6 @@
     <ClCompile Include="ParameterPassingTechniques\Main_Time.cpp">
       <Filter>Source Files\ParameterPassingTechniques</Filter>
     </ClCompile>
-    <ClCompile Include="Exercises\STL_Phonebook\IteratorEinBeispiel.cpp">
-      <Filter>Excercises\STL_PhoneBook</Filter>
-    </ClCompile>
     <ClCompile Include="Exercises\STL_Phonebook\PhoneBook.cpp">
       <Filter>Excercises\STL_PhoneBook</Filter>
     </ClCompile>
@@ -448,9 +445,6 @@
       <Filter>Excercises\STL_PhoneBook</Filter>
     </ClCompile>
     <ClCompile Include="Exercises\STL_Phonebook\PhoneBookExEx.cpp">
-      <Filter>Excercises\STL_PhoneBook</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercises\STL_Phonebook\PhoneBookShared.cpp">
       <Filter>Excercises\STL_PhoneBook</Filter>
     </ClCompile>
     <ClCompile Include="Exercises\STL_Phonebook\PhoneBook_Main.cpp">
@@ -507,9 +501,6 @@
       <Filter>Excercises\STL_PhoneBook</Filter>
     </ClInclude>
     <ClInclude Include="Exercises\STL_Phonebook\PhoneBookEx.h">
-      <Filter>Excercises\STL_PhoneBook</Filter>
-    </ClInclude>
-    <ClInclude Include="Exercises\STL_Phonebook\PhoneBookShared.h">
       <Filter>Excercises\STL_PhoneBook</Filter>
     </ClInclude>
   </ItemGroup>

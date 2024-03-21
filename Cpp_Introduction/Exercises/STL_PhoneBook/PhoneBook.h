@@ -1,10 +1,13 @@
+// ===============================================================================
+// PhoneBook.h // Using std::vector
+// ===============================================================================
+
 #pragma once
 
 #include <iostream>
 #include <string>
 #include <vector>
 #include <forward_list>
-#include <tuple>
 
 #include "IPhoneBook.h"
 
@@ -15,8 +18,16 @@ namespace PhoneBookVectorBased
     class PhoneBook : public IPhoneBook
     {
     private:
-        struct Entry
+        class Entry
         {
+        public:
+            Entry(const std::string& first, const std::string& last, long number)
+            {
+                m_first = first;
+                m_last = last;
+                m_number = number;
+            }
+
             std::string m_first;
             std::string m_last;
             long        m_number;
@@ -34,23 +45,21 @@ namespace PhoneBookVectorBased
         virtual std::forward_list<std::string> getNames() override;
         virtual void sort() override;
 
-     //   virtual std::ostream& operator () (std::ostream& os) override;  // ???
 
-        // iterator support
-        std::vector<Entry>::iterator begin();
-        std::vector<Entry>::iterator end();
-        std::vector<Entry>::const_iterator begin() const;
-        std::vector<Entry>::const_iterator end() const;
+       // friend std::ostream& operator << (std::ostream& os, const PhoneBook& book);
 
-        friend std::ostream& operator << (std::ostream& os, const PhoneBook& book);
         friend bool operator< (const Entry& entry1, const Entry& entry2);
 
-        size_t vectorsizeof()
-        {
-            return sizeof(Entry) * m_entries.size();
-        }
+        //size_t vectorsizeof()
+        //{
+        //    return sizeof(Entry) * m_entries.size();
+        //}
     };
 
     //bool operator< (const PhoneBook::Entry& entry1, const PhoneBook::Entry& entry2);
     //std::ostream& operator<< (std::ostream& os, const PhoneBook& book);
 }
+
+// ===============================================================================
+// End-of-File
+// ===============================================================================

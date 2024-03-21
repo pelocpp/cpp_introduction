@@ -115,6 +115,12 @@
     <Filter Include="Excercises\DynamicArray\Resources">
       <UniqueIdentifier>{0e3e1ee3-6a62-4666-96b7-96876329f67f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Excercises\STL_PhoneBook">
+      <UniqueIdentifier>{b6b8e616-2e1a-4f3b-bcf8-33ffc2957ad6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\STL_PhoneBook\Resources">
+      <UniqueIdentifier>{31df9f2d-225d-441c-b35c-09612febbade}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -277,6 +283,12 @@
     <None Include="Markdown\cpp_variable_vs_pointer.svg">
       <Filter>Markdown</Filter>
     </None>
+    <None Include="Exercises\Exercises_STL_PhoneBook.md">
+      <Filter>Excercises</Filter>
+    </None>
+    <None Include="Exercises\STL_Phonebook\Resources\cpp_hash_table.svg">
+      <Filter>Excercises\STL_PhoneBook\Resources</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -426,6 +438,24 @@
     <ClCompile Include="ParameterPassingTechniques\Main_Time.cpp">
       <Filter>Source Files\ParameterPassingTechniques</Filter>
     </ClCompile>
+    <ClCompile Include="Exercises\STL_Phonebook\IteratorEinBeispiel.cpp">
+      <Filter>Excercises\STL_PhoneBook</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\STL_Phonebook\PhoneBook.cpp">
+      <Filter>Excercises\STL_PhoneBook</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\STL_Phonebook\PhoneBookEx.cpp">
+      <Filter>Excercises\STL_PhoneBook</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\STL_Phonebook\PhoneBookExEx.cpp">
+      <Filter>Excercises\STL_PhoneBook</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\STL_Phonebook\PhoneBookShared.cpp">
+      <Filter>Excercises\STL_PhoneBook</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\STL_Phonebook\PhoneBook_Main.cpp">
+      <Filter>Excercises\STL_PhoneBook</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constructors\Time.h">
@@ -469,6 +499,18 @@
     </ClInclude>
     <ClInclude Include="ParameterPassingTechniques\Time.h">
       <Filter>Source Files\ParameterPassingTechniques</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\STL_Phonebook\IPhoneBook.h">
+      <Filter>Excercises\STL_PhoneBook</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\STL_Phonebook\PhoneBook.h">
+      <Filter>Excercises\STL_PhoneBook</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\STL_Phonebook\PhoneBookEx.h">
+      <Filter>Excercises\STL_PhoneBook</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\STL_Phonebook\PhoneBookShared.h">
+      <Filter>Excercises\STL_PhoneBook</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,178 @@
+#include <iostream>
+#include <string>
+#include <map>
+#include <algorithm>
+
+#include "PhoneBookExEx.h"
+
+namespace PhoneBookUnorderedMapBased
+{
+    std::pair<std::string, std::string> PhoneBook::getNamesFromKey(std::string key)
+    {
+        size_t pos = key.find("_");
+
+        // substr : sub string == Teil Zeichenkette
+        std::string first = key.substr(0, pos);
+        std::string last = key.substr(pos + 1, key.size() - (pos + 1));
+
+        // short version of returning a std::pair<>  // man kann den Typ weglassen
+        return { first, last };
+
+        // long version of returning a std::pair<>
+        // return std::pair<std::string, std::string> { first, last };
+    }
+
+    void PhoneBook::insert(const std::string& first, const std::string& last, long number)
+    {
+        // bauen Schlüssel ( "Hubert", "Mueller" ==> "Hubert Mueller" )
+
+        std::string key = first + "_" + last;  //   "Hubert", "Mueller" ==> "Hubert Mueller"
+
+        // a) Nicht so kurz, aber exakt und besser verständlicher:
+        std::pair<std::string, long> entry{ key, number };
+
+        m_map.insert(entry);
+
+        // oder
+
+        // a) Die kürzeste und eleganteste
+        // m_map[key] = number;
+    }
+
+    bool PhoneBook::search(const std::string& first, const std::string& last, long& number)
+    {
+        // a) we need at first the key
+
+        std::string key = first + "_" + last;  //   "Hubert", "Mueller" ==> "Hubert Mueller"
+
+        // std::unordered_map<std::string, long>::iterator result = m_map.find(key);
+
+        auto result = m_map.find(key);
+
+        if (result == m_map.end()) {
+            std::cout << "Key" + key << " not found";
+            return false;
+        }
+        else {
+            std::pair<std::string, long> entry = *result;
+
+            long tmp = entry.second;
+
+            number = tmp;
+
+            std::cout << "At Key " + key << " found number: " << number;
+
+            return true;
+        }
+    }
+
+    // 1. Realisierung
+    std::ostream& operator << (std::ostream& os, const PhoneBook& pb)
+    {
+        // Range-Based Loop:  Mit Index ergänzt
+        for ( int i = 0; const std::pair<std::string, long>& entry : pb.m_map )
+        {
+            std::string key = entry.first;
+            long number = entry.second;
+
+            // Hans_Mueller  ===> "Hans",  "Mueller" 
+            // find und subtring
+
+            size_t pos = key.find("_");
+
+            // substr : sub string == Teil Zeichenkette
+            std::string first = key.substr(0, pos);
+            std::string last = key.substr(pos + 1, key.size() - (pos+1));
+
+            os << "Eintrag " << i << ": " 
+            << first << " " << last 
+            << ": " << number << '\n';
+
+             ++i;
+        }
+
+        return os;
+    }
+
+    bool PhoneBook::contains(const std::string& first, const std::string& last)
+    {
+        std::string key{ first + "_" + last };
+
+        auto result = m_map.find(key);   // result ist ein Iterator
+
+        return (result == m_map.end()) ? false : true;
+    }
+
+    bool PhoneBook::remove(const std::string& first, const std::string& last)
+    {
+        std::string key{ first + "_" + last };
+
+        size_t numErased = m_map.erase(key);
+
+        return (numErased == 1) ? true : false;
+    }
+
+    std::forward_list<std::string> PhoneBook::getNames()
+    {
+        std::forward_list<std::string> result;
+
+        // von Quelle zu Ziel: 
+        // Lambda erhält einen PhoneBook Entry, berechnet Name
+        // Achtung: transform greift auf das ZIEL mit [index] zu
+        // Geht NICHT bei einer Liste --- deshalb ein dazwischen geschalteter inserter
+        std::transform(
+            m_map.begin(),
+            m_map.end(),
+
+            std::front_insert_iterator(result),
+
+            [this](const auto& entry) {
+
+                std::string key = entry.first;  // std::pair
+
+                // structured binding
+                const auto& [vorname, nachname] = getNamesFromKey(key);
+
+                std::string name{ vorname + " " + nachname };
+
+                return name;
+            }
+        );
+
+        return result;
+    }
+
+    std::vector<std::string> PhoneBook::getNamesEx()
+    {
+        std::vector<std::string> result;
+
+        std::transform(
+
+            m_map.begin(),
+            m_map.end(),
+
+            std::back_inserter(result),  // Es wird ein LEERER Vektor mit push_back gefüllt
+
+            [this](const auto& entry) {
+
+                std::string key = entry.first;  // std::pair
+
+                // structured binding
+                const auto& [vorname, nachname] = getNamesFromKey(key);
+
+                std::string name{ vorname + " " + nachname };
+
+                return name;
+            }
+        );
+
+        return result;
+    }
+
+    void PhoneBook::sort()
+    {
+        throw std::exception("Sorting not supported");
+    }
+
+}
+

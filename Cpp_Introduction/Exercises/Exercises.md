@@ -141,7 +141,7 @@ Folgende Aspekte werden betrachtet:
 
 ---
 
-#### [STL-Standard Template Library](./Exercises_STL.md)
+#### [STL - Standard Template Library](./Exercises_STL.md)
 
 Folgende Aspekte werden betrachtet:
   * Zwei einfache, einführende Beispiel zur STL (*Standard Template Library*)
@@ -149,6 +149,16 @@ Folgende Aspekte werden betrachtet:
   * Grundlegende STL-Konzepte: STL-Container, Iteratoren, STL-Algorithmen und Funktionsobjekte
   * `std::for_each`, `std::generate`, `std::vector`
 
+---
+
+#### [STL - Klasse `Phonebook`](./Exercises_STL_PhoneBook.md)
+
+Folgende Aspekte werden betrachtet:
+  * Entwicklung einer Anwendung mit der STL (*Standard Template Library*)
+  * Definition einer Schnittstelle (`IPhoneBook`)
+  * Anwendung elementarer STL-Container (`std::vector`, `std::unordered_map`)
+  * Anwendung elementarer STL Algorithmen (`std::find_if`, `std::remove_if`, `std::transform`, `std::accumulate`, `std::for_each`)
+  * Einsatz von Funktoren (*Callable Objects*)
 
 
 <!--
@@ -186,21 +196,7 @@ Folgende Aspekte werden zum Thema &ldquo;Vererbung&rdquo; betrachtet:
 
 ---
 
-#### [Klasse `Phonebook`](Examples/PhoneBook/Resources/Readme.md)
-
-Folgende Aspekte werden betrachtet:
-  * Entwicklung einer Anwendung mit der STL (*Standard Template Library*)
-  * Definition einer Schnittstelle (`IPhoneBook`)
-  * Anwendung elementarer STL-Container (`std::vector`, `std::unordered_map`)
-  * Anwendung elementarer STL Algorithmen (`std::find_if`, `std::remove_if`, `std::transform`, `std::accumulate`, `std::for_each`)
-  * Einsatz von Funktoren (*Callable Objects*)
-
----
-
-
 -->
-
-
 
 
 ---

@@ -20,6 +20,7 @@ namespace PhoneBookRequirements
         virtual bool remove(const std::string& first, const std::string& last) = 0;
         virtual std::forward_list<std::string> getNames() = 0;
         virtual void sort() = 0;
+        virtual void print() = 0;
     };
 }
 

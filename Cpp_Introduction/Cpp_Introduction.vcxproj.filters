@@ -121,6 +121,12 @@
     <Filter Include="Excercises\STL_PhoneBook\Resources">
       <UniqueIdentifier>{31df9f2d-225d-441c-b35c-09612febbade}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Excercises\STL_PhoneBook\Header Files">
+      <UniqueIdentifier>{7293710d-0eea-4188-a406-9d022611f53c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\STL_PhoneBook\Source Files">
+      <UniqueIdentifier>{c081545f-053f-4720-a68d-819056865feb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -438,14 +444,11 @@
     <ClCompile Include="ParameterPassingTechniques\Main_Time.cpp">
       <Filter>Source Files\ParameterPassingTechniques</Filter>
     </ClCompile>
-    <ClCompile Include="Exercises\STL_Phonebook\PhoneBook.cpp">
-      <Filter>Excercises\STL_PhoneBook</Filter>
+    <ClCompile Include="Exercises\STL_Phonebook\PhoneBookVector.cpp">
+      <Filter>Excercises\STL_PhoneBook\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Exercises\STL_Phonebook\PhoneBookEx.cpp">
-      <Filter>Excercises\STL_PhoneBook</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercises\STL_Phonebook\PhoneBookExEx.cpp">
-      <Filter>Excercises\STL_PhoneBook</Filter>
+    <ClCompile Include="Exercises\STL_Phonebook\PhoneBookMap.cpp">
+      <Filter>Excercises\STL_PhoneBook\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Exercises\STL_Phonebook\PhoneBook_Main.cpp">
       <Filter>Excercises\STL_PhoneBook</Filter>
@@ -495,13 +498,13 @@
       <Filter>Source Files\ParameterPassingTechniques</Filter>
     </ClInclude>
     <ClInclude Include="Exercises\STL_Phonebook\IPhoneBook.h">
-      <Filter>Excercises\STL_PhoneBook</Filter>
+      <Filter>Excercises\STL_PhoneBook\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Exercises\STL_Phonebook\PhoneBook.h">
-      <Filter>Excercises\STL_PhoneBook</Filter>
+    <ClInclude Include="Exercises\STL_Phonebook\PhoneBookVector.h">
+      <Filter>Excercises\STL_PhoneBook\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Exercises\STL_Phonebook\PhoneBookEx.h">
-      <Filter>Excercises\STL_PhoneBook</Filter>
+    <ClInclude Include="Exercises\STL_Phonebook\PhoneBookMap.h">
+      <Filter>Excercises\STL_PhoneBook\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

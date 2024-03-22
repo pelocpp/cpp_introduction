@@ -100,9 +100,8 @@
     <ClCompile Include="Exercises\Rectangle\Rectangle_Main.cpp" />
     <ClCompile Include="Exercises\References_Pointers\References_Pointers_Main.cpp" />
     <ClCompile Include="Exercises\STL\STL_Main.cpp" />
-    <ClCompile Include="Exercises\STL_Phonebook\PhoneBook.cpp" />
-    <ClCompile Include="Exercises\STL_Phonebook\PhoneBookEx.cpp" />
-    <ClCompile Include="Exercises\STL_Phonebook\PhoneBookExEx.cpp" />
+    <ClCompile Include="Exercises\STL_Phonebook\PhoneBookVector.cpp" />
+    <ClCompile Include="Exercises\STL_Phonebook\PhoneBookMap.cpp" />
     <ClCompile Include="Exercises\STL_Phonebook\PhoneBook_Main.cpp" />
     <ClCompile Include="Exercises\Strings\Strings_Main.cpp" />
     <ClCompile Include="Exercises\String\String_Main.cpp" />
@@ -142,8 +141,8 @@
     <ClInclude Include="Exercises\Rectangle\Point.h" />
     <ClInclude Include="Exercises\Rectangle\Rectangle.h" />
     <ClInclude Include="Exercises\STL_Phonebook\IPhoneBook.h" />
-    <ClInclude Include="Exercises\STL_Phonebook\PhoneBook.h" />
-    <ClInclude Include="Exercises\STL_Phonebook\PhoneBookEx.h" />
+    <ClInclude Include="Exercises\STL_Phonebook\PhoneBookVector.h" />
+    <ClInclude Include="Exercises\STL_Phonebook\PhoneBookMap.h" />
     <ClInclude Include="Exercises\String\String.h" />
     <ClInclude Include="Exercises\Time\Time.h" />
     <ClInclude Include="OperatorOverloading\Time.h" />

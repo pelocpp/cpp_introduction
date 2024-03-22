@@ -44,7 +44,7 @@ namespace PhoneBookVectorBased
         virtual bool remove(const std::string& first, const std::string& last) override;
         virtual std::forward_list<std::string> getNames() override;
         virtual void sort() override;
-
+        virtual void print() override;
 
        // friend std::ostream& operator << (std::ostream& os, const PhoneBook& book);
 

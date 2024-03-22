@@ -15,7 +15,7 @@
 #include <forward_list>
 
 
-#include "PhoneBookEx.h"
+#include "PhoneBookMap.h"
 
 namespace PhoneBookMapBased
 {
@@ -32,6 +32,11 @@ namespace PhoneBookMapBased
 
         // long version of returning a std::pair<>
         // return std::pair<std::string, std::string> { first, last };
+    }
+
+    std::string PhoneBook::getKeyFromNames(const std::string& first, const std::string& last)
+    {
+        return { first + "_" + last };  // "Hubert", "Mueller" ==> "Hubert_Mueller"
     }
 
     bool PhoneBook::insert(const std::string& first, const std::string& last, long number)
@@ -59,9 +64,9 @@ namespace PhoneBookMapBased
 
         std::string key = first + "_" + last;  //   "Hubert", "Mueller" ==> "Hubert Mueller"
 
-        // std::unordered_map<std::string, long>::iterator result = m_map.find(key);
+        std::unordered_map<std::string, long>::iterator result = m_map.find(key);
 
-        auto result = m_map.find(key);
+        //auto result = m_map.find(key);
 
         if (result == m_map.end()) {
             std::cout << "Key" + key << " not found";
@@ -81,32 +86,33 @@ namespace PhoneBookMapBased
     }
 
     // 1. Realisierung
-    //std::ostream& operator << (std::ostream& os, const PhoneBook& pb)
-    //{
-    //    // Range-Based Loop:  Mit Index ergänzt
-    //    for ( int i = 0; const std::pair<std::string, long>& entry : pb.m_map )
-    //    {
-    //        std::string key = entry.first;
-    //        long number = entry.second;
+    std::ostream& operator << (std::ostream& os, const PhoneBook& pb)
+    {
+        // Range-Based Loop:  Mit Index ergänzt
+        int i = 0; 
+        for (  const std::pair<std::string, long>& entry : pb.m_map)
+        {
+            std::string key = entry.first;
+            long number = entry.second;
 
-    //        // Hans_Mueller  ===> "Hans",  "Mueller" 
-    //        // find und subtring
+            // Hans_Mueller  ===> "Hans",  "Mueller" 
+            // find und subtring
 
-    //        size_t pos = key.find("_");
+            size_t pos = key.find("_");
 
-    //        // substr : sub string == Teil Zeichenkette
-    //        std::string first = key.substr(0, pos);
-    //        std::string last = key.substr(pos + 1, key.size() - (pos+1));
+            // substr : sub string == Teil Zeichenkette
+            std::string first = key.substr(0, pos);
+            std::string last = key.substr(pos + 1, key.size() - (pos+1));
 
-    //        os << "Eintrag " << i << ": " 
-    //        << first << " " << last 
-    //        << ": " << number << '\n';
+            os << "Eintrag " << i << ": " 
+            << first << " " << last 
+            << ": " << number << '\n';
 
-    //         ++i;
-    //    }
+             ++i;
+        }
 
-    //    return os;
-    //}
+        return os;
+    }
 
     bool PhoneBook::contains(const std::string& first, const std::string& last)
     {
@@ -187,6 +193,17 @@ namespace PhoneBookMapBased
     //    );
 
     //    return result;
+    //}
+
+    //bool PhoneBookComparator::operator()(const std::string& left, const std::string& right) const
+    //{
+    //    //const auto& [first1, last1] = PhoneBook::getNamesFromKey(left);
+    //    //const auto& [first2, last2] = PhoneBook::getNamesFromKey(right);
+
+    //    const std::pair<std::string, std::string> last1 = PhoneBook::getNamesFromKey(left);
+    //    const std::pair<std::string, std::string> last2 = PhoneBook::getNamesFromKey(right);
+
+    //    return (last1 < last2);
     //}
 
     void PhoneBook::sort()

@@ -1,6 +1,6 @@
 #include <algorithm> 
 
-#include "PhoneBook.h"
+#include "PhoneBookVector.h"
 
 namespace PhoneBookVectorBased
 {
@@ -105,26 +105,6 @@ namespace PhoneBookVectorBased
         return result;
     }
 
-    //std::vector<PhoneBook::Entry>::iterator PhoneBook::begin()
-    //{
-    //    return m_entries.begin();
-    //}
-
-    //std::vector<PhoneBook::Entry>::iterator PhoneBook::end()
-    //{
-    //    return m_entries.end();
-    //}
-
-    //std::vector<PhoneBook::Entry>::const_iterator PhoneBook::begin() const
-    //{
-    //    return m_entries.begin();
-    //}
-
-    //std::vector<PhoneBook::Entry>::const_iterator PhoneBook::end() const
-    //{
-    //    return m_entries.end();
-    //}
-
     bool operator< (const PhoneBook::Entry& entry1, const PhoneBook::Entry& entry2)
     {
         // sorting according to last name
@@ -139,28 +119,19 @@ namespace PhoneBookVectorBased
         );
     }
 
-    // ?????????????????????????????????????????????????????????????????????
-    //std::ostream& PhoneBook::operator () (std::ostream& os)
-    //{
-    //    os << *this;
-    //    return os;
-    //}
-
-    //std::ostream& operator << (std::ostream& os, const PhoneBook& book)
-    //{
-    //    for (int i = 1; const auto& [first, last, number] : book) {
-
-    //        os
-    //            << i << ": "
-    //            << "First Name: " << first
-    //            << ", Last Name: " << last
-    //            << ", Phone: " << number
-    //            << std::endl;
-
-    //        ++i;
-    //    }
-
-    //    return os;
-    //}
+    void PhoneBook::print()
+    {
+        auto result = std::for_each(
+            m_entries.begin(),
+            m_entries.end(),
+            [&](Entry e) {
+                std::cout
+                    << "First Name: " << e.m_first
+                    << ", Last Name: " << e.m_last
+                    << ", Phone: " << e.m_number
+                    << std::endl;
+            }
+        );
+    }
 }
 

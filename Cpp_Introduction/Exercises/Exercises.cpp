@@ -14,22 +14,22 @@ extern void exerciseString();
 extern void exerciseMoreBankAccounts();
 extern void exerciseDynamicArrayTemplate();
 extern void exerciseSTL();
-extern void exercisePhoneBook();
+extern void exerciseSTLPhoneBook();
 
 void testExercises()
 {
-    exerciseRectangle();
-    exerciseBankAccount();
-    exerciseReferencesPointers();
-    exerciseTime();
-    exerciseFraction();
-    exerciseStrings();
-    exerciseDynamicArray();
-    exerciseString();
-    exerciseMoreBankAccounts();
-    exerciseDynamicArrayTemplate();
-    exerciseSTL();
-    exercisePhoneBook();
+    //exerciseRectangle();
+    //exerciseBankAccount();
+    //exerciseReferencesPointers();
+    //exerciseTime();
+    //exerciseFraction();
+    //exerciseStrings();
+    //exerciseDynamicArray();
+    //exerciseString();
+    //exerciseMoreBankAccounts();
+    //exerciseDynamicArrayTemplate();
+    //exerciseSTL();
+    exerciseSTLPhoneBook();
 }
 
 // ===========================================================================

@@ -1,137 +1,185 @@
+// ===============================================================================
+// IPhoneBook.h
+// ===============================================================================
+
 #include <algorithm> 
 
 #include "PhoneBookVector.h"
 
-namespace PhoneBookVectorBased
+namespace PhoneBook
 {
-    bool PhoneBook::insert(const std::string& first, const std::string& last, long number)
+    // -------------------------------------------------------------------------------
+
+    size_t PhoneBookVector::size()
+    {
+        return m_vec.size();
+    }
+
+    // -------------------------------------------------------------------------------
+
+    bool PhoneBookVector::insert(const std::string& first, const std::string& last, size_t number)
     {
         if (contains(first, last)) {
             return false;
         }
 
-        m_entries.push_back(Entry (first, last, number));
-        // m_entries.emplace_back(first, last, number); 
+        Entry entry(first, last, number);
+        m_vec.push_back(entry);
+
         return true;
     }
 
-    bool PhoneBook::update(const std::string& first, const std::string& last, long number)
+    // -------------------------------------------------------------------------------
+
+    bool PhoneBookVector::update(const std::string& first, const std::string& last, size_t number)
     {
-        auto position = std::find_if(
-            m_entries.begin(),
-            m_entries.end(),
-            [&](Entry e) {
-                return (e.m_first == first && e.m_last == last) ? true : false;
-            }
+        MatchNames matchNames(first, last);
+
+        std::vector<Entry>::iterator pos = std::find_if(
+            m_vec.begin(),
+            m_vec.end(),
+            matchNames
         );
 
-        if (position == m_entries.end()) {
+        if (pos == m_vec.end()) {
             return false;
         }
         else {
-            (*position).m_number = number;
+            (*pos).number = number;
             return true;
         }
     }
 
-    bool PhoneBook::search(const std::string& first, const std::string& last, long& number)
-    {
-        number = 0;
+    // -------------------------------------------------------------------------------
 
-        auto result = std::find_if(
-            m_entries.begin(), 
-            m_entries.end(), 
-            [&](Entry e) {
-                return (e.m_first == first && e.m_last == last) ? true : false;
-            }
+    bool PhoneBookVector::search(const std::string& first, const std::string& last, size_t& number)
+    {
+        MatchNames matchNames(first, last);
+
+        std::vector<Entry>::iterator pos = std::find_if(
+            m_vec.begin(),
+            m_vec.end(),
+            matchNames
         );
 
-        if (result == m_entries.end()) {
+        if (pos == m_vec.end()) {
+
+       //     std::cout << first << " " << last << " not found!" << std::endl;
+
             return false;
         }
         else {
-            Entry gefunden = *result;
-            number = gefunden.m_number;
+
+            const Entry& result = *pos;
+
+            number = result.number;
+
+   //         std::cout << first << " " << last << " has number " << number << std::endl;
+
             return true;
         }
     }
 
-    bool PhoneBook::contains(const std::string& first, const std::string& last)
+    // -------------------------------------------------------------------------------
+
+    bool PhoneBookVector::contains(const std::string& first, const std::string& last)
     {
-        auto result = std::find_if(
-            m_entries.begin(), 
-            m_entries.end(),
-            [&](Entry e) {
-                return (e.m_first == first && e.m_last == last) ? true : false;
-            }
+        MatchNames matchNames(first, last);
+
+        std::vector<Entry>::iterator pos = std::find_if(
+            m_vec.begin(),
+            m_vec.end(),
+            matchNames
         );
 
-        return (result == m_entries.end()) ? false : true;
+        return pos != m_vec.end();
     }
 
-    bool PhoneBook::remove(const std::string& first, const std::string& last)
+
+    // -------------------------------------------------------------------------------
+
+    bool PhoneBookVector::remove(const std::string& first, const std::string& last)
     {
-        auto result = std::remove_if(
-            m_entries.begin(),
-            m_entries.end(), 
-            [&](Entry e) {
-                return (e.m_first == first && e.m_last == last) ? true : false;
-            }
+        MatchNames matchNames(first, last);
+
+        std::vector<Entry>::iterator pos = std::find_if(
+            m_vec.begin(),
+            m_vec.end(),
+            matchNames
         );
 
-        if (result == m_entries.end()) {
+        if (pos == m_vec.end()) {
+
+         //   std::cout << first << " " << last << " not found!" << std::endl;
             return false;
         }
         else {
-            m_entries.erase(result, m_entries.end());
+
+            m_vec.erase(pos);
             return true;
         }
     }
 
-    std::forward_list<std::string> PhoneBook::getNames()
+
+    // -------------------------------------------------------------------------------
+
+    std::string PhoneBookVector::transform(const Entry& entry)
     {
-        std::forward_list<std::string> result;
+        return entry.first + " " + entry.last;
+    }
+
+    // NOT TESTED
+    std::forward_list<std::string> PhoneBookVector::getNames()
+    {
+        std::forward_list<std::string> names;
 
         std::transform( 
-            m_entries.begin(),
-            m_entries.end(), 
-            std::front_insert_iterator<std::forward_list<std::string>>(result),
-            [] (const auto& entry) {
-                std::string name{ entry.m_first + " " + entry.m_last };
-                return name;
-            }
+            m_vec.begin(),
+            m_vec.end(), 
+            std::front_insert_iterator<std::forward_list<std::string>>(names),
+            transform
+            //[] (const auto& entry) {
+            //    std::string name{ entry.first + " " + entry.last };
+            //    return name;
+            //}
         );
 
-        return result;
+        return names;
     }
 
-    bool operator< (const PhoneBook::Entry& entry1, const PhoneBook::Entry& entry2)
+    // -------------------------------------------------------------------------------
+
+    void PhoneBookVector::printEntry(const Entry& entry)
     {
-        // sorting according to last name
-        return (entry1.m_last < entry2.m_last) ? true : false;
+        std::cout << entry.first << " " << entry.last << ": " << entry.number << std::endl;
     }
 
-    void PhoneBook::sort()
+    void PhoneBookVector::print()
     {
-        std::sort (
-            m_entries.begin(), 
-            m_entries.end()
+        std::for_each(
+            m_vec.begin(),
+            m_vec.end(),
+            printEntry
         );
     }
 
-    void PhoneBook::print()
+    // -------------------------------------------------------------------------------
+
+    // sorting according to last name
+    bool operator< (const PhoneBookVector::Entry& entry1, const PhoneBookVector::Entry& entry2)
     {
-        auto result = std::for_each(
-            m_entries.begin(),
-            m_entries.end(),
-            [&](Entry e) {
-                std::cout
-                    << "First Name: " << e.m_first
-                    << ", Last Name: " << e.m_last
-                    << ", Phone: " << e.m_number
-                    << std::endl;
-            }
+        return entry1.last < entry2.last;
+    }
+
+    void PhoneBookVector::sort()
+    {
+        std::sort(
+            m_vec.begin(),
+            m_vec.end()
         );
     }
 }
 
+// ===============================================================================
+// End-of-File
+// ===============================================================================

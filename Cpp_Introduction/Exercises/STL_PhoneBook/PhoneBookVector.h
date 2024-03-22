@@ -11,53 +11,66 @@
 
 #include "IPhoneBook.h"
 
-namespace PhoneBookVectorBased
+namespace PhoneBook
 {
-    using namespace PhoneBookRequirements;
-
-    class PhoneBook : public IPhoneBook
+    class PhoneBookVector : public IPhoneBook
     {
     private:
         class Entry
         {
         public:
-            Entry(const std::string& first, const std::string& last, long number)
-            {
-                m_first = first;
-                m_last = last;
-                m_number = number;
-            }
+            std::string first;
+            std::string last;
+            size_t number;
 
-            std::string m_first;
-            std::string m_last;
-            long        m_number;
+            Entry(const std::string& first, const std::string& last, size_t number)
+                : first(first), last(last), number(number)
+            {}
         };
 
-        std::vector<Entry> m_entries;
+        class MatchNames
+        {
+        public:
+            const std::string& first;
+            const std::string& last;
+            
+            MatchNames(const std::string& first, const std::string& last)
+                : first(first), last(last)
+            {}
+
+            bool operator() (const Entry& entry) const {
+
+                return entry.first == first && entry.last == last;
+            }
+        };
+
+        std::vector<Entry> m_vec;
 
     public:
         // public interface
-        virtual bool insert(const std::string& first, const std::string& last, long number) override;
-        virtual bool update(const std::string& first, const std::string& last, long number) override;
-        virtual bool search(const std::string& first, const std::string& last, long& number) override;
-        virtual bool contains(const std::string& first, const std::string& last) override;
-        virtual bool remove(const std::string& first, const std::string& last) override;
-        virtual std::forward_list<std::string> getNames() override;
-        virtual void sort() override;
-        virtual void print() override;
+        size_t size() override;
+        bool insert(const std::string& first, const std::string& last, size_t number) override;
+        bool update(const std::string& first, const std::string& last, size_t number) override;
+        bool search(const std::string& first, const std::string& last, size_t& number) override;
+        bool remove(const std::string& first, const std::string& last) override;
+        bool contains(const std::string& first, const std::string& last) override;
+        std::forward_list<std::string> getNames() override;
+        void sort() override;
+        void print() override;
 
        // friend std::ostream& operator << (std::ostream& os, const PhoneBook& book);
 
-        friend bool operator< (const Entry& entry1, const Entry& entry2);
+        friend bool operator< (const Entry&, const Entry&);
 
-        //size_t vectorsizeof()
-        //{
-        //    return sizeof(Entry) * m_entries.size();
-        //}
+    private:
+        // private helper methods
+        static void printEntry(const Entry&);
+        static std::string transform(const Entry&);
     };
 
-    //bool operator< (const PhoneBook::Entry& entry1, const PhoneBook::Entry& entry2);
     //std::ostream& operator<< (std::ostream& os, const PhoneBook& book);
+
+
 }
 
 // ===============================================================================

@@ -1,4 +1,4 @@
-# Zwei einführende Aufgaben zur STL
+# STL - Zwei einführende Aufgaben
 
 [Zurück](./Exercises.md)
 

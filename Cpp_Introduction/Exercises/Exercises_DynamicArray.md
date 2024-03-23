@@ -71,7 +71,6 @@ Datenbereich erhalten:
 *Abbildung* 4. Korrekter Ansatz beim Kopieren eines `DynamicArray`-Objekts.
 
 
-
 Eine mögliche Schnittstelle der Klasse `DynamicArray` könnte so aussehen:
 
 | Element        | Schnittstelle und Beschreibung |

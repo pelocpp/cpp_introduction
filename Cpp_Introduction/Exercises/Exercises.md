@@ -141,7 +141,7 @@ Folgende Aspekte werden betrachtet:
 
 ---
 
-#### [Zwei einführende Aufgaben zur STL - Standard Template Library](./Exercises_STL.md)
+#### [STL - Zwei einführende Aufgaben](./Exercises_STL.md)
 
 Folgende Aspekte werden betrachtet:
   * Zwei einfache, einführende Beispiel zur STL (*Standard Template Library*)
@@ -155,10 +155,13 @@ Folgende Aspekte werden betrachtet:
 
 Folgende Aspekte werden betrachtet:
   * Entwicklung einer Anwendung mit der STL (*Standard Template Library*)
+  * Anwendung sequentieller und assoziativer STL-Container (`std::vector`, `std::unordered_map` und `std::forward_list`)
+  * Einsatz des Iteratoren-Konzepts
+  * Anwendung elementarer STL Algorithmen (`std::find_if`, `std::transform`, `std::accumulate`, `std::sort` und `std::for_each`)
+  * Einsatz von aufrufbaren Objekten (*Callable Objects*)
+  * Klasse `std::ostringstream`
   * Definition einer Schnittstelle (`IPhoneBook`)
-  * Anwendung elementarer STL-Container (`std::vector`, `std::unordered_map`)
-  * Anwendung elementarer STL Algorithmen (`std::find_if`, `std::remove_if`, `std::transform`, `std::accumulate`, `std::for_each`)
-  * Einsatz von Funktoren (*Callable Objects*)
+
 
 
 <!--

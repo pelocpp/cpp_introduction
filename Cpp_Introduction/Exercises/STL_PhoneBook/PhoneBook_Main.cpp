@@ -1,5 +1,5 @@
 // ===============================================================================
-// IPhoneBook.h
+// PhoneBook_Main.h
 // ===============================================================================
 
 #include <iostream>
@@ -8,7 +8,7 @@
 #include "PhoneBookVector.h"
 #include "PhoneBookMap.h"
 
-void test01_phonebook()
+static void test01_phonebook()
 {
     using namespace PhoneBook;
 
@@ -17,9 +17,15 @@ void test01_phonebook()
     // testing insert
     book.insert("Franz", "Schneider", 8483);
     book.insert("Hans", "Mueller", 5326);
-    book.insert("Hans", "Meier", 7561);
+    book.insert("Sepp", "Meier", 7561);
     book.insert("Anton", "Huber", 4899);
     book.print();
+
+    // testing invalid insertion
+    bool succeeded = book.insert("Franz", "Schneider", 4321);
+    if (!succeeded) {
+        std::cout << "Franz Schneider already in Phonebook!" << std::endl;
+    }
 
     // testing sort
     book.sort();
@@ -27,8 +33,7 @@ void test01_phonebook()
 
     // testing update
     std::cout << "Updating phone number of Franz Schneider:" << std::endl;
-    bool succeeded = book.update("Franz", "Schneider", 1234);
-    //   std::cout << book << std::endl;
+    succeeded = book.update("Franz", "Schneider", 1234);
     book.print();
 
     // testing remove
@@ -37,14 +42,14 @@ void test01_phonebook()
     book.print();
 
     // testing contains
-    bool found = book.contains("Hans", "Meier");
-    std::cout << "Found Hans Meier: " << std::boolalpha << found << std::endl;
+    bool found = book.contains("Sepp", "Meier");
+    std::cout << "Found Sepp Meier: " << std::boolalpha << found << std::endl;
     found = book.contains("Otto", "Meier");
     std::cout << "Found Otto Meier: " << found << std::endl;
 
     // testing search
     size_t numberMeier = 0;
-    succeeded = book.search("Hans", "Meier", numberMeier);
+    succeeded = book.search("Sepp", "Meier", numberMeier);
     if (succeeded) {
         std::cout << "Hans Meier: " << numberMeier << std::endl;
     }
@@ -60,7 +65,7 @@ void test01_phonebook()
     std::cout << std::endl;
 }
 
-void test02_phonebook()
+static void test02_phonebook()
 {
     using namespace PhoneBook;
 
@@ -69,18 +74,23 @@ void test02_phonebook()
     // testing insert
     book.insert("Franz", "Schneider", 8483);
     book.insert("Hans", "Mueller", 5326);
-    book.insert("Hans", "Meier", 7561);
+    book.insert("Sepp", "Meier", 7561);
     book.insert("Anton", "Huber", 4899);
     book.print();
 
+    // testing invalid insertion
+    bool succeeded = book.insert("Franz", "Schneider", 4321);
+    if (!succeeded) {
+        std::cout << "Franz Schneider already in Phonebook!" << std::endl;
+    }
+
     // testing sort
-    book.sort();
+    // book.sort();  // unordered map doesn't support sorting
     book.print();
 
     // testing update
     std::cout << "Updating phone number of Franz Schneider:" << std::endl;
-    bool succeeded = book.update("Franz", "Schneider", 1234);
-    //   std::cout << book << std::endl;
+    succeeded = book.update("Franz", "Schneider", 1234);
     book.print();
 
     // testing remove
@@ -89,14 +99,14 @@ void test02_phonebook()
     book.print();
 
     // testing contains
-    bool found = book.contains("Hans", "Meier");
-    std::cout << "Found Hans Meier: " << std::boolalpha << found << std::endl;
+    bool found = book.contains("Sepp", "Meier");
+    std::cout << "Found Sepp Meier: " << std::boolalpha << found << std::endl;
     found = book.contains("Otto", "Meier");
     std::cout << "Found Otto Meier: " << found << std::endl;
 
     // testing search
     size_t numberMeier = 0;
-    succeeded = book.search("Hans", "Meier", numberMeier);
+    succeeded = book.search("Sepp", "Meier", numberMeier);
     if (succeeded) {
         std::cout << "Hans Meier: " << numberMeier << std::endl;
     }
@@ -112,13 +122,18 @@ void test02_phonebook()
     std::cout << std::endl;
 }
 
-void test03_benchmark_01()
-{
-    std::string first{ "First_" };
-    std::string last{ "Last_" };
+// ===============================================================================
 
-    // Initialisierung
-    for (int i = 0; i < 100; ++i) {
+const long long MaxNames = 10000;
+const long long MaxIterations = 10000;
+
+static void test03_benchmark_01()
+{
+    std::string first("First_");
+    std::string last("Last_");
+
+    // initialization
+    for (int i = 0; i < MaxNames; ++i) {
 
         std::string vorname = first + std::to_string(i);
         std::string nachname = last + std::to_string(i);
@@ -128,23 +143,52 @@ void test03_benchmark_01()
     }
 }
 
-const long long MaxIterations = 100000;
-const long long MaxIterations2 = 100000;
-
-void test03_benchmark_02()
+static void test03_benchmark_02()
 {
     using namespace PhoneBook;
 
-    std::cout << "Start Vector Phonebook" << std::endl;
+    std::cout << "Start PhoneBook Vector" << std::endl;
 
-    const auto startTime{ std::chrono::high_resolution_clock::now() };
+    const auto startTime(std::chrono::high_resolution_clock::now());
 
     PhoneBookVector book;
 
-    std::string first{ "First_" };
-    std::string last{ "Last_" };
+    std::string first("First_");
+    std::string last("Last_");
 
-    // Initialisierung
+    // initialization
+    for (int i = 0; i < MaxNames; ++i) {
+
+        std::string vorname = first + std::to_string(i);
+        std::string nachname = last + std::to_string(i);
+
+        book.insert(vorname, nachname, (size_t)10000 + i);
+    }
+
+    std::cout << "Done." << std::endl;
+
+    const auto endTime(std::chrono::high_resolution_clock::now());
+
+    std::cout
+        << std::chrono::duration_cast<std::chrono::duration<double, std::milli>>(endTime - startTime).count()
+        << " msecs."
+        << std::endl;
+}
+
+static void test03_benchmark_03()
+{
+    using namespace PhoneBook;
+
+    std::cout << "Start PhoneBook Hashmap" << std::endl;
+
+    const auto startTime(std::chrono::high_resolution_clock::now());
+
+    PhoneBookMap book;
+
+    std::string first("First_");
+    std::string last("Last_");
+
+    // initialization
     for (int i = 0; i < MaxIterations; ++i) {
 
         std::string vorname = first + std::to_string(i);
@@ -153,32 +197,63 @@ void test03_benchmark_02()
         book.insert(vorname, nachname, (size_t)10000 + i);
     }
 
-    std::cout << "Initialisierung fertig." << std::endl;
+    std::cout << "Done." << std::endl;
 
-    const auto endTime{ std::chrono::high_resolution_clock::now() };
+    const auto endTime(std::chrono::high_resolution_clock::now());
+
+    std::cout
+        << std::chrono::duration_cast<std::chrono::duration<double, std::milli>>(endTime - startTime).count()
+        << " msecs."
+        << std::endl;
+}
+
+static void test03_benchmark_04()
+{
+    using namespace PhoneBook;
+
+    std::cout << "Start PhoneBook Vector" << std::endl;
+
+    const auto startTime(std::chrono::high_resolution_clock::now());
+
+    PhoneBookVector book;
+
+    std::string first("First_");
+    std::string last("Last_");
+
+    // initialization
+    for (int i = 0; i < MaxNames; ++i) {
+
+        std::string firstName = first + std::to_string(i);
+        std::string lastName = last + std::to_string(i);
+
+        book.insert(firstName, lastName, (size_t)10000 + i);
+    }
+
+    std::cout << "Initialization done." << std::endl;
+
+    const auto endTime(std::chrono::high_resolution_clock::now());
 
     std::cout
         << std::chrono::duration_cast<std::chrono::duration<double, std::milli>>(endTime - startTime).count()
         << " msecs."
         << std::endl;
 
-    // Test
+    // test searching a number
+    const auto startTime2(std::chrono::high_resolution_clock::now());
 
-    const auto startTime2{ std::chrono::high_resolution_clock::now() };
+    first = "First_999";
+    last = "Last_999";
 
-    for (int k = 0; k < 5; ++k)
-    {
-        for (int i = 0; i < MaxIterations2; ++i) {
+    for (int i = 0; i < MaxIterations; ++i) {
 
-            // Element löschen
-        //    book.remove("First_99", "Last_99");
-
-            // Element wieder einfügen
-            book.insert("First_99", "Last_99", (size_t)10000 + i);
+        size_t number = 0;
+        bool succeeded = book.search(first, last, number);
+        if (! succeeded) {
+            std::cout << "Internal Error" << std::endl;
         }
     }
 
-    const auto endTime2{ std::chrono::high_resolution_clock::now() };
+    const auto endTime2(std::chrono::high_resolution_clock::now());
 
     std::cout
         << std::chrono::duration_cast<std::chrono::duration<double, std::milli>>(endTime2 - startTime2).count()
@@ -186,31 +261,31 @@ void test03_benchmark_02()
         << std::endl;
 }
 
-void test03_benchmark_03()
+static void test03_benchmark_05()
 {
     using namespace PhoneBook;
 
-    std::cout << "Start Vector Hashmap" << std::endl;
+    std::cout << "Start PhoneBook Hashmap" << std::endl;
 
-    const auto startTime{ std::chrono::high_resolution_clock::now() };
+    const auto startTime(std::chrono::high_resolution_clock::now());
 
     PhoneBookMap book;
 
-    std::string first{ "First_" };
-    std::string last{ "Last_" };
+    std::string first("First_");
+    std::string last("Last_");
 
-    // Initialisierung
+    // Initialization
     for (int i = 0; i < MaxIterations; ++i) {
 
-        std::string vorname = first + std::to_string(i);
-        std::string nachname = last + std::to_string(i);
+        std::string firstName = first + std::to_string(i);
+        std::string lastName = last + std::to_string(i);
 
-        book.insert(vorname, nachname, (size_t)10000 + i);
+        book.insert(firstName, lastName, (size_t)10000 + i);
     }
 
-    std::cout << "Initialisierung fertig." << std::endl;
+    std::cout << "Initialization done." << std::endl;
 
-    const auto endTime{ std::chrono::high_resolution_clock::now() };
+    const auto endTime(std::chrono::high_resolution_clock::now());
 
     std::cout
         << std::chrono::duration_cast<std::chrono::duration<double, std::milli>>(endTime - startTime).count()
@@ -218,26 +293,22 @@ void test03_benchmark_03()
         << std::endl;
 
 
-    // Test
+    // test searching a number
+    const auto startTime2(std::chrono::high_resolution_clock::now());
 
-    const auto startTime2{ std::chrono::high_resolution_clock::now() };
+    first = "First_999";
+    last = "Last_999";
 
+    for (int i = 0; i < MaxIterations; ++i) {
 
-    for (int k = 0; k < 5; ++k)
-    {
-        const auto startTime{ std::chrono::high_resolution_clock::now() };
-
-        for (int i = 0; i < MaxIterations2; ++i) {
-
-            // Element löschen
-       //     book.remove("First_99", "Last_99");
-
-            // Element wieder einfügen
-            book.insert("First_99", "Last_99", (size_t)10000 + i);
+        size_t number = 0;
+        bool succeeded = book.search(first, last, number);
+        if (!succeeded) {
+            std::cout << "Internal Error" << std::endl;
         }
     }
 
-    const auto endTime2{ std::chrono::high_resolution_clock::now() };
+    const auto endTime2(std::chrono::high_resolution_clock::now());
 
     std::cout
         << std::chrono::duration_cast<std::chrono::duration<double, std::milli>>(endTime2 - startTime2).count()
@@ -247,11 +318,13 @@ void test03_benchmark_03()
 
 void exerciseSTLPhoneBook()
 {
-    //test01_phonebook();
+    test01_phonebook();
     test02_phonebook();
     //test03_benchmark_01();
     //test03_benchmark_02();
     //test03_benchmark_03();
+    //test03_benchmark_04();
+    //test03_benchmark_05();
 }
 
 // ===============================================================================

@@ -1,5 +1,5 @@
 // ===============================================================================
-// PhoneBook.h // Using std::vector
+// PhoneBookVector.h // Using std::vector
 // ===============================================================================
 
 #pragma once
@@ -16,6 +16,7 @@ namespace PhoneBook
     class PhoneBookVector : public IPhoneBook
     {
     private:
+        // private helper classes
         class Entry
         {
         public:
@@ -44,6 +45,7 @@ namespace PhoneBook
             }
         };
 
+        // member data
         std::vector<Entry> m_vec;
 
     public:
@@ -65,7 +67,7 @@ namespace PhoneBook
     private:
         // private helper methods
         static void printEntry(const Entry&);
-        static std::string transform(const Entry&);
+        static std::string transformToName(const Entry&);
     };
 
     //std::ostream& operator<< (std::ostream& os, const PhoneBook& book);

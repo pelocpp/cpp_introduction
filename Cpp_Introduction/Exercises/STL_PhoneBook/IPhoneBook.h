@@ -22,7 +22,6 @@ namespace PhoneBook
         virtual std::forward_list<std::string> getNames() = 0;
         virtual void sort() = 0;
         virtual void print() = 0;
-
     };
 }
 

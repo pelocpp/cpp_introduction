@@ -93,7 +93,7 @@ Folgende Aspekte werden betrachtet:
 
 ---
 
-#### [Zeichenketten / Klasse `std::string`](./Exercises_Strings.md)
+#### [Zeichenketten &ndash; Klasse `std::string`](./Exercises_Strings.md)
 
 Folgende Aspekte werden betrachtet:
   * Umgang mit der Klasse `std::string`
@@ -104,7 +104,7 @@ Folgende Aspekte werden betrachtet:
 
 ---
 
-#### [Dynamische Daten / Klasse `DynamicArray`](./Exercises_DynamicArray.md)
+#### [Dynamische Daten &ndash; Klasse `DynamicArray`](./Exercises_DynamicArray.md)
 
 Folgende Aspekte werden betrachtet:
   * Umgang mit den Operatoren `new` und `delete`
@@ -113,7 +113,7 @@ Folgende Aspekte werden betrachtet:
 
 ---
 
-#### [Dynamische Daten / Klasse `String`](./Exercises_String.md)
+#### [Dynamische Daten &ndash; Realisierung einer Klasse `String`](./Exercises_String.md)
 
 Folgende Aspekte werden betrachtet:
   * Prinzipielle Realisierung einer einfachen Klasse *mit* dynamischen Daten im Instanzvariablenbereich
@@ -174,7 +174,7 @@ Folgende Aspekte werden betrachtet:
   * Realisierung einer Klasse mit dynamischen Daten im Instanzvariablenbereich (Variante 1)
   * Realisierung einer Klasse mit einem STL-Container (`std::vector`) im Instanzvariablenbereich (Variante 2)
   * Korrekte Verwaltung dynamischer Daten einer Klasse ("*Big-Three*")
-  * Verbesserung des Laufverzeitverhaltens: Implementierung der Move-Semantik ("*Big-Five*" / Variante 3 und 4)
+  * Verbesserung des Laufverzeitverhaltens: Implementierung der Move-Semantik ("*Big-Five*" &ndash; Variante 3 und 4)
   * Betrachtung des *Swap-Idioms* als eine Möglichkeit zur Umsetzung der Move-Semantik
 
 

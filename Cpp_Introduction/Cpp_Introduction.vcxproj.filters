@@ -127,6 +127,9 @@
     <Filter Include="Excercises\STL_PhoneBook\Source Files">
       <UniqueIdentifier>{c081545f-053f-4720-a68d-819056865feb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Excercises\STL_Lotto">
+      <UniqueIdentifier>{cb26c968-183a-47fa-b1d2-728aaa7731ad}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -295,6 +298,9 @@
     <None Include="Exercises\STL_Phonebook\Resources\cpp_hash_table.svg">
       <Filter>Excercises\STL_PhoneBook\Resources</Filter>
     </None>
+    <None Include="Exercises\Exercises_STL_Lotto.md">
+      <Filter>Excercises</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -453,6 +459,12 @@
     <ClCompile Include="Exercises\STL_Phonebook\PhoneBook_Main.cpp">
       <Filter>Excercises\STL_PhoneBook</Filter>
     </ClCompile>
+    <ClCompile Include="Exercises\STL_Lotto\Lotto.cpp">
+      <Filter>Excercises\STL_Lotto</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\STL_Lotto\Lotto_Main.cpp">
+      <Filter>Excercises\STL_Lotto</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constructors\Time.h">
@@ -505,6 +517,9 @@
     </ClInclude>
     <ClInclude Include="Exercises\STL_Phonebook\PhoneBookMap.h">
       <Filter>Excercises\STL_PhoneBook\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\STL_Lotto\Lotto.h">
+      <Filter>Excercises\STL_Lotto</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

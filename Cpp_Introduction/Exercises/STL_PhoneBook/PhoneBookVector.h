@@ -24,10 +24,15 @@ namespace PhoneBook
             std::string last;
             size_t number;
 
+            Entry() : number(0) {}
+
             Entry(const std::string& first, const std::string& last, size_t number)
                 : first(first), last(last), number(number)
             {}
         };
+
+        // needed for sorting entries
+        friend bool operator< (const Entry&, const Entry&);
 
         class MatchNames
         {
@@ -39,9 +44,8 @@ namespace PhoneBook
                 : first(first), last(last)
             {}
 
-            bool operator() (const Entry& entry) const {
-
-                return entry.first == first && entry.last == last;
+            bool operator() (const Entry& other) const {
+                return other.first == first && other.last == last;
             }
         };
 
@@ -58,21 +62,15 @@ namespace PhoneBook
         bool contains(const std::string& first, const std::string& last) override;
         std::forward_list<std::string> getNames() override;
         void sort() override;
+        std::string toString() override;
         void print() override;
-
-       // friend std::ostream& operator << (std::ostream& os, const PhoneBook& book);
-
-        friend bool operator< (const Entry&, const Entry&);
 
     private:
         // private helper methods
         static void printEntry(const Entry&);
         static std::string transformToName(const Entry&);
+        static std::string append(const std::string&, const Entry&);
     };
-
-    //std::ostream& operator<< (std::ostream& os, const PhoneBook& book);
-
-
 }
 
 // ===============================================================================

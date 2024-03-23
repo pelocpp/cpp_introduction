@@ -5,7 +5,10 @@
 #include "PhoneBookVector.h"
 
 #include <iostream>
+#include <iomanip>
+#include <sstream> 
 #include <algorithm> 
+#include <numeric> 
 
 namespace PhoneBook
 {
@@ -64,19 +67,11 @@ namespace PhoneBook
         );
 
         if (pos == m_vec.end()) {
-
-       //     std::cout << first << " " << last << " not found!" << std::endl;
-
             return false;
         }
         else {
-
             const Entry& result = *pos;
-
             number = result.number;
-
-   //         std::cout << first << " " << last << " has number " << number << std::endl;
-
             return true;
         }
     }
@@ -110,17 +105,13 @@ namespace PhoneBook
         );
 
         if (pos == m_vec.end()) {
-
-         //   std::cout << first << " " << last << " not found!" << std::endl;
             return false;
         }
         else {
-
             m_vec.erase(pos);
             return true;
         }
     }
-
 
     // ---------------------------------------------------------------------------
 
@@ -145,22 +136,6 @@ namespace PhoneBook
 
     // ---------------------------------------------------------------------------
 
-    void PhoneBookVector::printEntry(const Entry& entry)
-    {
-        std::cout << entry.first << " " << entry.last << ": " << entry.number << std::endl;
-    }
-
-    void PhoneBookVector::print()
-    {
-        std::for_each(
-            m_vec.begin(),
-            m_vec.end(),
-            printEntry
-        );
-    }
-
-    // ---------------------------------------------------------------------------
-
     // sorting according to last name
     bool operator< (const PhoneBookVector::Entry& entry1, const PhoneBookVector::Entry& entry2)
     {
@@ -172,6 +147,51 @@ namespace PhoneBook
         std::sort(
             m_vec.begin(),
             m_vec.end()
+        );
+    }
+
+    // ---------------------------------------------------------------------------
+
+    std::string PhoneBookVector::append(const std::string& first, const Entry& next)
+    {
+        static int counter = 0;
+        counter++;
+
+        std::string name = next.first + " " + next.last;
+
+        std::ostringstream ss;
+        ss << std::setfill('0') << std::setw(2) << counter
+           << ": " << std::setfill(' ') << std::setw(16) << std::left << name << " Phone: "
+           << next.number << std::endl;
+
+        return first + ss.str();
+    }
+
+    std::string PhoneBookVector::toString() {
+
+        std::string s = std::accumulate(
+            m_vec.begin(),
+            m_vec.end(),
+            std::string(),
+            append
+        );
+
+        return s;
+    };
+
+    // ---------------------------------------------------------------------------
+
+    void PhoneBookVector::printEntry(const Entry& entry)
+    {
+        std::cout << entry.first << " " << entry.last << ": " << entry.number << std::endl;
+    }
+
+    void PhoneBookVector::print()
+    {
+        std::for_each(
+            m_vec.begin(),
+            m_vec.end(),
+            printEntry
         );
     }
 }

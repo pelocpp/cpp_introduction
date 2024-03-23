@@ -1,5 +1,5 @@
 // ===============================================================================
-// PhoneBook_Main.h
+// PhoneBook_Main.cpp
 // ===============================================================================
 
 #include <iostream>
@@ -26,6 +26,10 @@ static void test01_phonebook()
     if (!succeeded) {
         std::cout << "Franz Schneider already in Phonebook!" << std::endl;
     }
+
+    // testing toString
+    std::string s = book.toString();
+    std::cout << s << std::endl;
 
     // testing sort
     book.sort();
@@ -84,8 +88,12 @@ static void test02_phonebook()
         std::cout << "Franz Schneider already in Phonebook!" << std::endl;
     }
 
+    // testing toString
+    std::string s = book.toString();
+    std::cout << s << std::endl;
+
     // testing sort
-    // book.sort();  // unordered map doesn't support sorting
+    // book.sort();  // std::unordered map doesn't support sorting
     book.print();
 
     // testing update

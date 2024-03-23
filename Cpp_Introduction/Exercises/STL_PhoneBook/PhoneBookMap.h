@@ -15,8 +15,6 @@ namespace PhoneBook
 {
     class PhoneBookMap : public IPhoneBook
     {
-        //friend std::ostream& operator << (std::ostream& os, const PhoneBookMap& pb);
-
     private:
         std::unordered_map<std::string, size_t> m_map;
 
@@ -30,6 +28,7 @@ namespace PhoneBook
         bool contains(const std::string& first, const std::string& last) override;
         std::forward_list<std::string> getNames() override;
         void sort() override;
+        std::string toString() override;
         void print() override;
 
     private:
@@ -37,8 +36,9 @@ namespace PhoneBook
         static std::pair<std::string, std::string> getNamesFromKey(const std::string&);
         static std::string getKeyFromNames(const std::string&, const std::string&);
 
-        static void printEntry(const std::pair<std::string, size_t>& entry);
-        static std::string transformToName(const std::pair<std::string, size_t>& entry);
+        static void printEntry(const std::pair<std::string, size_t>&);
+        static std::string transformToName(const std::pair<std::string, size_t>&);
+        static std::string append(const std::string&, const std::pair<std::string, size_t>&);
     };
 }
 

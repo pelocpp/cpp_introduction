@@ -37,29 +37,31 @@ Legen Sie Ihrer Realisierung folgende Schnittstelle zu Grunde:
 01: class IPhoneBook
 02: {
 03: public:
-04:     virtual bool insert(const std::string& first, const std::string& last, long number) = 0;
-05:     virtual bool update(const std::string& first, const std::string& last, long number) = 0;
-06:     virtual bool search(const std::string& first, const std::string& last, long& number) = 0;
-07:     virtual bool contains(const std::string& first, const std::string& last) = 0;
+04:     virtual size_t size() = 0;
+05:     virtual bool insert(const std::string& first, const std::string& last, size_t number) = 0;
+06:     virtual bool update(const std::string& first, const std::string& last, size_t number) = 0;
+07:     virtual bool search(const std::string& first, const std::string& last, size_t& number) = 0;
 08:     virtual bool remove(const std::string& first, const std::string& last) = 0;
-09:     virtual std::forward_list<std::string> getNames() = 0;
-10:     virtual void sort() = 0;
-11:     virtual void print() = 0;
-12: };
+09:     virtual bool contains(const std::string& first, const std::string& last) = 0;
+10:     virtual std::forward_list<std::string> getNames() = 0;
+11:     virtual void sort() = 0;
+12:     virtual std::string toString() = 0;
+13:     virtual void print() = 0;
+14: };
 ```
 
-
 ---
-
 
 ## Quellcode der Lösungen:
 
 [*IPhoneBook.h*](./STL_PhoneBook/IPhoneBook.h)<br />
-[*PhoneBook.h*](./STL_PhoneBook/PhoneBook.h)<br /><br />
+[*PhoneBookVector.h*](./STL_PhoneBook/PhoneBookVector.h)<br /><br />
+[*PhoneBookMap.h*](./STL_PhoneBook/PhoneBookMap.h)<br /><br />
 
-
-
-[*String_Main.cpp*](./STL_PhoneBook/String_Main.cpp)<br />
+[*PhoneBookVector.cpp*](./STL_PhoneBook/PhoneBookVector.cpp)<br /><br />
+[*PhoneBookMap.cpp*](./STL_PhoneBook/PhoneBookMap.cpp)<br /><br />
+[*PhoneBookMap.cpp*](./STL_PhoneBook/PhoneBookMap.cpp)<br /><br />
+[*PhoneBook_Main.cpp*](./STL_PhoneBook/PhoneBook_Main.cpp)<br />
 
 ---
 

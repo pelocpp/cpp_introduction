@@ -5,7 +5,10 @@
 #include "PhoneBookMap.h"
 
 #include <iostream>
+#include <iomanip>
+#include <sstream> 
 #include <algorithm>
+#include <numeric> 
 
 namespace PhoneBook
 {
@@ -93,9 +96,9 @@ namespace PhoneBook
     {
         std::string key = entry.first;
 
-        std::pair<std::string, std::string> names = getNamesFromKey(key);
+        std::pair<std::string, std::string> fullName = getNamesFromKey(key);
 
-        std::string name(names.first + " " + names.second);
+        std::string name(fullName.first + " " + fullName.second);
 
         return name;
     }
@@ -116,12 +119,50 @@ namespace PhoneBook
 
     // ---------------------------------------------------------------------------
 
+    void PhoneBookMap::sort()
+    {
+        throw std::exception("Sorting not supported");
+    }
+
+    // ---------------------------------------------------------------------------
+
+    std::string PhoneBookMap::append(const std::string& first, const std::pair<std::string, size_t>& next)
+    {
+        static int counter = 0;
+        counter++;
+
+        std::string key = next.first;
+        std::pair<std::string, std::string> fullName = getNamesFromKey(key);
+        std::string name = fullName.first + " " + fullName.second;
+
+        std::ostringstream ss;
+        ss << std::setfill('0') << std::setw(2) << counter
+            << ": " << std::setfill(' ') << std::setw(16) << std::left << name << " Phone: "
+            << next.second << std::endl;
+
+        return first + ss.str();
+    }
+
+    std::string PhoneBookMap::toString() {
+
+        std::string s = std::accumulate(
+            m_map.begin(),
+            m_map.end(),
+            std::string(),
+            append
+        );
+
+        return s;
+    };
+
+    // ---------------------------------------------------------------------------
+
     void PhoneBookMap::printEntry(const std::pair<std::string, size_t>& entry)
     {
         std::string key = entry.first;
-        std::pair<std::string, std::string> name = getNamesFromKey(key);
+        std::pair<std::string, std::string> fullName = getNamesFromKey(key);
         size_t number = entry.second;
-        std::cout << name.first << " " << name.second << ": " << number << std::endl;
+        std::cout << fullName.first << " " << fullName.second << ": " << number << std::endl;
     }
 
     void PhoneBookMap::print()
@@ -132,46 +173,6 @@ namespace PhoneBook
             printEntry
         );
     }
-
-
-    // ---------------------------------------------------------------------------
-
-    void PhoneBookMap::sort()
-    {
-        throw std::exception("Sorting not supported");
-    }
-
-    // ---------------------------------------------------------------------------
-
-    // 1. Realisierung
-    std::ostream& operator << (std::ostream& os, const PhoneBookMap& pb)
-    {
-        //// Range-Based Loop:  Mit Index ergänzt
-        //int i = 0;
-        //for (const std::pair<std::string, long>& entry : pb.m_map)
-        //{
-        //    std::string key = entry.first;
-        //    size_t number = entry.second;
-
-        //    // Hans_Mueller  ===> "Hans",  "Mueller" 
-        //    // find und subtring
-
-        //    size_t pos = key.find("_");
-
-        //    // substr : sub string == Teil Zeichenkette
-        //    std::string first = key.substr(0, pos);
-        //    std::string last = key.substr(pos + 1, key.size() - (pos + 1));
-
-        //    os << "Eintrag " << i << ": "
-        //        << first << " " << last
-        //        << ": " << number << '\n';
-
-        //    ++i;
-        //}
-
-        return os;
-    }
-
 
     // ---------------------------------------------------------------------------
 

@@ -151,6 +151,16 @@ Folgende Aspekte werden betrachtet:
 
 ---
 
+#### [Aufgabe zur STL: Klasse `Lottery` &ndash; Iteratoren-Konzept](./Exercises_STL_Lotto.md)
+
+Folgende Aspekte werden betrachtet:
+  * Entwicklung einer Anwendung &ndash; Klasse `Lottery` &ndash; mit der STL (*Standard Template Library*)
+  * Einsatz eines sequentiellen STL-Containers (hier: Klasse `std::vector`)
+  * Realisierung des STL Iteratoren-Konzepts für Klasse  `Lottery`
+  * Anwendung elementarer STL Algorithmen (`std::find_if` und `std::for_each`)
+
+---
+
 #### [STL - Klasse `Phonebook`](./Exercises_STL_PhoneBook.md)
 
 Folgende Aspekte werden betrachtet:
@@ -161,7 +171,6 @@ Folgende Aspekte werden betrachtet:
   * Einsatz von aufrufbaren Objekten (*Callable Objects*)
   * Klasse `std::ostringstream`
   * Definition einer Schnittstelle (`IPhoneBook`)
-
 
 
 <!--

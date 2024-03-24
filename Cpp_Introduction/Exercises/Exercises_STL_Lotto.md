@@ -1,4 +1,4 @@
-# Aufgabe zu dynamischen Daten: Klasse `DynamicArray`
+# Aufgabe zur STL: Klasse `Lottery` &ndash; Iteratoren-Konzept
 
 [Zurück](./Exercises.md)
 
@@ -7,98 +7,64 @@
 ## Übersicht
 
 Folgende C++&ndash;Sprachmittel sollen zum Einsatz kommen:
-  * Umgang mit den Operatoren `new` und `delete`
-  * Realisierung einer Klasse mit dynamischen Daten
-  * Handhabung der Regel *Rule-of-Three*
+  * Entwicklung einer Anwendung &ndash; Klasse `Lottery` &ndash; mit der STL (*Standard Template Library*)
+  * Einsatz eines sequentiellen STL-Containers (hier: Klasse `std::vector`)
+  * Realisierung des STL Iteratoren-Konzepts für Klasse  `Lottery`
+  * Anwendung elementarer STL Algorithmen (`std::find_if` und `std::for_each`)
+
 
 ## Beschreibung
 
-Der Datentyp *Array* steht in C++ für Felder fester Länge.
-Es gibt keinerlei Möglichkeit, nach dem Erzeugen eines Felds seine Länge zu ändern.
+In dieser Aufgabe simulieren wir eine Ziehung der Lottozahlen.
+
+Schreiben Sie eine Klasse `Lottery`, die 
+
+Zur Ablage der bereits gezogenen Lottozahlen setzt die Klasse `Lottery` einen STL-Container `std::vector` ein.
+
+Zur Strukturierung der Klasse entwickeln Sie die folgende, in *Tabelle* 1 beschriebenen
+öffentlichen und privaten Methoden.
+
+
+| Methode        | Schnittstelle und Beschreibung |
+|:-------------- |:-----------------------------------------|
+| `drawnNumbers` | `size_t drawnNumbers() const;`<br/>Liefert die Anzahl der bereits gezogenen Kugeln zurück. |
+| `nextRandomNumber` | `int nextRandomNumber();`<br/> Ermittelt eine Zufallszahl zwischen 1 und 49. In dieser Methode werden Details zur Generierung einer Zufallszahl verborgen. Sollte eine Zahl mehrfach erzeugt werden, spielt das in dieser Methode keine Rolle. |
+| `drawNextNumber` | `int drawNextNumber();`<br/>Ziehung der nächsten Kugel. Mit Hilfe der Instanzvariablen der umgebenden Klasse `Lottery` achtet diese Methode darauf, dass keine Kugel doppelt gezogen wird. |
+| `numberAlreadyDrawn` | `bool numberAlreadyDrawn(int number);`<br/>Hilfsmethode, die zu einer zufällig erzeugten Zahl `number` bestimmt, ob diese Zahl (Kugel) schon einmal gezogen wurde. |
+| `print` | `void setNextNumber(int number);`<br/>Hilfsmethode, die Kugel `number` in den Instanzvariablen der umgebenden `Lottery`-Klasse als gezogene Kugel einträgt. |
+| `play` | `void play();`<br/>Simuliert eine Ziehung der Lottozahlen. Die zuvor beschriebenen Methoden sind geeignet aufzurufen. |
+| `print` | `void print();`<br/>Gibt das Ergebnis einer Ziehung der Lottozahlen in der Konsole aus. |
+
+*Tabelle* 1: Beschreibung der öffentlichen Schnittstelle einer Telefonbuchrealisierung.
+
+
+## Iteratoren-Konzept
+
+Man kann &ndash; mit einer gewissen Phantasie &ndash; eine Instanz der Klasse `Lottery` als C++-Container auffassen.
+Umabhängig davon, wieviele Kugeln in einer Ziehung der Lottozahlen bereits gezogen wurden,
+kann man diese &bdquo;iterieren&rdquo;.
+Geigneteterweise verwendet man eine Iteration, um die komplette Ziehung der Zahlen
+mit einer Iteration zu durchlaufen:
+
 
 ```cpp
-int numbers[10];
+01: Lottery lottery;
+02: for (int number : lottery) {
+03:     std::cout << "> " << number << std::endl;
+04: }
 ```
 
-Der Wert 10 muss zur Übersetzungszeit bekannt sein.
+In diesem Beispiel kommt eine *Range-based* `for`-Wiederholungsschleife zum Einsatz.
+Alternativ könnte man auch den STL-Algorithmus `std::for_each` verwenden.
 
-An dieser Stelle kommt die dynamische Speicherverwaltung ins Spiel:
-Mit Hilfe der beiden Operatoren `new` und `delete` kann man eine Klasse `DynamicArray` realisieren,
-die im Prinzip dieselbe Funktionalität wie C++-Felder besitzt,
-nur mit dem Unterschied, dass die Längenangabe sowohl zum Erzeugungszeitpunkt
-als auch während der Lebenszeit eines `DynamicArray`-Objekts änderbar ist.
-
-Diese Flexibilität wird erreicht, indem die Daten des Felds in einem Speicherbereich auf der Halde (*Heap*) abgelegt werden.
-Bei Bedarf, zum Beispiel, wenn der Datenbereich zu klein geworden ist, kann man auf der Halde ein größeres Stück Speicher reservieren.
-
-Implementieren Sie eine Klasse `DynamicArray`, die diese Eigenschaft besitzt.
-Ein Objekt dieser Klasse sollte wie in *Abbildung* 1 gezeigt aussehen:
-
-<img src="DynamicArray/Resources/cpp_dynamic_array_01.svg" width="550">
-
-*Abbildung* 1. Instanzdatenbereich eines `DynamicArray`-Objekts mit dynamisch allokiertem Datenpuffer.
-
-Wir erkennen in *Abbildung* 1 zwei Instanzvariablen in der Klasse `DynamicArray`: `m_data` und `m_length`.
-`m_data` enthält die Adresse eines Stück Speichers, das sich auf der Halde befindet und mit dem `new`-Operator angelegt wurde.
-Die Länge dieses Speicherbereichs wird in der zweiten Instanzvariablen `m_length` festgehalten.
-
-Die Problematik, wenn der dynamisch allokierte Datenpuffer zu klein wird, haben wir bereits angesprochen.
-*Abbildung* 2 soll veranschaulichen, wie wir mit einem größeren Datenpuffer größere Anforderungen erfüllen können.
-Neben einem größeren Stück Speicher, das wieder mit dem `new`-Operator angelegt wird, ist zu beachten, dass der
-vorhandene Inhalt des alten Speicherbereichs in den neuen umzukopieren ist.
-
-<img src="DynamicArray/Resources/cpp_dynamic_array_02.svg" width="550">
-
-*Abbildung* 2. Vergrößerung des Instanzdatenbereich eines `DynamicArray`-Objekts.
-
-
-In *Abbildung* 3 und *Abbildung* 4 sprechen wir ein letztes Problem in der Realisierung der `DynamicArray`-Klasse an:
-Die Wertzuweisung zweier `DynamicArray`-Objekte. In einem ersten Ansatz könnte man geneigt sein zu denken,
-dass diese einfach mit dem Kopieren der beteiligten Instanzvariablen umzusetzen ist.
-*Abbildung* 3 versucht darzustellen, dass dies nicht zu einer Realisierung führt, die man als korrekt ansehen kann:
-Die beiden in *Abbildung* 3 dargestellten `DynamicArray`-Objekt haben einen gemeinsamen Datenbereich auf Grund des kopierten Zeigers.
-Dies ist nicht das, was man sich unter einer echte Kopie vorstellt.
-
-<img src="DynamicArray/Resources/cpp_dynamic_array_03.svg" width="550">
-
-*Abbildung* 3. Falscher Ansatz beim Kopieren eines `DynamicArray`-Objekts.
-
-*Abbildung* 4 veranschaulicht, wie hier korrekt vorzugehen ist: Eine Kopie eines `DynamicArray`-Objekts muss einen neuen, separaten
-Datenbereich erhalten:
-
-<img src="DynamicArray/Resources/cpp_dynamic_array_04.svg" width="550">
-
-*Abbildung* 4. Korrekter Ansatz beim Kopieren eines `DynamicArray`-Objekts.
-
-
-Eine mögliche Schnittstelle der Klasse `DynamicArray` könnte so aussehen:
-
-| Element        | Schnittstelle und Beschreibung |
-|:-------------- |-----------------------------------------|
-| Standard-Konstruktor | `DynamicArray();`<br/>Belegt die Instanzvariablen mit datentypspezifischen Null-Werten. |
-| Benutzerdefinierter Konstruktor | `DynamicArray(size_t size);`<br/>Initialisiert ein `DynamicArray`-Objekt mit einem Datenpuffer der Länge `size` an. |
-| *getter* `size()`  | `size_t size() const;`<br/>Liefert die aktuelle Länge des Datenpuffers zurück. |
-| `at`     | `int& at (size_t i);`<br/> Zugriff auf ein Element an der Stelle *i*. Bei ungültigem Index wird eine Ausnahme geworfen. |
-| Operator `[]` | `int& operator[] (size_t i);`<br/>Wie Methode `at`, nur ohne Gültigkeitsüberprüfung des Index. |
-| `fill` | `void fill(int value);`<br/>Belegt alle Elemente des Datenpuffers mit dem Wert `value`. |
-| `resize` | `void resize(size_t newSize);`<br/>Ändert die Länge des internen Datenpuffers. Die vorhandenen Daten im Puffer sollen dabei &ndash; soweit möglich &ndash; erhalten bleiben, sprich: Ist die neue Länge kürzer im Vergleich zur aktuellen Länge, spielen die Daten im oberen Teil des alten Puffers keine Rolle mehr. Ist die neue Länge größer, ist der aktuelle Puffer komplett umzukopieren und die zusätzlichen Elemente im oberen Bereich sind mit `0` vorzubelegen. |
-| `release` | `void release();`<br/>Gibt den dynamisch allokierten Speicher frei. |
-| `print` | `void print();`<br/>Gibt alle Elemente des Datenpuffers in der Konsole aus. |
-| `bool operator==` | `friend bool operator== (const DynamicArray& left, DynamicArray right);`<br/>Vergleicht zwei `DynamicArray`-Objekte auf Gleichheit. |
-| `bool operator!=` | `friend bool operator!= (const DynamicArray& left, DynamicArray right);`<br/>Vergleicht zwei `DynamicArray`-Objekte auf Ungleichheit. |
-
-*Tabelle* 1: Schnittstelle der Klasse `DynamicArray`.
-
-Beachten Sie, dass neben den in *Tabelle* 1 aufgeführten Methoden
-auch noch das Regelwerk der &ldquo;Rule of Three&rdquo; vorhanden ist.
 
 ---
 
 ## Quellcode der Lösungen:
 
-[*DynamicArray.h*](./DynamicArray/DynamicArray.h)<br />
-[*DynamicArray.cpp*](./DynamicArray/DynamicArray.cpp)<br />
-[*DynamicArray_Main.cpp*](./DynamicArray/DynamicArray_Main.cpp)<br />
+[*Lottery.h*](./STL_Lotto/Lottery.h)<br />
+[*Lottery.cpp*](./STL_Lotto/Lottery.cpp)<br />
+[*Lottery_Main_.cpp*](./STL_Lotto/Lottery_Main_.cpp)<br />
 
 ---
 

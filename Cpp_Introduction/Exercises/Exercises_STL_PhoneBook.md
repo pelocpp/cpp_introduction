@@ -50,7 +50,7 @@ Legen Sie Ihrer Realisierung folgende Schnittstelle zu Grunde:
 ```
 
 Im Großen und Ganzen kann man sagen, dass die Funktionsweise dieser Methoden
-selbsterklärend ist:
+selbsterklärend ist. Weitere Details zu den Methoden entnehmen Sie bitte *Tabelle* 1:
 
 
 | Methode        | Schnittstelle und Beschreibung |

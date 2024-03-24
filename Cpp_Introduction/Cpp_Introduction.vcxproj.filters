@@ -459,10 +459,10 @@
     <ClCompile Include="Exercises\STL_Phonebook\PhoneBook_Main.cpp">
       <Filter>Excercises\STL_PhoneBook</Filter>
     </ClCompile>
-    <ClCompile Include="Exercises\STL_Lotto\Lotto.cpp">
+    <ClCompile Include="Exercises\STL_Lotto\Lottery.cpp">
       <Filter>Excercises\STL_Lotto</Filter>
     </ClCompile>
-    <ClCompile Include="Exercises\STL_Lotto\Lotto_Main.cpp">
+    <ClCompile Include="Exercises\STL_Lotto\Lottery_Main.cpp">
       <Filter>Excercises\STL_Lotto</Filter>
     </ClCompile>
   </ItemGroup>
@@ -518,7 +518,7 @@
     <ClInclude Include="Exercises\STL_Phonebook\PhoneBookMap.h">
       <Filter>Excercises\STL_PhoneBook\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Exercises\STL_Lotto\Lotto.h">
+    <ClInclude Include="Exercises\STL_Lotto\Lottery.h">
       <Filter>Excercises\STL_Lotto</Filter>
     </ClInclude>
   </ItemGroup>

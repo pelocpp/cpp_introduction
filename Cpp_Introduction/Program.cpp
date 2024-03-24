@@ -1,5 +1,10 @@
 // =====================================================================================
-// https://github.com/pelocpp // https://peterloos.de
+// Cpp Introduction
+// Program.cpp
+// Entry Point for all Examples
+// 
+// https://github.com/pelocpp
+// https://peterloos.de
 // =====================================================================================
 
 #pragma message("Collection of introductionary C++ Code Examples - Copyright (C) 2019-2024 Peter Loos")
@@ -60,7 +65,7 @@ int main()
         //testMoreInheritance();
         //testSTL();
 
-        testExercises();
+        //testExercises();
     }
     catch (const std::exception& ex) {
         std::cout << "Exception: " << ex.what() << std::endl;

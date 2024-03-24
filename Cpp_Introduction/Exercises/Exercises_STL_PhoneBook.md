@@ -57,13 +57,13 @@ selbsterklärend ist. Weitere Details zu den Methoden entnehmen Sie bitte *Tabell
 |:-------------- |:-----------------------------------------|
 | `size` | `size_t size();`<br/>Liefert die Anzahl der Einträge im Telefonbuch zurück. |
 | `insert` | `bool insert(const std::string& first, const std::string& last, size_t number);`<br/>Fügt einen Eintrag, bestehend aus den Werten *Vorname*, *Nachname* und Telefonnummer in das Telefonbuch ein. Ist der Name (*Vorname* und *Nachname*) im Telefonbuch schon enthalten, liefert die Funktion `false` zurück, andernfalls `true`. |
-| `update` | `bool update(const std::string& first, const std::string& last, size_t number);`<br/>Ändert einen Eintrag im Telefonbuch. Zu vorgegebenem Namen (*Vorname* und *Nachname*) wird eine neue Nummer im im Telefonbuch eingetragen. Sind die Angaben des Namens falsch, liefert die Funktion `false` zurück, andernfalls `true`. |
+| `update` | `bool update(const std::string& first, const std::string& last, size_t number);`<br/>Ändert einen Eintrag im Telefonbuch. Zu vorgegebenem Namen (*Vorname* und *Nachname*) wird eine neue Nummer im Telefonbuch eingetragen. Sind die Angaben des Namens falsch, liefert die Funktion `false` zurück, andernfalls `true`. |
 | `search` | `bool search(const std::string& first, const std::string& last, size_t& number);`<br/>Sucht einen Eintrag im Telefonbuch. Zu vorgegebenem Namen (*Vorname* und *Nachname*) wird die Telefonnummer (im dritten Parameter `number`) zurückgegeben. Sind die Namensangaben falsch, liefert die Funktion `false` zurück, andernfalls `true`. |
 | `remove` | `bool remove(const std::string& first, const std::string& last);`<br/>Entfernt einen Eintrag (*Vorname* und *Nachname*) im Telefonbuch. |
 | `contains` | `bool contains(const std::string& first, const std::string& last);`<br/>Liefert die Information zurück, ob ein bestimmter Eintrag (*Vorname* und *Nachname*) im Telefonbuch vorhanden ist oder nicht. |
 | `getNames` | `std::forward_list<std::string> getNames();`<br/>Es wird ein STL-Container (`std::forward_list<std::string>`) konstruiert, der alle Namen des Telefonbuchs in einer Art Zusammenfassung darstellt. |
 | `sort` | `void sort();`<br/>Sortiert die Einträge in alphabetischer Reihenfolge in Bezug auf die Nachnamen.<br />*Hinweis*: Diese Realisierung kann nur von sequentiellen Container erbracht werden. |
-| `toString` | `std::string toString();`<br/>Kreiert eine Zeichenkette, die den gesamten Inhalt des Telefonbuchs in einer ansprechenden lesbaren Darstellung enthält. |
+| `toString` | `std::string toString();`<br/>Kreiert eine Zeichenkette (`std::string`), die den gesamten Inhalt des Telefonbuchs in einer ansprechenden lesbaren Darstellung enthält. |
 | `print` | `void print();`<br/>Gibt den Inhalt des Telefonbuchs in der Konsole aus. |
 
 *Tabelle* 1: Beschreibung der öffentlichen Schnittstelle einer Telefonbuchrealisierung.
@@ -71,6 +71,9 @@ selbsterklärend ist. Weitere Details zu den Methoden entnehmen Sie bitte *Tabell
 ---
 
 ## Quellcode der Lösungen:
+
+Im Quellcode zu den Lösungen finden Sie zwei Realisierungen vor: Eine, die als Datenspeicher 
+ein `std::vector`-Objekt verwendet sowie eine zweite Realisierung mit einem `std::unordered_map`-Objekt:
 
 [*IPhoneBook.h*](./STL_PhoneBook/IPhoneBook.h)<br />
 [*PhoneBookVector.h*](./STL_PhoneBook/PhoneBookVector.h)<br />
@@ -86,4 +89,3 @@ selbsterklärend ist. Weitere Details zu den Methoden entnehmen Sie bitte *Tabell
 [Zurück](./Exercises.md)
 
 ---
-

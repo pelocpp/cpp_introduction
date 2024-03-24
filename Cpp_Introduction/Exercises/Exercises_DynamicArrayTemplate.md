@@ -1,4 +1,4 @@
-# Klassentemplate `DynamicArrayTemplate`
+# Klassentemplate zur Klasse `DynamicArray`
 
 [Zurück](./Exercises.md)
 
@@ -33,8 +33,8 @@ array.print();
 
 ## Quellcode der Lösungen:
 
-[*DynamicArray.h*](./DynamicArrayTemplate/DynamicArrayTemplate.h)<br />
-[*DynamicArray_Main.cpp*](./DynamicArrayTemplate/DynamicArrayTemplate_Main.cpp)<br />
+[*DynamicArrayTemplate.h*](./DynamicArrayTemplate/DynamicArrayTemplate.h)<br />
+[*DynamicArrayTemplate_Main.cpp*](./DynamicArrayTemplate/DynamicArrayTemplate_Main.cpp)<br />
 
 ---
 

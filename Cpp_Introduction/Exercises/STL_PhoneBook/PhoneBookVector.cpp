@@ -12,14 +12,10 @@
 
 namespace PhoneBook
 {
-    // ---------------------------------------------------------------------------
-
     size_t PhoneBookVector::size()
     {
         return m_vec.size();
     }
-
-    // ---------------------------------------------------------------------------
 
     bool PhoneBookVector::insert(const std::string& first, const std::string& last, size_t number)
     {
@@ -32,8 +28,6 @@ namespace PhoneBook
 
         return true;
     }
-
-    // ---------------------------------------------------------------------------
 
     bool PhoneBookVector::update(const std::string& first, const std::string& last, size_t number)
     {
@@ -53,8 +47,6 @@ namespace PhoneBook
             return true;
         }
     }
-
-    // ---------------------------------------------------------------------------
 
     bool PhoneBookVector::search(const std::string& first, const std::string& last, size_t& number)
     {
@@ -76,8 +68,6 @@ namespace PhoneBook
         }
     }
 
-    // ---------------------------------------------------------------------------
-
     bool PhoneBookVector::contains(const std::string& first, const std::string& last)
     {
         MatchNames matchNames(first, last);
@@ -90,9 +80,6 @@ namespace PhoneBook
 
         return pos != m_vec.end();
     }
-
-
-    // ---------------------------------------------------------------------------
 
     bool PhoneBookVector::remove(const std::string& first, const std::string& last)
     {

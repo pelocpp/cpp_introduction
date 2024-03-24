@@ -9,7 +9,7 @@
 
 static void testLottery01()
 {
-    Lottery lottery(55);
+    Lottery lottery(123);
     lottery.play();
     lottery.print();
 }
@@ -25,7 +25,7 @@ static void testLottery02()
     std::cout << "========================" << std::endl;;
 
     // using std::for_each
-    Lottery lottery(55);
+    Lottery lottery(123);
     std::for_each(
         lottery.begin(),
         lottery.end(),
@@ -40,7 +40,7 @@ static void testLottery03()
     std::cout << "========================" << std::endl;;
 
     // using range-based for loop
-    Lottery lottery(55);
+    Lottery lottery(123);
     for (int number : lottery) {
         std::cout << "> " << number << std::endl;
     }

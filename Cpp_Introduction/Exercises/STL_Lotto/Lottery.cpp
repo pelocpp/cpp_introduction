@@ -10,20 +10,20 @@ Lottery::Lottery() : m_random_engine(123), m_dist(1, 49) {}
 Lottery::Lottery(int seed) : m_random_engine(seed), m_dist(1, 49) {}
 
 // getter
-size_t Lottery::drawnNumbers() const { return m_numbers.size(); }
+size_t Lottery::getDrawnNumbers() const { return m_numbers.size(); }
 
 // public interface
-int Lottery::nextRandomNumber()
+int Lottery::nextRandomNumber() const
 {
     int number = m_dist(m_random_engine);
     return number;
 }
 
-bool Lottery::numberAlreadyDrawn(int number)
+bool Lottery::numberAlreadyDrawn(int number) const
 {
-    std::vector<int>::iterator pos = std::find(
-        m_numbers.begin(),
-        m_numbers.end(),
+    std::vector<int>::const_iterator pos = std::find(
+        m_numbers.cbegin(),
+        m_numbers.cend(),
         number
     );
 
@@ -35,7 +35,7 @@ void Lottery::setNextNumber(int number)
     m_numbers.push_back(number);
 }
 
-int Lottery::drawNextNumber()
+int Lottery::drawNextNumber() const
 {
     int number;
     do {
@@ -55,7 +55,7 @@ void Lottery::play()
     }
 }
 
-void Lottery::verifyNumbers()
+void Lottery::verifyNumbers() const
 {
     for (int i = 0; i < m_numbers.size(); ++i) {
 

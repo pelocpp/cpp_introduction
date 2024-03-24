@@ -12,15 +12,11 @@
 
 namespace PhoneBook
 {
-    // ---------------------------------------------------------------------------
-
     size_t PhoneBookMap::size()
     {
         return m_map.size();
     }
     
-    // ---------------------------------------------------------------------------
-
     bool PhoneBookMap::insert(const std::string& first, const std::string& last, size_t number)
     {
         std::string key = getKeyFromNames(first, last);
@@ -34,8 +30,6 @@ namespace PhoneBook
 
         return insertionSucceeded;
     }
-
-    // ---------------------------------------------------------------------------
 
     bool PhoneBookMap::update(const std::string& first, const std::string& last, size_t number)
     {
@@ -51,8 +45,6 @@ namespace PhoneBook
             return true;
         }
     }
-
-    // ---------------------------------------------------------------------------
 
     bool PhoneBookMap::search(const std::string& first, const std::string& last, size_t& number)
     {
@@ -72,16 +64,12 @@ namespace PhoneBook
         }
     }
 
-    // ---------------------------------------------------------------------------
-
     bool PhoneBookMap::contains(const std::string& first, const std::string& last)
     {
         std::string key = getKeyFromNames(first, last);
         std::unordered_map<std::string, size_t>::iterator pos = m_map.find(key);
         return pos != m_map.end();
     }
-
-    // ---------------------------------------------------------------------------
 
     bool PhoneBookMap::remove(const std::string& first, const std::string& last)
     {
@@ -195,5 +183,3 @@ namespace PhoneBook
 // ===============================================================================
 // End-of-File
 // ===============================================================================
-
-

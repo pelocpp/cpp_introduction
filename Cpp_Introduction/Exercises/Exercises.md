@@ -134,7 +134,7 @@ Folgende Aspekte werden betrachtet:
    
 ---
 
-#### [Templateklasse `DynamicArrayTemplate`](./Exercises_DynamicArrayTemplate.md)
+#### [Klassentemplate zur Klasse `DynamicArray`](./Exercises_DynamicArrayTemplate.md)
 
 Folgende Aspekte werden betrachtet:
   * Templates
@@ -146,12 +146,12 @@ Folgende Aspekte werden betrachtet:
 Folgende Aspekte werden betrachtet:
   * Zwei einfache, einführende Beispiel zur STL (*Standard Template Library*)
   * Berechnung der Teuflischen Zahlenfolge und von Fibonacci Zahlen
-  * Grundlegende STL-Konzepte: STL-Container, Iteratoren, STL-Algorithmen und Funktionsobjekte
+  * Grundlegende STL-Konzepte: STL-Container, -Iteratoren, -Algorithmen und Funktionsobjekte
   * `std::for_each`, `std::generate`, `std::vector`
 
 ---
 
-#### [Aufgabe zur STL: Klasse `Lottery` &ndash; Iteratoren-Konzept](./Exercises_STL_Lotto.md)
+#### [STL - Klasse `Lottery` (inklusive Iteratoren-Konzept)](./Exercises_STL_Lotto.md)
 
 Folgende Aspekte werden betrachtet:
   * Entwicklung einer Anwendung &ndash; Klasse `Lottery` &ndash; mit der STL (*Standard Template Library*)

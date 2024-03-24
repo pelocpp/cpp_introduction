@@ -13,8 +13,8 @@ class Lottery
 private:
     std::vector<int> m_numbers;
 
-    std::default_random_engine m_random_engine;
-    std::uniform_int_distribution<int> m_dist;
+    mutable std::default_random_engine m_random_engine;
+    mutable std::uniform_int_distribution<int> m_dist;
 
     // ----------------------------------------------------------
     // iterator support
@@ -79,7 +79,7 @@ public:
     Lottery(int seed);
 
     // getter
-    size_t drawnNumbers() const;
+    size_t getDrawnNumbers() const;
 
     // public interface
     void play();
@@ -87,11 +87,11 @@ public:
 
 private:
     // private helper methods
-    int nextRandomNumber();
-    bool numberAlreadyDrawn(int number);
-    int drawNextNumber();
+    int nextRandomNumber() const;
+    bool numberAlreadyDrawn(int number) const;
+    int drawNextNumber() const;
     void setNextNumber(int number);
-    void verifyNumbers();
+    void verifyNumbers() const;
 
     // private class method
     static void printNumber(int number);

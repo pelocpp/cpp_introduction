@@ -19,19 +19,19 @@ extern void exerciseSTLPhoneBook();
 
 void testExercises()
 {
-    //exerciseRectangle();
-    //exerciseBankAccount();
-    //exerciseReferencesPointers();
-    //exerciseTime();
-    //exerciseFraction();
-    //exerciseStrings();
-    //exerciseDynamicArray();
-    //exerciseString();
-    //exerciseMoreBankAccounts();
-    //exerciseDynamicArrayTemplate();
-    //exerciseSTL();
+    exerciseRectangle();
+    exerciseBankAccount();
+    exerciseReferencesPointers();
+    exerciseTime();
+    exerciseFraction();
+    exerciseStrings();
+    exerciseDynamicArray();
+    exerciseString();
+    exerciseMoreBankAccounts();
+    exerciseDynamicArrayTemplate();
+    exerciseSTL();
     exerciseLotto();
-    //exerciseSTLPhoneBook();
+    exerciseSTLPhoneBook();
 }
 
 // ===========================================================================

@@ -328,11 +328,11 @@ void exerciseSTLPhoneBook()
 {
     test01_phonebook();
     test02_phonebook();
-    //test03_benchmark_01();
-    //test03_benchmark_02();
-    //test03_benchmark_03();
-    //test03_benchmark_04();
-    //test03_benchmark_05();
+    test03_benchmark_01();
+    test03_benchmark_02();
+    test03_benchmark_03();
+    test03_benchmark_04();
+    test03_benchmark_05();
 }
 
 // ===============================================================================

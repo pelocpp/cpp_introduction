@@ -37,7 +37,7 @@ namespace Templates {
     };
 }
 
-void testTemplates01()
+static void testTemplates01()
 {
     using namespace Templates;
 
@@ -50,7 +50,7 @@ void testTemplates01()
     std::cout << "DoubleCalculator: " << dresult << std::endl;
 }
 
-void testTemplates02()
+static void testTemplates02()
 {
     using namespace Templates;
 

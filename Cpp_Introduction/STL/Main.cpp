@@ -3,6 +3,7 @@
 // ===========================================================================
 
 #include <iostream>
+#include <iomanip>
 #include <string>
 #include <unordered_map>
 #include <map>
@@ -12,7 +13,7 @@
 
 namespace StandardTemplateLibrary
 {
-    void testSTL01()
+    static void testSTL01()
     {
         // array of arbitraty length of int-values
         std::vector<int> vec;
@@ -28,7 +29,7 @@ namespace StandardTemplateLibrary
         }
     }
 
-    void testSTL02()
+    static void testSTL02()
     {
         // array of arbitraty length of int-values
         std::vector<int> vec;
@@ -56,7 +57,7 @@ namespace StandardTemplateLibrary
         // value = *first;   // does this line work?
     }
 
-    void testSTL03()
+    static void testSTL03()
     {
         // array of arbitraty length of int-values
         std::vector<int> vec;
@@ -79,12 +80,12 @@ namespace StandardTemplateLibrary
     }
 
     // C-style function
-    void print(int value)
+    static void print(int value)
     {
         std::cout << value << std::endl;
     }
 
-    void testSTL04()
+    static void testSTL04()
     {
         // array of arbitraty length of int-values
         std::vector<int> vec;
@@ -100,7 +101,7 @@ namespace StandardTemplateLibrary
         );
     }
 
-    void testSTL05()
+    static void testSTL05()
     {
         std::vector<int> vec;
 
@@ -109,8 +110,9 @@ namespace StandardTemplateLibrary
             vec.push_back(2 * i);
 
             std::cout
-                << i << ": " << vec[i] << ", size: " << vec.size()
-                << ", capacity: " << vec.capacity() << std::endl;
+                << std::setw(3) << i << ": " << std::setw(3) << vec[i] << " | size: " 
+                << std::setw(3) << vec.size() << " | capacity: " << vec.capacity() 
+                << std::endl;
         }
 
         // vec.shrink_to_fit();
@@ -120,7 +122,35 @@ namespace StandardTemplateLibrary
         //    << ", capacity: " << vec.capacity() << std::endl;
     }
 
-    void testSTL06()
+    static void printVectorStats(std::vector<int> integers)
+    {
+        std::cout << std::setw(2) << integers.size() 
+            << " | " << integers.capacity() << std::endl;
+    }
+
+    static void testSTL06()
+    {
+        std::vector<int> vec;
+
+        // explain output of 'printVectorStats': values of 'capacity()'
+        // (Solution: printVectorStats makes a copy (!) of the provided vector, 
+        // obviously the copy c'tor uses the capacity of the passed vector
+        // as an initial value for the newly created vector)
+
+        for (int i = 0; i < 50; i++)
+        {
+            vec.push_back(2 * i);
+            printVectorStats(vec);
+        }
+
+        for (int i = 0; i < 20; i++)
+        {
+            vec.pop_back();
+            printVectorStats(vec);
+        }
+    }
+
+    static void testSTL07()
     {
         std::vector<int> vec;
 
@@ -146,7 +176,7 @@ namespace StandardTemplateLibrary
         return 2 * i + 1;
     }
 
-    void testSTL07()
+    static void testSTL08()
     {
         std::vector<int> vec;
 
@@ -225,7 +255,7 @@ namespace StandardTemplateLibrary
         }
     };
 
-    void testSTL08()
+    static void testSTL09()
     {
         InitializerForVector initializer;
 
@@ -238,7 +268,7 @@ namespace StandardTemplateLibrary
         next = initializer();
     }
 
-    void testSTL09()
+    static void testSTL10()
     {
         std::vector<int> vec;
         vec.resize(5);
@@ -268,7 +298,7 @@ namespace StandardTemplateLibrary
         );
     }
 
-    void testSTL10()
+    static void testSTL11()
     {
         std::vector<int> vec;
         vec.resize(100);
@@ -291,7 +321,7 @@ namespace StandardTemplateLibrary
 
     // =======================================================================
 
-    class PhonebookHelper
+    class MatchNames
     {
     public:
         void operator () (std::pair <std::string, int> entry) {
@@ -300,7 +330,7 @@ namespace StandardTemplateLibrary
         }
     };
 
-    void testSTL20()
+    static void testSTL20()
     {
         // hash table with STL
         std::unordered_map<std::string, int> phoneBook;
@@ -315,15 +345,15 @@ namespace StandardTemplateLibrary
         phoneBook.insert(thirdEntry);
 
         // print phonebook to console
-        PhonebookHelper helper;
+        MatchNames match;
         std::for_each(
             phoneBook.begin(),
             phoneBook.end(),
-            helper
+            match
         );
     }
 
-    void testSTL21()
+    static void testSTL21()
     {
         // hash table with STL
         std::unordered_map<std::string, int> phoneBook;
@@ -359,19 +389,20 @@ void testSTL()
 {
     using namespace StandardTemplateLibrary;
 
-    testSTL01();
-    testSTL02();
-    testSTL03();
-    testSTL04();
-    testSTL05();
+    //testSTL01();
+    //testSTL02();
+    //testSTL03();
+    //testSTL04();
+    //testSTL05();
     testSTL06();
-    testSTL07();
-    testSTL08();
-    testSTL09();
-    testSTL10();
+    //testSTL07();
+    //testSTL08();
+    //testSTL09();
+    //testSTL10();
+    //testSTL11();
 
-    testSTL20();
-    testSTL21();
+    //testSTL20();
+    //testSTL21();
 }
 
 // ===========================================================================

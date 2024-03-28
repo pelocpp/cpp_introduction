@@ -11,32 +11,46 @@ Variablen sind Bezeichner, denen ein Datentyp zugeordnet ist.
 Eine Variable 
 
 ```cpp
-int zahl = 5;
+int n = 123;
 ```
 
 wird auf Grund ihrer Deklaration vom Typ `int` im Speicher so angeordnet,
 dass sie &ndash; auf den meisten Rechern in 4 Bytes &ndash; einen ganzzahligen Wert
-aufnehmen kann. Auf die Adresse, an der diese Variable im Speicher liegt, hat die Programmierer
+aufnehmen kann.
+
+Auf die Adresse, an der diese Variable im Speicher liegt, hat die Programmierer
 so gut wie keinen Einfluss. Es sind Tools wie der *Linker* und der *Loader*,
-die hierfür die Entscheidungen treffen.
+die hierfür die Entscheidungen treffen:
 
-<img src="cpp_variable_vs_pointer.svg" width="550">
+<img src="cpp_variable.svg" width="270">
 
-*Abbildung* 1: Zwei Variablen `zahl` und `zeiger_auf_int_variable` im Speicher.
+*Abbildung* 1: Eine Variable `n` im Speicher an einer fiktiven Adresse *0x00001024*.
 
 
-*Zeiger* (*Pointer*) der Programmiersprache C sind eine Möglichkeit,
+*Zeiger* (*Pointer*) der Programmiersprache C/C++ sind eine Möglichkeit,
 um auf Objekte (Variablen) indirekt zugreifen zu können.
-&bdquo;Indirekt&rdquo; bedeutet in diesem Fall, dass auch Adressen ins Spiel kommen:
+&bdquo;Indirekt&rdquo; bedeutet in diesem Fall, dass in einem C/C++&ndash;Programm
+auch Adressen ins Spiel kommen:
 
 
-<img src="cpp_pointer_01.svg" width="300">
+```cpp
+int n = 123;
+int* ip = &n;
+```
+
+<img src="cpp_pointer_01.svg" width="320">
 
 *Abbildung* 2: Eine Variable und ein Zeiger, der auf die Variable zeigt.
 
 
-*Referenzen* bieten nahezu die gleichen Möglichkeiten wie Zeiger, aber mit einer wesentlich *einfacheren*
-Syntax:
+*Referenzen*, die es nur in der Programmiersprache C/C++ gibt, bieten nahezu die gleichen Möglichkeiten wie Zeiger,
+aber mit einer *einfacheren* Syntax:
+
+
+```cpp
+int n = 123;
+int& rn = n;
+```
 
 
 <img src="cpp_pointer_02.svg" width="600">
@@ -67,11 +81,11 @@ Die Deklaration einer Referenz besteht aus dem Typ des Zielobjekts,
 gefolgt vom Referenzoperator (`&`) und dem Namen der Referenz.
 
 Viele Programmierer stellen Referenzvariablen ein `r` voran.
-Zum Beispiel erzeugt man für eine `int`-Variable `ri` eine Referenz mit der folgenden Anweisung:
+Zum Beispiel erzeugt man für eine `int`-Variable `rn` eine Referenz mit der folgenden Anweisung:
 
 ```cpp
 int n = 123;
-int &ri = n;
+int &rn = n;
 ```
 
 Wir betrachten ein Beispiel zu Referenzen:

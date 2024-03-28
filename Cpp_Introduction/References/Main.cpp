@@ -6,16 +6,16 @@
 
 namespace References
 {
-    void scriptSnippets()
+    static void scriptSnippets()
     {
-        int var = 123;
-        int& rVar = var;
+        int n = 123;
+        int& rn = n;
 
-        std::cout << var << std::endl;
-        std::cout << rVar << std::endl;
+        std::cout << n << std::endl;
+        std::cout << rn << std::endl;
     }
 
-    void referencesUnderstanding()
+    static void referencesUnderstanding()
     {
         int anInteger;
         int& rSomeRef = anInteger;
@@ -29,7 +29,7 @@ namespace References
         std::cout << "rSomeRef:  " << rSomeRef << std::endl;
     }
 
-    void referencesAndAddressOperator()
+    static void referencesAndAddressOperator()
     {
         int anInteger;
         int& rSomeRef = anInteger;
@@ -42,7 +42,7 @@ namespace References
         std::cout << "&rSomeRef:  " << &rSomeRef << std::endl;
     }
 
-    void referencesAndReAssignment()
+    static void referencesAndReAssignment()
     {
         int anInteger;
         int& rSomeRef = anInteger;
@@ -66,7 +66,7 @@ namespace References
         std::cout << "&rSomeRef:      " << &rSomeRef << std::endl;
     }
 
-    void referencesVsPointers()
+    static void referencesVsPointers()
     {
         int n = 123;
         int m;

@@ -8,9 +8,9 @@
 
 namespace Exceptions {
 
-    void dangerousFunction() {}
+    static void dangerousFunction() {}
 
-    void scriptSnippets()
+    static void scriptSnippets()
     {
         try
         {
@@ -35,7 +35,7 @@ namespace Exceptions {
     }
 }
 
-void testExceptions01()
+static void testExceptions01()
 {
     try
     {

@@ -31,7 +31,7 @@ namespace Classes_Objects_Motivating_This
     }
 }
 
-void testClassTimeImproved()
+static void testClassTimeImproved()
 {
     using namespace Classes_Objects_Improved;
 

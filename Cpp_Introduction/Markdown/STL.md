@@ -159,6 +159,65 @@ an Hand einer Reihe von Beispielen:
 
 ---
 
+### Nochmals die Eigenschaften `size` und `capacity` der Klasse `std::vector<int>` im Vergleich
+
+[*Main.cpp*](../STL/Main.cpp)
+
+Betrachten Sie die Ausgaben des folgenden Code-Fragments:
+
+```cpp
+01: static void printVectorStats(std::vector<int> integers)
+02: {
+03:     std::cout << std::setw(2) << integers.size() 
+04:         << " | " << integers.capacity() << std::endl;
+05: }
+06: 
+07: static void testSTL06()
+08: {
+09:     std::vector<int> vec;
+10: 
+11:     for (int i = 0; i < 50; i++)
+12:     {
+13:         vec.push_back(2 * i);
+14:         printVectorStats(vec);
+15:     }
+16: }
+```
+
+*Ausgabe*:
+
+```
+ 1 | 1
+ 2 | 2
+ 3 | 3
+ 4 | 4
+ 5 | 5
+ 6 | 6
+ 7 | 7
+ 8 | 8
+ 9 | 9
+10 | 10
+11 | 11
+12 | 12
+13 | 13
+14 | 14
+15 | 15
+16 | 16
+17 | 17
+18 | 18
+19 | 19
+20 | 20
+21 | 21
+22 | 22
+...
+...
+```
+
+Können Sie den Wert von *capacity* des Vektors erklären?
+
+
+---
+
 ### Initialisieren eines Container: `for`-Wiederholungsschleife oder `std::fill`
 
 [*Main.cpp*](../STL/Main.cpp)
@@ -316,7 +375,7 @@ an Hand einer Reihe von Beispielen:
 [*Main.cpp*](../STL/Main.cpp)
 
 ```cpp
-01: class PhonebookHelper
+01: class MatchNames
 02: {
 03: public:
 04:     void operator () (std::pair <std::string, int> entry) {
@@ -340,11 +399,11 @@ an Hand einer Reihe von Beispielen:
 22:     phoneBook.insert(thirdEntry);
 23: 
 24:     // print phonebook to console
-25:     PhonebookHelper helper;
+25:     MatchNames match;
 26:     std::for_each(
 27:         phoneBook.begin(),
 28:         phoneBook.end(),
-29:         helper
+29:         match
 30:     );
 31: }
 ```
@@ -392,7 +451,11 @@ an Hand einer Reihe von Beispielen:
 
 ## Aufgaben
 
-[Aufgabe zur STL](../Exercises/Exercises_STL.md)
+[STL &ndash; Zwei einführende Aufgaben](../Exercises/Exercises_STL.md)
+
+[STL &ndash; Klasse `Lottery` (inklusive Iteratoren-Konzept)](../Exercises/Exercises_STL_Lotto.md)
+
+[STL &ndash; Klasse `Phonebook`](../Exercises/Exercises_STL_PhoneBook.md)
 
 ---
 

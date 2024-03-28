@@ -128,7 +128,7 @@ namespace MoreInheritance
     };
 }
 
-void testMoreInheritance01()
+static void testMoreInheritance01()
 {
     using namespace MoreInheritance;
 
@@ -142,7 +142,7 @@ void testMoreInheritance01()
     crRef.paint();
 }
 
-void testMoreInheritance02()
+static void testMoreInheritance02()
 {
     using namespace MoreInheritance;
 
@@ -157,7 +157,7 @@ void testMoreInheritance02()
     // crPtr->draw();
 }
 
-void testMoreInheritance03()
+static void testMoreInheritance03()
 {
     using namespace MoreInheritance;
 

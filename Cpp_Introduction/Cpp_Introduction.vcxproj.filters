@@ -301,6 +301,9 @@
     <None Include="Exercises\Exercises_STL_Lotto.md">
       <Filter>Excercises</Filter>
     </None>
+    <None Include="Markdown\cpp_variable.svg">
+      <Filter>Markdown</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -563,6 +566,9 @@
       <Filter>Excercises\String\Resources</Filter>
     </Image>
     <Image Include="Markdown\Embedded_Cpp.jpg">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\Buch_Marc_Gregoire.png">
       <Filter>Markdown</Filter>
     </Image>
   </ItemGroup>

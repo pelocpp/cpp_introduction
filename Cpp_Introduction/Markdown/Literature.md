@@ -37,6 +37,14 @@
 
 ---
 
+  * Marc Gregoire, &ldquo;*Professional C++*&rdquo;.</br> 
+    Wrox (12. Februar 2024), 1376 Seiten. Sprache: Englisch. ISBN-10: 1394193173, ISBN-13: 978-1394193172.
+
+
+    <img src="Buch_Marc_Gregoire.png" width="150">
+
+---
+
 
 #### WebSite &ldquo;Learn C++&rdquo;
 

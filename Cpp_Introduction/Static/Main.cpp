@@ -36,7 +36,7 @@ namespace Violating_Static
         int div(int x, int y) { return x + y; }
     };
 
-    void testViolatingStatic02()
+    static void testViolatingStatic02()
     {
         Calculator calc;
 
@@ -68,7 +68,7 @@ namespace Motivating_Static
         static int div(int x, int y) { return x + y; }
     };
 
-    void testMotivatingStatic02()
+    static void testMotivatingStatic02()
     {
         int sum = Calculator::add(123, 456);
     }

@@ -6,7 +6,7 @@
 
 namespace Parameter_Passing_Techniques
 {
-    void func(int a, int b)
+    static void func(int a, int b)
     {
         int sum;
 
@@ -15,7 +15,7 @@ namespace Parameter_Passing_Techniques
         std::cout << "In func: a = " << a << ", b = " << b << ", sum = " << sum << std::endl;
     }
     
-    void testFunc()
+    static void testFunc()
     {
         int x = 123;
         int y = 456;
@@ -27,19 +27,19 @@ namespace Parameter_Passing_Techniques
         func(123, 321);
     }
 
-    void scriptSnippets()
+    static void scriptSnippets()
     {
         testFunc();
     }
 
     // doesn't do, what the function name promises (why)
-    void multiplyByTwo01(int n)
+    static void multiplyByTwo01(int n)
     {
         n = 2 * n;
     }
 
     // C-like Solution
-    void multiplyByTwo02(int* ip)      // demonstrating use of address (*)
+    static void multiplyByTwo02(int* ip)      // demonstrating use of address (*)
     {
         int tmp = *ip;                 // *: Value-Of / value behind the address
 
@@ -52,12 +52,12 @@ namespace Parameter_Passing_Techniques
     }
 
     // C++-like Solution
-    void multiplyByTwo03(int& n)       // demonstrating use of reference (&)
+    static void multiplyByTwo03(int& n)       // demonstrating use of reference (&)
     {
         n = 2 * n;
     }
 
-    void testMultiplyByTwo()
+    static void testMultiplyByTwo()
     {
         int x = 10;
 

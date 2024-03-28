@@ -9,7 +9,7 @@
 
 namespace Strings
 {
-    void testChar()
+    static void testChar()
     {
         char ch;
         int n;
@@ -36,7 +36,7 @@ namespace Strings
         bool b2 = std::isdigit(noDigit);
     }
 
-    void testString()
+    static void testString()
     {
         // standard class 'std::string'
 
@@ -108,7 +108,7 @@ void testStrings()
     using namespace Strings;
 
     testChar();
-    // testString();
+    testString();
 }
 
 // ===========================================================================

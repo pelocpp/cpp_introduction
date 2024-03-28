@@ -14,7 +14,7 @@ namespace Dynamic_Memory_Management
         void print () { std::cout << "SimpleClass" << std::endl; }
     };
 
-    void dynamicMemory_Scalar()
+    static void dynamicMemory_Scalar()
     {
         // allocating a single int variable
         int* pInt = new int(123);
@@ -24,7 +24,7 @@ namespace Dynamic_Memory_Management
         delete pInt;
     }
 
-    void dynamicMemory_Array()
+    static void dynamicMemory_Array()
     {
         // allocating an array of int values
         int* pArray = new int[10];
@@ -44,7 +44,7 @@ namespace Dynamic_Memory_Management
         delete[] pArray;
     }
 
-    void dynamicMemory_Object()
+    static void dynamicMemory_Object()
     {
         // allocating a single variable
         SimpleClass* pSimpleClass = new SimpleClass;

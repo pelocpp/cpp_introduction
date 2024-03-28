@@ -38,7 +38,6 @@ extern void testExercises();
 // entry point
 int main()
 {
-
     std::cout << "[Collection of introductionary C++ Code Examples - Copyright (C) 2019-2024 Peter Loos]" << std::endl;
 
     // main entry points code examples

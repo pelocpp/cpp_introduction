@@ -7,7 +7,7 @@
 
 namespace Streams
 {
-    void scriptSnippets()
+    static void scriptSnippets()
     {
         int n;
         std::cout << "Geben Sie eine Zahl ein: ";
@@ -15,7 +15,7 @@ namespace Streams
         std::cout << "n: " << n << std::endl;
     }
 
-    void testCinCout()
+    static void testCinCout()
     {
         int myInt;
         double myDouble;
@@ -35,7 +35,7 @@ void testStreams()
 {
     using namespace Streams;
 
-    //scriptSnippets();
+    scriptSnippets();
     testCinCout();
 }
 

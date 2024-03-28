@@ -4,7 +4,7 @@
 
 #include "Time.h"
 
-void scriptSnippets()
+static void scriptSnippets()
 {
     using namespace OperatorOverloading;
 
@@ -37,7 +37,7 @@ void scriptSnippets()
     d = c = b = a;
 }
 
-void testTimeOperators()
+static void testTimeOperators()
 {
     using namespace OperatorOverloading;
 

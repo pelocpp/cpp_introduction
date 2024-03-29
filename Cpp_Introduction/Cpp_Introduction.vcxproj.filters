@@ -181,9 +181,6 @@
     <None Include="Markdown\Roadmap.md">
       <Filter>Markdown</Filter>
     </None>
-    <None Include="Markdown\Introduction.md">
-      <Filter>Markdown</Filter>
-    </None>
     <None Include="Markdown\FirstOfAll.md">
       <Filter>Markdown</Filter>
     </None>

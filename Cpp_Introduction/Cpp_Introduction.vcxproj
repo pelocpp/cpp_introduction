@@ -61,7 +61,6 @@
     <None Include="Markdown\History.md" />
     <None Include="Markdown\InstallationGuide.md" />
     <None Include="Markdown\Inheritance.md" />
-    <None Include="Markdown\Introduction.md" />
     <None Include="Markdown\Literature.md" />
     <None Include="Markdown\MoreInheritance.md" />
     <None Include="Markdown\Namespaces.md" />

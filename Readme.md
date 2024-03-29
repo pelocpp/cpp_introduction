@@ -6,8 +6,6 @@
 
 ## [Vorab](./Cpp_Introduction/Markdown/FirstOfAll.md)
 
-## [Einleitung](./Cpp_Introduction/Markdown/Introduction.md)
-
 ## [Historisches zu C++](./Cpp_Introduction/Markdown/History.md)
 
 ## [Agenda](./Cpp_Introduction/Markdown/Agenda.md)

@@ -571,5 +571,8 @@
     <Image Include="Markdown\Buch_Marc_Gregoire.png">
       <Filter>Markdown</Filter>
     </Image>
+    <Image Include="Markdown\Ken_Thompson_and_Dennis_Ritchie.jpg">
+      <Filter>Markdown</Filter>
+    </Image>
   </ItemGroup>
 </Project>

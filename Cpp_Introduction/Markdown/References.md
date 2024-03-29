@@ -18,7 +18,7 @@ wird auf Grund ihrer Deklaration vom Typ `int` im Speicher so angeordnet,
 dass sie &ndash; auf den meisten Rechern in 4 Bytes &ndash; einen ganzzahligen Wert
 aufnehmen kann.
 
-Auf die Adresse, an der diese Variable im Speicher liegt, hat die Programmierer
+Auf die Adresse, an der diese Variable im Speicher liegt, hat der Programmierer
 so gut wie keinen Einfluss. Es sind Tools wie der *Linker* und der *Loader*,
 die hierfür die Entscheidungen treffen:
 

@@ -9,33 +9,35 @@ namespace Dynamic_Memory_Management
     class SimpleClass
     {
     public:
-        SimpleClass() { std::cout << "Default constructor SimpleClass" << std::endl; }
+        SimpleClass() { std::cout << "c'tor" << std::endl; }
 
-        void print () { std::cout << "SimpleClass" << std::endl; }
+        void print () { std::cout << "print" << std::endl; }
+
+        ~SimpleClass() { std::cout << "d'tor" << std::endl; }
     };
 
     static void dynamicMemory_Scalar()
     {
         // allocating a single int variable
-        int* pInt = new int(123);
-        std::cout << *pInt << std::endl;
+        int* pi = new int(123);
+        std::cout << *pi << std::endl;
 
         // releasing memory
-        delete pInt;
+        delete pi;
     }
 
     static void dynamicMemory_Array()
     {
         // allocating an array of int values
-        int* pArray = new int[10];
+        int* pArray = new int[5];
 
         // initialize array
-        for (int i = 0; i < 10; ++i) {
+        for (int i = 0; i < 5; ++i) {
             pArray[i] = i;
         }
 
         // accessing dynamically allocated array
-        for (int i = 0; i < 10; ++i) {
+        for (int i = 0; i < 5; ++i) {
             std::cout << pArray[i] << ' ';
         }
         std::cout << std::endl;
@@ -44,14 +46,29 @@ namespace Dynamic_Memory_Management
         delete[] pArray;
     }
 
-    static void dynamicMemory_Object()
+    static void dynamicMemory_ScalarObject()
     {
         // allocating a single variable
         SimpleClass* pSimpleClass = new SimpleClass;
+
         pSimpleClass->print();
 
         // releasing memory
         delete pSimpleClass;
+    }
+
+    static void dynamicMemory_ArrayObject()
+    {
+        // allocating and initializing an array of objects
+        SimpleClass* pArray = new SimpleClass[5];
+
+        // accessing dynamically allocated objects
+        for (int i = 0; i < 5; ++i) {
+            pArray[i].print();
+        }
+
+        // releasing memory - note: array delete (!)
+        delete[] pArray;
     }
 }
 
@@ -59,9 +76,10 @@ void testDynamicMemoryManagement()
 {
     using namespace Dynamic_Memory_Management;
 
-    dynamicMemory_Scalar();
-    dynamicMemory_Array();
-    dynamicMemory_Object();
+    //dynamicMemory_Scalar();
+    //dynamicMemory_Array();
+    //dynamicMemory_ScalarObject();
+    dynamicMemory_ArrayObject();
 }
 
 // ===========================================================================

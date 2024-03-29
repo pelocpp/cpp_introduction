@@ -132,8 +132,11 @@ static void test02_phonebook()
 
 // ===============================================================================
 
-const long long MaxNames = 10000;
-const long long MaxIterations = 10000;
+//const long long MaxNames = 10000;
+//const long long MaxIterations = 10000;
+
+const long long MaxNames = 1000;
+const long long MaxIterations = 500000;
 
 static void test03_benchmark_01()
 {
@@ -170,7 +173,7 @@ static void test03_benchmark_02()
         std::string vorname = first + std::to_string(i);
         std::string nachname = last + std::to_string(i);
 
-        book.insert(vorname, nachname, (size_t)10000 + i);
+        book.insert(vorname, nachname, (size_t) 10000 + i);
     }
 
     std::cout << "Done." << std::endl;
@@ -237,8 +240,6 @@ static void test03_benchmark_04()
         book.insert(firstName, lastName, (size_t)10000 + i);
     }
 
-    std::cout << "Initialization done." << std::endl;
-
     const auto endTime(std::chrono::high_resolution_clock::now());
 
     std::cout
@@ -246,11 +247,18 @@ static void test03_benchmark_04()
         << " msecs."
         << std::endl;
 
+    std::cout << "Initialization done." << std::endl;
+
     // test searching a number
     const auto startTime2(std::chrono::high_resolution_clock::now());
 
-    first = "First_999";
-    last = "Last_999";
+    size_t offset = MaxNames / 2;
+
+    //first = "First_999";
+    //last = "Last_999";
+
+    first = first + std::to_string(offset);
+    last = last + std::to_string(offset);
 
     for (int i = 0; i < MaxIterations; ++i) {
 
@@ -267,6 +275,8 @@ static void test03_benchmark_04()
         << std::chrono::duration_cast<std::chrono::duration<double, std::milli>>(endTime2 - startTime2).count()
         << " msecs."
         << std::endl;
+
+    std::cout << "Searching done." << std::endl;
 }
 
 static void test03_benchmark_05()
@@ -291,8 +301,6 @@ static void test03_benchmark_05()
         book.insert(firstName, lastName, (size_t)10000 + i);
     }
 
-    std::cout << "Initialization done." << std::endl;
-
     const auto endTime(std::chrono::high_resolution_clock::now());
 
     std::cout
@@ -300,12 +308,18 @@ static void test03_benchmark_05()
         << " msecs."
         << std::endl;
 
+    std::cout << "Initialization done." << std::endl;
 
     // test searching a number
     const auto startTime2(std::chrono::high_resolution_clock::now());
 
-    first = "First_999";
-    last = "Last_999";
+    size_t offset = MaxNames / 2;
+
+    //first = "First_999";
+    //last = "Last_999";
+
+    first = first + std::to_string(offset);
+    last = last + std::to_string(offset);
 
     for (int i = 0; i < MaxIterations; ++i) {
 
@@ -322,6 +336,8 @@ static void test03_benchmark_05()
         << std::chrono::duration_cast<std::chrono::duration<double, std::milli>>(endTime2 - startTime2).count()
         << " msecs."
         << std::endl;
+
+    std::cout << "Searching done." << std::endl;
 }
 
 void exerciseSTLPhoneBook()

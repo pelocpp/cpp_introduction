@@ -129,11 +129,11 @@ nicht mehr anderweitig verwenden.
 
 ```cpp
 01: // allocating a single int variable
-02: int* pInt = new int(123);
-03: std::cout << *pInt << std::endl;
+02: int* pi = new int(123);
+03: std::cout << *pi << std::endl;
 04: 
 05: // releasing memory
-06: delete pInt;
+06: delete pi;
 ```
 
 *Ausgabe*:
@@ -147,15 +147,15 @@ nicht mehr anderweitig verwenden.
 
 ```cpp
 01: // allocating an array of int values
-02: int* pArray = new int[10];
+02: int* pArray = new int[5];
 03: 
 04: // initialize array
-05: for (int i = 0; i < 10; ++i) {
+05: for (int i = 0; i < 5; ++i) {
 06:     pArray[i] = i;
 07: }
 08: 
 09: // accessing dynamically allocated array
-10: for (int i = 0; i < 10; ++i) {
+10: for (int i = 0; i < 5; ++i) {
 11:     std::cout << pArray[i] << ' ';
 12: }
 13: std::cout << std::endl;
@@ -168,7 +168,7 @@ nicht mehr anderweitig verwenden.
 
 
 ```
-0 1 2 3 4 5 6 7 8 9
+0 1 2 3 4
 ```
 
 *Achtung*:
@@ -181,9 +181,8 @@ in zwei Schreibweisen:
   * `new []` &ndash; Reserviert Speicher für ein Feld von Variablen (Objekten).
 
 
-  * `delete ptr` &ndash; Gibt Speicher einer einzelnen Variablen frei.
-  * `delete [] ptr` &ndash; Gibt Speicher eines Felds von Variablen (Objekten) frei.
-
+  * `delete` &ndash; Gibt Speicher einer einzelnen Variablen frei.
+  * `delete []` &ndash; Gibt Speicher eines Felds von Variablen (Objekten) frei.
 
 
 ### *Beispiel* 3: Reservieren und Freigeben eines Speicherbereichs für ein Objekt:
@@ -192,30 +191,67 @@ in zwei Schreibweisen:
 01: class SimpleClass
 02: {
 03: public:
-04:     SimpleClass() { std::cout << "Default constructor SimpleClass" << std::endl; }
+04:     SimpleClass() { std::cout << "c'tor" << std::endl; }
 05: 
-06:     void print () { std::cout << "SimpleClass" << std::endl; }
-07: };
-08: 
-09: void dynamicMemory_Object()
-10: {
-11:     // allocating a single variable
-12:     SimpleClass* pSimpleClass = new SimpleClass;
-13:     pSimpleClass->print();
-14: 
-15:     // releasing memory
-16:     delete pSimpleClass;
-17: }
-18: 
+06:     void print () { std::cout << "print" << std::endl; }
+07: 
+08:     ~SimpleClass() { std::cout << "d'tor" << std::endl; }
+09: };
+10: 
+11: void test()
+12: {
+13:     // allocating a single variable
+14:     SimpleClass* pSimpleClass = new SimpleClass;
+15: 
+16:     pSimpleClass->print();
+17: 
+18:     // releasing memory
+19:     delete pSimpleClass;
+20: }
 ```
-
 
 *Ausgabe*:
 
+```
+c'tor
+print
+d'tor
+```
+
+
+### *Beispiel* 4: Reservieren und Freigeben eines Speicherbereichs für ein Array von Objekten:
+
+```cpp
+01: // allocating and initializing an array of objects
+02: SimpleClass* pArray = new SimpleClass[5];
+03: 
+04: // accessing dynamically allocated objects
+05: for (int i = 0; i < 5; ++i) {
+06:     pArray[i].print();
+07: }
+08: 
+09: // releasing memory - note: array delete (!)
+10: delete[] pArray;
+```
+
+*Ausgabe*:
 
 ```
-Default constructor SimpleClass
-SimpleClass
+c'tor
+c'tor
+c'tor
+c'tor
+c'tor
+print
+print
+print
+print
+print
+d'tor
+d'tor
+d'tor
+d'tor
+d'tor
 ```
 
 ---

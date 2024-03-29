@@ -57,27 +57,49 @@ static void test05_intersection()
 {
     using namespace Rectangles;
 
-    Rectangle rect1(4, 8, 9, 5);
-    Rectangle rect2(2, 10, 8, 6);
-    Rectangle rect = rect1.intersection(rect2);
+    Rectangle center(30, 30, 10, 10);
 
-    rect1.print();
-    rect2.print();
-    rect.print();
+    Rectangle upperLeft(10, 10, 10, 10);
+    Rectangle upperRight(50, 10, 10, 10);
+    Rectangle lowerLeft(10, 50, 10, 10);
+    Rectangle lowerRight(50, 50, 10, 10);
 
-    Rectangle rect3(7, 9, 9, 4);
-    rect = rect1.intersection(rect3);
-    rect.print();
+    Rectangle intersection;
 
-    rect = rect3.intersection(rect3);
-    rect.print();
-
-    Rectangle rect4(6, 7, 10, 5);
-    rect = rect1.intersection(rect4);
-    rect.print();
+    intersection = center.intersection(upperLeft);
+    intersection.print();
+    intersection = center.intersection(upperRight);
+    intersection.print();
+    intersection = center.intersection(lowerLeft);
+    intersection.print();
+    intersection = center.intersection(lowerRight);
+    intersection.print();
 }
 
-static void test06_equals()
+static void test06_intersection()
+{
+    using namespace Rectangles;
+
+    Rectangle center(20, 20, 30, 30);
+
+    Rectangle upperLeft(10, 10, 20, 20);
+    Rectangle upperRight(40, 10, 20, 20);
+    Rectangle lowerLeft(10, 40, 20, 20);
+    Rectangle lowerRight(40, 40, 20, 20);
+
+    Rectangle intersection;
+
+    intersection = center.intersection(upperLeft);
+    intersection.print();
+    intersection = center.intersection(upperRight);
+    intersection.print();
+    intersection = center.intersection(lowerLeft);
+    intersection.print();
+    intersection = center.intersection(lowerRight);
+    intersection.print();
+}
+
+static void test07_equals()
 {
     using namespace Rectangles;
 
@@ -99,7 +121,8 @@ void exerciseRectangle()
     test03_center();
     test04_move();
     test05_intersection();
-    test06_equals();
+    test06_intersection();
+    test07_equals();
 }
 
 // ===========================================================================

@@ -53,7 +53,7 @@ int main()
         //testParameterPassing();
         //testClassTimeParameterPassing(); 
         //testOperatorsOverloading();
-        //testDynamicMemoryManagement();
+        testDynamicMemoryManagement();
         //testRuleOfThree();
         //testNamespaces();
         //testTemplates();

@@ -10,7 +10,7 @@
 namespace Classes_Objects_Constructors
 {
     // default c'tor
-    Time::Time() : m_seconds(0), m_minutes(0), m_hours(0) {}
+    Time::Time() : m_hours(0), m_minutes(0), m_seconds(0) {}
 
     // user-defined c'tor
     Time::Time(int hours, int minutes, int seconds)

@@ -12,18 +12,18 @@ namespace Classes_Objects_Improved
     class Time
     {
     private:
-        int m_seconds;
-        int m_minutes;
         int m_hours;
+        int m_minutes;
+        int m_seconds;
 
     public:
         // getter // setter
-        int getSeconds() { return m_seconds; }
-        int getMinutes() { return m_minutes; }
         int getHours() { return m_hours; }
-        void setSeconds(int seconds);
-        void setMinutes(int minutes);
+        int getMinutes() { return m_minutes; }
+        int getSeconds() { return m_seconds; }
         void setHours(int hours);
+        void setMinutes(int minutes);
+        void setSeconds(int seconds);
 
         // public interface
         void reset();

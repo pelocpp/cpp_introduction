@@ -53,9 +53,9 @@ Im nachfolgenden Beispiel finden wir also gleich fünf Konstruktoren vor:
 01: class Time
 02: {
 03: private:
-04:     int m_seconds;
+04:     int m_hours;
 05:     int m_minutes;
-06:     int m_hours;
+06:     int m_seconds;
 07: 
 08: public:
 09:     // c'tors
@@ -83,7 +83,7 @@ wurden die anderen Methoden der Klasse bis auf wenige Ausnahmen weggelassen.
 
 ```cpp
 01: // default c'tor
-02: Time::Time() : m_seconds(0), m_minutes(0), m_hours(0) {}
+02: Time::Time() : m_hours(0), m_minutes(0), m_seconds(0) {}
 03: 
 04: // user-defined c'tor
 05: Time::Time(int hours, int minutes, int seconds)
@@ -183,7 +183,7 @@ Im letzten Code-Fragment kommt diese Syntax bei zwei Konstruktoren
 zum Einsatz:
 
 ```cpp
-01: Time::Time() : m_seconds(0), m_minutes(0), m_hours(0) {}
+01: Time::Time() : m_hours(0), m_minutes(0), m_seconds(0) {}
 02: 
 03: Time::Time(int hours, int minutes)
 04:     : Time(hours, minutes, 0) 
@@ -210,7 +210,7 @@ Time(const char*);
 Beide Konstruktoren besitzen genau ein Argument, dessen Datentyp
 gewissermaßen dem *Quelldatentyp*  entspricht.
 Der *Zieldatentyp* wiederum ist gleich dem Typ der Klasse,
-es findet in den beiden Beispielen folglich eine Konvertierung
+es findet in beiden Beispielen folglich eine Konvertierung
 von `int` nach `Time` bzw. von `const char*` nach `Time` statt:
 
 ```cpp

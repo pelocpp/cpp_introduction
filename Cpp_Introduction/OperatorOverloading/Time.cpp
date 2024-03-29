@@ -8,7 +8,7 @@
 namespace OperatorOverloading
 {
     // c'tors
-    Time::Time() : m_seconds(0), m_minutes(0), m_hours(0) {}  // default c'tor
+    Time::Time() : m_hours(0), m_minutes(0), m_seconds(0) {}  // default c'tor
 
     Time::Time(int hours, int minutes, int seconds)   // user-defined c'tor
     {

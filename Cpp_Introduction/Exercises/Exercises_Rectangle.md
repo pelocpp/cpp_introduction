@@ -1,4 +1,4 @@
-# Aufgabe Klasse `Rectangle`
+# Aufgabe zur Klasse `Rectangle`
 
 [Zurück](./Exercises.md)
 

@@ -154,9 +154,9 @@ Studieren Sie sorgfältig die folgenden Ergänzungen in der Klasse `Time`:
 01: class Time
 02: {
 03: private:
-04:     int m_seconds;
+04:     int m_hours;
 05:     int m_minutes;
-06:     int m_hours;
+06:     int m_seconds;
 07: 
 08: public:
 09:     // c'tors
@@ -263,20 +263,20 @@ Welche Unterschiede in der Realisierung fallen Ihnen auf?
 01: class Time
 02: {
 03: private:
-04:     int m_seconds;
+04:     int m_hours;
 05:     int m_minutes;
-06:     int m_hours;
+06:     int m_seconds;
 07: 
 08: public:
 09:     ...
 10: 
 11:     // getter // setter
-12:     int getSeconds() const { return m_seconds; }
+12:     int getHours() const { return m_hours; }
 13:     int getMinutes() const { return m_minutes; }
-14:     int getHours() const { return m_hours; }
-15:     void setSeconds(int seconds);
+14:     int getSeconds() const { return m_seconds; }
+15:     void setHours(int hours);
 16:     void setMinutes(int minutes);
-17:     void setHours(int hours);
+17:     void setSeconds(int seconds);
 18: 
 19:     ...
 20: };
@@ -372,9 +372,9 @@ angesprochen. Mit dem Schlüsselwort `friend` lassen diese sich umgehen:
 01: class Time
 02: {
 03: private:
-04:     int m_seconds;
+04:     int m_hours;
 05:     int m_minutes;
-06:     int m_hours;
+06:     int m_seconds;
 07: 
 08: public:
 09:     ...

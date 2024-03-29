@@ -14,9 +14,9 @@ namespace Classes_Objects
     {
     public:
         // member data / instance variables
-        int m_seconds;
-        int m_minutes;
         int m_hours;
+        int m_minutes;
+        int m_seconds;
 
         // public interface / methods
         void reset();

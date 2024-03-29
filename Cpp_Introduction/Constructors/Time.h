@@ -12,9 +12,9 @@ namespace Classes_Objects_Constructors
     class Time
     {
     private:
-        int m_seconds;
-        int m_minutes;
         int m_hours;
+        int m_minutes;
+        int m_seconds;
 
     public:
         // c'tors

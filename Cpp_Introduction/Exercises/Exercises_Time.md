@@ -1,4 +1,4 @@
-# Aufgabe Klasse `Time`
+# Aufgabe zur Klasse `Time`
 
 [Zurück](./Exercises.md)
 

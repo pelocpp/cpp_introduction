@@ -65,9 +65,9 @@ so wird der Zugriff aller nachfolgend deklarierten Daten und Methoden wie folgt 
 01: class Time
 02: {
 03: private:
-04:     int m_seconds;
+04:     int m_hours;
 05:     int m_minutes;
-06:     int m_hours;
+06:     int m_seconds;
 07: 
 08: public:
 09:     // public interface
@@ -115,18 +115,18 @@ Der Umweg über diese Zugriffsmethoden bewirkt somit einen ausschließlich *kontro
 01: class Time
 02: {
 03: private:
-04:     int m_seconds;
+04:     int m_hours;
 05:     int m_minutes;
-06:     int m_hours;
+06:     int m_seconds;
 07: 
 08: public:
 09:     // getter // setter
-10:     int getSeconds() { return m_seconds; }
+10:     int getHours() { return m_hours; }
 11:     int getMinutes() { return m_minutes; }
-12:     int getHours() { return m_hours; }
-13:     void setSeconds(int seconds);
+12:     int getSeconds() { return m_seconds; }
+13:     void setHours(int hours);
 14:     void setMinutes(int minutes);
-15:     void setHours(int hours);
+15:     void setSeconds(int seconds);
 16: 
 17:     // public interface
 18:     ...
@@ -206,18 +206,18 @@ Realisierung unserer Klasse `Time`:
 01: class Time
 02: {
 03: private:
-04:     int seconds;
+04:     int hours;
 05:     int minutes;
-06:     int hours;
+06:     int seconds;
 07: 
 08: public:
 09:     // setter
-10:     void setSeconds(int seconds);
+10:     void setHours(int hours);
 11: };
 ```
 
 Im Prinzip geht es nur um die Betrachtung von Bezeichnern,
-die für Instanzvariablen und Parameter von Methoden verwendet werden.
+die für Instanzvariablen und Parameter von Methoden verwendet werden können.
 
 Möglichweise erkennen Sie schon ein kleines Problem beim Betrachten des Code-Fragments?
 Lassen Sie mich versuchen, den *setter* für den Stundenanteil zu realisieren:

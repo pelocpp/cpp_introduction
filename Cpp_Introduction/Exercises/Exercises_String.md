@@ -1,4 +1,4 @@
-# Aufgabe Klasse `String`
+# Aufgabe zur Klasse `String`
 
 [Zurück](./Exercises.md)
 

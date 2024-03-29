@@ -13,9 +13,9 @@ namespace OperatorOverloading
     class Time
     {
     private:
-        int m_seconds;
-        int m_minutes;
         int m_hours;
+        int m_minutes;
+        int m_seconds;
 
     public:
         // c'tors
@@ -23,12 +23,12 @@ namespace OperatorOverloading
         Time(int hours, int minutes, int seconds);
 
         // getter // setter
-        int getSeconds() const { return m_seconds; }
-        int getMinutes() const { return m_minutes; }
         int getHours() const { return m_hours; }
-        void setSeconds(int seconds);
-        void setMinutes(int minutes);
         void setHours(int hours);
+        int getMinutes() const { return m_minutes; }
+        void setMinutes(int minutes);
+        int getSeconds() const { return m_seconds; }
+        void setSeconds(int seconds);
 
         // comparison operators: as member methods
         //bool operator== (const Time& other);

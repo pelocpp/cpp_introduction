@@ -37,9 +37,9 @@ Typischerweise ist die Realisierung einer Klasse auf 2 Dateien aufgeteilt:
 02: {
 03: public:
 04:     // member data / instance variables
-05:     int m_seconds;
+05:     int m_hours;
 06:     int m_minutes;
-07:     int m_hours;
+07:     int m_seconds;
 08: 
 09:     // public interface / methods
 10:     void reset();
@@ -59,9 +59,9 @@ hierauf näher ein.
 ```cpp
 01: void Time::reset()
 02: {
-03:     m_seconds = 0;
+03:     m_hours = 0;
 04:     m_minutes = 0;
-05:     m_hours = 0;
+05:     m_seconds = 0;
 06: }
 07: 
 08: void Time::increment()

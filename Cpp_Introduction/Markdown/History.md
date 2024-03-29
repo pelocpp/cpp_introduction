@@ -22,19 +22,19 @@
 
 ## Historisches zu C
 
-In den frühen 1970er Jahren entwickelte Dennis Ritchie an den Bell Labs eine Programmiersprache mit dem minimalistischen Namen C. Sie basiert auf dem Vorläufer, der Programmiersprache B, daher ihr Name. C wurde zur besseren Programmierung des Betriebssystems Unix geschaffen und verbreitete sich entsprechend schnell in der Systemprogrammierung.
+In den frühen 1970er Jahren entwickelte *Dennis Ritchie* an den Bell Labs eine Programmiersprache mit dem minimalistischen Namen C. Sie basiert auf dem Vorläufer, der Programmiersprache B, daher ihr Name. C wurde zur besseren Programmierung des Betriebssystems Unix geschaffen und verbreitete sich entsprechend schnell in der Systemprogrammierung.
 
 <br />
 
 <img src="Ken_Thompson_and_Dennis_Ritchie.jpg" width="400">
 
-*Abbildung* 1: Der Erfinder von C: *Dennis Ritchie* (rechts), zusammem mit Ken Thompson.
+*Abbildung* 1: Der Erfinder von C: *Dennis Ritchie* (rechts), zusammem mit *Ken Thompson*.
 
-C ist eine so genannte imperative und prozedurale Programmiersprache, sie ist eine der am weitesten verbreiteten Programmiersprachen.
+C ist eine so genannte *imperative* und *prozedurale* Programmiersprache, sie ist eine der am weitesten verbreiteten Programmiersprachen.
 
 Bei der Entwicklung von C stützte sich Dennis Ritchie auf die Programmiersprache B,
 die er mit Ken Thompson in den Jahren 1969/70 geschrieben hatten &ndash; der Name C entstand als Weiterentwicklung von B.
-B wiederum geht auf die von Martin Richards Mitte der 1960er-Jahre entwickelte Programmiersprache BCPL zurück.Ursprünglich war der Name NB („New B“) vorgesehen, daraus wurde schließlich C. Ritchie schrieb auch den ersten Compiler für C.
+B wiederum geht auf die von Martin Richards Mitte der 1960er-Jahre entwickelte Programmiersprache BCPL zurück. Ursprünglich war der Name NB („New B“) vorgesehen, daraus wurde schließlich C. Ritchie schrieb auch den ersten Compiler für C.
 1973 war die Sprache so weit ausgereift, dass man nun den Unix-Kernel für die PDP-11 neu in C schreiben konnte.
 
 ## Historisches zu C++
@@ -50,12 +50,12 @@ die von dem dänischen Informatiker *Bjarne Stroustrup* als Erweiterung der Progr
 
 Stroustrup wollte eine leistungsfähige, effiziente Sprache schaffen, die sich für die Erstellung komplexer Softwareanwendungen eignet.
 Er war frustriert über die Einschränkungen von C und suchte nach einer Möglichkeit, die Programmiersprache zu erweitern,
-um eine höhere Abstraktionsebene und eine objektorientierte Programmierung (Object Oriented Programming) zu ermöglichen.
+um eine höhere Abstraktionsebene und eine objektorientierte Programmierung (*Object Oriented Programming*) zu ermöglichen.
 Der erste Prototyp von C++ wurde 1983 erstellt und hatte den Namen “C with Classes”.
 
-Eine Pilotsprache &ldquo;C mit Klassen&rdquo; diente als Vorlage für C++,
+Eine Pilotsprache &bdquo;C mit Klassen&rdquo; diente als Vorlage für C++,
 sie griff auf Strukturen und Konzepte von C zurück und war um objektorientierte Elemente erweitert.
-&ldquo;C mit Klassen&rdquo; wiederum besaß eine Reihe von Anleihen bei *Simula-67*,
+&bdquo;C mit Klassen&rdquo; wiederum besaß eine Reihe von Anleihen bei *Simula-67*,
 die man wohl als älteste objektorientierte Programmiersprache bezeichnen kann.
 Sie wurde im Jahre 1967 konzipiert, kannte bereits das Konzept der Klassen, der abgeleiteten Klassen und der virtuellen Funktionen.
 Zur damaligen Zeit kamen diese Konzepte jedoch zu früh und Simula-67 konnte sich am Markt nicht durchsetzen.
@@ -72,7 +72,7 @@ AT&amp;T Bell Laboratories gestand Bjarne Stroustrup das Recht zu, das Referenzh
 mit anderen zu diskutieren und es weiterzugeben.
 Durch Informationen und Diskussionen, die in der Newsgroup *comp.lang.c++* geführt wurden,
 kam es zu einer schnellen Verbreitung und Akzeptanz der neugeschaffenen Programmiersprache C++.
-In Papierform wurde C++ im Jahre 1986 durch das Referenzhandbuch *The C++ Programming Language* beschrieben.
+In Papierform wurde C++ im Jahre 1986 durch das Referenzhandbuch &bdquo;*The C++ Programming Language*&rdquo; beschrieben.
 
 Die Standardisierungsbemühungen des American National Standards Institutes (ANSI) wurden 1989
 durch die Gründung des Kommitees X3J16 auf Initiative von Hewlett Packard vorangetrieben.
@@ -82,7 +82,7 @@ Referenzmanual *The Annotated C++ Reference Manual* im Addison-Wesley-Verlag.
 Ab diesem Zeitpunkt finden regelmäßig Konferenzen über C++ statt,
 die neue Entwicklungen der Sprache diskutieren. 
 Im März 1996 veröffentlichen das Komitee X3J16 der ANSI und die Arbeitsgruppe WG21 der ISO in Austin, Texas ein Dokument,
-das als &ldquo;*Draft C++ Standard*&rdquo; bekannt wurde.
+das als &bdquo;*Draft C++ Standard*&rdquo; bekannt wurde.
 Nach neun Jahren Arbeit verabschieden diese beiden Standardisierungsgremien den ANSI C++&ndash;Standard (ISO/IEC 14882).
 
 Die Sprache hat sich im Laufe der Zeit erheblich erweitert, und *Modern C++* verfügt jetzt
@@ -102,7 +102,7 @@ Alleine durch das jeweilige Alter der beiden Programmiersprachen bedingt ergeben
 
   * C wurde 1972 eingeführt, während C++ erst 1984 erschien. Seitdem hat sich Einiges in der Entwicklung von Computern und Programmiersprachen getan.
   * C ist eine prozedurale Programmiersprache und arbeitet nah an der Maschinenebene, sodass die Befehle auch vergleichsweise einfach und rudimentär sind.
-  * C war lange Zeit der Standard unter den Programmiersprachen. Auch heutzutage lernen viele Studierende als erste Programmiersprachen C.
+  * C war lange Zeit der Standard unter den Programmiersprachen. Auch heutzutage lernen viele Studierende als erste Programmiersprache C.
   * C lässt sich durch seine Low-Level-Programmierung für die Gerätesteuerung (Hardware) wie beispielsweise im BIOS
   oder für die Programmierung von Betriebssystemen (Firmware, Treiber) einsetzen. Aber auch für Game-Engines, komplexe Berechnungen und Kryprographie eignet sich C bestens.
   * C++ hingegen ist in manchen Prinzipien an C angelehnt, beherzigt aber außer der prozeduralen Programmierung auch Objektorientierung und generische Programmierung und ist daher auch heute noch in der Lage, Programme mit der Komplexität von Java, Python oder C# zu erstellen.
@@ -114,33 +114,33 @@ Alleine durch das jeweilige Alter der beiden Programmiersprachen bedingt ergeben
 
 ## Was denken andere Entwickler über C++?
 
-&ldquo;*C++ makes it much harder to shoot yourself in the foot, but when you do, it blows off your whole leg.*&rdquo; &ndash; **Bjarne Stroustrup**.
+&bdquo;*C++ makes it much harder to shoot yourself in the foot, but when you do, it blows off your whole leg.*&rdquo; &ndash; **Bjarne Stroustrup**.
 
-&ldquo;*In C we had to code our own bugs. In C++ we can inherit them.*&rdquo; &ndash; **Prof. Gerald Karam**.
+&bdquo;*In C we had to code our own bugs. In C++ we can inherit them.*&rdquo; &ndash; **Prof. Gerald Karam**.
 
-&ldquo;*Fifty years of programming language research, and we end up with C++&nbsp;???*&rdquo; &ndash; **Richard A. O'Keefe**, Computer scientist, concentrating on languages for logic programming and functional programming (including Prolog and Haskell).
+&bdquo;*Fifty years of programming language research, and we end up with C++&nbsp;???*&rdquo; &ndash; **Richard A. O'Keefe**, Computer scientist, concentrating on languages for logic programming and functional programming (including Prolog and Haskell).
 
-&ldquo;*I invented the term 'Object-Oriented', and I can tell you I did not have C++ in mind.*&rdquo; &ndash; **Alan Kay**, creator of Smalltalk.
+&bdquo;*I invented the term 'Object-Oriented', and I can tell you I did not have C++ in mind.*&rdquo; &ndash; **Alan Kay**, creator of Smalltalk.
 
-&ldquo;*C++: Hard to learn and built to stay that way."*&rdquo; &ndash; *Without author*;
+&bdquo;*C++: Hard to learn and built to stay that way."*&rdquo; &ndash; *Without author*;
 
-&ldquo;*Java is, in many ways, C++--.*&rdquo; &ndash; **Michael Feldman**, Professor Emeritus at the George Washington University, Department of Computer Science, Washington.
+&bdquo;*Java is, in many ways, C++--.*&rdquo; &ndash; **Michael Feldman**, Professor Emeritus at the George Washington University, Department of Computer Science, Washington.
 
-&ldquo;*Writing in C or C++ is like running a chain saw with all the safety guards removed.*&rdquo; &ndash; **Bob Gray**.
+&bdquo;*Writing in C or C++ is like running a chain saw with all the safety guards removed.*&rdquo; &ndash; **Bob Gray**.
 
-&ldquo;*Ever spend a little time reading comp.lang.c++&nbsp;? That's really the best place to learn about the number of C++ users looking for a better language.*&rdquo; &ndash; **R. William Beckwith**.
+&bdquo;*Ever spend a little time reading comp.lang.c++&nbsp;? That's really the best place to learn about the number of C++ users looking for a better language.*&rdquo; &ndash; **R. William Beckwith**.
 
-&ldquo;*The evolution of languages: FORTRAN is a non-typed language. C is a weakly typed language. Ada is a strongly typed language. C++ is a strongly hyped language.*&rdquo; &ndash; **Ron Sercely**.
+&bdquo;*The evolution of languages: FORTRAN is a non-typed language. C is a weakly typed language. Ada is a strongly typed language. C++ is a strongly hyped language.*&rdquo; &ndash; **Ron Sercely**.
 
-&ldquo;*C(++) is a write-only, high-level assembler language.*&rdquo; &ndash; **Stefan Van Baelen**.
+&bdquo;*C(++) is a write-only, high-level assembler language.*&rdquo; &ndash; **Stefan Van Baelen**.
 
-&ldquo;*C++ : Where friends have access to your private members.*&rdquo; &ndash; **Gavin Russell Baker**.
+&bdquo;*C++ : Where friends have access to your private members.*&rdquo; &ndash; **Gavin Russell Baker**.
 
-&ldquo;*C++ would make a decent teaching language if we could teach the ++ part without the C part.*&rdquo; &ndash; **Michael B. Feldman**.
+&bdquo;*C++ would make a decent teaching language if we could teach the ++ part without the C part.*&rdquo; &ndash; **Michael B. Feldman**.
 
-&ldquo;*The great thing about Object Oriented code is that it can make small, simple problems look like large, complex ones.*&rdquo; &ndash; *Without author*.
+&bdquo;*The great thing about Object Oriented code is that it can make small, simple problems look like large, complex ones.*&rdquo; &ndash; *Without author*.
 
-&ldquo;*Hybrid ('half-assed') object languages like C++ are worst of all, as they unite the simplicity of Brainfuck with the inherent security of C and the speed of Perl.*&rdquo; &ndash; **Tony**.
+&bdquo;*Hybrid ('half-assed') object languages like C++ are worst of all, as they unite the simplicity of Brainfuck with the inherent security of C and the speed of Perl.*&rdquo; &ndash; **Tony**.
 
 ---
 

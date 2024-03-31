@@ -130,6 +130,9 @@
     <Filter Include="Excercises\STL_Lotto">
       <UniqueIdentifier>{cb26c968-183a-47fa-b1d2-728aaa7731ad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Excercises\Wallet">
+      <UniqueIdentifier>{49695647-5a43-404d-b760-bd6da82dfeac}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -301,6 +304,9 @@
     <None Include="Markdown\cpp_variable.svg">
       <Filter>Markdown</Filter>
     </None>
+    <None Include="Exercises\Exercises_Wallet.md">
+      <Filter>Excercises</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -465,6 +471,12 @@
     <ClCompile Include="Exercises\STL_Lotto\Lottery_Main.cpp">
       <Filter>Excercises\STL_Lotto</Filter>
     </ClCompile>
+    <ClCompile Include="Exercises\Wallet\Wallet.cpp">
+      <Filter>Excercises\Wallet</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Wallet\Wallet_Main.cpp">
+      <Filter>Excercises\Wallet</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constructors\Time.h">
@@ -520,6 +532,9 @@
     </ClInclude>
     <ClInclude Include="Exercises\STL_Lotto\Lottery.h">
       <Filter>Excercises\STL_Lotto</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\Wallet\Wallet.h">
+      <Filter>Excercises\Wallet</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

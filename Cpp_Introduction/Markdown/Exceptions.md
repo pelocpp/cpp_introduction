@@ -170,6 +170,11 @@ Was fällt Ihnen auf?
 
 ## Aufgaben
 
+[Aufgabe zu einem Geldbeutel: Klasse `Wallet`](../Exercises/Exercises_Wallet.md)
+
+Die Realisierung von Konstruktoren der Klasse `Wallet` kann geignet bei negativen Geldwerten reagieren.
+
+
 [Aufgabe zur Klasse `DynamicArray`](../Exercises/Exercises_DynamicArray.md)
 
 Die Realisierung des Operators `[]` bzw. eine Methode `at`

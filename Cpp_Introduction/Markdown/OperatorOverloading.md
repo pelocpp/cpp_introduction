@@ -455,6 +455,8 @@ auf den Modus *öffentlich* umgestellt &ndash; für *Freunde*.
 
 ## Aufgaben
 
+[Aufgabe zu einem Geldbeutel: Klasse `Wallet`](../Exercises/Exercises_Wallet.md)
+
 [Aufgabe zur Klasse `Fraction`](../Exercises/Exercises_Fraction.md)
 
 ---

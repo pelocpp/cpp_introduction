@@ -38,6 +38,7 @@
     <None Include="Exercises\Exercises_Rectangle.md" />
     <None Include="Exercises\Exercises_Time.md" />
     <None Include="Exercises\Exercises_Fraction.md" />
+    <None Include="Exercises\Exercises_Wallet.md" />
     <None Include="Exercises\STL_Phonebook\Resources\cpp_hash_table.svg" />
     <None Include="Markdown\Agenda.md" />
     <None Include="Markdown\cpp_call_by_reference.svg" />
@@ -111,6 +112,8 @@
     <ClCompile Include="Exercises\String\String.cpp" />
     <ClCompile Include="Exercises\Time\Time_Main.cpp" />
     <ClCompile Include="Exercises\Time\Time.cpp" />
+    <ClCompile Include="Exercises\Wallet\Wallet.cpp" />
+    <ClCompile Include="Exercises\Wallet\Wallet_Main.cpp" />
     <ClCompile Include="HelloWorld\Main.cpp" />
     <ClCompile Include="Inheritance\Main.cpp" />
     <ClCompile Include="MoreInheritance\Main.cpp" />
@@ -149,6 +152,7 @@
     <ClInclude Include="Exercises\STL_Phonebook\PhoneBookMap.h" />
     <ClInclude Include="Exercises\String\String.h" />
     <ClInclude Include="Exercises\Time\Time.h" />
+    <ClInclude Include="Exercises\Wallet\Wallet.h" />
     <ClInclude Include="OperatorOverloading\Time.h" />
     <ClInclude Include="ParameterPassingTechniques\Time.h" />
     <ClInclude Include="RuleOfThree\BigData.h" />

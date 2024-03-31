@@ -47,18 +47,18 @@ Fraction operator+ (const Fraction& f)
     return Fraction(f);
 }
 
-Fraction operator- (const Fraction & f)
+Fraction operator- (const Fraction& f)
 {
     return Fraction(-f.m_num, f.m_denom);
 }
 
-Fraction operator~ (const Fraction & f)
+Fraction operator~ (const Fraction& f)
 {
     return Fraction(f.m_denom, f.m_num);
 }
 
 // implementation of binary arithmetic operators
-Fraction operator+ (const Fraction & f1, const Fraction & f2)
+Fraction operator+ (const Fraction& f1, const Fraction& f2)
 {
     int num = f1.m_num * f2.m_denom + f1.m_denom * f2.m_num;
     int denom = f1.m_denom * f2.m_denom;
@@ -72,14 +72,14 @@ Fraction operator- (const Fraction& f1, const Fraction& f2)
     return Fraction(num, denom);
 }
 
-Fraction operator* (const Fraction & f1, const Fraction & f2)
+Fraction operator* (const Fraction& f1, const Fraction& f2)
 {
     int num = f1.m_num * f2.m_num;
     int denom = f1.m_denom * f2.m_denom;
     return Fraction(num, denom);
 }
 
-Fraction operator/ (const Fraction & f1, const Fraction & f2)
+Fraction operator/ (const Fraction& f1, const Fraction& f2)
 {
     int num = f1.m_num * f2.m_denom;
     int denom = f1.m_denom * f2.m_num;
@@ -111,7 +111,7 @@ const Fraction& operator*= (Fraction& f1, const Fraction& f2)
     return f1;
 }
 
-const Fraction & operator/= (Fraction & f1, const Fraction & f2)
+const Fraction& operator/= (Fraction& f1, const Fraction& f2)
 {
     f1.m_num = f1.m_num * f2.m_denom;
     f1.m_denom = f1.m_denom * f2.m_num;
@@ -120,32 +120,32 @@ const Fraction & operator/= (Fraction & f1, const Fraction & f2)
 }
 
 // comparison operators   
-bool operator<= (const Fraction & f1, const Fraction & f2)
+bool operator<= (const Fraction& f1, const Fraction& f2)
 {
     return f1.m_num * f2.m_denom <= f1.m_denom * f2.m_num;
 }
 
-bool operator< (const Fraction & f1, const Fraction & f2)
+bool operator< (const Fraction& f1, const Fraction& f2)
 {
     return f1.m_num * f2.m_denom < f1.m_denom* f2.m_num;
 }
 
-bool operator>= (const Fraction & f1, const Fraction & f2)
+bool operator>= (const Fraction& f1, const Fraction& f2)
 {
     return !(f1 < f2);
 }
 
-bool operator> (const Fraction & f1, const Fraction & f2)
+bool operator> (const Fraction& f1, const Fraction& f2)
 {
     return !(f1 <= f2);
 }
 
-bool operator== (const Fraction & f1, const Fraction & f2)
+bool operator== (const Fraction& f1, const Fraction& f2)
 {
     return f1.m_num * f2.m_denom == f1.m_denom * f2.m_num;
 }
 
-bool operator!= (const Fraction & f1, const Fraction & f2)
+bool operator!= (const Fraction& f1, const Fraction& f2)
 {
     return !(f1 == f2);
 }
@@ -157,21 +157,21 @@ Fraction::operator double()
 }
 
 // increment operator: prefix version
-Fraction & operator++ (Fraction & f)
+Fraction& operator++ (Fraction& f)
 {
     f += 1;
     return f;
 }
 
 // decrement operator: prefix version
-Fraction & operator-- (Fraction & f)
+Fraction& operator-- (Fraction& f)
 {
     f -= 1;
     return f;
 }
 
 // increment operator: postfix version
-const Fraction operator++ (Fraction & f, int)
+Fraction operator++ (Fraction& f, int)
 {
     Fraction tmp(f); // construct a copy
     ++f;             // increment number
@@ -179,7 +179,7 @@ const Fraction operator++ (Fraction & f, int)
 }
 
 // decrement operator: postfix version
-const Fraction operator-- (Fraction & f, int)
+Fraction operator-- (Fraction& f, int)
 {
     Fraction tmp(f); // construct a copy
     --f;             // decrement number
@@ -222,14 +222,14 @@ int Fraction::gcd(int n, int m)
 }
 
 // output operator
-std::ostream & operator<< (std::ostream & os, const Fraction & f)
+std::ostream & operator<< (std::ostream & os, const Fraction& f)
 {
     os << f.m_num << '/' << f.m_denom;
     return os;
 }
 
 // input operator
-std::istream & operator>> (std::istream & is, Fraction & f)
+std::istream & operator>> (std::istream & is, Fraction& f)
 {
     is >> f.m_num >> f.m_denom;
     f.reduce();

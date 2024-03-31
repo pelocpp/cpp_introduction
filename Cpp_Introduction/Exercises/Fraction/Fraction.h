@@ -39,16 +39,16 @@ public:
     friend Fraction operator/ (const Fraction&, const Fraction&);
 
     // arithmetic-assignment operators
-    friend const Fraction & operator+= (Fraction&, const Fraction&);
-    friend const Fraction & operator-= (Fraction&, const Fraction&);
-    friend const Fraction & operator*= (Fraction&, const Fraction&);
-    friend const Fraction & operator/= (Fraction&, const Fraction&);
+    friend const Fraction& operator+= (Fraction&, const Fraction&);
+    friend const Fraction& operator-= (Fraction&, const Fraction&);
+    friend const Fraction& operator*= (Fraction&, const Fraction&);
+    friend const Fraction& operator/= (Fraction&, const Fraction&);
 
     // increment/decrement operators (prefix/postfix version)
-    friend Fraction & operator++ (Fraction&);           // prefix increment
-    friend const Fraction operator++ (Fraction&, int);  // postfix increment
-    friend Fraction & operator-- (Fraction&);           // prefix decrement
-    friend const Fraction operator-- (Fraction&, int);  // postfix decrement
+    friend Fraction& operator++ (Fraction&);       // prefix increment
+    friend Fraction operator++  (Fraction&, int);  // postfix increment
+    friend Fraction& operator-- (Fraction&);       // prefix decrement
+    friend Fraction operator--  (Fraction&, int);  // postfix decrement
 
     // comparison operators
     friend bool operator<= (const Fraction&, const Fraction&);

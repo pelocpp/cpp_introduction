@@ -104,6 +104,20 @@ Folgende Aspekte werden betrachtet:
 
 ---
 
+#### [Aufgabe zu einem Geldbeutel: Klasse `Wallet`](./Exercises_Wallet.md)
+
+Folgende Aspekte werden betrachtet:
+  * Klasse und Objekt
+  * Konstruktoren
+  * Zugriffsrechte (`private`, `public`)
+  * *getter*/*setter*-Methoden
+  * Realisierung einfacher Methoden
+  * Klasse `std::string`
+  * Überladen von Operatoren
+  * Exception-Handling mit `try`, `catch` und `throw`
+
+---
+
 #### [Dynamische Daten &ndash; Klasse `DynamicArray`](./Exercises_DynamicArray.md)
 
 Folgende Aspekte werden betrachtet:

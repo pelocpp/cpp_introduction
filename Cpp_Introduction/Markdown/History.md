@@ -32,10 +32,12 @@ In den frühen 1970er Jahren entwickelte *Dennis Ritchie* an den Bell Labs eine P
 
 C ist eine so genannte *imperative* und *prozedurale* Programmiersprache, sie ist eine der am weitesten verbreiteten Programmiersprachen.
 
-Bei der Entwicklung von C stützte sich Dennis Ritchie auf die Programmiersprache B,
-die er mit Ken Thompson in den Jahren 1969/70 geschrieben hatten &ndash; der Name C entstand als Weiterentwicklung von B.
-B wiederum geht auf die von Martin Richards Mitte der 1960er-Jahre entwickelte Programmiersprache BCPL zurück. Ursprünglich war der Name NB („New B“) vorgesehen, daraus wurde schließlich C. Ritchie schrieb auch den ersten Compiler für C.
-1973 war die Sprache so weit ausgereift, dass man nun den Unix-Kernel für die PDP-11 neu in C schreiben konnte.
+Bei der Entwicklung von *C* stützte sich Dennis Ritchie auf die Programmiersprache *B*,
+die er mit *Ken Thompson* in den Jahren 1969/70 geschrieben hatten &ndash; der Name *C* entstand als Weiterentwicklung von *B*.
+*B* wiederum geht auf die von *Martin Richards* Mitte der 1960er-Jahre entwickelte Programmiersprache *BCPL* zurück.
+Ursprünglich war der Name *NB* (&bdquo;*New B*&rdquo;) vorgesehen, daraus wurde schließlich *C*.
+Ritchie schrieb auch den ersten Compiler für *C*.
+1973 war die Sprache so weit ausgereift, dass man nun den Unix-Kernel für die PDP-11 neu in *C* schreiben konnte.
 
 ## Historisches zu C++
 
@@ -51,7 +53,7 @@ die von dem dänischen Informatiker *Bjarne Stroustrup* als Erweiterung der Progr
 Stroustrup wollte eine leistungsfähige, effiziente Sprache schaffen, die sich für die Erstellung komplexer Softwareanwendungen eignet.
 Er war frustriert über die Einschränkungen von C und suchte nach einer Möglichkeit, die Programmiersprache zu erweitern,
 um eine höhere Abstraktionsebene und eine objektorientierte Programmierung (*Object Oriented Programming*) zu ermöglichen.
-Der erste Prototyp von C++ wurde 1983 erstellt und hatte den Namen “C with Classes”.
+Der erste Prototyp von C++ wurde 1983 erstellt und hatte den Namen &bdquo;C with Classes&rdquo;.
 
 Eine Pilotsprache &bdquo;C mit Klassen&rdquo; diente als Vorlage für C++,
 sie griff auf Strukturen und Konzepte von C zurück und war um objektorientierte Elemente erweitert.
@@ -74,11 +76,11 @@ Durch Informationen und Diskussionen, die in der Newsgroup *comp.lang.c++* gefüh
 kam es zu einer schnellen Verbreitung und Akzeptanz der neugeschaffenen Programmiersprache C++.
 In Papierform wurde C++ im Jahre 1986 durch das Referenzhandbuch &bdquo;*The C++ Programming Language*&rdquo; beschrieben.
 
-Die Standardisierungsbemühungen des American National Standards Institutes (ANSI) wurden 1989
+Die Standardisierungsbemühungen des *American National Standards Institutes* (ANSI) wurden 1989
 durch die Gründung des Kommitees X3J16 auf Initiative von Hewlett Packard vorangetrieben.
-Das standardisierte C++ soll auf die AT&amp;T-Version 2.0 des C++&ndash;Compilers aufbauen sowie im wesentlichen ANSI C beinhalten. 
-1990 veröffentlichten *Margaret A. Ellis* und Bjarne Stroustrup das
-Referenzmanual *The Annotated C++ Reference Manual* im Addison-Wesley-Verlag.
+Das standardisierte C++ sollte auf die AT&amp;T-Version 2.0 des C++&ndash;Compilers aufbauen sowie im wesentlichen ANSI C beinhalten. 
+1990 veröffentlichten *Margaret A. Ellis* und *Bjarne Stroustrup* das
+Referenzmanual &bdquo;*The Annotated C++ Reference Manual*&rdquo; im Addison-Wesley-Verlag.
 Ab diesem Zeitpunkt finden regelmäßig Konferenzen über C++ statt,
 die neue Entwicklungen der Sprache diskutieren. 
 Im März 1996 veröffentlichen das Komitee X3J16 der ANSI und die Arbeitsgruppe WG21 der ISO in Austin, Texas ein Dokument,

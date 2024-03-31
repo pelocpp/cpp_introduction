@@ -27,7 +27,7 @@ Dabei sollten nicht mehr als 99 Cent in dem Geldbeutel sein,
 bei größeren Cent-Beträgen ist der Euro-Betrag entsprechend aufzurunden.
 
 Logischerweise kann ein Geldbeutel keine negativen Geldbeträge enthalten.
-Es ist bei allen Methoden und Operatoren in der Realisierung der Klasse `Wallet` darauf zu achten, dass niemals mehr Geld entnommen wird,
+Es ist bei allen Methoden und Operatoren in der Realisierung der Klasse `Wallet` darauf zu achten, dass niemals mehr Geld entnommen wird
 als sich in dem Geldbeutel befindet.
 
 Folgende Aktivitäten sollten mit einem Geldbeutel möglich sein:
@@ -46,9 +46,7 @@ Folgende Aktivitäten sollten mit einem Geldbeutel möglich sein:
 
 ## Hinweis
 
-Beachten Sie folgenden Hinweis zur Realisierung der Konstrukoren:
-
-Mit
+Beachten Sie folgenden Hinweis zur Realisierung der Konstruktoren: Mit
 
 ```cpp
 Wallet wallet(5, 55);

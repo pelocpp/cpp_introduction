@@ -20,20 +20,20 @@ extern void exerciseSTLPhoneBook();
 
 void testExercises()
 {
-    //exerciseRectangle();
-    //exerciseBankAccount();
-    //exerciseReferencesPointers();
-    //exerciseTime();
-    //exerciseFraction();
-    //exerciseStrings();
+    exerciseRectangle();
+    exerciseBankAccount();
+    exerciseReferencesPointers();
+    exerciseTime();
+    exerciseFraction();
+    exerciseStrings();
     exerciseWallet();
-    //exerciseDynamicArray();
-    //exerciseString();
-    //exerciseMoreBankAccounts();
-    //exerciseDynamicArrayTemplate();
-    //exerciseSTL();
-    //exerciseLotto();
-    //exerciseSTLPhoneBook();
+    exerciseDynamicArray();
+    exerciseString();
+    exerciseMoreBankAccounts();
+    exerciseDynamicArrayTemplate();
+    exerciseSTL();
+    exerciseLotto();
+    exerciseSTLPhoneBook();
 }
 
 // ===========================================================================

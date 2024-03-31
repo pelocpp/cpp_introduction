@@ -172,7 +172,7 @@ Was fällt Ihnen auf?
 
 [Aufgabe zu einem Geldbeutel: Klasse `Wallet`](../Exercises/Exercises_Wallet.md)
 
-Die Realisierung von Konstruktoren der Klasse `Wallet` kann geignet bei negativen Geldwerten reagieren.
+Die Realisierung von Konstruktoren der Klasse `Wallet` kann geignet bei negativen Geldbeträgen reagieren.
 
 
 [Aufgabe zur Klasse `DynamicArray`](../Exercises/Exercises_DynamicArray.md)

@@ -11,7 +11,7 @@ Folgende C++&ndash;-Sprachmittel sollen zum Einsatz kommen:
   * Klasse und Objekt
   * Konstruktoren
   * Zugriffsrechte (`private`, `public`)
-  * *getter*/*setter*-Methoden
+  * *getter*-Methoden
   * Realisierung einfacher Methoden
   * Klasse `std::string`
   * Überladen von Operatoren
@@ -20,20 +20,20 @@ Folgende C++&ndash;-Sprachmittel sollen zum Einsatz kommen:
 
 ## Beschreibung
 
-Schreiben Sie eine Klasse  `Wallet`, die einen *Geldbeutel* (*Portemonnaie*, ein aus dem Französischen stammender Begriff)
+Schreiben Sie eine Klasse `Wallet`, die einen *Geldbeutel* (*Portemonnaie*, ein aus dem Französischen stammender Begriff)
 repräsentiert.
-Das enthaltene Geld stellt einen Wert in Euros und Cent dar.
+Im Geldbeutel sind Euros und Cent enthalten.
 Dabei sollten nicht mehr als 99 Cent in dem Geldbeutel sein,
 bei größeren Cent-Beträgen ist der Euro-Betrag entsprechend aufzurunden.
 
 Logischerweise kann ein Geldbeutel keine negativen Geldbeträge enthalten.
-Es ist bei allen Methoden und Operatoren darauf zu achten, dass niemals mehr Geld entnommen wird,
+Es ist bei allen Methoden und Operatoren in der Realisierung der Klasse `Wallet` darauf zu achten, dass niemals mehr Geld entnommen wird,
 als sich in dem Geldbeutel befindet.
 
 Folgende Aktivitäten sollten mit einem Geldbeutel möglich sein:
 
   * Geld hinzufügen.
-  * Geld entnehmen, allerdings nicht mehr, als in dem Geldbeutel enthalten ist.
+  * Geld entnehmen, allerdings nicht mehr, als im Geldbeutel ist.
   * Den Inhalt zweier Geldbeutel vergleichen.
   * Nur Euros hinzufügen.
   * Nur Euros entnehmen.
@@ -44,6 +44,8 @@ Folgende Aktivitäten sollten mit einem Geldbeutel möglich sein:
 
 ---
 
+## Hinweis
+
 Beachten Sie folgenden Hinweis zur Realisierung der Konstrukoren:
 
 Mit
@@ -52,9 +54,7 @@ Mit
 Wallet wallet(5, 55);
 ```
 
-erzeugt man einen Geldbeutel, der 5€ und 55 Cent enthält.
-
-Ist es möglich, Aufrufe der Gestalt
+erzeugt man einen Geldbeutel, der 5€ und 55 Cent enthält. Ist es möglich, Aufrufe der Gestalt
 
 ```cpp
 Wallet wallet(-5, 55);
@@ -106,6 +106,9 @@ Die folgenden zwei Beispiele demonstrieren den Umgang mit der Klasse `Wallet`:
 Exception: Not enough money available in wallet!
 ```
 
+Und noch ein zweites Beispiel:
+
+
 ```cpp
 01: void test()
 02: {
@@ -140,9 +143,9 @@ false
 
 ## Quellcode der Lösungen:
 
-[*DynamicArray.h*](./DynamicArray/DynamicArray.h)<br />
-[*DynamicArray.cpp*](./DynamicArray/DynamicArray.cpp)<br />
-[*DynamicArray_Main.cpp*](./DynamicArray/DynamicArray_Main.cpp)<br />
+[*Wallet.h*](./Wallet/Wallet.h)<br />
+[*Wallet.cpp*](./Wallet/Wallet.cpp)<br />
+[*Wallet_Main.cpp*](./Wallet/Wallet_Main.cpp)<br />
 
 ---
 

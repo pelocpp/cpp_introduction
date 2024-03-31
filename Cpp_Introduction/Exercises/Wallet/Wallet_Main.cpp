@@ -2,19 +2,6 @@
 // Wallet_Main.cpp
 // ===========================================================================
 
-
-// http://www.di-mare.com/adolfo/p/money.htm
-
-// https://codereview.stackexchange.com/questions/273031/c-basic-bank-money-class
-
-// https://codereview.stackexchange.com/questions/272287/c-money-class-for-basic-banking-application
-
-// https://github.com/joemulray/java-programs/blob/master/Money.java
-
-
-// \\pelosyno\programming\GCPP_Ex\Seminar_C_03_Absolute_Beginners_Oktober_2023\C_Beginners_November_2023
-
-
 #include <iostream>
 
 #include "Wallet.h"
@@ -174,17 +161,16 @@ static void test_10_Example_Tutorial()
 
 void exerciseWallet()
 {
-    //test_01_Ctors();
-    //test_02_Ctors();
-    //test_03_toString();
-    //test_04_add();
-    //test_05_sub();
-    //test_06_add_sub_euros();
+    test_01_Ctors();
+    test_02_Ctors();
+    test_03_toString();
+    test_04_add();
+    test_05_sub();
+    test_06_add_sub_euros();
     test_07_comparision();
-    // test_08_arithmetic_increment_operators();
-    //test_09_increment_operators();
-   // test_10_Example_Tutorial();
-
+    test_08_arithmetic_increment_operators();
+    test_09_increment_operators();
+    test_10_Example_Tutorial();
 }
 
 // ===========================================================================

@@ -110,7 +110,7 @@ Folgende Aspekte werden betrachtet:
   * Klasse und Objekt
   * Konstruktoren
   * Zugriffsrechte (`private`, `public`)
-  * *getter*/*setter*-Methoden
+  * *getter*-Methoden
   * Realisierung einfacher Methoden
   * Klasse `std::string`
   * Überladen von Operatoren

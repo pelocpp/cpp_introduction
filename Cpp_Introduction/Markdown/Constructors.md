@@ -31,8 +31,11 @@ so zu erweitern, dass für das Objekt auch Vorbelegungswerte mit übergeben werden
 
 ### Was sind Konstruktoren?
 
-Unter einem *Konstruktor* versteht man eine spezielle Art von Methode,
-die den gleichen Namen wie die Klasse hat, zu der sie gehört.
+Unter einem *Konstruktor* versteht man eine spezielle Art von Methode, die
+
+  * den gleichen Namen wie die Klasse hat, zu der sie gehört und
+  * die *keinen* Rückgabetyp hat.
+
 Ein Konstruktor besitzt die Aufgabe, die Instanzvariablen eines Objekts vollständig mit sinnvollen Werten vorzubelegen.
 Umgangssprachlich kann man auch sagen, dass ein Konstruktor eine Instanz &ldquo;konstruiert&rdquo;.
 

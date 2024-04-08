@@ -28,7 +28,7 @@ In den frühen 1970er Jahren entwickelte *Dennis Ritchie* an den Bell Labs eine P
 
 <img src="Ken_Thompson_and_Dennis_Ritchie.jpg" width="400">
 
-*Abbildung* 1: Der Erfinder von C: *Dennis Ritchie* (rechts), zusammem mit *Ken Thompson*.
+*Abbildung* 1: Der Erfinder von C: *Dennis Ritchie* (rechts), zusammen mit *Ken Thompson*.
 
 C ist eine so genannte *imperative* und *prozedurale* Programmiersprache, sie ist eine der am weitesten verbreiteten Programmiersprachen.
 

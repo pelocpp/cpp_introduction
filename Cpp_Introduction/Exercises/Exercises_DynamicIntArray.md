@@ -1,4 +1,4 @@
-# Aufgabe zu dynamischen Daten: Klasse `DynamicArray`
+# Aufgabe zu dynamischen Daten: Klasse `DynamicIntArray`
 
 [Zurück](./Exercises.md)
 
@@ -23,22 +23,22 @@ int numbers[10];
 Der Wert 10 muss zur Übersetzungszeit bekannt sein.
 
 An dieser Stelle kommt die dynamische Speicherverwaltung ins Spiel:
-Mit Hilfe der beiden Operatoren `new` und `delete` kann man eine Klasse `DynamicArray` realisieren,
+Mit Hilfe der beiden Operatoren `new` und `delete` kann man eine Klasse `DynamicIntArray` realisieren,
 die im Prinzip dieselbe Funktionalität wie C++-Felder besitzt,
 nur mit dem Unterschied, dass die Längenangabe sowohl zum Erzeugungszeitpunkt
-als auch während der Lebenszeit eines `DynamicArray`-Objekts änderbar ist.
+als auch während der Lebenszeit eines `DynamicIntArray`-Objekts änderbar ist.
 
 Diese Flexibilität wird erreicht, indem die Daten des Felds in einem Speicherbereich auf der Halde (*Heap*) abgelegt werden.
 Bei Bedarf, zum Beispiel, wenn der Datenbereich zu klein geworden ist, kann man auf der Halde ein größeres Stück Speicher reservieren.
 
-Implementieren Sie eine Klasse `DynamicArray`, die diese Eigenschaft besitzt.
+Implementieren Sie eine Klasse `DynamicIntArray`, die diese Eigenschaft besitzt.
 Ein Objekt dieser Klasse sollte wie in *Abbildung* 1 gezeigt aussehen:
 
-<img src="DynamicArray/Resources/cpp_dynamic_array_01.svg" width="550">
+<img src="DynamicIntArray/Resources/cpp_dynamic_array_01.svg" width="550">
 
-*Abbildung* 1. Instanzdatenbereich eines `DynamicArray`-Objekts mit dynamisch allokiertem Datenpuffer.
+*Abbildung* 1. Instanzdatenbereich eines `DynamicIntArray`-Objekts mit dynamisch allokiertem Datenpuffer.
 
-Wir erkennen in *Abbildung* 1 zwei Instanzvariablen in der Klasse `DynamicArray`: `m_data` und `m_length`.
+Wir erkennen in *Abbildung* 1 zwei Instanzvariablen in der Klasse `DynamicIntArray`: `m_data` und `m_length`.
 `m_data` enthält die Adresse eines Stück Speichers, das sich auf der Halde befindet und mit dem `new`-Operator angelegt wurde.
 Die Länge dieses Speicherbereichs wird in der zweiten Instanzvariablen `m_length` festgehalten.
 
@@ -47,37 +47,37 @@ Die Problematik, wenn der dynamisch allokierte Datenpuffer zu klein wird, haben 
 Neben einem größeren Stück Speicher, das wieder mit dem `new`-Operator angelegt wird, ist zu beachten, dass der
 vorhandene Inhalt des alten Speicherbereichs in den neuen umzukopieren ist.
 
-<img src="DynamicArray/Resources/cpp_dynamic_array_02.svg" width="550">
+<img src="DynamicIntArray/Resources/cpp_dynamic_array_02.svg" width="550">
 
-*Abbildung* 2. Vergrößerung des Instanzdatenbereich eines `DynamicArray`-Objekts.
+*Abbildung* 2. Vergrößerung des Instanzdatenbereich eines `DynamicIntArray`-Objekts.
 
 
-In *Abbildung* 3 und *Abbildung* 4 sprechen wir ein letztes Problem in der Realisierung der `DynamicArray`-Klasse an:
-Die Wertzuweisung zweier `DynamicArray`-Objekte. In einem ersten Ansatz könnte man geneigt sein zu denken,
+In *Abbildung* 3 und *Abbildung* 4 sprechen wir ein letztes Problem in der Realisierung der `DynamicIntArray`-Klasse an:
+Die Wertzuweisung zweier `DynamicIntArray`-Objekte. In einem ersten Ansatz könnte man geneigt sein zu denken,
 dass diese einfach mit dem Kopieren der beteiligten Instanzvariablen umzusetzen ist.
 *Abbildung* 3 versucht darzustellen, dass dies nicht zu einer Realisierung führt, die man als korrekt ansehen kann:
-Die beiden in *Abbildung* 3 dargestellten `DynamicArray`-Objekt haben einen gemeinsamen Datenbereich auf Grund des kopierten Zeigers.
+Die beiden in *Abbildung* 3 dargestellten `DynamicIntArray`-Objekt haben einen gemeinsamen Datenbereich auf Grund des kopierten Zeigers.
 Dies ist nicht das, was man sich unter einer echte Kopie vorstellt.
 
-<img src="DynamicArray/Resources/cpp_dynamic_array_03.svg" width="550">
+<img src="DynamicIntArray/Resources/cpp_dynamic_array_03.svg" width="550">
 
-*Abbildung* 3. Falscher Ansatz beim Kopieren eines `DynamicArray`-Objekts.
+*Abbildung* 3. Falscher Ansatz beim Kopieren eines `DynamicIntArray`-Objekts.
 
-*Abbildung* 4 veranschaulicht, wie hier korrekt vorzugehen ist: Eine Kopie eines `DynamicArray`-Objekts muss einen neuen, separaten
+*Abbildung* 4 veranschaulicht, wie hier korrekt vorzugehen ist: Eine Kopie eines `DynamicIntArray`-Objekts muss einen neuen, separaten
 Datenbereich erhalten:
 
-<img src="DynamicArray/Resources/cpp_dynamic_array_04.svg" width="550">
+<img src="DynamicIntArray/Resources/cpp_dynamic_array_04.svg" width="550">
 
-*Abbildung* 4. Korrekter Ansatz beim Kopieren eines `DynamicArray`-Objekts.
+*Abbildung* 4. Korrekter Ansatz beim Kopieren eines `DynamicIntArray`-Objekts.
 
 
-Eine mögliche Schnittstelle der Klasse `DynamicArray` könnte so aussehen:
+Eine mögliche Schnittstelle der Klasse `DynamicIntArray` könnte so aussehen:
 
 | Element        | Schnittstelle und Beschreibung |
 |:-------------- |-----------------------------------------|
-| Standard-Konstruktor | `DynamicArray();`<br/>Belegt die Instanzvariablen mit datentypspezifischen Null-Werten. |
-| Benutzerdefinierter Konstruktor | `DynamicArray(size_t size);`<br/>Initialisiert ein `DynamicArray`-Objekt mit einem Datenpuffer der Länge `size`. |
-| Benutzerdefinierter Konstruktor | `DynamicArray(int* values, size_t count);`<br/>Initialisiert ein `DynamicArray`-Objekt mit den Werten eines Arrays `values` der Länge `count`. |
+| Standard-Konstruktor | `DynamicIntArray();`<br/>Belegt die Instanzvariablen mit datentypspezifischen Null-Werten. |
+| Benutzerdefinierter Konstruktor | `DynamicIntArray(size_t size);`<br/>Initialisiert ein `DynamicIntArray`-Objekt mit einem Datenpuffer der Länge `size`. |
+| Benutzerdefinierter Konstruktor | `DynamicIntArray(int* values, size_t count);`<br/>Initialisiert ein `DynamicIntArray`-Objekt mit den Werten eines Arrays `values` der Länge `count`. |
 | *getter* `size()`  | `size_t size() const;`<br/>Liefert die aktuelle Länge des Datenpuffers zurück. |
 | `at`     | `int& at (size_t i);`<br/> Zugriff auf ein Element an der Stelle *i*. Bei ungültigem Index wird eine Ausnahme geworfen. |
 | Operator `[]` | `int& operator[] (size_t i);`<br/>Wie Methode `at`, nur ohne Gültigkeitsüberprüfung des Index. |
@@ -87,13 +87,13 @@ Eine mögliche Schnittstelle der Klasse `DynamicArray` könnte so aussehen:
 | `minimum` | `int minimum() const;`<br/>Liefert das minimale Element im Datenpuffer zurück. |
 | `maximum` | `int maximum() const;`<br/>Liefert das maximale Element im Datenpuffer zurück. |
 | `indexOf` | `int indexOf(int value) const;`<br/>Liefert die Position des gesuchten Elements `value` im Datenpuffer zurück. Ist das Element nicht vorhanden, wird -1 zurückgegeben. |
-| `contains` | `bool contains(int value) const;`<br/>Liefert 0 oder 1 zurück, je nach dem, ob das Element `value` vorhanden ist oder nicht. |
+| `contains` | `bool contains(int value) const;`<br/>Liefert `true` oder `false` zurück, je nach dem, ob das Element `value` vorhanden ist oder nicht. |
 | `release` | `void release();`<br/>Gibt den dynamisch allokierten Speicher frei. |
 | `print` | `void print();`<br/>Gibt alle Elemente des Datenpuffers in der Konsole aus. |
-| `bool operator==` | `friend bool operator== (const DynamicArray& left, DynamicArray right);`<br/>Vergleicht zwei `DynamicArray`-Objekte auf Gleichheit. |
-| `bool operator!=` | `friend bool operator!= (const DynamicArray& left, DynamicArray right);`<br/>Vergleicht zwei `DynamicArray`-Objekte auf Ungleichheit. |
+| `bool operator==` | `friend bool operator== (const DynamicIntArray& left, DynamicIntArray right);`<br/>Vergleicht zwei `DynamicIntArray`-Objekte auf Gleichheit. |
+| `bool operator!=` | `friend bool operator!= (const DynamicIntArray& left, DynamicIntArray right);`<br/>Vergleicht zwei `DynamicIntArray`-Objekte auf Ungleichheit. |
 
-*Tabelle* 1: Schnittstelle der Klasse `DynamicArray`.
+*Tabelle* 1: Schnittstelle der Klasse `DynamicIntArray`.
 
 Beachten Sie, dass neben den in *Tabelle* 1 aufgeführten Methoden
 auch noch das Regelwerk der &ldquo;Rule of Three&rdquo; vorhanden ist.

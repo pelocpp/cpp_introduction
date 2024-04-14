@@ -77,11 +77,17 @@ Eine mögliche Schnittstelle der Klasse `DynamicArray` könnte so aussehen:
 |:-------------- |-----------------------------------------|
 | Standard-Konstruktor | `DynamicArray();`<br/>Belegt die Instanzvariablen mit datentypspezifischen Null-Werten. |
 | Benutzerdefinierter Konstruktor | `DynamicArray(size_t size);`<br/>Initialisiert ein `DynamicArray`-Objekt mit einem Datenpuffer der Länge `size`. |
+| Benutzerdefinierter Konstruktor | `DynamicArray(int* values, size_t count);`<br/>Initialisiert ein `DynamicArray`-Objekt mit den Werten eines Arrays `values` der Länge `count`. |
 | *getter* `size()`  | `size_t size() const;`<br/>Liefert die aktuelle Länge des Datenpuffers zurück. |
 | `at`     | `int& at (size_t i);`<br/> Zugriff auf ein Element an der Stelle *i*. Bei ungültigem Index wird eine Ausnahme geworfen. |
 | Operator `[]` | `int& operator[] (size_t i);`<br/>Wie Methode `at`, nur ohne Gültigkeitsüberprüfung des Index. |
 | `fill` | `void fill(int value);`<br/>Belegt alle Elemente des Datenpuffers mit dem Wert `value`. |
 | `resize` | `void resize(size_t newSize);`<br/>Ändert die Länge des internen Datenpuffers. Die vorhandenen Daten im Puffer sollen dabei &ndash; soweit möglich &ndash; erhalten bleiben, sprich: Ist die neue Länge kürzer im Vergleich zur aktuellen Länge, spielen die Daten im oberen Teil des alten Puffers keine Rolle mehr. Ist die neue Länge größer, ist der aktuelle Puffer komplett umzukopieren und die zusätzlichen Elemente im oberen Bereich sind mit `0` vorzubelegen. |
+| `shrinkToFit` | `void shrinkToFit();`<br/>Sollte auf Grund eines oder mehrerer `resize`-Aufrufe der Datenpuffer größer als erforderlich sein, wird ein neuer Datenpuffer mit exakt passender Länge angelegt. Natürlich sind die vorhandenen Elemente des alten Puffers umzukopieren. |
+| `minimum` | `int minimum() const;`<br/>Liefert das minimale Element im Datenpuffer zurück. |
+| `maximum` | `int maximum() const;`<br/>Liefert das maximale Element im Datenpuffer zurück. |
+| `indexOf` | `int indexOf(int value) const;`<br/>Liefert die Position des gesuchten Elements `value` im Datenpuffer zurück. Ist das Element nicht vorhanden, wird -1 zurückgegeben. |
+| `contains` | `bool contains(int value) const;`<br/>Liefert 0 oder 1 zurück, je nach dem, ob das Element `value` vorhanden ist oder nicht. |
 | `release` | `void release();`<br/>Gibt den dynamisch allokierten Speicher frei. |
 | `print` | `void print();`<br/>Gibt alle Elemente des Datenpuffers in der Konsole aus. |
 | `bool operator==` | `friend bool operator== (const DynamicArray& left, DynamicArray right);`<br/>Vergleicht zwei `DynamicArray`-Objekte auf Gleichheit. |
@@ -96,9 +102,9 @@ auch noch das Regelwerk der &ldquo;Rule of Three&rdquo; vorhanden ist.
 
 ## Quellcode der Lösungen:
 
-[*DynamicArray.h*](./DynamicArray/DynamicArray.h)<br />
-[*DynamicArray.cpp*](./DynamicArray/DynamicArray.cpp)<br />
-[*DynamicArray_Main.cpp*](./DynamicArray/DynamicArray_Main.cpp)<br />
+[*DynamicIntArray.h*](./DynamicIntArray/DynamicIntArray.h)<br />
+[*DynamicIntArray.cpp*](./DynamicIntArray/DynamicIntArray.cpp)<br />
+[*DynamicIntArray_Main.cpp*](./DynamicIntArray/DynamicIntArray_Main.cpp)<br />
 
 ---
 

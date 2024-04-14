@@ -118,7 +118,7 @@ Folgende Aspekte werden betrachtet:
 
 ---
 
-#### [Dynamische Daten &ndash; Klasse `DynamicArray`](./Exercises_DynamicArray.md)
+#### [Dynamische Daten &ndash; Klasse `DynamicIntArray`](./Exercises_DynamicIntArray.md)
 
 Folgende Aspekte werden betrachtet:
   * Umgang mit den Operatoren `new` und `delete`

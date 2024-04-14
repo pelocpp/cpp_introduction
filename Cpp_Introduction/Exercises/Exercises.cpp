@@ -10,7 +10,7 @@ extern void exerciseTime();
 extern void exerciseFraction();
 extern void exerciseStrings();
 extern void exerciseWallet();
-extern void exerciseDynamicArray();
+extern void exerciseDynamicIntArray();
 extern void exerciseString();
 extern void exerciseMoreBankAccounts();
 extern void exerciseDynamicArrayTemplate();
@@ -27,7 +27,7 @@ void testExercises()
     exerciseFraction();
     exerciseStrings();
     exerciseWallet();
-    exerciseDynamicArray();
+    exerciseDynamicIntArray();
     exerciseString();
     exerciseMoreBankAccounts();
     exerciseDynamicArrayTemplate();

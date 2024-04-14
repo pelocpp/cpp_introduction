@@ -1,12 +1,12 @@
 // ===========================================================================
-// DynamicArray_Main.cpp
+// DynamicIntArray_Main.cpp
 // ===========================================================================
 
-#include "DynamicArray.h"
+#include "DynamicIntArray.h"
 
-static void testDynamicArray01()
+static void testDynamicIntArray01()
 {
-    DynamicArray array(3);
+    DynamicIntArray array(3);
     array.print();
     array[0] = 1;
     array[1] = 2;
@@ -14,9 +14,9 @@ static void testDynamicArray01()
     array.print();
 }
 
-static void testDynamicArray02()
+static void testDynamicIntArray02()
 {
-    DynamicArray array(3);
+    DynamicIntArray array(3);
     array.print();
 
     array.fill(123);
@@ -26,9 +26,9 @@ static void testDynamicArray02()
     array.print();
 }
 
-static void testDynamicArray03()
+static void testDynamicIntArray03()
 {
-    DynamicArray array(3);
+    DynamicIntArray array(3);
     array.print();
     array[0] = 1;
     array[1] = 2;
@@ -47,10 +47,10 @@ static void testDynamicArray03()
     array.print();
 }
 
-static void testDynamicArray04()
+static void testDynamicIntArray04()
 {
-    DynamicArray array1(3);
-    DynamicArray array2(5);
+    DynamicIntArray array1(3);
+    DynamicIntArray array2(5);
     array1.print();
     array2.print();
 
@@ -58,21 +58,21 @@ static void testDynamicArray04()
     array1.print();
 }
 
-static void testDynamicArray05()
+static void testDynamicIntArray05()
 {
-    DynamicArray array1(3);
-    DynamicArray array2(array1);
+    DynamicIntArray array1(3);
+    DynamicIntArray array2(array1);
     array1.print();
     array2.print();
 }
 
-void exerciseDynamicArray()
+void exerciseDynamicIntArray()
 {
-    testDynamicArray01();
-    testDynamicArray02();
-    testDynamicArray03();
-    testDynamicArray04();
-    testDynamicArray05();
+    testDynamicIntArray01();
+    testDynamicIntArray02();
+    testDynamicIntArray03();
+    testDynamicIntArray04();
+    testDynamicIntArray05();
 }
 
 // ===========================================================================

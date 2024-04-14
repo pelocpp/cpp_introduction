@@ -82,9 +82,6 @@
     <Filter Include="Source Files\MoreInheritance">
       <UniqueIdentifier>{5260111a-3e80-4a5e-9665-1b6dc794392c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Excercises\DynamicArray">
-      <UniqueIdentifier>{513f0937-91db-41bc-b95e-192d1709f579}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Excercises\MoreBankAccounts">
       <UniqueIdentifier>{e342862c-29d2-40ad-aa3c-f2dfa71e6743}</UniqueIdentifier>
     </Filter>
@@ -112,9 +109,6 @@
     <Filter Include="Excercises\String\Resources">
       <UniqueIdentifier>{3b517a1f-a6ce-4412-8832-0886d0957db5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Excercises\DynamicArray\Resources">
-      <UniqueIdentifier>{0e3e1ee3-6a62-4666-96b7-96876329f67f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Excercises\STL_PhoneBook">
       <UniqueIdentifier>{b6b8e616-2e1a-4f3b-bcf8-33ffc2957ad6}</UniqueIdentifier>
     </Filter>
@@ -132,6 +126,12 @@
     </Filter>
     <Filter Include="Excercises\Wallet">
       <UniqueIdentifier>{49695647-5a43-404d-b760-bd6da82dfeac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\DynamicIntArray">
+      <UniqueIdentifier>{513f0937-91db-41bc-b95e-192d1709f579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\DynamicIntArray\Resources">
+      <UniqueIdentifier>{8440d379-de60-41b5-82c3-f7990e2752eb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -232,7 +232,7 @@
     <None Include="Exercises\Exercises_Strings.md">
       <Filter>Excercises</Filter>
     </None>
-    <None Include="Exercises\Exercises_DynamicArray.md">
+    <None Include="Exercises\Exercises_DynamicIntArray.md">
       <Filter>Excercises</Filter>
     </None>
     <None Include="Exercises\Exercises_MoreBankAccounts.md">
@@ -277,18 +277,6 @@
     <None Include="Exercises\Exercises_String.md">
       <Filter>Excercises</Filter>
     </None>
-    <None Include="Exercises\DynamicArray\Resources\cpp_dynamic_array_01.svg">
-      <Filter>Excercises\DynamicArray\Resources</Filter>
-    </None>
-    <None Include="Exercises\DynamicArray\Resources\cpp_dynamic_array_02.svg">
-      <Filter>Excercises\DynamicArray\Resources</Filter>
-    </None>
-    <None Include="Exercises\DynamicArray\Resources\cpp_dynamic_array_03.svg">
-      <Filter>Excercises\DynamicArray\Resources</Filter>
-    </None>
-    <None Include="Exercises\DynamicArray\Resources\cpp_dynamic_array_04.svg">
-      <Filter>Excercises\DynamicArray\Resources</Filter>
-    </None>
     <None Include="Markdown\cpp_variable_vs_pointer.svg">
       <Filter>Markdown</Filter>
     </None>
@@ -306,6 +294,18 @@
     </None>
     <None Include="Exercises\Exercises_Wallet.md">
       <Filter>Excercises</Filter>
+    </None>
+    <None Include="Exercises\DynamicIntArray\Resources\cpp_dynamic_array_01.svg">
+      <Filter>Excercises\DynamicIntArray\Resources</Filter>
+    </None>
+    <None Include="Exercises\DynamicIntArray\Resources\cpp_dynamic_array_02.svg">
+      <Filter>Excercises\DynamicIntArray\Resources</Filter>
+    </None>
+    <None Include="Exercises\DynamicIntArray\Resources\cpp_dynamic_array_03.svg">
+      <Filter>Excercises\DynamicIntArray\Resources</Filter>
+    </None>
+    <None Include="Exercises\DynamicIntArray\Resources\cpp_dynamic_array_04.svg">
+      <Filter>Excercises\DynamicIntArray\Resources</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -408,12 +408,6 @@
     <ClCompile Include="MoreInheritance\Main.cpp">
       <Filter>Source Files\MoreInheritance</Filter>
     </ClCompile>
-    <ClCompile Include="Exercises\DynamicArray\DynamicArray.cpp">
-      <Filter>Excercises\DynamicArray</Filter>
-    </ClCompile>
-    <ClCompile Include="Exercises\DynamicArray\DynamicArray_Main.cpp">
-      <Filter>Excercises\DynamicArray</Filter>
-    </ClCompile>
     <ClCompile Include="Exercises\MoreBankAccounts\MoreBankAccounts_Main.cpp">
       <Filter>Excercises\MoreBankAccounts</Filter>
     </ClCompile>
@@ -477,6 +471,12 @@
     <ClCompile Include="Exercises\Wallet\Wallet_Main.cpp">
       <Filter>Excercises\Wallet</Filter>
     </ClCompile>
+    <ClCompile Include="Exercises\DynamicIntArray\DynamicIntArray.cpp">
+      <Filter>Excercises\DynamicIntArray</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\DynamicIntArray\DynamicIntArray_Main.cpp">
+      <Filter>Excercises\DynamicIntArray</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constructors\Time.h">
@@ -502,9 +502,6 @@
     </ClInclude>
     <ClInclude Include="Exercises\BankAccount\BankAccount.h">
       <Filter>Excercises\BankAccount</Filter>
-    </ClInclude>
-    <ClInclude Include="Exercises\DynamicArray\DynamicArray.h">
-      <Filter>Excercises\DynamicArray</Filter>
     </ClInclude>
     <ClInclude Include="Exercises\DynamicArrayTemplate\DynamicArrayTemplate.h">
       <Filter>Excercises\DynamicArrayTemplate</Filter>
@@ -535,6 +532,9 @@
     </ClInclude>
     <ClInclude Include="Exercises\Wallet\Wallet.h">
       <Filter>Excercises\Wallet</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\DynamicIntArray\DynamicIntArray.h">
+      <Filter>Excercises\DynamicIntArray</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

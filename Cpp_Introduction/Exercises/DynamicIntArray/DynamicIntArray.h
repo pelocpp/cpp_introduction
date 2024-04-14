@@ -1,22 +1,23 @@
 // ===========================================================================
-// DynamicArray.h
+// DynamicIntArray.h
 // ===========================================================================
 
 #pragma once
 
 #include <iostream>
 
-class DynamicArray
+class DynamicIntArray
 {
 private:
-    size_t m_size;
     int* m_data;
+    size_t m_size;
 
 public:
     // c'tor(s) / d'tor
-    DynamicArray();
-    DynamicArray(size_t size);
-    ~DynamicArray();
+    DynamicIntArray();
+    DynamicIntArray(size_t size);
+    DynamicIntArray(int* values, size_t count);
+    ~DynamicIntArray();
 
     // getter / setter
     size_t size() const;
@@ -25,19 +26,24 @@ public:
     // public interface
     void fill(int value);
     void resize(size_t newSize);
+    void shrinkToFit();
+    int  minimum() const;
+    int  maximum() const;
+    int  indexOf(int value) const;
+    bool contains(int value) const;
     void release();
-    void print();
+    void print() const;
 
     // operators
     int& operator[] (size_t index);
 
     // copy semantics
-    DynamicArray(const DynamicArray&); // copy c'tor
-    DynamicArray& operator= (const DynamicArray&);  // copy assignment
+    DynamicIntArray(const DynamicIntArray&); // copy c'tor
+    DynamicIntArray& operator= (const DynamicIntArray&);  // copy assignment
 
     // comparison operators
-    friend bool operator== (const DynamicArray& left, DynamicArray right);
-    friend bool operator!= (const DynamicArray& left, DynamicArray right);
+    friend bool operator== (const DynamicIntArray& left, DynamicIntArray right);
+    friend bool operator!= (const DynamicIntArray& left, DynamicIntArray right);
 };
 
 // ===========================================================================

@@ -76,7 +76,7 @@ Eine mögliche Schnittstelle der Klasse `DynamicArray` könnte so aussehen:
 | Element        | Schnittstelle und Beschreibung |
 |:-------------- |-----------------------------------------|
 | Standard-Konstruktor | `DynamicArray();`<br/>Belegt die Instanzvariablen mit datentypspezifischen Null-Werten. |
-| Benutzerdefinierter Konstruktor | `DynamicArray(size_t size);`<br/>Initialisiert ein `DynamicArray`-Objekt mit einem Datenpuffer der Länge `size` an. |
+| Benutzerdefinierter Konstruktor | `DynamicArray(size_t size);`<br/>Initialisiert ein `DynamicArray`-Objekt mit einem Datenpuffer der Länge `size`. |
 | *getter* `size()`  | `size_t size() const;`<br/>Liefert die aktuelle Länge des Datenpuffers zurück. |
 | `at`     | `int& at (size_t i);`<br/> Zugriff auf ein Element an der Stelle *i*. Bei ungültigem Index wird eine Ausnahme geworfen. |
 | Operator `[]` | `int& operator[] (size_t i);`<br/>Wie Methode `at`, nur ohne Gültigkeitsüberprüfung des Index. |

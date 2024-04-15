@@ -29,6 +29,7 @@ public:
     // public interface
     void deposit(double amount);
     void withdraw(double amount);
+    bool equals(BankAccount other);
     void print();
 
     // interest

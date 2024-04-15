@@ -25,6 +25,13 @@ void exerciseBankAccount()
     thirdAccount.setInterestRate(5.0);
     thirdAccount.updateInterest(365);
     thirdAccount.print();
+
+    if (firstAccount.equals(secondAccount)) {
+        std::cout << "Same Balance" << std::endl;
+    }
+    else {
+        std::cout << "Different Balances" << std::endl;
+    }
 }
 
 // ===========================================================================

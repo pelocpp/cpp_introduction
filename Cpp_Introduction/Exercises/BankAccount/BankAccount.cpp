@@ -54,6 +54,16 @@ void BankAccount::withdraw(double amount)
     m_balance -= amount;
 }
 
+bool BankAccount::equals(BankAccount other)
+{
+    if (m_balance == other.m_balance) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
 void BankAccount::updateInterest(int days)
 {
     double interest = (days * m_rate * m_balance) / 365.0 / 100.0;

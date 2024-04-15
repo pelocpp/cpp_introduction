@@ -43,7 +43,7 @@ int* ip = &n;
 *Abbildung* 2: Eine Variable und ein Zeiger, der auf die Variable zeigt.
 
 
-*Referenzen*, die es nur in der Programmiersprache C/C++ gibt, bieten nahezu die gleichen Möglichkeiten wie Zeiger,
+*Referenzen*, die es nur in der Programmiersprache C++ gibt, bieten nahezu die gleichen Möglichkeiten wie Zeiger,
 aber mit einer *einfacheren* Syntax:
 
 

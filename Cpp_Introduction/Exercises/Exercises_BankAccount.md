@@ -13,7 +13,7 @@ Es soll möglich sein, Geldbeträge einzahlen und abheben zu können.
 Auskünfte über das Bankkonto lassen sich bzgl. Kontonummer und Kontostand einholen.
 Die Informationen des Kontos lassen sich in der Konsole ausgeben.
 
-Folgende C++&ndash;-Sprachmittel sollen zum Einsatz kommen:
+Folgende C++&ndash;Sprachmittel sollen zum Einsatz kommen:
 
   * Klasse und Objekt
   * Konstruktoren
@@ -40,14 +40,14 @@ BankAccount Nr. 10000:   Balance=25.
 ```
 
 
-*Erster Hinweis*:
+Ein *Hinweis* zur möglichen Namensgebung von Methoden:
 
 einzahlen: engl. &ldquo;*to deposit*&rdquo;<br />
 abheben: engl. &ldquo;*to withdraw*&rdquo;<br />
 Kontostand: engl. &ldquo;*balance*&rdquo;
 
 
-*Zweiter Hinweis*:
+Und noch ein zweiter *Hinweis*:
 
 Die Kontonummer ist intern in der Klasse `BankAccount` geeignet durch eine Klassenvariable
 zu verwalten. Der erste Kunde erhält die Kontonummer 10.000, danach werden die Kontonummern
@@ -57,7 +57,7 @@ in aufsteigender Reihenfolge vergeben.
 ### Erste Erweiterung
 
 Die Methode zum Abheben (`withdraw`) schlägt fehl, wenn auf dem Konto nicht genügend Geld vorhanden ist.
-Wie könnte man dies in einer Verbesserung der `withdraw`-Methode zum Ausdruck bringen?
+Wie könnte man dies in der Schnittstelle der `withdraw`-Methode zum Ausdruck bringen?
 
 *Beispiel*:
 
@@ -75,9 +75,9 @@ if (! succeeded) {
 
 Bankkonten lassen sich vergleichen. Im echten Leben interessieren wir uns natürlich für den Geldbetrag,
 der auf einem Konto verfügbar ist. Wir vergleichen also zwei Bankkonten mit einer `equals`-Methode,
-indem wir die jeweiliegen Kontostände vergleichen.
+indem wir die jeweiligen Kontostände vergleichen.
 
-Dies bedeutet anders herum betrachtet, dass die Kontonummer beim Vergleichen keine Rolle spielt.
+Dies bedeutet anders herum betrachtet, dass Kontonummern beim Vergleichen keine Rolle spielen.
 Dies ist kein Widerspruch, denn unter Einbeziehung der Kontonummer könnte man nie zwei Konten vergleichen,
 da Kontonummern ja immer verschieden sein müssen.
 

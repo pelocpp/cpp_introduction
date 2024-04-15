@@ -6,7 +6,7 @@
 
 ## Übersicht
 
-Folgende C++&ndash;-Sprachmittel sollen zum Einsatz kommen:
+Folgende C++&ndash;Sprachmittel sollen zum Einsatz kommen:
 
   * Parameterübergabe *Call-by_Value*
   * Parameterübergabe mit Zeigern

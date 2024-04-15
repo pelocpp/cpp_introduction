@@ -8,12 +8,12 @@
 int BankAccount::s_NextAccountNumber = 10'000;
 
 // c'tor
-BankAccount::BankAccount(double start) : m_number(s_NextAccountNumber)
+BankAccount::BankAccount(double balance) : m_number(s_NextAccountNumber)
 {
     // move to next available account number
     s_NextAccountNumber++;
 
-    m_balance = 0.0;
+    m_balance = balance;
     m_rate = 0.0;
 }
 

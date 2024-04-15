@@ -13,8 +13,6 @@ Es soll möglich sein, Geldbeträge einzahlen und abheben zu können.
 Auskünfte über das Bankkonto lassen sich bzgl. Kontonummer und Kontostand einholen.
 Die Informationen des Kontos lassen sich in der Konsole ausgeben.
 
-### Beschreibung
-
 Folgende C++&ndash;-Sprachmittel sollen zum Einsatz kommen:
 
   * Klasse und Objekt

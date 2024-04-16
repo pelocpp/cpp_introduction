@@ -226,14 +226,14 @@ void Wallet::operator -= (unsigned long long euros) {
 // increment operator: prefix version
 Wallet& Wallet::operator++()
 {
-    add((unsigned long long) 1);
+    add(1);
     return *this;
 }
 
 // decrement operator: prefix version
 Wallet& Wallet::operator--()
 {
-    sub((unsigned long long) 1);
+    sub(1);
     return *this;
 }
 
@@ -241,7 +241,7 @@ Wallet& Wallet::operator--()
 Wallet Wallet::operator++(int)
 {
     Wallet tmp(*this);              // construct a copy
-    add((unsigned long long) 1);    // increment wallet
+    add(1);    // increment wallet
     return tmp;                     // return the copy
 }
 
@@ -249,7 +249,7 @@ Wallet Wallet::operator++(int)
 Wallet Wallet::operator--(int)
 {
     Wallet tmp(*this);              // construct a copy
-    sub((unsigned long long) 1);    // decrement wallet
+    sub(1);    // decrement wallet
     return tmp;                     // return the copy
 }
 

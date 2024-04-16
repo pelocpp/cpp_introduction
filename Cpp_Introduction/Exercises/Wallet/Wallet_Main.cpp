@@ -71,8 +71,15 @@ static void test_05_sub()
     std::cout << wallet1 << std::endl;
     wallet1.sub(wallet2);
     std::cout << wallet1 << std::endl;
-    wallet1.sub(wallet2);
-    std::cout << wallet1 << std::endl;
+
+    try
+    {
+        wallet1.sub(wallet2);
+    }
+    catch (std::invalid_argument ex)
+    {
+        std::cout << ex.what() << std::endl;
+    }
 }
 
 static void test_06_add_sub_euros()
@@ -81,8 +88,6 @@ static void test_06_add_sub_euros()
     wallet.add(5);
     std::cout << wallet<< std::endl;
     wallet.sub(10);
-    std::cout << wallet << std::endl;
-    wallet.sub(1);
     std::cout << wallet << std::endl;
 }
 

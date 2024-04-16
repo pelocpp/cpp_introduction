@@ -26,10 +26,14 @@ public:
     unsigned int getCent() const;
 
     // public interface
-    void add(const Wallet& other);
+    void add(unsigned long long euros, unsigned int cents);
     void add(unsigned long long euros);
-    void sub(const Wallet& other);
+    void add(const Wallet& other);
+
+    void sub(unsigned long long euros, unsigned int cents);
     void sub(unsigned long long euros);
+    void sub(const Wallet& other);
+
     void print() const;
 
     int compareTo(const Wallet& other) const;

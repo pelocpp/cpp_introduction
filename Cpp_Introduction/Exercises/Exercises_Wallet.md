@@ -36,7 +36,9 @@ Folgende Aktivitäten sollten mit einem Geldbeutel möglich sein:
   * Geld entnehmen, allerdings nicht mehr, als im Geldbeutel ist.
   * Den Inhalt zweier Geldbeutel vergleichen.
   * Nur Euros hinzufügen.
+  * Nur Cent hinzufügen.
   * Nur Euros entnehmen.
+  * Nur Cent entnehmen.
   * Einen Geldbeutel als `std::string`-Objekt darstellen.
   * Einen Geldbeutel mit dem Operator `operator<<` auf der Konsole ausgeben.
   * Einen Euro hinzufügen.
@@ -71,7 +73,6 @@ zu verhindern? Welchen Weg muss man hierzu in der Realisierung der Konstruktoren
 ## Beispiele
 
 Die folgenden Beispiele demonstrieren den Umgang mit der Klasse `Wallet`:
-
 
 ```cpp
 01: void test()

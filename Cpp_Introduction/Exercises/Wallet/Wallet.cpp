@@ -14,11 +14,13 @@
 Wallet::Wallet() : m_euros(0), m_cents(0) {}
 
 Wallet::Wallet(unsigned long long euros, unsigned int cents)
-    : m_euros(euros), m_cents(cents)
 {
-    if (m_cents >= 100) {
-        throw std::out_of_range("Cents larger than 100 are not allowed!");
+    if (cents >= 100) {
+        throw std::out_of_range("cent larger than 100 are not allowed!");
     }
+
+    m_euros = euros;
+    m_cents = cents;
 }
 
 Wallet::Wallet(unsigned long long euros) 
@@ -100,13 +102,17 @@ unsigned long long Wallet::getEuros() const { return m_euros; }
 unsigned int Wallet::getCent() const { return m_cents; }
 
 // public interface
-void Wallet::add(const Wallet& other) {
+void Wallet::add(unsigned long long euros, unsigned int cents) {
 
-    m_cents = m_cents + other.m_cents;
+    if (cents >= 100) {
+        throw std::invalid_argument("Cent amount between 0 and 99 expected!");
+    }
+
+    m_cents = m_cents + cents;
     unsigned int carry = m_cents / 100;
 
     m_cents = m_cents % 100;
-    m_euros = m_euros + other.m_euros + carry;
+    m_euros = m_euros + euros + carry;
 }
 
 void Wallet::add(unsigned long long euros) {
@@ -114,31 +120,45 @@ void Wallet::add(unsigned long long euros) {
     m_euros = m_euros + euros;
 }
 
-void Wallet::sub(const Wallet& other) {
+void Wallet::add(const Wallet& other) {
 
-    if (*this < other) {
-        throw std::invalid_argument("Not enough money available in wallet!");
-        return;
+    add(other.m_euros, other.m_cents);
+}
+
+void Wallet::sub(unsigned long long euros, unsigned int cents) {
+
+    if (cents >= 100) {
+        throw std::invalid_argument("Cent amount between 0 and 99 expected!");
     }
 
-    if (m_cents < other.m_cents)
+    Wallet tmp(euros, cents);
+
+    if (*this < tmp) {
+        throw std::invalid_argument("Not enough money available in wallet!");
+    }
+
+    if (m_cents < cents)
     {
         m_euros = m_euros - 1;
         m_cents = m_cents + 100;
     }
 
-    m_euros = m_euros - other.m_euros;
-    m_cents = m_cents - other.m_cents;
+    m_euros = m_euros - euros;
+    m_cents = m_cents - cents;
 }
 
-void Wallet::sub(unsigned long long euros) {
-
+void Wallet::sub(unsigned long long euros)
+{
     if (m_euros < euros) {
         throw std::invalid_argument("Not enough money available in wallet!");
-        return;
     }
 
     m_euros = m_euros - euros;
+}
+
+void Wallet::sub(const Wallet& other) {
+
+    sub(other.m_euros, other.m_cents);
 }
 
 void Wallet::print() const
@@ -206,31 +226,31 @@ void Wallet::operator -= (unsigned long long euros) {
 // increment operator: prefix version
 Wallet& Wallet::operator++()
 {
-    add(1);
+    add((unsigned long long) 1);
     return *this;
 }
 
 // decrement operator: prefix version
 Wallet& Wallet::operator--()
 {
-    sub(1);
+    sub((unsigned long long) 1);
     return *this;
 }
 
 // increment operator: postfix version
 Wallet Wallet::operator++(int)
 {
-    Wallet tmp(*this);  // construct a copy
-    add(1);             // increment wallet
-    return tmp;         // return the copy
+    Wallet tmp(*this);              // construct a copy
+    add((unsigned long long) 1);    // increment wallet
+    return tmp;                     // return the copy
 }
 
 // decrement operator: postfix version
 Wallet Wallet::operator--(int)
 {
-    Wallet tmp(*this);  // construct a copy
-    sub(1);             // decrement wallet
-    return tmp;         // return the copy
+    Wallet tmp(*this);              // construct a copy
+    sub((unsigned long long) 1);    // decrement wallet
+    return tmp;                     // return the copy
 }
 
 // comparison operators

@@ -6,7 +6,7 @@
 
 #include "Wallet.h"
 
-static void test_01_Ctors()
+static void test_01_ctors()
 {
     Wallet empty;
     empty.print();
@@ -15,7 +15,7 @@ static void test_01_Ctors()
     wallet.print();
 }
 
-static void test_02_Ctors()
+static void test_02_ctors()
 {
     try
     {
@@ -50,6 +50,7 @@ static void test_04_add()
     Wallet wallet3(3, 30);
     Wallet wallet4(3, 30);
     Wallet wallet5(3, 30);
+
     wallet1.add(wallet2);
     std::cout << wallet1 << std::endl;
     wallet1.add(wallet3);
@@ -138,31 +139,78 @@ static void test_09_increment_operators()
     std::cout << wallet << std::endl;
 }
 
-
-static void test_10_Example_Tutorial()
+static void test_10_example_tutorial()
 {
-    Wallet wallet(15, 55);
+    Wallet wallet(2, 50);
+    std::cout << wallet << std::endl;
+
+    std::cout << "Wallet contains " << wallet.getEuros() << " euros." << std::endl;
+    std::cout << "Wallet contains " << wallet.getCent() << " cent." << std::endl;
+}
+
+static void test_11_example_tutorial()
+{
+    Wallet wallet(2, 50);
     std::cout << wallet << std::endl;
 
     wallet.add(5);
     std::cout << wallet << std::endl;
 
-    Wallet secondwallet(9, 45);
-    wallet.add(secondwallet);
-    std::cout << wallet << std::endl;
-
-    wallet.sub(30);
-    std::cout << wallet << std::endl;
-
-    wallet.sub(1);
+    wallet.sub(7);
     std::cout << wallet << std::endl;
 }
 
+static void test_12_example_tutorial()
+{
+    Wallet wallet(2, 50);
+    std::cout << wallet << std::endl;
+
+    try
+    {
+        wallet.sub(3);
+    }
+    catch (std::invalid_argument ex)
+    {
+        std::cout << ex.what() << std::endl;
+    }
+
+    std::cout << wallet << std::endl;
+}
+
+static void test_13_example_tutorial()
+{
+    Wallet wallet(2, 50);
+    std::cout << wallet << std::endl;
+
+    wallet += 3;
+    std::cout << wallet << std::endl;
+}
+
+static void test_14_example_tutorial()
+{
+    Wallet wallet1(2, 50);
+    std::cout << wallet1 << std::endl;
+
+    Wallet wallet2(3, 75);
+    std::cout << wallet2 << std::endl;
+
+    if (wallet1 < wallet2) {
+        std::cout << "Wallet 1 contains less money than Wallet 2" << std::endl;
+    }
+
+    wallet1 = wallet2;
+    std::cout << wallet1 << std::endl;
+    std::cout << wallet1 << std::endl;
+
+    if (wallet1 == wallet2) {
+        std::cout << "Wallet 1 contains the same amount of money as Wallet 2." << std::endl;
+    }
+}
 
 void exerciseWallet()
 {
-    test_01_Ctors();
-    test_02_Ctors();
+    test_01_ctors();
+    test_02_ctors();
     test_03_toString();
     test_04_add();
     test_05_sub();
@@ -170,7 +218,12 @@ void exerciseWallet()
     test_07_comparision();
     test_08_arithmetic_increment_operators();
     test_09_increment_operators();
-    test_10_Example_Tutorial();
+
+    test_10_example_tutorial();
+    test_11_example_tutorial();
+    test_12_example_tutorial();
+    test_13_example_tutorial();
+    test_14_example_tutorial();
 }
 
 // ===========================================================================

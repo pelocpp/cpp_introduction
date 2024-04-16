@@ -70,71 +70,139 @@ zu verhindern? Welchen Weg muss man hierzu in der Realisierung der Konstruktoren
 
 ## Beispiele
 
-Die folgenden zwei Beispiele demonstrieren den Umgang mit der Klasse `Wallet`:
+Die folgenden Beispiele demonstrieren den Umgang mit der Klasse `Wallet`:
+
 
 ```cpp
 01: void test()
 02: {
-03:     Wallet wallet(15, 55);
+03:     Wallet wallet(2, 50);
+04:     std::cout << wallet << std::endl;
+05: 
+06:     std::cout << "Wallet contains " << wallet.getEuros() << " euros." << std::endl;
+07:     std::cout << "Wallet contains " << wallet.getCent() << " cent." << std::endl;
+08: }
+```
+
+*Ausgabe*:
+
+```
+2.50
+Wallet contains 2 euros.
+Wallet contains 50 cent.
+```
+
+Es folgt ein Beispiel zum Hinzufügen und Entnehmen von Geldbeträgen:
+
+```cpp
+01: void test()
+02: {
+03:     Wallet wallet(2, 50);
 04:     std::cout << wallet << std::endl;
 05: 
 06:     wallet.add(5);
 07:     std::cout << wallet << std::endl;
 08: 
-09:     Wallet secondwallet(9, 45);
-10:     wallet.add(secondwallet);
-11:     std::cout << wallet << std::endl;
-12: 
-13:     wallet.sub(30);
-14:     std::cout << wallet << std::endl;
-15: 
-16:     wallet.sub(1);
-17:     std::cout << wallet << std::endl;
-18: }
+09:     wallet.sub(7);
+10:     std::cout << wallet << std::endl;
+11: }
 ```
 
 *Ausgabe*:
 
-
 ```
-15.55
-20.55
-30.00
-0.00
-Exception: Not enough money available in wallet!
+2.50
+7.50
+0.50
 ```
 
-Und noch ein zweites Beispiel:
+Ein drittes Beispiel demonstriert die Behandlung von Ausnahmen.
+Es sollte dann eine Ausnahme geworfen werden, wenn versucht wird,
+mehr Geld aus einem Geldbeutel zu entnehmen als dieser enthält:
 
 
 ```cpp
 01: void test()
 02: {
-03:     Wallet wallet1(10, 20);
-04:     Wallet wallet2(20, 10);
+03:     Wallet wallet(2, 50);
+04:     std::cout << wallet << std::endl;
 05: 
-06:     std::cout << std::boolalpha << (wallet1 == wallet1) << std::endl;
-07:     std::cout << std::boolalpha << (wallet1 == wallet2) << std::endl;
-08:     std::cout << std::boolalpha << (wallet1 != wallet2) << std::endl;
-09: 
-10:     std::cout << std::boolalpha << (wallet1  < wallet2) << std::endl;
-11:     std::cout << std::boolalpha << (wallet1 <= wallet2) << std::endl;
-12:     std::cout << std::boolalpha << (wallet1  > wallet2) << std::endl;
-13:     std::cout << std::boolalpha << (wallet1 >= wallet2) << std::endl;
-14: }
+06:     try
+07:     {
+08:         wallet.sub(3);
+09:     }
+10:     catch (std::invalid_argument ex)
+11:     {
+12:         std::cout << ex.what() << std::endl;
+13:     }
+14: 
+15:     std::cout << wallet << std::endl;
+16: }
 ```
 
 *Ausgabe*:
 
+```
+2.50
+Not enough money available in wallet!
+2.50
+```
+
+Mit Hilfe der arithmetischen Wertzuweisungsoperatoren
+kann man das Hinzufügen von Euros sehr anschaulich formulieren:
+
+```cpp
+01: void test()
+02: {
+03:     Wallet wallet(2, 50);
+04:     std::cout << wallet << std::endl;
+05: 
+06:     wallet += 3;
+07:     std::cout << wallet << std::endl;
+08: }
+```
+
+*Ausgabe*:
 
 ```
-true
-false
-true
-true
-true
-false
-false
+2.50
+5.50
+```
+
+Mit den Vergleichsoperatoren kann man die Inhalte zweier Geldbeutel vergleichen:
+
+```cpp
+01: void test()
+02: {
+03:     Wallet wallet1(2, 50);
+04:     std::cout << wallet1 << std::endl;
+05: 
+06:     Wallet wallet2(3, 75);
+07:     std::cout << wallet2 << std::endl;
+08: 
+09:     if (wallet1 < wallet2) {
+10:         std::cout << "Wallet 1 contains less money than Wallet 2" << std::endl;
+11:     }
+12: 
+13:     wallet1 = wallet2;
+14:     std::cout << wallet1 << std::endl;
+15:     std::cout << wallet1 << std::endl;
+16: 
+17:     if (wallet1 == wallet2) {
+18:         std::cout << "Wallet 1 contains the same amount of money as Wallet 2." << std::endl;
+19:     }
+20: }
+```
+
+*Ausgabe*:
+
+```
+2.50
+3.75
+Wallet 1 contains less money than Wallet 2
+3.75
+3.75
+Wallet 1 contains the same amount of money as Wallet 2.
 ```
 
 ---

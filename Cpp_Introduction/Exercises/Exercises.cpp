@@ -11,7 +11,7 @@ extern void exerciseFraction();
 extern void exerciseStrings();
 extern void exerciseWallet();
 extern void exerciseDynamicIntArray();
-extern void exerciseString();
+extern void exerciseClassString();
 extern void exerciseMoreBankAccounts();
 extern void exerciseDynamicArrayTemplate();
 extern void exerciseSTL();
@@ -20,20 +20,20 @@ extern void exerciseSTLPhoneBook();
 
 void testExercises()
 {
-    exerciseRectangle();
-    exerciseBankAccount();
-    exerciseReferencesPointers();
-    exerciseTime();
-    exerciseFraction();
-    exerciseStrings();
-    exerciseWallet();
-    exerciseDynamicIntArray();
-    exerciseString();
-    exerciseMoreBankAccounts();
-    exerciseDynamicArrayTemplate();
-    exerciseSTL();
-    exerciseLotto();
-    exerciseSTLPhoneBook();
+    //exerciseRectangle();
+    //exerciseBankAccount();
+    //exerciseReferencesPointers();
+    //exerciseTime();
+    //exerciseFraction();
+     exerciseStrings();
+    //exerciseWallet();
+    //exerciseDynamicIntArray();
+    //exerciseClassString();
+    //exerciseMoreBankAccounts();
+    //exerciseDynamicArrayTemplate();
+    //exerciseSTL();
+    //exerciseLotto();
+    //exerciseSTLPhoneBook();
 }
 
 // ===========================================================================

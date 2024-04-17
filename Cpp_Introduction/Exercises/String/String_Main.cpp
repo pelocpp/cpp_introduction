@@ -186,7 +186,7 @@ static void testStringConcatenation()
     std::cout << "s2:" << s2 << std::endl;
 }
 
-void exerciseString()
+void exerciseClassString()
 {
     testCtorsDtor();
     testInsert();

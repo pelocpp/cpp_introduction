@@ -2,10 +2,112 @@
 // Strings_Main.cpp
 // ===========================================================================
 
+
+// includes
 #include <iostream>
 #include <string>
 #include <cctype>
 #include <cstdlib>
+
+// function prototypes
+static bool isLeapYear(int year);
+static int maxNumOfDays(int month, int year);
+static bool IsValid(int day, int month, int year);
+static bool verifyDateFormat(const std::string& date);
+static std::string dateToWord(const std::string& date);
+static void testVerifyDateFormat();
+static void testDateToWord();
+
+// implementation
+static bool verifyDateFormat(const std::string& date)
+{
+    // accepted format: "tt.mm.jjjj"
+
+    if (date.length() != 10) {
+        return false;
+    }
+    else if (date[2] != '.' || date[5] != '.') {
+        return false;
+    }
+
+    int indices[]{ 0, 1, 3, 4, 6, 7, 8, 9 };
+
+    for (int i = 0; i < 8; ++i) {
+
+        int index = indices[i];
+
+        if (std::isdigit(date[index]) == 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+static std::string dateToWord(const std::string& date)
+{
+    static std::string months[12] =
+    {
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    };
+
+    if (!verifyDateFormat(date)) {
+        return "";
+    }
+
+    // verify values
+    std::string sDay = date.substr(0, 2);
+    std::string sMonth = date.substr(3, 2);
+    std::string sYear = date.substr(6, 4);
+
+    // convert strings to ints
+    int day = std::stoi(sDay);
+    int month = std::stoi(sMonth);
+    int year = std::stoi(sYear);
+
+    if (! IsValid(day, month, year)) {
+        return "";
+    }
+
+    std::string label = months[month - 1];
+
+    // remove leading '0', if any
+    if (sDay[0] == '0') {
+        sDay = sDay[1];
+    }
+
+    std::string word = sDay + ". " + label + " " + sYear;
+    return word;
+}
+
+static void testVerifyDateFormat()
+{
+    // test 'verifyDateFormat'
+    std::cout << std::boolalpha << verifyDateFormat("10.08.2000") << std::endl;
+    std::cout << std::boolalpha << verifyDateFormat("ABCDEFGHIJK") << std::endl;
+    std::cout << std::boolalpha << verifyDateFormat("10:08:4321") << std::endl;
+    std::cout << std::boolalpha << verifyDateFormat("10.XX.4321") << std::endl;
+}
+
+static void testDateToWord()
+{
+    // test 'dateToWord'
+    std::string s = dateToWord("12.08.2000");
+    std::cout << s << std::endl;
+
+    s = dateToWord("01.13.2023");
+    std::cout << s << std::endl;
+
+    s = dateToWord("32.12.2023");
+    std::cout << s << std::endl;
+
+    s = dateToWord("01.01.2023");
+    std::cout << s << std::endl;
+
+    s = dateToWord("31.12.2023");
+    std::cout << s << std::endl;
+}
 
 static bool isLeapYear(int year)
 {
@@ -56,100 +158,12 @@ static bool IsValid(int day, int month, int year)
     return true;
 }
 
-
-static bool verifyDateFormat(const std::string& date)
-{
-    // accepted format: "tt.mm.jjjj"
-
-    if (date.length() != 10) {
-        return false;
-    }
-    else if (date[2] != '.' || date[5] != '.') {
-        return false;
-    }
-
-    int indices[]{ 0, 1, 3, 4, 6, 7, 8, 9 };
-
-    for (int i = 0; i < 8; ++i) {
-
-        int index = indices[i];
-
-        if (!std::isdigit(date[index])) {
-            return false;
-        }
-    }
-
-    return true;
-}
-
-static std::string dateToWord(const std::string& date)
-{
-    static std::string months[]{
-        "January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"
-    };
-
-    if (!verifyDateFormat(date)) {
-        return "";
-    }
-
-    // verify values
-    std::string sDay = date.substr(0, 2);
-    std::string sMonth = date.substr(3, 2);
-    std::string sYear = date.substr(6, 4);
-
-    // convert month string to int
-    int day = std::stoi(sDay);
-    int month = std::stoi(sMonth);
-    int year = std::stoi(sYear);
-
-    if (! IsValid(day, month, year)) {
-        return "";
-    }
-
-    std::string label = months[month - 1];
-
-    // remove leading '0', if any
-    if (sDay[0] == '0') {
-        sDay = sDay[1];
-    }
-
-    std::string word = sDay + ". " + label + " " + sYear;
-    return word;
-}
-
-static void testDateToWord()
-{
-    // test 'verifyDateFormat'
-    std::cout << std::boolalpha << verifyDateFormat("10.08.2000") << std::endl;
-    std::cout << std::boolalpha << verifyDateFormat("ABCDEFGHIJK") << std::endl;
-    std::cout << std::boolalpha << verifyDateFormat("10:08:4321") << std::endl;
-    std::cout << std::boolalpha << verifyDateFormat("10.XX.4321") << std::endl;
-
-    // test 'dateToWord'
-    std::string s = dateToWord("12.08.2000");
-    std::cout << s << std::endl;
-
-    s = dateToWord("01.13.2023");
-    std::cout << s << std::endl;
-
-    s = dateToWord("32.12.2023");
-    std::cout << s << std::endl;
-
-    s = dateToWord("01.01.2023");
-    std::cout << s << std::endl;
-
-    s = dateToWord("31.12.2023");
-    std::cout << s << std::endl;
-}
-
 void exerciseStrings()
 {
+    //testVerifyDateFormat();
     testDateToWord();
 }
 
 // ===========================================================================
 // End-of-File
 // ===========================================================================
-
-

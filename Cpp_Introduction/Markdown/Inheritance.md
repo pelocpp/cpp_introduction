@@ -132,7 +132,7 @@ Rectangle::draw [x=2, y=2]
 Es wird in den beiden Klassen `ColoredRectangle` und `TransparentRectangle` 
 von der Vaterklasse `Rectangle` eine Methode `draw` geerbt:
 
-  * Was ist der Nachteil dieser Vorhehensweise?
+  * Was ist der Nachteil dieser Vorgehensweise?
   * Zeigen Sie auf, wie man diese Methode in den Klassen `ColoredRectangle` und `TransparentRectangle`
     besser realisieren kann.
 

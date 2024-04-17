@@ -49,7 +49,7 @@ vorhandene Inhalt des alten Speicherbereichs in den neuen umzukopieren ist.
 
 <img src="DynamicIntArray/Resources/cpp_dynamic_array_02.svg" width="550">
 
-*Abbildung* 2. Vergrößerung des Instanzdatenbereich eines `DynamicIntArray`-Objekts.
+*Abbildung* 2. Vergrößerung des Instanzdatenbereichs eines `DynamicIntArray`-Objekts.
 
 
 In *Abbildung* 3 und *Abbildung* 4 sprechen wir ein letztes Problem in der Realisierung der `DynamicIntArray`-Klasse an:

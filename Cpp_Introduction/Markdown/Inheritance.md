@@ -38,10 +38,10 @@ Basisklasse `Rectangle`:
 15:     {}
 16: 
 17:     // getter
-18:     int getX() { return m_x; }
-19:     int getY() { return m_y; }
-20:     int getWidth() { return m_width; }
-21:     int getHeight() { return m_height; }
+18:     int getX() const { return m_x; }
+19:     int getY() const { return m_y; }
+20:     int getWidth() const { return m_width; }
+21:     int getHeight() const { return m_height; }
 22: 
 23:     // public interface
 24:     void eraseBackground()
@@ -68,7 +68,7 @@ Abgeleitete Klasse `ColoredRectangle`:
 01: class ColoredRectangle : public Rectangle
 02: {
 03: private:
-04:     int m_color;  // representing some color model
+04:     int m_color;   // representing some color model
 05: 
 06: public:
 07:     // c'tor(s)
@@ -77,7 +77,15 @@ Abgeleitete Klasse `ColoredRectangle`:
 10:     ColoredRectangle(int x, int y, int width, int height, int color)
 11:         : Rectangle(x, y, width, height), m_color(123)
 12:     {}
-13: };
+13: 
+14:     void draw() {
+15: 
+16:         Rectangle::draw();
+17: 
+18:         std::cout
+19:             << "  ColoredRectangle::draw [color = " << m_color << "]" << std::endl;
+20:     }
+21: };
 ```
 
 Abgeleitete Klasse `TransparentRectangle`:
@@ -88,18 +96,26 @@ Abgeleitete Klasse `TransparentRectangle`:
 01: class TransparentRectangle : public Rectangle
 02: {
 03: private:
-04:     double m_opaque;  // representing some transparency model
+04:     double m_opacity;  // representing some transparency model
 05: 
 06: public:
 07:     // c'tor(s)
-08:     TransparentRectangle() 
+08:     TransparentRectangle()
 09:         : TransparentRectangle(0, 0, 0, 0, 0.0)
 10:     {}
 11: 
-12:     TransparentRectangle(int x, int y, int width, int height, double transparency)
-13:         : Rectangle(x, y, width, height), m_opaque(transparency)
+12:     TransparentRectangle(int x, int y, int width, int height, double opacity)
+13:         : Rectangle(x, y, width, height), m_opacity(123.45)
 14:     {}
-15: };
+15: 
+16:     void draw() {
+17: 
+18:         Rectangle::draw();
+19: 
+20:         std::cout
+21:             << "  ColoredRectangle::draw [opacity = " << m_opacity << "]" << std::endl;
+22:     }
+23: };
 ```
 
 Testrahmen:
@@ -119,25 +135,22 @@ Testrahmen:
 
 *Ausgabe*:
 
-
 ```
 Rectangle::draw [x=1, y=1]
   Rectangle::eraseBackground
+  ColoredRectangle::draw [color = 123]
 Rectangle::draw [x=2, y=2]
   Rectangle::eraseBackground
+  ColoredRectangle::draw [opacity = 123.45]
 ```
 
-## Weiterarbeit an diesem Beispiel
+## Hinweise zu diesem Beispiel
 
 Es wird in den beiden Klassen `ColoredRectangle` und `TransparentRectangle` 
 von der Vaterklasse `Rectangle` eine Methode `draw` geerbt:
 
-  * Was ist der Nachteil dieser Vorgehensweise?
-  * Zeigen Sie auf, wie man diese Methode in den Klassen `ColoredRectangle` und `TransparentRectangle`
-    besser realisieren kann.
-
-Eine verbesserte Lösung finden Sie im Quellcode zu diesem Abschnitt
-im Namensraum `InheritanceImproved` vor.
+  * Betrachten Sie, wie diese Methode in den Klassen `ColoredRectangle` und `TransparentRectangle`
+    &bdquo;verbessert&rdquo; realisiert wird.
 
 ---
 

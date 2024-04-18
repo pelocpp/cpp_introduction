@@ -84,15 +84,15 @@ namespace MoreInheritance
     class TransparentRectangle : public Rectangle
     {
     private:
-        double m_opaque;   // representing some transparency model
+        double m_opacity;   // representing some transparency model
     
     public:
         TransparentRectangle() 
             : TransparentRectangle(0, 0, 0, 0, 0.0)
         {}
 
-        TransparentRectangle(int x, int y, int width, int height, double transparency)
-            : Rectangle(x, y, width, height), m_opaque(transparency)
+        TransparentRectangle(int x, int y, int width, int height, double opacity)
+            : Rectangle(x, y, width, height), m_opacity(opacity)
         {}
 
         virtual void drawForeground() override {

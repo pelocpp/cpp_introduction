@@ -60,11 +60,11 @@ int main()
         //testStrings();
         //testExceptions();
         //testStreams();
-        //testInheritance();
+        testInheritance();
         //testMoreInheritance();
         //testSTL();
 
-        testExercises();
+        //testExercises();
     }
     catch (const std::exception& ex) {
         std::cout << "Exception: " << ex.what() << std::endl;

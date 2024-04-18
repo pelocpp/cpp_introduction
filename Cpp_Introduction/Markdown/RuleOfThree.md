@@ -333,7 +333,7 @@ Datei *BigData.cpp*:
 
 ## Aufgaben
 
-[Aufgabe zur Klasse `DynamicArray`](../Exercises/Exercises_DynamicArray.md)
+[Aufgabe zur Klasse `DynamicIntArray`](../Exercises/Exercises_DynamicIntArray.md)
 
 [Aufgabe zur Klasse `String`](../Exercises/Exercises_String.md)
 

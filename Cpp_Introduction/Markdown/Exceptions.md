@@ -175,7 +175,7 @@ Was fällt Ihnen auf?
 Die Realisierung von Konstruktoren der Klasse `Wallet` kann geignet bei negativen Geldbeträgen reagieren.
 
 
-[Aufgabe zur Klasse `DynamicArray`](../Exercises/Exercises_DynamicArray.md)
+[Aufgabe zur Klasse `DynamicIntArray`](../Exercises/Exercises_DynamicIntArray.md)
 
 Die Realisierung des Operators `[]` bzw. eine Methode `at`
 kann nun geeignet auf falsche Indices reagieren.

@@ -165,7 +165,7 @@ Folgende Aspekte werden betrachtet:
 
 ---
 
-#### [STL - Klasse `Lottery` (inklusive Iteratoren-Konzept)](./Exercises_STL_Lotto.md)
+#### [STL - Ziehung der Lottozahlen &ndash; Klasse `Lottery` (inklusive Iteratoren-Konzept)](./Exercises_STL_Lotto.md)
 
 Folgende Aspekte werden betrachtet:
   * Entwicklung einer Anwendung &ndash; Klasse `Lottery` &ndash; mit der STL (*Standard Template Library*)

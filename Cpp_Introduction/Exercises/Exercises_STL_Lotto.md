@@ -1,4 +1,4 @@
-# Aufgabe zur STL: Klasse `Lottery` (inklusive Iteratoren-Konzept)
+# Aufgabe zur STL: Ziehung der Lottozahlen &ndash; Klasse `Lottery` (inklusive Iteratoren-Konzept)
 
 [Zurück](./Exercises.md)
 
@@ -38,7 +38,7 @@ Zur Strukturierung der Klasse `Lottery` realisieren Sie die folgenden, in *Tabel
 ## Iteratoren-Konzept
 
 Man kann &ndash; mit einer gewissen Phantasie &ndash; eine Instanz der Klasse `Lottery` als C++-Container auffassen.
-Umabhängig davon, wieviele Kugeln in einer Ziehung der Lottozahlen bereits gezogen worden sind,
+Unabhängig davon, wieviele Kugeln in einer Ziehung der Lottozahlen bereits gezogen worden sind,
 kann man diese bereits gezogenen Kugeln &bdquo;iterieren&rdquo;.
 
 Geeigneterweise verwendet man eine Iteration, um die komplette Ziehung der Zahlen

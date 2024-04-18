@@ -39,11 +39,9 @@ Zur Strukturierung der Klasse `Lottery` realisieren Sie die folgenden, in *Tabel
 
 Man kann &ndash; mit einer gewissen Phantasie &ndash; eine Instanz der Klasse `Lottery` als C++-Container auffassen.
 Unabhängig davon, wieviele Kugeln in einer Ziehung der Lottozahlen bereits gezogen worden sind,
-kann man diese bereits gezogenen Kugeln &bdquo;iterieren&rdquo;.
+könnte man diese bereits gezogenen Kugeln &bdquo;iterieren&rdquo;.
 
-Geeigneterweise verwendet man eine Iteration, um die komplette Ziehung der Zahlen
-in einer Iteration zu durchlaufen:
-
+Verwenden Sie eine Iteration, um die komplette Ziehung der Zahlen auf diese Weise zu durchlaufen:
 
 ```cpp
 01: Lottery lottery;

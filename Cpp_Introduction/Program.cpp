@@ -60,7 +60,7 @@ int main()
         //testStrings();
         //testExceptions();
         //testStreams();
-        testInheritance();
+        //testInheritance();
         //testMoreInheritance();
         //testSTL();
 

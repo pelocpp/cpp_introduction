@@ -5,9 +5,13 @@
 #include "Lottery.h"
 
 // c'tors
-Lottery::Lottery() : m_random_engine(123), m_dist(1, 49) {}
+Lottery::Lottery() : m_random_engine(123), m_dist(1, 49) {
+    m_numbers.reserve(6); 
+}
 
-Lottery::Lottery(int seed) : m_random_engine(seed), m_dist(1, 49) {}
+Lottery::Lottery(int seed) : m_random_engine(seed), m_dist(1, 49) {
+    m_numbers.reserve(6); 
+}
 
 // getter
 size_t Lottery::getDrawnNumbers() const { return m_numbers.size(); }

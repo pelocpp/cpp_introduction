@@ -1,10 +1,10 @@
 // ===========================================================================
-// Main.cpp // Dynamic Memory Management
+// Main.cpp // Dynamic Memory
 // ===========================================================================
 
 #include <iostream>
 
-namespace Dynamic_Memory_Management
+namespace Dynamic_Memory
 {
     class SimpleClass
     {
@@ -72,13 +72,13 @@ namespace Dynamic_Memory_Management
     }
 }
 
-void testDynamicMemoryManagement()
+void testDynamicMemory()
 {
-    using namespace Dynamic_Memory_Management;
+    using namespace Dynamic_Memory;
 
-    //dynamicMemory_Scalar();
-    //dynamicMemory_Array();
-    //dynamicMemory_ScalarObject();
+    dynamicMemory_Scalar();
+    dynamicMemory_Array();
+    dynamicMemory_ScalarObject();
     dynamicMemory_ArrayObject();
 }
 

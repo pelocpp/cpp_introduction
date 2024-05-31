@@ -100,9 +100,15 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
   * Schlüsselwörter `try` und `catch`
 
 
-## [Dynamische Speicherverwaltung](DynamicMemoryManagement.md) 
-  * Speicherbereiche eines C++&ndash;Programms
+## [Speicherbereiche eines C–Programms](MemoryManagement.md) 
+  * Globale Variablen
+  * Lokale Variablen
+  * Statische Variablen
+  * Dynamische Variablen
   * Lebensdauer von Variablen in einem C++&ndash;Programm
+
+
+## [Dynamische Speicherverwaltung](DynamicMemory.md) 
   * Stack und Heap (Stapel und Halde)
   * Operatoren `new` und `delete`
 

@@ -34,9 +34,6 @@
     <Filter Include="Source Files\OperatorOverloading">
       <UniqueIdentifier>{4791d00b-6d2b-4e99-9e41-a764a25b0761}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\DynamicMemoryManagement">
-      <UniqueIdentifier>{0aac6741-0a39-4cb7-99a4-3c6997d2a563}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\RuleOfThree">
       <UniqueIdentifier>{ff8ccf77-f96f-4b5a-adf5-cd4a08b8535b}</UniqueIdentifier>
     </Filter>
@@ -133,6 +130,12 @@
     <Filter Include="Excercises\DynamicIntArray\Resources">
       <UniqueIdentifier>{8440d379-de60-41b5-82c3-f7990e2752eb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\MemoryManagement">
+      <UniqueIdentifier>{0aac6741-0a39-4cb7-99a4-3c6997d2a563}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DynamicMemory">
+      <UniqueIdentifier>{4baeb04a-21b7-4c6a-b38c-d6bdd58a079b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -157,7 +160,7 @@
     <None Include="Markdown\OperatorOverloading.md">
       <Filter>Markdown</Filter>
     </None>
-    <None Include="Markdown\DynamicMemoryManagement.md">
+    <None Include="Markdown\MemoryManagement.md">
       <Filter>Markdown</Filter>
     </None>
     <None Include="Markdown\RuleOfThree.md">
@@ -307,6 +310,9 @@
     <None Include="Exercises\DynamicIntArray\Resources\cpp_dynamic_array_04.svg">
       <Filter>Excercises\DynamicIntArray\Resources</Filter>
     </None>
+    <None Include="Markdown\DynamicMemory.md">
+      <Filter>Markdown</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -341,9 +347,6 @@
     </ClCompile>
     <ClCompile Include="OperatorOverloading\Time.cpp">
       <Filter>Source Files\OperatorOverloading</Filter>
-    </ClCompile>
-    <ClCompile Include="DynamicMemoryManagement\Main.cpp">
-      <Filter>Source Files\DynamicMemoryManagement</Filter>
     </ClCompile>
     <ClCompile Include="RuleOfThree\BigData.cpp">
       <Filter>Source Files\RuleOfThree</Filter>
@@ -476,6 +479,12 @@
     </ClCompile>
     <ClCompile Include="Exercises\DynamicIntArray\DynamicIntArray_Main.cpp">
       <Filter>Excercises\DynamicIntArray</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicMemory\Main.cpp">
+      <Filter>Source Files\DynamicMemory</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryManagement\Main.cpp">
+      <Filter>Source Files\MemoryManagement</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -55,7 +55,8 @@
     <None Include="Markdown\cpp_standard_flat_copy.svg" />
     <None Include="Markdown\cpp_variable.svg" />
     <None Include="Markdown\cpp_variable_vs_pointer.svg" />
-    <None Include="Markdown\DynamicMemoryManagement.md" />
+    <None Include="Markdown\DynamicMemory.md" />
+    <None Include="Markdown\MemoryManagement.md" />
     <None Include="Markdown\Exceptions.md" />
     <None Include="Markdown\FirstOfAll.md" />
     <None Include="Markdown\HelloWorld.md" />
@@ -85,7 +86,7 @@
     <ClCompile Include="ClassesObjects\Time.cpp" />
     <ClCompile Include="Constructors\Main.cpp" />
     <ClCompile Include="Constructors\Time.cpp" />
-    <ClCompile Include="DynamicMemoryManagement\Main.cpp" />
+    <ClCompile Include="DynamicMemory\Main.cpp" />
     <ClCompile Include="Exceptions\Main.cpp" />
     <ClCompile Include="Exercises\BankAccount\BankAccount.cpp" />
     <ClCompile Include="Exercises\BankAccount\BankAccount_Main.cpp" />
@@ -116,6 +117,7 @@
     <ClCompile Include="Exercises\Wallet\Wallet_Main.cpp" />
     <ClCompile Include="HelloWorld\Main.cpp" />
     <ClCompile Include="Inheritance\Main.cpp" />
+    <ClCompile Include="MemoryManagement\Main.cpp" />
     <ClCompile Include="MoreInheritance\Main.cpp" />
     <ClCompile Include="Namespaces\Main.cpp" />
     <ClCompile Include="OperatorOverloading\Main.cpp" />

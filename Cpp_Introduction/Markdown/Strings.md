@@ -53,7 +53,9 @@ A
 Man beachte in dem Beispiel den Zusammenhang der beiden Datentypen `char` und `int`,
 siehe dazu auch die ASCII-Tabelle:
 
-<img src="ASCII_Table.png" width="600" />
+<img src="ASCII_Table.png" width="700" />
+
+*Abbildung* 1: Die ASCII_Tabelle.
 
 ASCII steht für *American Standard Code for Information Interchange*.
 Die Zeichen 0 bis 127 wurden schon vor langer Zeit festgelegt, als der ASCII-Code noch ein 7 Bit-Code

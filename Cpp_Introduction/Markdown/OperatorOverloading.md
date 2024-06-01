@@ -48,7 +48,7 @@ Error binary '==': 'Time' does not define this operator
 Mit dem Sprachfeature *Überladen von Operatoren*
 können wir das letzte Beispiel zum Laufen bringen!
 
-### Stelligkeit und Priorität
+## Vorrang (Priorität) und Stelligkeitm (Assoziativität) von Operatoren
 
 In der folgenden Tabelle sind die Rangfolge und Assoziativität von C++&ndash;Operatoren aufgeführt.
 Die Operatoren werden von oben nach unten in absteigender Reihenfolge aufgelistet.
@@ -76,7 +76,7 @@ Zu den Begriffen:
     Zunächst einmal ganz einfach formuliert:
     Unter der *Priorität* von Operatoren versteht man die *Punkt- vor Strich*&ndash;Regel.
     Etwas allgemeiner und formaler ausgedrückt:
-    Für jeden Operator wird eine *Priorität* festgelegt, indem jedem Operator ein Rang zugeordnet wird.
+    Für jeden Operator wird eine *Priorität* festgelegt, indem jedem Operator ein *Rang* zugeordnet wird.
     Dieser Rang entscheidet das Gruppieren und die Auswertung von Operanden in arithmetischen Ausdrücken.
     Ausdrücke mit höherrangigen Operatoren werden zuerst ausgewertet.
     Diese (im englischen als *Operator-Precedence* bezeichnete) Rangordnung

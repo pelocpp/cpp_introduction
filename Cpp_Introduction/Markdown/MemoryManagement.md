@@ -32,15 +32,17 @@ zur Speichersegmentierung in der Intel x86-Computerbefehlssatzarchitektur:
 | **CS** | Code Segment |
 | **ES** | Extra Segment (Heap) |
 
-Lokale Variablen befinden sich zusammen mit den Funktionsparametern auf dem Stack.
+*Tabelle*: Segmentregister einer Intel-CPU.
 
-Der Code steht natürlich im Codebereich, und globale Variablen im globalen Datensegment.
+  * Lokale Variablen befinden sich zusammen mit den Funktionsparametern auf dem Stack.
 
-Die Register dienen internen Verwaltungsaufgaben. Dazu gehören beispielsweise Stack-Operationen
-(Register **SP** (*Stack Pointer*) und **BP** (*Base Pointer*))
-oder der *Akkumulator* (**AX** bzw. **EAX**).
+  * Der Code steht natürlich im Codebereich, und globale Variablen im globalen Datensegment.
 
-Speicher, der *dynamisch* allokiert wird, residiert in der so genannten *Halde*.
+  * Die Register dienen internen Verwaltungsaufgaben. Dazu gehören beispielsweise Stack-Operationen
+  (Register **SP** (*Stack Pointer*) und **BP** (*Base Pointer*))
+  oder der *Akkumulator* (**AX** bzw. **EAX**).
+
+  * Speicher, der *dynamisch* allokiert wird, residiert in der so genannten *Halde*.
 
 ### Lebensdauer von Variablen in einem C++&ndash;Programm
 

@@ -13,7 +13,7 @@
 
 namespace StandardTemplateLibrary
 {
-    static void testSTL01()
+    static void STL01()
     {
         // array of arbitraty length of int-values
         std::vector<int> vec;
@@ -29,7 +29,7 @@ namespace StandardTemplateLibrary
         }
     }
 
-    static void testSTL02()
+    static void STL02()
     {
         // array of arbitraty length of int-values
         std::vector<int> vec;
@@ -57,7 +57,7 @@ namespace StandardTemplateLibrary
         // value = *first;   // does this line work?
     }
 
-    static void testSTL03()
+    static void STL03()
     {
         // array of arbitraty length of int-values
         std::vector<int> vec;
@@ -85,7 +85,7 @@ namespace StandardTemplateLibrary
         std::cout << value << std::endl;
     }
 
-    static void testSTL04()
+    static void STL04()
     {
         // array of arbitraty length of int-values
         std::vector<int> vec;
@@ -101,7 +101,7 @@ namespace StandardTemplateLibrary
         );
     }
 
-    static void testSTL05()
+    static void STL05()
     {
         std::vector<int> vec;
 
@@ -128,7 +128,7 @@ namespace StandardTemplateLibrary
             << " | " << integers.capacity() << std::endl;
     }
 
-    static void testSTL06()
+    static void STL06()
     {
         std::vector<int> vec;
 
@@ -150,7 +150,7 @@ namespace StandardTemplateLibrary
         }
     }
 
-    static void testSTL07()
+    static void STL07()
     {
         std::vector<int> vec;
 
@@ -176,7 +176,7 @@ namespace StandardTemplateLibrary
         return 2 * i + 1;
     }
 
-    static void testSTL08()
+    static void STL08()
     {
         std::vector<int> vec;
 
@@ -255,7 +255,7 @@ namespace StandardTemplateLibrary
         }
     };
 
-    static void testSTL09()
+    static void STL09()
     {
         InitializerForVector initializer;
 
@@ -268,7 +268,7 @@ namespace StandardTemplateLibrary
         next = initializer();
     }
 
-    static void testSTL10()
+    static void STL10()
     {
         std::vector<int> vec;
         vec.resize(5);
@@ -298,7 +298,7 @@ namespace StandardTemplateLibrary
         );
     }
 
-    static void testSTL11()
+    static void STL11()
     {
         std::vector<int> vec;
         vec.resize(100);
@@ -330,7 +330,7 @@ namespace StandardTemplateLibrary
         }
     };
 
-    static void testSTL20()
+    static void STL20()
     {
         // hash table with STL
         std::unordered_map<std::string, int> phoneBook;
@@ -353,7 +353,7 @@ namespace StandardTemplateLibrary
         );
     }
 
-    static void testSTL21()
+    static void STL21()
     {
         // hash table with STL
         std::unordered_map<std::string, int> phoneBook;
@@ -385,24 +385,24 @@ namespace StandardTemplateLibrary
     }
 }
 
-void testSTL()
+void main_STL()
 {
     using namespace StandardTemplateLibrary;
 
-    //testSTL01();
-    //testSTL02();
-    //testSTL03();
-    //testSTL04();
-    //testSTL05();
-    testSTL06();
-    //testSTL07();
-    //testSTL08();
-    //testSTL09();
-    //testSTL10();
-    //testSTL11();
+    STL01();
+    STL02();
+    STL03();
+    STL04();
+    STL05();
+    STL06();
+    STL07();
+    STL08();
+    STL09();
+    STL10();
+    STL11();
 
-    //testSTL20();
-    //testSTL21();
+    STL20();
+    STL21();
 }
 
 // ===========================================================================

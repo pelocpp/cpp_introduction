@@ -93,7 +93,7 @@ namespace References
     }
 }
 
-void testReferences()
+void main_References()
 {
     using namespace References;
 

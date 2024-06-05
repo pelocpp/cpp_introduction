@@ -4,7 +4,7 @@
 
 #include "Time.h"
 
-void testConstructors()
+void main_Constructors()
 {
     using namespace Classes_Objects_Constructors;
 

@@ -95,7 +95,7 @@ namespace Inheritance
     };
 }
 
-void testInheritance()
+void main_Inheritance()
 {
     using namespace Inheritance;
 

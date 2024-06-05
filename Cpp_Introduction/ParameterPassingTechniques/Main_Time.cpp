@@ -33,7 +33,7 @@ static void testClassTimeParameterPassing_01()
 
 }
 
-void testClassTimeParameterPassing()
+void main_ClassTimeParameterPassing()
 {
     testClassTimeParameterPassing_01();
 }

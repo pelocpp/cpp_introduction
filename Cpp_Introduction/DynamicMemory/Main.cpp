@@ -72,7 +72,7 @@ namespace Dynamic_Memory
     }
 }
 
-void testDynamicMemory()
+void main_DynamicMemory()
 {
     using namespace Dynamic_Memory;
 

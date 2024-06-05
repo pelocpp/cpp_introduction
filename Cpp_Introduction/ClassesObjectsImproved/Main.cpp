@@ -31,7 +31,7 @@ namespace Classes_Objects_Motivating_This
     }
 }
 
-static void testClassTimeImproved()
+static void classesObjectsImproved()
 {
     using namespace Classes_Objects_Improved;
 
@@ -54,9 +54,9 @@ static void testClassTimeImproved()
     what.print();            // watch output carefully
 }
 
-void testClassesObjectsImproved()
+void main_ClassesObjectsImproved()
 {
-    testClassTimeImproved();
+    classesObjectsImproved();
 }
 
 // ===========================================================================

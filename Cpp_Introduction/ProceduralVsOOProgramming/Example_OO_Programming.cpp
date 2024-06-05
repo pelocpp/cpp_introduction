@@ -68,7 +68,7 @@ namespace Procedural_Versus_OO_Programming {
     };
 }
 
-void testComparisonOO()
+void comparisonOO()
 {
     using namespace Procedural_Versus_OO_Programming;
 

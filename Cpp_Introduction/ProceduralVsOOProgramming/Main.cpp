@@ -2,13 +2,13 @@
 // Main.cpp // Comparison OO versus Procedural Programming
 // ===========================================================================
 
-extern void testComparisonOO();
-extern void testComparisonProcedural();
+extern void comparisonOO();
+extern void comparisonProcedural();
 
-void testProceduralVsOOProgramming()
+void main_ProceduralVsOOProgramming()
 {
-    testComparisonOO();
-    testComparisonProcedural();
+    comparisonOO();
+    comparisonProcedural();
 }
 
 // ===========================================================================

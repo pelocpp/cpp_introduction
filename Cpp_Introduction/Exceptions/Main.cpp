@@ -35,7 +35,7 @@ namespace Exceptions {
     }
 }
 
-static void testExceptions01()
+static void exceptions01()
 {
     try
     {
@@ -75,11 +75,11 @@ static void testExceptions01()
     std::cout << "Done." << std::endl;
 }
 
-void testExceptions()
+void main_Exceptions()
 {
     using namespace Exceptions;
 
-    testExceptions01();
+    exceptions01();
 }
 
 

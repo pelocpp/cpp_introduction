@@ -9,34 +9,39 @@
 
 namespace Strings
 {
-    static void testChar()
+static void chars()
+{
+    char ch;
+    int n;
+
+    ch = '*';
+    std::cout << ch << std::endl;
+
+    n = ch;
+    std::cout << n << std::endl;
+
+    ch = 65;  // ASCII table: 'A'
+    std::cout << ch << std::endl;
+
+    char digit('1');
+    bool b1 = std::isdigit(digit);
+    std::cout << std::boolalpha << b1 << std::endl;
+
+    char noDigit('!');
+    bool b2 = std::isdigit(noDigit);
+    std::cout << std::boolalpha << b2 << std::endl;
+}
+
+    static void ASCIITable()
     {
-        char ch;
-        int n;
-
-        ch = '*';
-        std::cout << ch << std::endl;
-
-        n = ch;
-        std::cout << n << std::endl;
-
-        ch = 65;     // ASCII table: 'A'
-        std::cout << ch << std::endl;
-
         // printing ASCII table
         for (int i = 0; i <= 127; i++) {
 
-            std::cout << i << ": " << (char) i << std::endl;
+            std::cout << i << ": " << (char)i << std::endl;
         }
-
-        char digit('1');
-        bool b1 = std::isdigit(digit);
-
-        char noDigit('!');
-        bool b2 = std::isdigit(noDigit);
     }
 
-    static void testString()
+    static void strings()
     {
         // standard class 'std::string'
 
@@ -103,12 +108,13 @@ namespace Strings
     }
 }
 
-void testStrings()
+void main_Strings()
 {
     using namespace Strings;
 
-    testChar();
-    testString();
+    chars();
+    ASCIITable();
+    strings();
 }
 
 // ===========================================================================

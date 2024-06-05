@@ -37,7 +37,7 @@ static void scriptSnippets()
     d = c = b = a;
 }
 
-static void testTimeOperators()
+static void timeOperators()
 {
     using namespace OperatorOverloading;
 
@@ -56,10 +56,10 @@ static void testTimeOperators()
     }
 }
 
-void testOperatorsOverloading()
+void main_OperatorsOverloading()
 {
     scriptSnippets();
-    testTimeOperators();
+    timeOperators();
 }
 
 // ===========================================================================

@@ -17,11 +17,11 @@ namespace HelloWorld {
     }
 }
 
-void testHelloWorld()
+void main_HelloWorld()
 {
     using namespace HelloWorld;
 
-    // helloWorldClassic();
+    helloWorldClassic();
     helloWorldCpp();
 }
 

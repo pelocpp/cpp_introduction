@@ -57,7 +57,7 @@ Die Wertzuweisung zweier `DynamicIntArray`-Objekte. In einem ersten Ansatz könnt
 dass diese einfach mit dem Kopieren der beteiligten Instanzvariablen umzusetzen ist.
 *Abbildung* 3 versucht darzustellen, dass dies nicht zu einer Realisierung führt, die man als korrekt ansehen kann:
 Die beiden in *Abbildung* 3 dargestellten `DynamicIntArray`-Objekt haben einen gemeinsamen Datenbereich auf Grund des kopierten Zeigers.
-Dies ist nicht das, was man sich unter einer echte Kopie vorstellt.
+Dies ist nicht das, was man sich unter einer echten Kopie vorstellt.
 
 <img src="DynamicIntArray/Resources/cpp_dynamic_array_03.svg" width="550">
 

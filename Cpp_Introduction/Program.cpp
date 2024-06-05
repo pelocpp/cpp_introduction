@@ -1,3 +1,4 @@
+
 // =====================================================================================
 // Cpp Introduction
 // Program.cpp
@@ -12,29 +13,29 @@
 #include <iostream>
 
 // function prototypes
-extern void testHelloWorld();
-extern void testClassesObjects();
-extern void testProceduralVsOOProgramming();
-extern void testClassesObjectsImproved();
-extern void testConstructors();
-extern void testStatic();
-extern void testReferences();
-extern void testParameterPassing();
-extern void testClassTimeParameterPassing();
-extern void testOperatorsOverloading();
-extern void testMemoryManagement();
-extern void testDynamicMemory();
-extern void testRuleOfThree();
-extern void testNamespaces();
-extern void testTemplates();
-extern void testStrings();
-extern void testExceptions();
-extern void testStreams();
-extern void testInheritance();
-extern void testMoreInheritance();
-extern void testSTL();
+extern void main_HelloWorld();
+extern void main_ClassesObjects();
+extern void main_ProceduralVsOOProgramming();
+extern void main_ClassesObjectsImproved();
+extern void main_Constructors();
+extern void main_Static();
+extern void main_References();
+extern void main_ParameterPassing();
+extern void main_ClassTimeParameterPassing();
+extern void main_OperatorsOverloading();
+extern void main_MemoryManagement();
+extern void main_DynamicMemory();
+extern void main_RuleOfThree();
+extern void main_Namespaces();
+extern void main_Templates();
+extern void main_Strings();
+extern void main_Exceptions();
+extern void main_Streams();
+extern void main_Inheritance();
+extern void main_MoreInheritance();
+extern void main_STL();
 
-extern void testExercises();
+extern void main_Exercises();
 
 // entry point
 int main()
@@ -44,29 +45,29 @@ int main()
     // main entry points code examples
     try
     {
-        //testHelloWorld();
-        //testClassesObjects();
-        //testProceduralVsOOProgramming();
-        //testClassesObjectsImproved();
-        //testConstructors();
-        //testStatic();
-        //testReferences();
-        //testParameterPassing();
-        //testClassTimeParameterPassing(); 
-        //testOperatorsOverloading();
-        //testMemoryManagement();
-        //testDynamicMemory();
-        //testRuleOfThree();
-        //testNamespaces();
-        //testTemplates();
-        //testStrings();
-        //testExceptions();
-        //testStreams();
-        //testInheritance();
-        //testMoreInheritance();
-        //testSTL();
+        //main_HelloWorld();
+        //main_ClassesObjects();
+        //main_ProceduralVsOOProgramming();
+        //main_ClassesObjectsImproved();
+        //main_Constructors();
+        //main_Static();
+        //main_References();
+        //main_ParameterPassing();
+        //main_ClassTimeParameterPassing(); 
+        //main_OperatorsOverloading();
+        //main_MemoryManagement();
+        //main_DynamicMemory();
+        //main_RuleOfThree();
+        //main_Namespaces();
+        //main_Templates();
+        //main_Strings();
+        //main_Exceptions();
+        //main_Streams();
+        //main_Inheritance();
+        //main_MoreInheritance();
+        //main_STL();
 
-        //testExercises();
+        //main_Exercises();
     }
     catch (const std::exception& ex) {
         std::cout << "Exception: " << ex.what() << std::endl;

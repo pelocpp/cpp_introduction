@@ -26,7 +26,7 @@ namespace AnotherProject
     };
 }
 
-static void test_namespace_01()
+static void namespace_01()
 {
     using namespace MyFirstProject::Widgets;
     // or
@@ -39,7 +39,7 @@ static void test_namespace_01()
     AnotherProject::Textbox tb3;             // namespace AnotherProject
 }
 
-static void test_namespace_02()
+static void namespace_02()
 {
     // accessing classes with full namespace specification
     using namespace MyFirstProject::Widgets;
@@ -49,7 +49,7 @@ static void test_namespace_02()
     // Textbox tb2;                          // doesn't compile: why
 }
 
-static void test_namespace_03()
+static void namespace_03()
 {
     // better way
     MyFirstProject::Widgets::Textbox tb;
@@ -60,11 +60,11 @@ static void test_namespace_03()
     Textbox tb2;
 }
 
-void testNamespaces()
+void main_Namespaces()
 {
-    test_namespace_01();
-    test_namespace_02();
-    test_namespace_03();
+    namespace_01();
+    namespace_02();
+    namespace_03();
 }
 
 #pragma warning(pop)

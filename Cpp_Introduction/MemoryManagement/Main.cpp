@@ -8,7 +8,7 @@ namespace Memory_Management
 {
 }
 
-void testMemoryManagement()
+void main_MemoryManagement()
 {
     using namespace Memory_Management;
 }

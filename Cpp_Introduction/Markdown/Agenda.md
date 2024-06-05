@@ -100,7 +100,7 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
   * Schlüsselwörter `try` und `catch`
 
 
-## [Speicherbereiche eines C–Programms](MemoryManagement.md) 
+## [Speicherbereiche eines C++&ndash;–Programms](MemoryManagement.md) 
   * Globale Variablen
   * Lokale Variablen
   * Statische Variablen

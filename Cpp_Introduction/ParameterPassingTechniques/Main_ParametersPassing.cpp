@@ -57,7 +57,7 @@ namespace Parameter_Passing_Techniques
         n = 2 * n;
     }
 
-    static void testMultiplyByTwo()
+    static void multiplyByTwo()
     {
         int x = 10;
 
@@ -82,12 +82,12 @@ namespace Parameter_Passing_Techniques
     }
 }
 
-void testParameterPassing()
+void main_ParameterPassing()
 {
     using namespace Parameter_Passing_Techniques;
 
-    //scriptSnippets();
-    testMultiplyByTwo();
+    scriptSnippets();
+    multiplyByTwo();
 }
 
 // ===========================================================================

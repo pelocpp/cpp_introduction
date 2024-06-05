@@ -30,19 +30,19 @@ namespace Rule_Of_Three {
     }
 
     // test methods
-    static void testRuleOfThree01() {
+    static void ruleOfThree01() {
 
         BigData data(100);
     }
 
-    static void testRuleOfThree02() {
+    static void ruleOfThree02() {
 
         BigData data1(100);
         BigData data2;
         data2 = data1;
     }
 
-    static void testRuleOfThree03() {
+    static void ruleOfThree03() {
 
         BigData data1(100);
         BigData data2(data1);
@@ -53,7 +53,7 @@ namespace Rule_Of_Three {
         return data;
     }
 
-    static void testRuleOfThree04() {
+    static void ruleOfThree04() {
 
         BigData data;
         data.print();
@@ -61,22 +61,22 @@ namespace Rule_Of_Three {
         data.print();
     }
 
-    static void testRuleOfThree05() {
+    static void ruleOfThree05() {
 
         BigData data;
         data = BigData(100);
     }
 }
 
-void testRuleOfThree()
+void main_RuleOfThree()
 {
     using namespace Rule_Of_Three;
 
-    testRuleOfThree01();
-    testRuleOfThree02();
-    testRuleOfThree03();
-    testRuleOfThree04();
-    testRuleOfThree05();
+    ruleOfThree01();
+    ruleOfThree02();
+    ruleOfThree03();
+    ruleOfThree04();
+    ruleOfThree05();
 }
 
 // ===========================================================================

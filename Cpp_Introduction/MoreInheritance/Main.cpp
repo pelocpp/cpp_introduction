@@ -128,7 +128,7 @@ namespace MoreInheritance
     };
 }
 
-static void testMoreInheritance01()
+static void moreInheritance01()
 {
     using namespace MoreInheritance;
 
@@ -142,7 +142,7 @@ static void testMoreInheritance01()
     crRef.paint();
 }
 
-static void testMoreInheritance02()
+static void moreInheritance02()
 {
     using namespace MoreInheritance;
 
@@ -157,7 +157,7 @@ static void testMoreInheritance02()
     // crPtr->draw();
 }
 
-static void testMoreInheritance03()
+static void moreInheritance03()
 {
     using namespace MoreInheritance;
 
@@ -172,11 +172,11 @@ static void testMoreInheritance03()
     }
 }
 
-void testMoreInheritance()
+void main_MoreInheritance()
 {
-    testMoreInheritance01();
-    testMoreInheritance02();
-    testMoreInheritance03();
+    moreInheritance01();
+    moreInheritance02();
+    moreInheritance03();
 }
 
 // ===========================================================================

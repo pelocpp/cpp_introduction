@@ -1,6 +1,5 @@
 # Zeichenketten: Klasse `std::string`
 
-
 [Zurück](Agenda.md)
 
 ---
@@ -14,7 +13,7 @@ Zeichen werden in C und C++ auf den Datentyp `char` abgebildet:
 #### Datei [*Main.cpp*](../Strings/Main.cpp):
 
 ```cpp
-01: void testChar()
+01: static void mainChar()
 02: {
 03:     char ch;
 04:     int n;
@@ -25,21 +24,17 @@ Zeichen werden in C und C++ auf den Datentyp `char` abgebildet:
 09:     n = ch;
 10:     std::cout << n << std::endl;
 11: 
-12:     ch = 65;     // ASCII table: 'A'
+12:     ch = 65;  // ASCII table: 'A'
 13:     std::cout << ch << std::endl;
 14: 
-15:     // printing ASCII table
-16:     for (int i = 0; i <= 127; i++) {
-17: 
-18:         std::cout << i << ": " << (char) i << std::endl;
-19:     }
-20: 
-21:     char digit('1');
-22:     bool b1 = std::isdigit(digit);
-23: 
-24:     char noDigit('!');
-25:     bool b2 = std::isdigit(noDigit);
-26: }
+15:     char digit('1');
+16:     bool b1 = std::isdigit(digit);
+17:     std::cout << std::boolalpha << b1 << std::endl;
+18: 
+19:     char noDigit('!');
+20:     bool b2 = std::isdigit(noDigit);
+21:     std::cout << std::boolalpha << b2 << std::endl;
+22: }
 ```
 
 *Ausführung*:
@@ -48,6 +43,8 @@ Zeichen werden in C und C++ auf den Datentyp `char` abgebildet:
 *
 42
 A
+true
+false
 ```
 
 Man beachte in dem Beispiel den Zusammenhang der beiden Datentypen `char` und `int`,

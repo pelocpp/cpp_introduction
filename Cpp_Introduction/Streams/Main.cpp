@@ -15,7 +15,7 @@ namespace Streams
         std::cout << "n: " << n << std::endl;
     }
 
-    static void testCinCout()
+    static void cinCout()
     {
         int myInt;
         double myDouble;
@@ -31,12 +31,12 @@ namespace Streams
     }
 }
 
-void testStreams()
+void main_Streams()
 {
     using namespace Streams;
 
     scriptSnippets();
-    testCinCout();
+    cinCout();
 }
 
 // ===========================================================================

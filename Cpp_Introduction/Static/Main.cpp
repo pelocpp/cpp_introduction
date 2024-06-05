@@ -20,7 +20,7 @@ namespace Violating_Static
         double Pi() { return m_pi; }
     };
 
-    void testViolatingStatic01()
+    void violatingStatic01()
     {
         Math math;
 
@@ -36,7 +36,7 @@ namespace Violating_Static
         int div(int x, int y) { return x + y; }
     };
 
-    static void testViolatingStatic02()
+    static void violatingStatic02()
     {
         Calculator calc;
 
@@ -54,7 +54,7 @@ namespace Motivating_Static
 
     double const Math::Pi = 3.14159265358979323846;
 
-    void testMotivatingStatic01()
+    void motivatingStatic01()
     {
         double radius = Math::Pi * 2.0 * 2.0;
     }
@@ -68,22 +68,22 @@ namespace Motivating_Static
         static int div(int x, int y) { return x + y; }
     };
 
-    static void testMotivatingStatic02()
+    static void motivatingStatic02()
     {
         int sum = Calculator::add(123, 456);
     }
 }
 
 
-void testStatic()
+void main_Static()
 {
     using namespace Violating_Static;
     using namespace Motivating_Static;
 
-    testViolatingStatic01();
-    testViolatingStatic02();
-    testMotivatingStatic01();
-    testMotivatingStatic02();
+    violatingStatic01();
+    violatingStatic02();
+    motivatingStatic01();
+    motivatingStatic02();
 }
 
 // ===========================================================================

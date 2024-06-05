@@ -18,7 +18,7 @@ extern void exerciseSTL();
 extern void exerciseLotto();
 extern void exerciseSTLPhoneBook();
 
-void testExercises()
+void main_Exercises()
 {
     exerciseRectangle();
     exerciseBankAccount();

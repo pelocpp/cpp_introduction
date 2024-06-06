@@ -74,7 +74,9 @@ namespace PhoneBook
     bool PhoneBookMap::remove(const std::string& first, const std::string& last)
     {
         std::string key = getKeyFromNames(first, last);
+
         size_t numErased = m_map.erase(key);
+
         return numErased == 1;
     }
 

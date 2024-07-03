@@ -40,7 +40,7 @@ Wallet::Wallet(std::string euros, std::string cents)
         length = euros.length();
         m_euros = std::stoll(euros, &pos);
     }
-    catch (std::invalid_argument const& ex)
+    catch (const std::invalid_argument& ex)
     {
         std::cout << "Wrong format for euros values expected: " << euros << " - " << ex.what() << std::endl;
         throw std::invalid_argument("Wrong format for euro value");
@@ -68,7 +68,7 @@ Wallet::Wallet(std::string euros, std::string cents)
         length = cents.length();
         m_cents = std::stoi(cents, &pos);
     }
-    catch (std::invalid_argument const& ex)
+    catch (const std::invalid_argument& ex)
     {
         std::cout << "Wrong format for cents values expected: " << cents << " - " << ex.what() << std::endl;
         throw std::invalid_argument("Wrong format for cent values");

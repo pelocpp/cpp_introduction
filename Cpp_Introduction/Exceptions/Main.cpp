@@ -16,19 +16,19 @@ namespace Exceptions {
         {
             dangerousFunction();
         }
-        catch (std::out_of_range)
+        catch (const std::out_of_range&)
         {
             // do something because of out_of_range exception
         }
-        catch (std::overflow_error)
+        catch (const std::overflow_error&)
         {
             // do something because of overflow_error exception
         }
-        catch (std::invalid_argument)
+        catch (const std::invalid_argument&)
         {
             // do something because of invalid_argument exception
         }
-        catch (std::exception)
+        catch (const std::exception&)
         {
             // an unexpected exception occurred
         }
@@ -51,22 +51,22 @@ static void exceptions01()
         str.insert(123, " !!!");
         std::cout << str << std::endl;
     }
-    catch (std::out_of_range ex)
+    catch (const std::out_of_range& ex)
     {
         // do something because of out_of_range exception
         std::cout << "std::out_of_range: " << ex.what() << std::endl;
     }
-    catch (std::invalid_argument ex)
+    catch (const std::invalid_argument& ex)
     {
         // do something because of invalid_argument exception
         std::cout << "std::invalid_argument: " << ex.what() << std::endl;
     }
-    catch (std::length_error ex)
+    catch (const std::length_error& ex)
     {
         // do something because of invalid_argument exception
         std::cout << "std::length_error: " << ex.what() << std::endl;
     }
-    catch (std::exception ex)
+    catch (const std::exception& ex)
     {
         // an unexpected exception occurred
         std::cout << "std::exception: " << ex.what() << std::endl;

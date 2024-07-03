@@ -132,7 +132,7 @@ mehr Geld aus einem Geldbeutel zu entnehmen als dieser enthält:
 07:     {
 08:         wallet.sub(3);
 09:     }
-10:     catch (std::invalid_argument ex)
+10:     catch (const std::invalid_argument& ex)
 11:     {
 12:         std::cout << ex.what() << std::endl;
 13:     }

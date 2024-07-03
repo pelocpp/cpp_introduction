@@ -56,19 +56,19 @@ schließt man in `try`-Blöcke ein. Zum Beispiel
 02: {
 03:     dangerousFunction();
 04: }
-05: catch (std::out_of_range)
+05: catch (const std::out_of_range&)
 06: {
 07:     // do something because of out_of_range exception
 08: }
-09: catch (std::overflow_error)
+09: catch (const std::overflow_error&)
 10: {
 11:     // do something because of overflow_error exception
 12: }
-13: catch (std::invalid_argument)
+13: catch (const std::invalid_argument&)
 14: {
 15:     // do something because of invalid_argument exception
 16: }
-17: catch (std::exception)
+17: catch (const std::exception&)
 18: {
 19:     // an unexpected exception occurred
 20: }
@@ -117,22 +117,22 @@ Tritt keine Ausnahme ein, werden alle `catch`-Blöcke übersprungen.
 14:         str.insert(123, " !!!");
 15:         std::cout << str << std::endl;
 16:     }
-17:     catch (std::out_of_range ex)
+17:     catch (const std::out_of_range& ex)
 18:     {
 19:         // do something because of out_of_range exception
 20:         std::cout << "std::out_of_range: " << ex.what() << std::endl;
 21:     }
-22:     catch (std::invalid_argument ex)
+22:     catch (const std::invalid_argument& ex)
 23:     {
 24:         // do something because of invalid_argument exception
 25:         std::cout << "std::invalid_argument: " << ex.what() << std::endl;
 26:     }
-27:     catch (std::length_error ex)
+27:     catch (const std::length_error& ex)
 28:     {
 29:         // do something because of invalid_argument exception
 30:         std::cout << "std::length_error: " << ex.what() << std::endl;
 31:     }
-32:     catch (std::exception ex)
+32:     catch (const std::exception& ex)
 33:     {
 34:         // an unexpected exception occurred
 35:         std::cout << "std::exception: " << ex.what() << std::endl;

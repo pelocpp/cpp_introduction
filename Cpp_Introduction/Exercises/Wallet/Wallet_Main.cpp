@@ -28,7 +28,7 @@ static void test_02_ctors()
         //Wallet wallet("123", "-45");
         wallet.print();
     }
-    catch (std::exception ex)
+    catch (const std::exception& ex)
     {
         std::cout << "Wrong parameters: " << ex.what() << std::endl;
     }
@@ -76,7 +76,7 @@ static void test_05_sub()
     {
         wallet1.sub(wallet2);
     }
-    catch (std::invalid_argument ex)
+    catch (const std::invalid_argument& ex)
     {
         std::cout << ex.what() << std::endl;
     }
@@ -174,7 +174,7 @@ static void test_12_example_tutorial()
     {
         wallet.sub(3);
     }
-    catch (std::invalid_argument ex)
+    catch (const std::invalid_argument& ex)
     {
         std::cout << ex.what() << std::endl;
     }

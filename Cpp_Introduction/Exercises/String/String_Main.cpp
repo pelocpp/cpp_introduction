@@ -164,9 +164,9 @@ static void testSubsriptOperator()
     {
         s[5] = '!';
     }
-    catch (std::out_of_range& e)
+    catch (const std::out_of_range& ex)
     {
-        std::cout << e.what() << std::endl;
+        std::cout << ex.what() << std::endl;
     }
 }
 

@@ -136,6 +136,9 @@
     <Filter Include="Source Files\DynamicMemory">
       <UniqueIdentifier>{4baeb04a-21b7-4c6a-b38c-d6bdd58a079b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Images">
+      <UniqueIdentifier>{75c3f029-c26e-4b44-854d-6e93963714c1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Markdown\Agenda.md">
@@ -594,6 +597,9 @@
     </Image>
     <Image Include="Markdown\Ken_Thompson_and_Dennis_Ritchie.jpg">
       <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Images\CertifiedExpertTrainer.png">
+      <Filter>Images</Filter>
     </Image>
   </ItemGroup>
 </Project>

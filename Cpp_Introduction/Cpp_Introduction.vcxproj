@@ -161,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Exercises\String\Resources\String.png" />
+    <Image Include="Images\CertifiedExpertTrainer.png" />
     <Image Include="Markdown\ASCII_Table.png" />
     <Image Include="Markdown\Buch_Dirk_Louis.png" />
     <Image Include="Markdown\Buch_Dummies.png" />

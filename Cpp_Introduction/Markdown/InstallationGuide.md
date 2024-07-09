@@ -6,7 +6,7 @@
 
 ## Compiler / Entwicklungsumgebung
 
-Das Repository wurde mit der &ldquo;*Visual Studio*&rdquo; Entwicklungsumgebung 2022 erstellt.
+Das Repository wurde mit der &bdquo;*Visual Studio*&rdquo; Entwicklungsumgebung 2022 erstellt.
 Alle Beispiel müssten aber auch mit dem GCC Compiler übersetzungsfähig sein.
 
 ---

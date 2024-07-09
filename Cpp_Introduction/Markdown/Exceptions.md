@@ -19,7 +19,7 @@ Entsprechende Gegenreaktionen könnten sein:
     die den Fehler dann in kodierter Form beschreibt.
   * Das Beschreiben einer globalen Variablen.
 
-Andere Fehler wiederum treten &ldquo;überraschend&rdquo; auf, und im schlimmsten Fall
+Andere Fehler wiederum treten &bdquo;überraschend&rdquo; auf, und im schlimmsten Fall
 kommt es zu einem Absturz der Programms.
 
 In C++ hat man ein weiteres Sprachmittel hinzugefügt: 

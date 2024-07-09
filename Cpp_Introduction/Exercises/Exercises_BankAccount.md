@@ -36,15 +36,15 @@ myAccount.print();
 
 
 ```
-BankAccount Nr. 10000:   Balance=25.
+BankAccount Nr. 10000:   Balance=75.0
 ```
 
 
 Ein *Hinweis* zur möglichen Namensgebung von Methoden:
 
-einzahlen: engl. &ldquo;*to deposit*&rdquo;<br />
-abheben: engl. &ldquo;*to withdraw*&rdquo;<br />
-Kontostand: engl. &ldquo;*balance*&rdquo;
+einzahlen: engl. &bdquo;*to deposit*&rdquo;<br />
+abheben: engl. &bdquo;*to withdraw*&rdquo;<br />
+Kontostand: engl. &bdquo;*balance*&rdquo;
 
 
 Und noch ein zweiter *Hinweis*:

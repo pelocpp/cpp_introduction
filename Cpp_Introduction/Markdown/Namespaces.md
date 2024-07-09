@@ -7,7 +7,7 @@
 
 ## Erläuterungen
 
-### Hintergrund für das Konzept der &ldquo;Namensräume&rdquo;
+### Hintergrund für das Konzept der &bdquo;Namensräume&rdquo;
 
 Wenn mehrere Programmierer an einem Projekt arbeiten, dann wird der Quellcode in
 verschiedene Module aufgeteilt. Jedes Programmiererteam kümmert sich um eine

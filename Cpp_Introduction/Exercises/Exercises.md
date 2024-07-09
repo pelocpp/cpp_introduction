@@ -205,7 +205,7 @@ Folgende Aspekte werden betrachtet:
 
 #### [Vererbung am Beispiel von Rechtecken](Examples/Rectangles/Resources/Readme.md)
 
-Folgende Aspekte werden zum Thema &ldquo;Vererbung&rdquo; betrachtet:
+Folgende Aspekte werden zum Thema &bdquo;Vererbung&rdquo; betrachtet:
   * Entwicklung einer Hierarchie von Klassen
   * Konstruktoren von abgeleiteten Klassen und Basisklassen
   * Verwendung von `public`, `protected` und `private`

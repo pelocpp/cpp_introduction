@@ -96,7 +96,7 @@ Eine mögliche Schnittstelle der Klasse `DynamicIntArray` könnte so aussehen:
 *Tabelle* 1: Schnittstelle der Klasse `DynamicIntArray`.
 
 Beachten Sie, dass neben den in *Tabelle* 1 aufgeführten Methoden
-auch noch das Regelwerk der &ldquo;Rule of Three&rdquo; vorhanden ist.
+auch noch das Regelwerk der &bdquo;Rule of Three&rdquo; vorhanden ist.
 
 ---
 

@@ -65,8 +65,8 @@ Die drei Klassen sollen folgende Eigenschaften aufweisen:
 ## Hinweis zur Realisierung
 
 Man könnte geneigt sein, die beiden Kontotypen *Studentenkonto* und *Girokonto* in Beziehung
-zueinander zu setzen. Zum Beispiel könnte man argumentieren, ein Studentenkonto &ldquo;ist-ein&rdquo; Girokonto
-mit Dispolimit 0. Oder auch anders herum: Ein Girokonto &ldquo;ist-ein&rdquo; Studentenkonto erweitert um
+zueinander zu setzen. Zum Beispiel könnte man argumentieren, ein Studentenkonto &bdquo;ist-ein&rdquo; Girokonto
+mit Dispolimit 0. Oder auch anders herum: Ein Girokonto &bdquo;ist-ein&rdquo; Studentenkonto erweitert um
 das Feature eines Dispolimits.
 
 Warum führen beide Überlegungen nicht ans Ziel?

@@ -7,16 +7,16 @@
 
 ## Erläuterungen
 
-### Was bedeutet &ldquo;prozedurale&rdquo; Programmierung
+### Was bedeutet &bdquo;prozedurale&rdquo; Programmierung
 
 Der Programmierer löst ein Problem mit Hilfe
 von Prozeduren (Unterprogrammen). Er nutzt also Funktionen, die
 er nach und nach aufruft, womit das Problem
 am Ende gelöst wird.
 
-### Was bedeutet &ldquo;objektorientierte&rdquo; Programmierung
+### Was bedeutet &bdquo;objektorientierte&rdquo; Programmierung
 
-Der Programmierer löst hier ein Problem, in dem er &ldquo;Objekte&rdquo; erstellt.
+Der Programmierer löst hier ein Problem, in dem er &bdquo;Objekte&rdquo; erstellt.
 
 Objekte enthalten neben den Daten auch Funktionen (Methoden, letzten Endes Unterprogramme),
 die auf den Daten operieren.
@@ -26,14 +26,14 @@ ist es, alles zu implementieren, was so in ein Objekt gehört.
 Ist beispielweise ein Programm zu schreiben,
 dass Umfang und Fläche von Kreisen und
 Quadraten berechnen soll, 
-dann erstellt der &ldquo;objektorientierte&rdquo; Entwickler zunächst
+dann erstellt der &bdquo;objektorientierte&rdquo; Entwickler zunächst
 zwei Klassen `Circle` und `Square`,
 die jeweils alle notwendigen Daten und Funktionen besitzen,
 die für das Funktionieren eines Kreises (eines Quadrats) erforderlich sind.
 Sowohl die Daten als auch die Funktionen sind in einer einzigen Datenstruktur
 (`struct`, `class`) vorhanden.
 
-### Vorteile der &ldquo;objektorientierten&rdquo; Programmierung
+### Vorteile der &bdquo;objektorientierten&rdquo; Programmierung
 
 #### Kapselung vermeidet Namenskonflikte
 
@@ -73,7 +73,7 @@ Das muss aber so nicht sein.
 Über das Sprachmittel der *Zugriffsklassen* gibt es neben `public`
 eine weitere Zugriffsklasse `private`, die einen unkontrollierten Zugriff
 auf Instanzvariablen untersagt. Mehr dazu im
-Abschnitt &ldquo;[*Vertiefungen zu Klassen und Objekten*](../Markdown/ClassesObjectsImproved.md)&rdquo;.
+Abschnitt &bdquo;[*Vertiefungen zu Klassen und Objekten*](../Markdown/ClassesObjectsImproved.md)&rdquo;.
 
 ## Beispiele
 

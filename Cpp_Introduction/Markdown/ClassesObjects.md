@@ -104,7 +104,7 @@ auf das zu einem späteren Zeitpunkt zu betrachtende Sprachkonstrukt von *Namensr
 aber um es hier schon einmal kurz anzusprechen:
 Sie helfen dabei, dass wir im Zuge unserer
 Weiterentwicklung der Klasse `Time` keine Fehlermeldungen der Gestalt
-&ldquo;*Error class 'Time': 'class' type redefinition*&rdquo;
+&bdquo;*Error class 'Time': 'class' type redefinition*&rdquo;
 erhalten. Bis auf Weiteres dürfen Sie die `namespace`-Anweisungen getrost ignorieren.
 
 #### Datei [*Main.cpp*](../ClassesObjects/Main.cpp) - Testrahmen:

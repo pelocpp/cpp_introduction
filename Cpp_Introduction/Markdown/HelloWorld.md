@@ -1,4 +1,4 @@
-# &ldquo;Hello World&rdquo;
+# &bdquo;Hello World&rdquo;
 
 [Zurück](Agenda.md)
 
@@ -15,7 +15,7 @@ Erst dann kann das Programm ausgeführt werden.
 In der *Visual Studio* Entwicklungsumgebung sind alle notwendigen Werkzeuge (Editor, Übersetzer)
 vorhanden bwz. integriert.
 
-Der Quelltext für ein &ldquo;Hello World&rdquo; Programm sieht so aus:
+Der Quelltext für ein &bdquo;Hello World&rdquo; Programm sieht so aus:
 
 #### Datei [*Main.cpp*](../HelloWorld/Main.cpp):
 

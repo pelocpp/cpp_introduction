@@ -12,7 +12,7 @@ Es werden zwei einfache Beispiele zu den Basiskonstrukten der STL betrachtet.
 
 ### Teuflische Zahlenfolge
 
-Die Teuflische Zahlenfolge, auch als &ldquo;3*n* + 1&rdquo;-Vermutung oder *Collatz*-Problem bezeichnet, ist ein ungelöstes mathematisches
+Die Teuflische Zahlenfolge, auch als &bdquo;3*n* + 1&rdquo;-Vermutung oder *Collatz*-Problem bezeichnet, ist ein ungelöstes mathematisches
 Problem und wird dem Mathematiker *Lothar Collatz* zugeschrieben. Bei dem Problem geht es um
 Zahlenfolgen, die nach einem einfachen Bildungsgesetz konstruiert werden. Gegeben ist eine
 beliebige natürliche Startzahl *n*, aus der sich eine Folge von Zahlen nach den folgenden zwei Regeln bildet:

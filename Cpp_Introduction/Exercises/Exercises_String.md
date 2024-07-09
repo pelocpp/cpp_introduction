@@ -9,7 +9,7 @@
 In einer objektorientierten Sprache wie C++ gehört eine Klasse `String` für den komfortablen Umgang
 mit Zeichenketten zum Pflichtbestandteil der Klassenbibliothek.
 
-wir finden die gesuchte Klasse unter dem Namen `std::string` in der STL (&bdquo;Standard Template Library&ldquo;) vor.
+wir finden die gesuchte Klasse unter dem Namen `std::string` in der STL (&bdquo;Standard Template Library&bdquo;) vor.
 
 Um Übung in der Anwendung der Programmiersprache C++ zu erlangen, beschäftigen wir uns im folgenden mit der Realisierung
 unserer eigenen Klasse `String`, siehe dazu die Beschreibung der öffentlichen Schnittstelle dieser `String`-Klasse in *Tabelle* 1.
@@ -33,7 +33,7 @@ Die Klassenelemente in *Tabelle 1* mögen eine Orientierung für Ihre Realisierung
 | Konstruktor    | Schnittstelle und Beschreibung |
 |:-------------- |-----------------------------------------|
 | Konstruktor | `String();`<br/> Standard-Konstruktor zum Anlegen einer leeren Zeichenkette.|
-| Benutzerdefinierter Konstruktor | `String(const char*);`<br/> Benutzerdefinierter Konstruktor. Als Argument wird eine Folge von `char`-Elementen erwartet, die mit `'\0'` abgeschlossen ist, sprich eine klassische &ldquo;C-Zeichenkette&rdquo;. |
+| Benutzerdefinierter Konstruktor | `String(const char*);`<br/> Benutzerdefinierter Konstruktor. Als Argument wird eine Folge von `char`-Elementen erwartet, die mit `'\0'` abgeschlossen ist, sprich eine klassische &bdquo;C-Zeichenkette&rdquo;. |
 | Methode `length` | `int length() const;`<br/> Liefert die Länge der Zeichenkette zurück. |
 | Methode `insert` | `bool insert(const String& s, int ofs);`<br/> Fügt die Zeichenkette `s` in die aktuelle Zeichenketten-Instanz an der Position `ofs` ein. |
 | Methode `append` | `void append(const String& s);`<br/> Hängt die Zeichenkette `s` am Ende des aktuellen Zeichenkettenobjekts an. |

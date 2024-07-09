@@ -15,13 +15,13 @@ Erweiterungen und Neuerungen von C++ den Überblick zu behalten.
 Das von mir zusammengestellte Inhaltsverzeichnis unternimmt den Versuch,
 die sprachlichen Konstrukte für einen Einstieg 
 nach gewissen systematischen und methodischen Gesichtspunkten so zu gliedern und zusammenzufassen,
-dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
+dass bei deren Betrachtung der &bdquo;rote Faden&rdquo; nicht verloren geht.
 
 ---
 
-## [&ldquo;Hello World&rdquo;](HelloWorld.md) 
+## [&bdquo;Hello World&rdquo;](HelloWorld.md) 
   * Umgang mit der Entwicklungsumgebung
-  * Ein &ldquo;Hello World&rdquo; erstellen und ablaufen lassen
+  * Ein &bdquo;Hello World&rdquo; erstellen und ablaufen lassen
 
 
 ## [Erster Blick auf Klassen und Objekte](ClassesObjects.md) 
@@ -32,8 +32,8 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
 
 
 ## [Vergleich zwischen prozeduraler und objektorientierter Programmierung](ProceduralVsOOProgramming.md) 
-  * Was bedeutet &ldquo;prozedurale&rdquo; Programmierung
-  * Was bedeutet &ldquo;objektorientierte&rdquo; Programmierung
+  * Was bedeutet &bdquo;prozedurale&rdquo; Programmierung
+  * Was bedeutet &bdquo;objektorientierte&rdquo; Programmierung
   * Vorteile der objektorientierten Programmierung
 
 
@@ -57,7 +57,7 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
 
 ## [Referenzen](References.md) 
   * Was ist eine Referenz?
-  * Der Adreßoperator `&` bei Referenzen
+  * Der Adressoperator `&` bei Referenzen
   * Referenzen können nicht erneut zugewiesen werden
   * Null-Zeiger und Null-Referenzen
   * Zeiger und Referenzen im Vergleich
@@ -85,7 +85,7 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
 
 
 ## [Namensräume / Namespaces](Namespaces.md) 
-  * Hintergrund für das Konzept der &ldquo;Namensräume&rdquo;
+  * Hintergrund für das Konzept der &bdquo;Namensräume&rdquo;
   * Schlüsselwörter `using` und `namespace`
 
 
@@ -113,13 +113,13 @@ dass bei deren Betrachtung der &ldquo;rote Faden&rdquo; nicht verloren geht.
   * Operatoren `new` und `delete`
 
 
-## [&ldquo;Rule of Three&rdquo;: Kopierkonstruktor, Wertzuweisungsoperator und Destruktor](RuleOfThree.md)
+## [&bdquo;Rule of Three&rdquo;: Kopierkonstruktor, Wertzuweisungsoperator und Destruktor](RuleOfThree.md)
   * Objekte mit dynamischen Daten
   * Ein Destruktor zum automatisierten Freigeben von allokiertem Speicher
   * Objekte kopieren und zuweisen
   * *Flat Copy* versus *Deep Copy*
   * Überladen von Kopierkonstruktor und Wertzuweisungsoperator
-  * Die &ldquo;Rule of Three&rdquo;
+  * Die &bdquo;Rule of Three&rdquo;
 
 
 ## [Vererbung](Inheritance.md)

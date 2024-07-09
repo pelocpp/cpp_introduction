@@ -37,7 +37,7 @@ Unter einem *Konstruktor* versteht man eine spezielle Art von Methode, die
   * die *keinen* Rückgabetyp hat.
 
 Ein Konstruktor besitzt die Aufgabe, die Instanzvariablen eines Objekts vollständig mit sinnvollen Werten vorzubelegen.
-Umgangssprachlich kann man auch sagen, dass ein Konstruktor eine Instanz &ldquo;konstruiert&rdquo;.
+Umgangssprachlich kann man auch sagen, dass ein Konstruktor eine Instanz &bdquo;konstruiert&rdquo;.
 
 Die Anweisung zum Aufruf eines Konstruktors wird durch den Compiler im Zuge der Objekterzeugung *automatisch* abgesetzt.
 Auf diese Weise wird erreicht, dass Objekterzeugung und Konstruktorausführung zu einer Einheit *verschmelzen*.

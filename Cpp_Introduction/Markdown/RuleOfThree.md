@@ -1,4 +1,4 @@
-# &ldquo;Rule of Three&rdquo;:<br />Kopierkonstruktor, Wertzuweisungsoperator und Destruktor
+# &bdquo;Rule of Three&rdquo;:<br />Kopierkonstruktor, Wertzuweisungsoperator und Destruktor
 
 
 [Zurück](Agenda.md)
@@ -200,9 +200,9 @@ siehe dazu auch *Abbildung* 3:
 Die notwendige Realisierung für ein korrektes Kopieren zweier Objekte,
 so wie in *Abbildung* 3 dargestellt, entnehmen Sie bitte dem folgenden Quellcode.
 
-### Die &ldquo;Rule of Three&rdquo;
+### Die &bdquo;Rule of Three&rdquo;
 
-Die viel zierte &ldquo;Rule of Three&rdquo; &ndash; in manchen Büchern auch als &ldquo;Big-Three&rdquo; bezeichnet &ndash; 
+Die viel zierte &bdquo;Rule of Three&rdquo; &ndash; in manchen Büchern auch als &bdquo;Big-Three&rdquo; bezeichnet &ndash; 
 besagt nun einfach, dass jede C++&ndash;Klasse, die dynamische Daten allokiert, zwingend
 
   * einen Destruktor,

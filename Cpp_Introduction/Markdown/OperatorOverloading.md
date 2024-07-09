@@ -16,7 +16,7 @@ In C++ können Sie diese Operatoren auch für Klassen definieren.
 
 *Beispiel*:
 
-Das folgende Code-Fragment ist gewissermaßen &ldquo;selbstverständlich&rdquo; übersetzungsfähig:
+Das folgende Code-Fragment ist gewissermaßen &bdquo;selbstverständlich&rdquo; übersetzungsfähig:
 
 
 ```cpp
@@ -69,8 +69,8 @@ Zu den Begriffen:
     Zweistellige Operatoren benötigen zwei Operanden.
     Beispiele sind etwa die arithmetischen Operationen
     Addition, Subtraktion, Multiplikation, oder Division, oder die logischen Operationen
-    &ldquo;Logisches Und&rdquo; (`&&`)  und
-    &ldquo;Logisches Oder&rdquo; (`||`).
+    &bdquo;Logisches Und&rdquo; (`&&`)  und
+    &bdquo;Logisches Oder&rdquo; (`||`).
 
   * *Priorität* :<br />
     Zunächst einmal ganz einfach formuliert:
@@ -96,7 +96,7 @@ int x = 1 - 2 - 3;
 ```
 
 Besitzt `n` den Wert -4 oder 2? Okay, Sie werden vermutlich für den Wert -4 plädieren
-auf Grund der Vorgehensweise: Ich lese den Ausdruck von &ldquo;links nach rechts&rdquo;.
+auf Grund der Vorgehensweise: Ich lese den Ausdruck von &bdquo;links nach rechts&rdquo;.
 
 Okay, wie sieht es mit diesem Code-Fragment aus?
 
@@ -112,7 +112,7 @@ d = c = b = a;
 
 Dies ist schon eher eine subtile Form der Wertzuweisung:
 Wir sprechen von einer so genannten *Mehrfachzuweisung*:
-Sie wird von &ldquo;rechts nach links&rdquo; abgearbeitet,
+Sie wird von &bdquo;rechts nach links&rdquo; abgearbeitet,
 also im vorliegenden Beispiel wird als erstes `b` der Wert von `a` zugewiesen
 (also `1`), dieser Wert wird danach der Variablen `c` zugewiesen und schließlich der Variablen `d`.
 

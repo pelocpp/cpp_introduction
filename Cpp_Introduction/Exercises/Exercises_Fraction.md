@@ -37,7 +37,7 @@ Folgenden Eigenschaften sollen in Ihrer Realisierung der Klasse `Fraction` Berüc
     Ausdruck auch dann verwendet werden können, wenn auf Grund des Kontextes ein `float` oder
     `double`-Wert erwartet wird.
 
-  * Ein- und Ausgabe: Eine rationale Zahl soll in der Form &ldquo;Zähler / Nenner&ldquo; ausgegeben werden.
+  * Ein- und Ausgabe: Eine rationale Zahl soll in der Form &bdquo;Zähler / Nenner&bdquo; ausgegeben werden.
     Für Eingaben ist dasselbe Format zu Grunde zu legen. Zwischen den numerischen
     Werten und dem Schrägstrich sind beliebige Leerzeichen und Tabulatoren erlaubt.
 

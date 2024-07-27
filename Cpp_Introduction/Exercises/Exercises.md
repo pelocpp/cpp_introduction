@@ -70,7 +70,7 @@ Folgende Aspekte werden betrachtet:
 
 ---
 
-#### [Klasse *Fraction*](Examples/Fraction/Resources/Readme.md)
+#### [Klasse *Fraction*](./Exercises_Fraction.md)
 
 Folgende Aspekte werden betrachtet:
   * Prinzipielle Realisierung einer einfachen Klasse *ohne* dynamische Daten im Instanzvariablenbereich

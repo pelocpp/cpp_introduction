@@ -81,20 +81,19 @@ namespace Rectangles {
         if (m_x != other.m_x) {
             return false;
         }
-
-        if (m_y != other.m_y) {
+        else if (m_y != other.m_y) {
             return false;
         }
-
-        if (m_width != other.m_width) {
+        else if (m_width != other.m_width) {
             return false;
         }
-
-        if (m_height != other.m_height) {
+        else if (m_height != other.m_height) {
             return false;
         }
-
-        return true;
+        else
+        {
+            return true;
+        }
     }
 
     double Rectangle::circumference()

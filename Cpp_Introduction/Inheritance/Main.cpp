@@ -28,6 +28,12 @@ namespace Inheritance
         int getWidth() const { return m_width; }
         int getHeight() const { return m_height; }
 
+        // setter
+        void setX(int x) { m_x = x; }
+        void setY(int y) { m_y = y; }
+        void setWidth(int width) { m_width = width; }
+        void setHeight(int height) { m_height = height; }
+
         // public interface
         void eraseBackground()
         {

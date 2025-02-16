@@ -8,7 +8,7 @@
 // https://peterloos.de
 // =====================================================================================
 
-#pragma message("Collection of introductory C++ Code Examples - Copyright (C) 2019-2024 Peter Loos")
+#pragma message("Collection of introductory C++ Code Examples - Copyright (C) 2019-2025 Peter Loos")
 
 #include <iostream>
 
@@ -40,7 +40,7 @@ extern void main_Exercises();
 // entry point
 int main()
 {
-    std::cout << "[Collection of introductory C++ Code Examples - Copyright (C) 2019-2024 Peter Loos]" << std::endl;
+    std::cout << "[Collection of introductory C++ Code Examples - Copyright (C) 2019-2025 Peter Loos]" << std::endl;
 
     // main entry points code examples
     try

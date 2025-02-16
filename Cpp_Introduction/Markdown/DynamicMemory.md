@@ -184,6 +184,68 @@ d'tor
 d'tor
 ```
 
+### *Beispiel* 5: Klasse `LotteryTickets` mit variabler Anzahl von Glückslosen
+
+
+```cpp
+01: class LotteryTickets
+02: {
+03: private:
+04:     int  m_count;
+05:     int* m_tickets;
+06: 
+07: public:
+08:     LotteryTickets() : m_count (0), m_tickets (NULL)
+09:     {
+10:         std::srand(  static_cast<unsigned int>(std::time(0))); // use current time as seed for random generator
+11:     }
+12: 
+13:     ~LotteryTickets() {
+14:         delete[] m_tickets; 
+15:     }
+16: 
+17:     void buyTickets(int count)
+18:     {
+19:         m_count = count;
+20:         m_tickets = new int[m_count];   // buying 'count' tickets at once
+21: 
+22:         for (int i = 0; i < m_count; i++) {
+23:             m_tickets[i] = 1 + rand() % 49;
+24:         }
+25:     }
+26: 
+27:     void printTickets()
+28:     {
+29:         for (int i = 0; i < m_count; i++) {
+30:             std::cout << "Ticket " << (i + 1) << ": " << m_tickets[i] << std::endl;
+31:         }
+32:     }
+33: };
+34: 
+35: static void test_lottery()
+36: {
+37:     std::cout << "How many lottery tickets do you want to buy? ";
+38: 
+39:     int numTickets;
+40:     std::cin >> numTickets;
+41: 
+42:     LotteryTickets lottery;
+43:     lottery.buyTickets(numTickets);
+44:     lottery.printTickets();
+45: }
+```
+
+*Ausgabe*:
+
+```
+How many lottery tickets do you want to buy? 5
+Ticket 1: 30
+Ticket 2: 13
+Ticket 3: 45
+Ticket 4: 21
+Ticket 5: 13
+```
+
 ---
 
 ## Quellcode des Beispiels:

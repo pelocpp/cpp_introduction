@@ -117,7 +117,7 @@ void Wallet::add(unsigned long long euros, unsigned int cents) {
 
 void Wallet::add(unsigned long long euros) {
 
-    m_euros = m_euros + euros;
+    m_euros += euros;
 }
 
 void Wallet::add(const Wallet& other) {

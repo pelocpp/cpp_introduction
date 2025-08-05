@@ -88,7 +88,7 @@ Es wird in diesem Kapitel weiter hinten besprochen. Konzentrieren wir uns auf di
 std::cin >> n;
 ```
 
-Was läßt sich über `std::cin` sagen?
+Was lässt sich über `std::cin` sagen?
 Offensichtlich handelt es sich um ein globales Objekt, da Sie es nicht in Ihrem Code definiert haben.
 Aus früheren Erfahrungen mit Operatoren können Sie schließen,
 daß `std::cin` den Eingabe-Operator (`>>`) überladen hat, mit der Folge,

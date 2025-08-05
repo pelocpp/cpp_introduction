@@ -50,7 +50,7 @@ mit dem Zeiger als Argument auf.
 *Beachte*:
 Ein mit `new` reserviertes Stück Speicher wird nicht automatisch freigegeben.
 Vergisst man den Aufruf von `delete`, entsteht eine sogenannte Speicherlücke.
-Dieser Speicherbereich läßt sich bis zum Ende des Programms
+Dieser Speicherbereich lässt sich bis zum Ende des Programms
 nicht mehr anderweitig verwenden.
 
 ## Beispiele

@@ -84,7 +84,7 @@ static void chars()
         // first param = position of the first character to include
         // second param = length of the substring
         std::string sub = s1.substr(1, 3);
-        std::cout << "s1.substr(1, 3)    ==> " << std::boolalpha << sub << std::endl;
+        std::cout << "s1.substr(1, 3)    ==> " << sub << std::endl;
         
         // index operator []
         s[2] = '?';
@@ -92,13 +92,12 @@ static void chars()
 
         // method: append
         // append another std::string object
-        std::string result;
-        result = s1.append(s2);
-        std::cout << "s1.append(s2)      ==> " << result << std::endl;
+        s1.append(s2);
+        std::cout << "s1.append(s2)      ==> " << s1 << std::endl;
 
         // operator +
         // concatenating two strings (same as using method append)
-        result = s1 + s3;
+        std::string result = s1 + s3;
         std::cout << "s1 + s3            ==> " << result << std::endl;
 
         // converting a string to an integer

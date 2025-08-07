@@ -28,7 +28,7 @@ Zur Strukturierung der Klasse `Lottery` realisieren Sie die folgenden, in *Tabel
 | `nextRandomNumber` | `int nextRandomNumber();`<br/> Ermittelt eine Zufallszahl zwischen 1 und 49. In dieser Methode werden Details zur Generierung einer Zufallszahl verborgen. Sollte eine Zahl mehrfach erzeugt werden, spielt das in dieser Methode keine Rolle. |
 | `drawNextNumber` | `int drawNextNumber();`<br/>Ziehung der nächsten Kugel. Mit Hilfe der Instanzvariablen der umgebenden Klasse `Lottery` achtet diese Methode darauf, dass keine Kugel doppelt gezogen wird. |
 | `numberAlreadyDrawn` | `bool numberAlreadyDrawn(int number);`<br/>Hilfsmethode, die zu einer zufällig erzeugten Zahl `number` bestimmt, ob diese Zahl (Kugel) schon einmal gezogen worden ist oder nicht. |
-| `print` | `void setNextNumber(int number);`<br/>Hilfsmethode, die Kugel `number` in den Instanzvariablen der umgebenden `Lottery`-Klasse als gezogene Kugel ablegt. |
+| `setNextNumber` | `void setNextNumber(int number);`<br/>Hilfsmethode, die Kugel `number` in den Instanzvariablen der umgebenden `Lottery`-Klasse als gezogene Kugel ablegt. |
 | `play` | `void play();`<br/>Simuliert eine Ziehung der Lottozahlen. Die zuvor beschriebenen Methoden sind geeignet aufzurufen. |
 | `print` | `void print();`<br/>Gibt das Ergebnis einer Ziehung der Lottozahlen in der Konsole aus. |
 
@@ -60,7 +60,7 @@ Alternativ könnte man auch den STL-Algorithmus `std::for_each` verwenden.
 
 [*Lottery.h*](./STL_Lotto/Lottery.h)<br />
 [*Lottery.cpp*](./STL_Lotto/Lottery.cpp)<br />
-[*Lottery_Main_.cpp*](./STL_Lotto/Lottery_Main_.cpp)<br />
+[*Lottery_Main_.cpp*](./STL_Lotto/Lottery_Main.cpp)<br />
 
 ---
 

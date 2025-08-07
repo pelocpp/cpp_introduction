@@ -16,8 +16,8 @@ Folgende C++&ndash;Sprachmittel sollen zum Einsatz kommen:
 
 ## Beschreibung
 
-Erstellen Sie eine Klasse `Account`, die das Guthaben eines Kontos verwaltet.
-Die Kontonummer wird von der Klasse `Account` mit Hilfe einer Klassenvariablen bestimmt.
+Erstellen Sie eine C++-Klasse, die das Guthaben eines Kontos verwaltet.
+Die Kontonummer wird von dieser Klasse mit Hilfe einer Klassenvariablen bestimmt.
 
 Die Klasse soll Methoden `deposit` zum Einzahlen und `withdrawal` zum Abheben besitzen.
 
@@ -29,8 +29,8 @@ und `getBalance` (Kontostand) eingeholt werden.
 Da das Bankinstitut mehrere Arten von Konten seinen Kunden anbietet,
 ist der Klassenentwurf in mehreren Ebenen zu gestalten:
 
-  * Schnittstelle `IAccount` &ndash; Beschreibung der Methoden der Klasse `Account`.<br />
-    Oder anders formuliert: Was sollten alle Realisierungen einer Konto-Klasse für Methoden haben?
+  * Schnittstelle `IAccount` &ndash; Beschreibung der Methoden, die alle Klassen, die ein Bankkonto realisieren, haben sollten.<br />
+    Oder anders formuliert: Was sollten alle Realisierungen einer Bankkonto-Klasse für Methoden haben?
   * Klasse `Account` &ndash; Teilweise Realisierung der Methoden der Klasse `Account` &ndash; Beschreibung siehe weiter unten.
   * Klassen `CurrentAccount` (Girokonto), `StudentsAccount` (Schülerkonto) und `DepositAccount` (Sparbuch).
 

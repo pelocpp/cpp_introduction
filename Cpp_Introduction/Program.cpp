@@ -8,7 +8,9 @@
 // https://peterloos.de
 // =====================================================================================
 
-#pragma message("Collection of introductory C++ Code Examples - Copyright (C) 2019-2025 Peter Loos")
+#define MessageText "Collection of introductory C Code Examples - Copyright (C) 2025 Peter Loos."
+
+#pragma message(MessageText)
 
 #include <iostream>
 
@@ -37,10 +39,9 @@ extern void main_STL();
 
 extern void main_Exercises();
 
-// entry point
 int main()
 {
-    std::cout << "[Collection of introductory C++ Code Examples - Copyright (C) 2019-2025 Peter Loos]" << std::endl;
+    std::cout << MessageText << std::endl;
 
     // main entry points code examples
     try
@@ -73,7 +74,7 @@ int main()
         std::cout << "Exception: " << ex.what() << std::endl;
     }
 
-    std::cout << "[Done]" << std::endl;
+    std::cout << "Done." << std::endl;
     return 0;
 }
 

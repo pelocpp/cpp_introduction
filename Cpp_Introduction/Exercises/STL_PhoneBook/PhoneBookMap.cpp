@@ -67,7 +67,9 @@ namespace PhoneBook
     bool PhoneBookMap::contains(const std::string& first, const std::string& last)
     {
         std::string key = getKeyFromNames(first, last);
+
         std::unordered_map<std::string, size_t>::iterator pos = m_map.find(key);
+
         return pos != m_map.end();
     }
 

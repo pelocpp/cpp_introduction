@@ -34,20 +34,20 @@ namespace PhoneBook
         // needed for sorting entries
         friend bool operator< (const Entry&, const Entry&);
 
-        class MatchNames
-        {
-        public:
-            const std::string& first;
-            const std::string& last;
-            
-            MatchNames(const std::string& first, const std::string& last)
-                : first(first), last(last)
-            {}
+        //class MatchNames
+        //{
+        //public:
+        //    const std::string& first;
+        //    const std::string& last;
+        //    
+        //    MatchNames(const std::string& first, const std::string& last)
+        //        : first(first), last(last)
+        //    {}
 
-            bool operator() (const Entry& other) const {
-                return other.first == first && other.last == last;
-            }
-        };
+        //    bool operator() (const Entry& other) const {
+        //        return other.first == first && other.last == last;
+        //    }
+        //};
 
         // member data
         std::vector<Entry> m_vec;
@@ -70,6 +70,7 @@ namespace PhoneBook
         static void printEntry(const Entry&);
         static std::string transformToName(const Entry&);
         static std::string append(const std::string&, const Entry&);
+        static bool matchNames(const Entry& lhs, const Entry& rhs);
     };
 }
 

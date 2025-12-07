@@ -29,49 +29,50 @@ namespace PhoneBook
         return true;
     }
 
+    bool PhoneBookVector::matchNames(const Entry& lhs, const Entry& rhs)
+    {
+        return lhs.first == rhs.first && lhs.last == rhs.last;
+    }
+
     bool PhoneBookVector::update(const std::string& first, const std::string& last, size_t number)
     {
-        MatchNames matchNames(first, last);
+        //std::vector<Entry>::iterator pos = std::find_if(
+        //    m_vec.begin(),
+        //    m_vec.end(),
+        //    matchNames
+        //);
 
-        std::vector<Entry>::iterator pos = std::find_if(
-            m_vec.begin(),
-            m_vec.end(),
-            matchNames
-        );
+        //if (pos == m_vec.end()) {
+        //    return false;
+        //}
+        //else {
+        //    (*pos).number = number;
+        //    return true;
+        //}
 
-        if (pos == m_vec.end()) {
-            return false;
-        }
-        else {
-            (*pos).number = number;
-            return true;
-        }
+        return true;
     }
 
     bool PhoneBookVector::search(const std::string& first, const std::string& last, size_t& number)
     {
-        MatchNames matchNames(first, last);
+        //std::vector<Entry>::iterator pos = std::find_if(
+        //    m_vec.begin(),
+        //    m_vec.end(),
+        //    matchNames
+        //);
 
-        std::vector<Entry>::iterator pos = std::find_if(
-            m_vec.begin(),
-            m_vec.end(),
-            matchNames
-        );
-
-        if (pos == m_vec.end()) {
-            return false;
-        }
-        else {
-            const Entry& result = *pos;
-            number = result.number;
-            return true;
-        }
+        //if (pos == m_vec.end()) {
+        //    return false;
+        //}
+        //else {
+        //    const Entry& result = *pos;
+        //    number = result.number;
+        //    return true;
+        //}
     }
 
     bool PhoneBookVector::contains(const std::string& first, const std::string& last)
     {
-        MatchNames matchNames(first, last);
-
         std::vector<Entry>::iterator pos = std::find_if(
             m_vec.begin(),
             m_vec.end(),
@@ -83,8 +84,6 @@ namespace PhoneBook
 
     bool PhoneBookVector::remove(const std::string& first, const std::string& last)
     {
-        MatchNames matchNames(first, last);
-
         std::vector<Entry>::iterator pos = std::find_if(
             m_vec.begin(),
             m_vec.end(),

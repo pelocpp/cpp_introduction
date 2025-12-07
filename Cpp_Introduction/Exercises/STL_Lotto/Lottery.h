@@ -4,9 +4,10 @@
 
 #pragma once
 
+#include <cstddef>
 #include <iostream>
-#include <vector>
 #include <random>
+#include <vector>
 
 class Lottery
 {
@@ -75,26 +76,26 @@ public:
 
 public:
     // c'tors
-    Lottery();
-    Lottery(int seed);
+    Lottery                  ();
+    Lottery                  (int seed);
 
     // getter
-    size_t getDrawnNumbers() const;
+    size_t getDrawnNumbers   () const;
 
     // public interface
-    void play();
-    void print();
+    void play                ();
+    void print               ();
 
 private:
     // private helper methods
-    int nextRandomNumber() const;
-    bool numberAlreadyDrawn(int number) const;
-    int drawNextNumber() const;
-    void setNextNumber(int number);
-    void verifyNumbers() const;
+    int  nextRandomNumber    () const;
+    bool numberAlreadyDrawn  (int number) const;
+    int  drawNextNumber      () const;
+    void setNextNumber       (int number);
+    void verifyNumbers       () const;
 
     // private class method
-    static void printNumber(int number);
+    static void printNumber (int number);
 };
 
 // ===========================================================================

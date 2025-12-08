@@ -36,7 +36,7 @@ Legen Sie Ihrer Realisierung folgende Schnittstelle zu Grunde:
 ```
 
 Im Großen und Ganzen kann man sagen, dass die Funktionsweise dieser Methoden
-selbsterklärend ist. Weitere Details zur Definition dieser entnehmen Sie bitte *Tabelle* 1:
+selbsterklärend ist. Weitere Details zur Definition dieser Methoden entnehmen Sie bitte *Tabelle* 1:
 
 
 | Methode        | Schnittstelle und Beschreibung |
@@ -60,13 +60,16 @@ selbsterklärend ist. Weitere Details zur Definition dieser entnehmen Sie bitte *
 Die Klasse `std::vector` ist der STL-Allzweckcontainer für eine Ansammlung von Daten,
 deren Umfang sich zur Laufzeit eines Programms ändern kann.
 
-Wie müssen Sie ein konkretes `std::vector`-Objekt definieren,
-wenn Sie pro Eintrag drei Informationen *Vorname* (`std::string`), *Nachname* (`std::string`) und *Telefonnummer* (`std::size_t`)
+Wir müssen Sie ein konkretes `std::vector`-Objekt definieren,
+wenn wir pro Eintrag die drei Informationen *Vorname* (`std::string`), *Nachname* (`std::string`) und *Telefonnummer* (`std::size_t`)
 im Telefonbuch ablegen wollen.
 
 <img src="./STL_PhoneBook/Resources/cpp_vector_phonebook.svg" width="400">
 
 *Abbildung* 1. Struktureller Aufbau eines `std::vector`-Objekts mit Telefonbucheinträgen.
+
+Definieren Sie eine geeignete Klasse `Entry`, um dann ein `std::vector<Entry>`
+anlegen zu können.
 
 Bilden Sie die geforderten Methoden der öffentlichen Schnittstelle einer `PhoneBook`-Klasse
 geeignet auf STL-Algorithmen ab.

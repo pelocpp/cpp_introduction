@@ -15,7 +15,7 @@ namespace PhoneBook
     // getter
     std::size_t PhoneBookVector::size()
     {
-        return m_vec.size();
+        return m_entries.size();
     }
 
     // public interface
@@ -26,7 +26,7 @@ namespace PhoneBook
         }
 
         Entry entry(first, last, number);
-        m_vec.push_back(entry);
+        m_entries.push_back(entry);
 
         return true;
     }
@@ -36,12 +36,12 @@ namespace PhoneBook
         MatchName name(first, last);
 
         std::vector<Entry>::iterator pos = std::find_if(
-            m_vec.begin(),
-            m_vec.end(),
+            m_entries.begin(),
+            m_entries.end(),
             name
         );
 
-        if (pos == m_vec.end()) {
+        if (pos == m_entries.end()) {
             return false;
         }
         else {
@@ -57,12 +57,12 @@ namespace PhoneBook
         MatchName name(first, last);
 
         std::vector<Entry>::iterator pos = std::find_if(
-            m_vec.begin(),
-            m_vec.end(),
+            m_entries.begin(),
+            m_entries.end(),
             name
         );
 
-        if (pos == m_vec.end()) {
+        if (pos == m_entries.end()) {
             return false;
         }
         else {
@@ -77,12 +77,12 @@ namespace PhoneBook
         MatchName name(first, last);
 
         std::vector<Entry>::iterator pos = std::find_if(
-            m_vec.begin(),
-            m_vec.end(),
+            m_entries.begin(),
+            m_entries.end(),
             name
         );
 
-        return pos != m_vec.end();
+        return pos != m_entries.end();
     }
 
     bool PhoneBookVector::remove(const std::string& first, const std::string& last)
@@ -90,16 +90,16 @@ namespace PhoneBook
         MatchName name(first, last);
 
         std::vector<Entry>::iterator pos = std::find_if(
-            m_vec.begin(),
-            m_vec.end(),
+            m_entries.begin(),
+            m_entries.end(),
             name
         );
 
-        if (pos == m_vec.end()) {
+        if (pos == m_entries.end()) {
             return false;
         }
         else {
-            m_vec.erase(pos);
+            m_entries.erase(pos);
             return true;
         }
     }
@@ -116,8 +116,8 @@ namespace PhoneBook
         std::forward_list<std::string> list;
 
         std::transform( 
-            m_vec.begin(),
-            m_vec.end(), 
+            m_entries.begin(),
+            m_entries.end(), 
             std::front_insert_iterator<std::forward_list<std::string>>(list),
             entryToString
         );
@@ -145,8 +145,8 @@ namespace PhoneBook
     std::string PhoneBookVector::toString() {
 
         std::string s = std::accumulate(
-            m_vec.begin(),
-            m_vec.end(),
+            m_entries.begin(),
+            m_entries.end(),
             std::string(),
             append
         );
@@ -164,8 +164,8 @@ namespace PhoneBook
     void PhoneBookVector::print()
     {
         std::for_each(
-            m_vec.begin(),
-            m_vec.end(),
+            m_entries.begin(),
+            m_entries.end(),
             printEntry
         );
     }

@@ -289,9 +289,6 @@
     <None Include="Exercises\Exercises_STL_PhoneBook.md">
       <Filter>Excercises</Filter>
     </None>
-    <None Include="Exercises\STL_Phonebook\Resources\cpp_hash_table.svg">
-      <Filter>Excercises\STL_PhoneBook\Resources</Filter>
-    </None>
     <None Include="Exercises\Exercises_STL_Lotto.md">
       <Filter>Excercises</Filter>
     </None>
@@ -315,6 +312,12 @@
     </None>
     <None Include="Markdown\DynamicMemory.md">
       <Filter>Markdown</Filter>
+    </None>
+    <None Include="Exercises\STL_PhoneBook\Resources\cpp_vector_phonebook.svg">
+      <Filter>Excercises\STL_PhoneBook\Resources</Filter>
+    </None>
+    <None Include="Exercises\STL_PhoneBook\Resources\cpp_hash_table_phonebook.svg">
+      <Filter>Excercises\STL_PhoneBook\Resources</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

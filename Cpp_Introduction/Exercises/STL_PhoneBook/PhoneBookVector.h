@@ -47,7 +47,7 @@ namespace PhoneBook
         };
 
         // member data
-        std::vector<Entry> m_vec;
+        std::vector<Entry> m_entries;
 
     public:
         // public interface

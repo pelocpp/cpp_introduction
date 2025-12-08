@@ -39,7 +39,8 @@
     <None Include="Exercises\Exercises_Time.md" />
     <None Include="Exercises\Exercises_Fraction.md" />
     <None Include="Exercises\Exercises_Wallet.md" />
-    <None Include="Exercises\STL_Phonebook\Resources\cpp_hash_table.svg" />
+    <None Include="Exercises\STL_PhoneBook\Resources\cpp_hash_table_phonebook.svg" />
+    <None Include="Exercises\STL_PhoneBook\Resources\cpp_vector_phonebook.svg" />
     <None Include="Markdown\Agenda.md" />
     <None Include="Markdown\cpp_call_by_reference.svg" />
     <None Include="Markdown\ClassesObjects.md" />

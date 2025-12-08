@@ -4,12 +4,12 @@
 
 #pragma once
 
-#include <iostream>
+#include "IPhoneBook.h"
+
+#include <cstddef>
 #include <string>
 #include <vector>
 #include <forward_list>
-
-#include "IPhoneBook.h"
 
 namespace PhoneBook
 {
@@ -20,57 +20,52 @@ namespace PhoneBook
         class Entry
         {
         public:
-            std::string first;
-            std::string last;
-            size_t number;
+            std::string m_first;
+            std::string m_last;
+            std::size_t m_number;
 
-            Entry() : number(0) {}
+            Entry() : m_number(0) {}
 
-            Entry(const std::string& first, const std::string& last, size_t number)
-                : first(first), last(last), number(number)
+            Entry(const std::string& first, const std::string& last, std::size_t number)
+                : m_first(first), m_last(last), m_number(number)
             {}
         };
 
-        // needed for sorting entries
-        friend bool operator< (const Entry&, const Entry&);
+        class MatchName
+        {
+        public:
+            const std::string& first;
+            const std::string& last;
+            
+            MatchName(const std::string& first, const std::string& last)
+                : first(first), last(last)
+            {}
 
-        //class MatchNames
-        //{
-        //public:
-        //    const std::string& first;
-        //    const std::string& last;
-        //    
-        //    MatchNames(const std::string& first, const std::string& last)
-        //        : first(first), last(last)
-        //    {}
-
-        //    bool operator() (const Entry& other) const {
-        //        return other.first == first && other.last == last;
-        //    }
-        //};
+            bool operator() (const Entry& other) const {
+                return other.m_first == first && other.m_last == last;
+            }
+        };
 
         // member data
         std::vector<Entry> m_vec;
 
     public:
         // public interface
-        size_t size() override;
-        bool insert(const std::string& first, const std::string& last, size_t number) override;
-        bool update(const std::string& first, const std::string& last, size_t number) override;
-        bool search(const std::string& first, const std::string& last, size_t& number) override;
+        std::size_t size() override;
+        bool insert(const std::string& first, const std::string& last, std::size_t number) override;
+        bool update(const std::string& first, const std::string& last, std::size_t number) override;
+        bool search(const std::string& first, const std::string& last, std::size_t& number) override;
         bool remove(const std::string& first, const std::string& last) override;
         bool contains(const std::string& first, const std::string& last) override;
         std::forward_list<std::string> getNames() override;
-        void sort() override;
         std::string toString() override;
         void print() override;
 
     private:
         // private helper methods
-        static void printEntry(const Entry&);
-        static std::string transformToName(const Entry&);
-        static std::string append(const std::string&, const Entry&);
-        static bool matchNames(const Entry& lhs, const Entry& rhs);
+        static void printEntry             (const Entry&);
+        static std::string entryToString   (const Entry&);
+        static std::string append          (const std::string&, const Entry&);
     };
 }
 

@@ -31,10 +31,6 @@ static void test01_phonebook()
     std::string s = book.toString();
     std::cout << s << std::endl;
 
-    // testing sort
-    book.sort();
-    book.print();
-
     // testing update
     std::cout << "Updating phone number of Franz Schneider:" << std::endl;
     succeeded = book.update("Franz", "Schneider", 1234);
@@ -52,7 +48,7 @@ static void test01_phonebook()
     std::cout << "Found Otto Meier: " << found << std::endl;
 
     // testing search
-    size_t numberMeier = 0;
+    std::size_t numberMeier = 0;
     succeeded = book.search("Sepp", "Meier", numberMeier);
     if (succeeded) {
         std::cout << "Hans Meier: " << numberMeier << std::endl;
@@ -61,7 +57,7 @@ static void test01_phonebook()
 
     // testing 'getNames'
     std::forward_list<std::string> allNames = book.getNames();
-    size_t i = 1;
+    std::size_t i = 1;
     for (const std::string& name : allNames) {
         std::cout << i << ": " << name << std::endl;
         ++i;
@@ -113,7 +109,7 @@ static void test02_phonebook()
     std::cout << "Found Otto Meier: " << found << std::endl;
 
     // testing search
-    size_t numberMeier = 0;
+    std::size_t numberMeier = 0;
     succeeded = book.search("Sepp", "Meier", numberMeier);
     if (succeeded) {
         std::cout << "Hans Meier: " << numberMeier << std::endl;
@@ -122,7 +118,7 @@ static void test02_phonebook()
 
     // testing 'getNames'
     std::forward_list<std::string> allNames = book.getNames();
-    size_t i = 1;
+    std::size_t i = 1;
     for (const std::string& name : allNames) {
         std::cout << i << ": " << name << std::endl;
         ++i;
@@ -173,7 +169,7 @@ static void test03_benchmark_02()
         std::string vorname = first + std::to_string(i);
         std::string nachname = last + std::to_string(i);
 
-        book.insert(vorname, nachname, (size_t) 10000 + i);
+        book.insert(vorname, nachname, (std::size_t) 10000 + i);
     }
 
     std::cout << "Done." << std::endl;
@@ -205,7 +201,7 @@ static void test03_benchmark_03()
         std::string vorname = first + std::to_string(i);
         std::string nachname = last + std::to_string(i);
 
-        book.insert(vorname, nachname, (size_t)10000 + i);
+        book.insert(vorname, nachname, (std::size_t)10000 + i);
     }
 
     std::cout << "Done." << std::endl;
@@ -237,7 +233,7 @@ static void test03_benchmark_04()
         std::string firstName = first + std::to_string(i);
         std::string lastName = last + std::to_string(i);
 
-        book.insert(firstName, lastName, (size_t)10000 + i);
+        book.insert(firstName, lastName, (std::size_t)10000 + i);
     }
 
     const auto endTime(std::chrono::high_resolution_clock::now());
@@ -252,7 +248,7 @@ static void test03_benchmark_04()
     // test searching a number
     const auto startTime2(std::chrono::high_resolution_clock::now());
 
-    size_t offset = MaxNames / 2;
+    std::size_t offset = MaxNames / 2;
 
     //first = "First_999";
     //last = "Last_999";
@@ -262,7 +258,7 @@ static void test03_benchmark_04()
 
     for (int i = 0; i < MaxIterations; ++i) {
 
-        size_t number = 0;
+        std::size_t number = 0;
         bool succeeded = book.search(first, last, number);
         if (! succeeded) {
             std::cout << "Internal Error" << std::endl;
@@ -298,7 +294,7 @@ static void test03_benchmark_05()
         std::string firstName = first + std::to_string(i);
         std::string lastName = last + std::to_string(i);
 
-        book.insert(firstName, lastName, (size_t)10000 + i);
+        book.insert(firstName, lastName, (std::size_t)10000 + i);
     }
 
     const auto endTime(std::chrono::high_resolution_clock::now());
@@ -313,7 +309,7 @@ static void test03_benchmark_05()
     // test searching a number
     const auto startTime2(std::chrono::high_resolution_clock::now());
 
-    size_t offset = MaxNames / 2;
+    std::size_t offset = MaxNames / 2;
 
     //first = "First_999";
     //last = "Last_999";
@@ -323,7 +319,7 @@ static void test03_benchmark_05()
 
     for (int i = 0; i < MaxIterations; ++i) {
 
-        size_t number = 0;
+        std::size_t number = 0;
         bool succeeded = book.search(first, last, number);
         if (!succeeded) {
             std::cout << "Internal Error" << std::endl;

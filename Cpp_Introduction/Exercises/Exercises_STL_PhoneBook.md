@@ -60,19 +60,19 @@ selbsterklärend ist. Weitere Details zur Definition dieser Methoden entnehmen Si
 Die Klasse `std::vector` ist der STL-Allzweckcontainer für eine Ansammlung von Daten,
 deren Umfang sich zur Laufzeit eines Programms ändern kann.
 
-Wir müssen Sie ein konkretes `std::vector`-Objekt definieren,
+Wie müssen Sie ein konkretes `std::vector`-Objekt definieren,
 wenn wir pro Eintrag die drei Informationen *Vorname* (`std::string`), *Nachname* (`std::string`) und *Telefonnummer* (`std::size_t`)
-im Telefonbuch ablegen wollen.
+im Telefonbuch ablegen wollen?
 
 <img src="./STL_PhoneBook/Resources/cpp_vector_phonebook.svg" width="400">
 
-*Abbildung* 1. Struktureller Aufbau eines `std::vector`-Objekts mit Telefonbucheinträgen.
+*Abbildung* 1. Struktureller Aufbau eines `std::vector`-Objekts mit mehreren Telefonbucheinträgen.
 
-Definieren Sie eine geeignete Klasse `Entry`, um dann ein `std::vector<Entry>`
-anlegen zu können.
+Definieren Sie eine geeignete Klasse `Entry`, um dann ein `std::vector<Entry>`-Objekt
+anlegen zu können. Dieses Objekt soll Membervariable eine Klasse `PhoneBook` sein.
 
-Bilden Sie die geforderten Methoden der öffentlichen Schnittstelle einer `PhoneBook`-Klasse
-geeignet auf STL-Algorithmen ab.
+Bilden Sie dann die geforderten Methoden der öffentlichen Schnittstelle einer `PhoneBook`-Klasse
+aus *Tabelle* 1 geeignet auf STL-Algorithmen ab.
 
 Denkbar wäre zum Beispiel:
 

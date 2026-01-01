@@ -42,7 +42,7 @@ selbsterklärend ist. Weitere Details zur Definition dieser Methoden entnehmen Si
 | Methode        | Schnittstelle und Beschreibung |
 |:-------------- |:-----------------------------------------|
 | `size` | `size_t size();`<br/>Liefert die Anzahl der Einträge im Telefonbuch zurück. |
-| `insert` | `bool insert(const std::string& first, const std::string& last, size_t number);`<br/>Fügt einen Eintrag, bestehend aus den Werten *Vorname*, *Nachname* und Telefonnummer in das Telefonbuch ein. Ist der Name (*Vorname* und *Nachname*) im Telefonbuch schon enthalten, liefert die Funktion `false` zurück, andernfalls `true`. |
+| `insert` | `bool insert(const std::string& first, const std::string& last, size_t number);`<br/>Fügt einen Eintrag, bestehend aus den Werten *Vorname*, *Nachname* und Telefonnummer, in das Telefonbuch ein. Ist der Name (*Vorname* und *Nachname*) im Telefonbuch schon enthalten, liefert die Funktion `false` zurück, andernfalls `true`. |
 | `update` | `bool update(const std::string& first, const std::string& last, size_t number);`<br/>Ändert einen Eintrag im Telefonbuch. Zu vorgegebenem Namen (*Vorname* und *Nachname*) wird eine neue Nummer im Telefonbuch eingetragen. Sind die Angaben des Namens falsch, liefert die Funktion `false` zurück, andernfalls `true`. |
 | `search` | `bool search(const std::string& first, const std::string& last, size_t& number);`<br/>Sucht einen Eintrag im Telefonbuch. Zu vorgegebenem Namen (*Vorname* und *Nachname*) wird die Telefonnummer (im dritten Parameter `number`) zurückgegeben. Sind die Namensangaben falsch, liefert die Funktion `false` zurück, andernfalls `true`. |
 | `remove` | `bool remove(const std::string& first, const std::string& last);`<br/>Entfernt einen Eintrag (*Vorname* und *Nachname*) im Telefonbuch. |
@@ -51,7 +51,7 @@ selbsterklärend ist. Weitere Details zur Definition dieser Methoden entnehmen Si
 | `toString` | `std::string toString();`<br/>Kreiert eine Zeichenkette (`std::string`), die den gesamten Inhalt des Telefonbuchs in einer ansprechenden lesbaren Darstellung enthält. |
 | `print` | `void print();`<br/>Gibt den Inhalt des Telefonbuchs in der Konsole aus. |
 
-*Tabelle* 1: Beschreibung der öffentlichen Schnittstelle einer Telefonbuchrealisierung.
+*Tabelle* 1: Beschreibung der öffentlichen Schnittstelle einer Telefonbuch Realisierung.
 
 ---
 

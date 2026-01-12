@@ -162,7 +162,7 @@ multiplyByTwo(123);
 
 ### Design einer Methoden-Schnittstelle
 
-Wenn Sie Methoden eine Klasse definieren, die Parameter besitzt,
+Wenn Sie Methoden einer Klasse definieren, die Parameter besitzt,
 sollten Sie genau darauf achten, wie Sie die Schnittstelle der Methode definieren.
 
 Betrachten wir als Beispiel eine Methode `diff` der Klasse `Time`,

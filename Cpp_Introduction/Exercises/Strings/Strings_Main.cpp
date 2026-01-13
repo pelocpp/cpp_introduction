@@ -4,10 +4,10 @@
 
 
 // includes
-#include <iostream>
-#include <string>
 #include <cctype>
 #include <cstdlib>
+#include <iostream>
+#include <string>
 
 // function prototypes
 static bool isLeapYear(int year);

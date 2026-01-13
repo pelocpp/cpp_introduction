@@ -2,8 +2,8 @@
 // DynamicIntArray.cpp
 // ===========================================================================
 
-#include <string>
 #include <stdexcept>
+#include <string>
 
 #include "DynamicIntArray.h"
 

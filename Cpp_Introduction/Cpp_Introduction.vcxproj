@@ -281,6 +281,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <ObjectFileName>$(IntDir)\%(RelativeDir)\%(Filename)</ObjectFileName>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

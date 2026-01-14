@@ -17,7 +17,7 @@ namespace Violating_Static
             m_pi = 3.14159265358979323846;
         }
 
-        double Pi() { return m_pi; }
+        double Pi() const { return m_pi; }
     };
 
     void violatingStatic01()
@@ -73,7 +73,6 @@ namespace Motivating_Static
         int sum = Calculator::add(123, 456);
     }
 }
-
 
 void main_Static()
 {

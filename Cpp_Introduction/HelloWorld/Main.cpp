@@ -6,12 +6,12 @@
 
 namespace HelloWorld {
 
-    void helloWorldClassic()
+    static void helloWorldClassic()
     {
         std::printf("Hello World\n");
     }
 
-    void helloWorldCpp()
+    static void helloWorldCpp()
     {
         std::cout << "Hello World" << std::endl;
     }

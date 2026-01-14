@@ -48,35 +48,62 @@ zur Speichersegmentierung in der Intel x86-Computerbefehlssatzarchitektur:
 
 Man kann die Lebensdauer von Variablen in einem C++&ndash;Programm in drei Gruppen einteilen:
 
-  * Globale Variablen:<br />
-  Derartige Variablen werden außerhalb von Funktionen oder Klassen, also auf der obersten
-  Ebene eines Programms definiert. Dabei sollten sie stets mit einem Vorbelegungswert initialisiert werden.<br /><br />
-  Globale Variablen existieren so lange wie das Programm ausgeführt wird.
-  So gesehen sollte man sie behutsam einsetzen, da sie bereits vor dem Start
-  des Programms Speicher in Anspruch nehmen &ndash;
-  und diesen bis zum Ende des Programms auch nicht vorzeitig freigeben können.<br /><br />
-  Man kann auf globale Variablen von überall aus im gesamten Programm zugreifen.
+#### Globale Variablen
 
-  * Lokale Variablen:<br />
-  Lokale Variablen werden in Funktionen oder Methoden (oder in inneren Blöcken von Funktionen oder Methoden)
-  definiert.<br /><br />
-  Sie werden wie gewohnt durch eine Deklaration erstellt
-  und durch das Schließen des Blocks zerstört.
-  Danach gibt es keine Möglichkeit mehr auf diese Variablen zuzugreifen.<br /><br />
-  Lokale Variablen werden nicht automatisch initialisiert,
-  es ist eine manuelle Initialisierung durch den Programmierer im Quellcode erforderlich.
+Derartige Variablen werden außerhalb von Funktionen oder Klassen, also auf der obersten
+Ebene eines Programms definiert. Dabei sollten sie stets mit einem Vorbelegungswert initialisiert werden.<br /><br />
+Globale Variablen existieren so lange wie das Programm ausgeführt wird.
+So gesehen sollte man sie behutsam einsetzen, da sie bereits vor dem Start
+des Programms Speicher in Anspruch nehmen &ndash;
+und diesen bis zum Ende des Programms auch nicht vorzeitig freigeben können.<br /><br />
+Man kann auf globale Variablen von überall aus im gesamten Programm zugreifen.
 
 
-  * Dynamische Variablen:<br />
-  Unter dynamischen Variablen versteht man Variablen, die nach Bedarf angelegt werden
-  und dann wieder zu löschen sind, wann man sie nicht mehr benötigt.
-  So gesehen stehen dynamische Variablen für eine optimale Inanspruchnahme (Auslastung) des Speichers,
-  da globale Variablen möglicherweise zu großzügig mit dem Speicher umgehen
-  und lokale Variablen andererseits nicht über Funktionsgrenzen hinweg verfügbar sind.<br /><br />
-  Man kann beliebig viele Variablen dynamisch anlegen (solange Hauptspeicher verfügbar ist).<br /><br />
-  Ihr großer Vorteil besteht darin, dass man mit ihrer Hilfe genau so viel Speicher anfordern kann,
-  wie man für einen Programmablauf benötigt.<br /><br />
-  Zum Reservieren dynamischen Speichers gibt es die beiden Operatoren `new` und `delete`.
+*Definition*:
+
+```c
+int g_counter = 0;
+```
+
+*Verwendung*:
+
+```c
+extern int g_counter;
+```
+
+#### Lokale Variablen
+
+Lokale Variablen werden in Funktionen oder Methoden (oder in inneren Blöcken von Funktionen oder Methoden)
+definiert.<br /><br />
+Sie werden wie gewohnt durch eine Deklaration erstellt
+und durch das Schließen des Blocks zerstört.
+Danach gibt es keine Möglichkeit mehr auf diese Variablen zuzugreifen.<br /><br />
+Lokale Variablen werden nicht automatisch initialisiert,
+es ist eine manuelle Initialisierung durch den Programmierer im Quellcode erforderlich.
+
+
+*Beispiel*:
+
+```c
+void local_variables()
+{
+    int a = 1;
+    int b = 2;
+    int sum = a + b;
+}
+```
+
+#### Dynamische Variablen
+
+Unter dynamischen Variablen versteht man Variablen, die nach Bedarf angelegt werden
+und dann wieder zu löschen sind, wann man sie nicht mehr benötigt.
+So gesehen stehen dynamische Variablen für eine optimale Inanspruchnahme (Auslastung) des Speichers,
+da globale Variablen möglicherweise zu großzügig mit dem Speicher umgehen
+und lokale Variablen andererseits nicht über Funktionsgrenzen hinweg verfügbar sind.<br /><br />
+Man kann beliebig viele Variablen dynamisch anlegen (solange Hauptspeicher verfügbar ist).<br /><br />
+Ihr großer Vorteil besteht darin, dass man mit ihrer Hilfe genau so viel Speicher anfordern kann,
+wie man für einen Programmablauf benötigt.<br /><br />
+Zum Reservieren dynamischen Speichers gibt es die beiden Operatoren `new` und `delete`.
 
 ---
 

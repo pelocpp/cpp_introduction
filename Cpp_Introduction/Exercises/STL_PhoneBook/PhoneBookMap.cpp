@@ -19,7 +19,7 @@ namespace PhoneBook
     
     bool PhoneBookMap::insert(const std::string& first, const std::string& last, std::size_t number)
     {
-        std::string key = getKeyFromName(first, last);
+        const std::string& key = getKeyFromName(first, last);
 
         std::pair<std::string, std::size_t> entry(key, number);
 
@@ -33,7 +33,7 @@ namespace PhoneBook
 
     bool PhoneBookMap::update(const std::string& first, const std::string& last, std::size_t number)
     {
-        std::string key = getKeyFromName(first, last);
+        const std::string& key = getKeyFromName(first, last);
 
         std::unordered_map<std::string, std::size_t>::iterator pos = m_map.find(key);
 
@@ -48,7 +48,7 @@ namespace PhoneBook
 
     bool PhoneBookMap::search(const std::string& first, const std::string& last, std::size_t& number) const
     {
-        std::string key = getKeyFromName(first, last);
+        const std::string& key = getKeyFromName(first, last);
 
         std::unordered_map<std::string, std::size_t>::const_iterator pos = m_map.find(key);
 
@@ -66,7 +66,7 @@ namespace PhoneBook
 
     bool PhoneBookMap::contains(const std::string& first, const std::string& last) const
     {
-        std::string key = getKeyFromName(first, last);
+        const std::string& key = getKeyFromName(first, last);
 
         std::unordered_map<std::string, std::size_t>::const_iterator pos = m_map.find(key);
 
@@ -75,7 +75,7 @@ namespace PhoneBook
 
     bool PhoneBookMap::remove(const std::string& first, const std::string& last)
     {
-        std::string key = getKeyFromName(first, last);
+        const std::string& key = getKeyFromName(first, last);
 
         std::size_t numErased = m_map.erase(key);
 
@@ -86,7 +86,7 @@ namespace PhoneBook
 
     std::string PhoneBookMap::pairToString(const std::pair<std::string, std::size_t>& entry)
     {
-        std::string key = entry.first;
+        const std::string& key = entry.first;
 
         std::pair<std::string, std::string> fullName = getNameFromKey(key);
 
@@ -116,7 +116,7 @@ namespace PhoneBook
         static int counter = 0;
         counter++;
 
-        std::string key = next.first;
+        const std::string& key = next.first;
         std::pair<std::string, std::string> fullName = getNameFromKey(key);
         std::string name = fullName.first + " " + fullName.second;
 
@@ -144,7 +144,7 @@ namespace PhoneBook
 
     void PhoneBookMap::printEntry(const std::pair<std::string, std::size_t>& entry)
     {
-        std::string key = entry.first;
+        const std::string& key = entry.first;
         std::pair<std::string, std::string> fullName = getNameFromKey(key);
         std::size_t number = entry.second;
         std::cout << fullName.first << " " << fullName.second << ": " << number << std::endl;
@@ -165,8 +165,8 @@ namespace PhoneBook
     {
         std::size_t pos = key.find("_");
 
-        std::string first = key.substr(0, pos);
-        std::string last = key.substr(pos + 1);
+        const std::string& first = key.substr(0, pos);
+        const std::string& last = key.substr(pos + 1);
 
         return std::pair<std::string, std::string>(first, last);
     }

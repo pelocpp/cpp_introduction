@@ -20,15 +20,15 @@ namespace PhoneBook
 
     public:
         // public interface
-        std::size_t size() override;
+        std::size_t size() const override;
         bool insert(const std::string& first, const std::string& last, std::size_t number) override;
         bool update(const std::string& first, const std::string& last, std::size_t number) override;
-        bool search(const std::string& first, const std::string& last, std::size_t& number) override;
+        bool search(const std::string& first, const std::string& last, std::size_t& number) const override;
         bool remove(const std::string& first, const std::string& last) override;
-        bool contains(const std::string& first, const std::string& last) override;
-        std::forward_list<std::string> getNames() override;
-        std::string toString() override;
-        void print() override;
+        bool contains(const std::string& first, const std::string& last) const override;
+        std::forward_list<std::string> getNames() const override;
+        std::string toString() const override;
+        void print()const  override;
 
     private:
         // helper methods

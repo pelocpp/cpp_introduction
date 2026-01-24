@@ -12,7 +12,7 @@
 
 namespace PhoneBook
 {
-    std::size_t PhoneBookMap::size()
+    std::size_t PhoneBookMap::size() const
     {
         return m_map.size();
     }
@@ -46,11 +46,11 @@ namespace PhoneBook
         }
     }
 
-    bool PhoneBookMap::search(const std::string& first, const std::string& last, std::size_t& number)
+    bool PhoneBookMap::search(const std::string& first, const std::string& last, std::size_t& number) const
     {
         std::string key = getKeyFromName(first, last);
 
-        std::unordered_map<std::string, std::size_t>::iterator pos = m_map.find(key);
+        std::unordered_map<std::string, std::size_t>::const_iterator pos = m_map.find(key);
 
         if (pos == m_map.end()) {
 
@@ -64,11 +64,11 @@ namespace PhoneBook
         }
     }
 
-    bool PhoneBookMap::contains(const std::string& first, const std::string& last)
+    bool PhoneBookMap::contains(const std::string& first, const std::string& last) const
     {
         std::string key = getKeyFromName(first, last);
 
-        std::unordered_map<std::string, std::size_t>::iterator pos = m_map.find(key);
+        std::unordered_map<std::string, std::size_t>::const_iterator pos = m_map.find(key);
 
         return pos != m_map.end();
     }
@@ -95,7 +95,7 @@ namespace PhoneBook
         return name;
     }
 
-    std::forward_list<std::string> PhoneBookMap::getNames()
+    std::forward_list<std::string> PhoneBookMap::getNames() const
     {
         std::forward_list<std::string> list;
 
@@ -128,7 +128,7 @@ namespace PhoneBook
         return first + ss.str();
     }
 
-    std::string PhoneBookMap::toString() {
+    std::string PhoneBookMap::toString() const {
 
         std::string s = std::accumulate(
             m_map.begin(),
@@ -150,7 +150,7 @@ namespace PhoneBook
         std::cout << fullName.first << " " << fullName.second << ": " << number << std::endl;
     }
 
-    void PhoneBookMap::print()
+    void PhoneBookMap::print() const
     {
         std::for_each(
             m_map.begin(),

@@ -13,7 +13,7 @@
 namespace PhoneBook
 {
     // getter
-    std::size_t PhoneBookVector::size()
+    std::size_t PhoneBookVector::size() const
     {
         return m_entries.size();
     }
@@ -52,11 +52,11 @@ namespace PhoneBook
         return true;
     }
 
-    bool PhoneBookVector::search(const std::string& first, const std::string& last, std::size_t& number)
+    bool PhoneBookVector::search(const std::string& first, const std::string& last, std::size_t& number) const
     {
         MatchName name(first, last);
 
-        std::vector<Entry>::iterator pos = std::find_if(
+        std::vector<Entry>::const_iterator pos = std::find_if(
             m_entries.begin(),
             m_entries.end(),
             name
@@ -72,11 +72,11 @@ namespace PhoneBook
         }
     }
 
-    bool PhoneBookVector::contains(const std::string& first, const std::string& last)
+    bool PhoneBookVector::contains(const std::string& first, const std::string& last) const
     {
         MatchName name(first, last);
 
-        std::vector<Entry>::iterator pos = std::find_if(
+        std::vector<Entry>::const_iterator pos = std::find_if(
             m_entries.begin(),
             m_entries.end(),
             name
@@ -85,7 +85,7 @@ namespace PhoneBook
         return pos != m_entries.end();
     }
 
-    bool PhoneBookVector::remove(const std::string& first, const std::string& last)
+    bool PhoneBookVector::remove(const std::string& first, const std::string& last) 
     {
         MatchName name(first, last);
 
@@ -111,7 +111,7 @@ namespace PhoneBook
         return entry.m_first + " " + entry.m_last;
     }
 
-    std::forward_list<std::string> PhoneBookVector::getNames()
+    std::forward_list<std::string> PhoneBookVector::getNames() const
     {
         std::forward_list<std::string> list;
 
@@ -142,7 +142,7 @@ namespace PhoneBook
         return first + ss.str();
     }
 
-    std::string PhoneBookVector::toString() {
+    std::string PhoneBookVector::toString() const {
 
         std::string s = std::accumulate(
             m_entries.begin(),
@@ -161,7 +161,7 @@ namespace PhoneBook
         std::cout << entry.m_first << " " << entry.m_last << ": " << entry.m_number << std::endl;
     }
 
-    void PhoneBookVector::print()
+    void PhoneBookVector::print() const
     {
         std::for_each(
             m_entries.begin(),

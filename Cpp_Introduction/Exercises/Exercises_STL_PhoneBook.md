@@ -23,15 +23,15 @@ Legen Sie Ihrer Realisierung folgende Schnittstelle zu Grunde:
 01: class IPhoneBook
 02: {
 03: public:
-04:     virtual size_t size() = 0;
-05:     virtual bool insert(const std::string& first, const std::string& last, size_t number) = 0;
-06:     virtual bool update(const std::string& first, const std::string& last, size_t number) = 0;
-07:     virtual bool search(const std::string& first, const std::string& last, size_t& number) = 0;
+04:     virtual std::size_t size() const = 0;
+05:     virtual bool insert(const std::string& first, const std::string& last, std::size_t number) = 0;
+06:     virtual bool update(const std::string& first, const std::string& last, std::size_t number) = 0;
+07:     virtual bool search(const std::string& first, const std::string& last, std::size_t& number) const = 0;
 08:     virtual bool remove(const std::string& first, const std::string& last) = 0;
-09:     virtual bool contains(const std::string& first, const std::string& last) = 0;
-10:     virtual std::forward_list<std::string> getNames() = 0;
-11:     virtual std::string toString() = 0;
-12:     virtual void print() = 0;
+09:     virtual bool contains(const std::string& first, const std::string& last) const = 0;
+10:     virtual std::forward_list<std::string> getNames() const = 0;
+11:     virtual std::string toString() const = 0;
+12:     virtual void print() const = 0;
 13: };
 ```
 
@@ -41,15 +41,15 @@ selbsterklärend ist. Weitere Details zur Definition dieser Methoden entnehmen Si
 
 | Methode        | Schnittstelle und Beschreibung |
 |:-------------- |:-----------------------------------------|
-| `size` | `size_t size();`<br/>Liefert die Anzahl der Einträge im Telefonbuch zurück. |
+| `size` | `size_t size() const;`<br/>Liefert die Anzahl der Einträge im Telefonbuch zurück. |
 | `insert` | `bool insert(const std::string& first, const std::string& last, size_t number);`<br/>Fügt einen Eintrag, bestehend aus den Werten *Vorname*, *Nachname* und Telefonnummer, in das Telefonbuch ein. Ist der Name (*Vorname* und *Nachname*) im Telefonbuch schon enthalten, liefert die Funktion `false` zurück, andernfalls `true`. |
 | `update` | `bool update(const std::string& first, const std::string& last, size_t number);`<br/>Ändert einen Eintrag im Telefonbuch. Zu vorgegebenem Namen (*Vorname* und *Nachname*) wird eine neue Nummer im Telefonbuch eingetragen. Sind die Angaben des Namens falsch, liefert die Funktion `false` zurück, andernfalls `true`. |
-| `search` | `bool search(const std::string& first, const std::string& last, size_t& number);`<br/>Sucht einen Eintrag im Telefonbuch. Zu vorgegebenem Namen (*Vorname* und *Nachname*) wird die Telefonnummer (im dritten Parameter `number`) zurückgegeben. Sind die Namensangaben falsch, liefert die Funktion `false` zurück, andernfalls `true`. |
+| `search` | `bool search(const std::string& first, const std::string& last, size_t& number) const;`<br/>Sucht einen Eintrag im Telefonbuch. Zu vorgegebenem Namen (*Vorname* und *Nachname*) wird die Telefonnummer (im dritten Parameter `number`) zurückgegeben. Sind die Namensangaben falsch, liefert die Funktion `false` zurück, andernfalls `true`. |
 | `remove` | `bool remove(const std::string& first, const std::string& last);`<br/>Entfernt einen Eintrag (*Vorname* und *Nachname*) im Telefonbuch. |
-| `contains` | `bool contains(const std::string& first, const std::string& last);`<br/>Liefert die Information zurück, ob ein bestimmter Eintrag (*Vorname* und *Nachname*) im Telefonbuch vorhanden ist oder nicht. |
-| `getNames` | `std::forward_list<std::string> getNames();`<br/>Es wird ein STL-Container (`std::forward_list<std::string>`) konstruiert, der alle Namen des Telefonbuchs in einer Art Zusammenfassung darstellt. |
-| `toString` | `std::string toString();`<br/>Kreiert eine Zeichenkette (`std::string`), die den gesamten Inhalt des Telefonbuchs in einer ansprechenden lesbaren Darstellung enthält. |
-| `print` | `void print();`<br/>Gibt den Inhalt des Telefonbuchs in der Konsole aus. |
+| `contains` | `bool contains(const std::string& first, const std::string& last) const;`<br/>Liefert die Information zurück, ob ein bestimmter Eintrag (*Vorname* und *Nachname*) im Telefonbuch vorhanden ist oder nicht. |
+| `getNames` | `std::forward_list<std::string> getNames() const;`<br/>Es wird ein STL-Container (`std::forward_list<std::string>`) konstruiert, der alle Namen des Telefonbuchs in einer Art Zusammenfassung darstellt. |
+| `toString` | `std::string toString() const;`<br/>Kreiert eine Zeichenkette (`std::string`), die den gesamten Inhalt des Telefonbuchs in einer ansprechenden lesbaren Darstellung enthält. |
+| `print` | `void print() const;`<br/>Gibt den Inhalt des Telefonbuchs in der Konsole aus. |
 
 *Tabelle* 1: Beschreibung der öffentlichen Schnittstelle einer Telefonbuch Realisierung.
 
@@ -106,7 +106,6 @@ ein `std::vector`-Objekt verwendet sowie eine zweite Realisierung mit einem `std
 [*PhoneBookMap.h*](./STL_PhoneBook/PhoneBookMap.h)<br />
 
 [*PhoneBookVector.cpp*](./STL_PhoneBook/PhoneBookVector.cpp)<br />
-[*PhoneBookMap.cpp*](./STL_PhoneBook/PhoneBookMap.cpp)<br />
 [*PhoneBookMap.cpp*](./STL_PhoneBook/PhoneBookMap.cpp)<br />
 [*PhoneBook_Main.cpp*](./STL_PhoneBook/PhoneBook_Main.cpp)<br />
 

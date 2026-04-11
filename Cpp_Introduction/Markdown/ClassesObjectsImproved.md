@@ -197,6 +197,49 @@ Der Umweg über diese Zugriffsmethoden bewirkt somit einen ausschließlich *kontro
 ```
 
 
+## Zugriffskontrolle richtig gemacht
+
+Wie kann eine bestmögliche Umsetzung der Kapselung (*Encapsulation*) aussehen?
+Es geht nicht nur darum, Variablen `private` zu machen, sondern ein Design zu wählen, das Fehler verhindert und die Wartbarkeit maximiert.
+
+### Daten sind grundsätzlich `private`
+
+Jede Instanzvariable einer Klasse sollte `private` sein.
+Ein direkter Zugriff von außen ist tabu, da er die interne Struktur der Klasse offenlegt und unkontrollierte Änderungen ermöglichen würde.
+
+### Invarianten schützen (Validierung)
+
+Zugriffskontrolle ist dann &bdquo;richtig&rdquo;, wenn sie sicherstellt, dass ein Objekt niemals in einen ungültigen Zustand gerät. 
+
+Schlechtes Beispiel:<br />Ein öffentliches Feld `age` in einer Klasse `Person`, das man auf den Wert `-5` setzen kann.
+
+Richtiges Beispiel:<br />Ein privates Feld  `age` mit einem öffentlichen *Setter*, der prüft:
+
+```cpp
+if (newAge >= 0) { age = newAge; }
+```
+
+### &bdquo;Easy to use correctly, hard to use incorrectly&rdquo;
+
+Dies ist ein berühmtes Leitmotiv (oft *Scott Meyers* zugeschrieben).
+Richtiges Design bedeutet, die Schnittstelle so zu gestalten, dass der Nutzer gar keine Chance hat, auf interne Mechanismen zuzugreifen, die er nicht verstehen muss. 
+
+
+### Schnittstelle von Implementierung trennen
+
+Die öffentliche (`public`) Schnittstelle sollte nur das &bdquo;Was&rdquo; (Funktionalität) zeigen,
+während das &bdquo;Wie&rdquo; &ndash; interne Logik und Daten &ndash; im `private`-Bereich verborgen bleibt.
+
+Dies erlaubt es Ihnen, die interne Logik später komplett zu ändern, ohne dass der Code, der die Klasse nutzt, angepasst werden muss (Entkopplung). 
+
+### Gezielte Nutzung der Schlüsselwörter `protected` und `friend`
+
+  * Schlüsselwort `protected`:<br />Wird nur verwendet, wenn abgeleitete Klassen wirklich internen Zugriff benötigen; ansonsten ist `private` auch hier sicherer.
+
+  * Schlüsselwort `friend`:<br />Diese &bdquo;Durchbrechung&rdquo; der Kapselung wird nur in Ausnahmefällen (z. B. für Operator-Überladung) genutzt,
+    niemals als Standardweg für den Datenzugriff. 
+
+
 ### Der `this`-Operator
 
 Wir betrachten für einen Moment eine geringfügig modifizierte

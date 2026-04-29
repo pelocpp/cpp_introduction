@@ -22,7 +22,7 @@ public:
     BankAccount            (double start);
 
     // getter / setter
-    double getAccountNumber() const;
+    int getAccountNumber() const;
     double getBalance      () const;
     double getInterestRate () const;
 

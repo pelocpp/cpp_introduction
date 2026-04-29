@@ -20,7 +20,7 @@ BankAccount::BankAccount(double balance) : m_number(s_NextAccountNumber)
 BankAccount::BankAccount() : BankAccount(0.0) {}
 
 // getter / setter
-double BankAccount::getAccountNumber() const
+int BankAccount::getAccountNumber() const
 {
     return m_number;
 }

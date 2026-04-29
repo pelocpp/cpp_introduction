@@ -4,6 +4,9 @@
 
 #include "Time.h"
 
+#include <iostream>
+#include <iomanip>
+
 // implementation
 namespace Classes_Objects
 {

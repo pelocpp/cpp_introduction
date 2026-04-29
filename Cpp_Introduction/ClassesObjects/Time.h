@@ -4,9 +4,9 @@
 
 #pragma once
 
-#include <iostream>
-#include <iomanip>
-#include <cstdio>
+//#include <iostream>
+//#include <iomanip>
+//#include <cstdio>
 
 namespace Classes_Objects
 {

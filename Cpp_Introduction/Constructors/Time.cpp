@@ -2,9 +2,6 @@
 // Time.cpp // Constructors
 // ===========================================================================
 
-//#include <iostream>
-//#include <iomanip>
-
 #include "Time.h"
 
 namespace Classes_Objects_Constructors

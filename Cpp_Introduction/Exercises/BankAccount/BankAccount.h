@@ -29,7 +29,7 @@ public:
     // public interface
     void deposit(double amount);
     void withdraw(double amount);
-    bool equals(BankAccount other);
+    bool equals(BankAccount other) const;
     void print();
 
     // interest

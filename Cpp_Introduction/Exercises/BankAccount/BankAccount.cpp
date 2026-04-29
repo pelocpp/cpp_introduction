@@ -54,7 +54,7 @@ void BankAccount::withdraw(double amount)
     m_balance -= amount;
 }
 
-bool BankAccount::equals(BankAccount other)
+bool BankAccount::equals(BankAccount other) const
 {
     if (m_balance == other.m_balance) {
         return true;

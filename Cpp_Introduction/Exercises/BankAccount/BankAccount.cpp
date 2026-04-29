@@ -71,7 +71,7 @@ void BankAccount::updateInterest(int days)
     m_balance += interest;
 }
 
-void BankAccount::print() 
+void BankAccount::print() const
 {
     std::cout << "BankAccount Nr. " << m_number << ":";
     std::cout << "   Balance=" << m_balance << "." << std::endl;
@@ -80,7 +80,7 @@ void BankAccount::print()
 // operators
 bool BankAccount::operator== (const BankAccount& other) {
 
-    if (m_balance == other.m_rate) {
+    if (m_balance == other.m_balance) {
         return true;
     }
     else {
@@ -95,7 +95,7 @@ bool BankAccount::operator!= (const BankAccount& other) {
 
 bool BankAccount::operator<  (const BankAccount& other) {
 
-    if (m_balance < other.m_rate) {
+    if (m_balance < other.m_balance) {
         return true;
     }
     else {

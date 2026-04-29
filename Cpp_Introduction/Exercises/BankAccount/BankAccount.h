@@ -30,7 +30,7 @@ public:
     void deposit           (double amount);
     void withdraw          (double amount);
     bool equals            (const BankAccount& other) const;
-    void print             ();
+    void print             () const;
 
     // interest
     void setInterestRate   (double rate);

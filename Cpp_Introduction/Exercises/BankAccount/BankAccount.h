@@ -18,23 +18,23 @@ private:
 
 public:
     // c'tor
-    BankAccount();
-    BankAccount(double start);
+    BankAccount            ();
+    BankAccount            (double start);
 
     // getter / setter
     double getAccountNumber() const;
-    double getBalance() const;
-    double getInterestRate() const;
+    double getBalance      () const;
+    double getInterestRate () const;
 
     // public interface
-    void deposit(double amount);
-    void withdraw(double amount);
-    bool equals(BankAccount other) const;
-    void print();
+    void deposit           (double amount);
+    void withdraw          (double amount);
+    bool equals            (const BankAccount& other) const;
+    void print             ();
 
     // interest
-    void setInterestRate(double rate);
-    void updateInterest(int days);
+    void setInterestRate   (double rate);
+    void updateInterest    (int days);
 
     // operators
     bool operator== (const BankAccount& other);
